@@ -1,0 +1,96 @@
+[  
+  {  
+    "id": "q_create_primary_001",  
+    "topic": "Introduction to Relational Databases and SQL",  
+    "question_text": "You are designing a university database system that needs to track student enrollments, course prerequisites, and faculty assignments. Which core relational concept would you **primarily leverage** to ensure data integrity when enforcing rules like 'a student cannot enroll in a course without completing its prerequisite'? (Select all that apply)",  
+    "bloom_level": "Creating",  
+    "question_type": "MCQ",  
+    "options": [  
+      "Primary Key Constraints on the Students table",  
+      "Foreign Key Relationships between Courses and Prerequisites tables",  
+      "Trigger-based Logic to Validate Enrollment Rules Dynamically",  
+      "Stored Procedures for Enrollments That Embed Business Rules",  
+      "Indexing Strategies on the Course Catalog Table"  
+    ],  
+    "correct_answer": [  
+      "Foreign Key Relationships between Courses and Prerequisites tables",  
+      "Trigger-based Logic to Validate Enrollment Rules Dynamically",  
+      "Stored Procedures for Enrollments That Embed Business Rules"  
+    ],  
+    "correct_answer_explanation": "Enforcing enrollment rules requires **foreign keys** (to link prerequisites to courses) and **dynamic validation mechanisms**. While foreign keys ensure structural relationships, triggers or stored procedures are needed for complex business logic like checking prerequisite completion. Primary keys (Option A) manage uniqueness but not integrity rules, while indexing (Option E) improves performance, not data integrity."  
+  },  
+  {  
+    "id": "q_create_primary_002",  
+    "topic": "Introduction to Relational Databases and SQL",  
+    "question_text": "Design an analogy for a relational database using a real-world scenario that emphasizes **table relationships** and **data normalization**. Which of the following analogies best captures these principles? (Select one)",  
+    "bloom_level": "Creating",  
+    "question_type": "MCQ",  
+    "options": [  
+      "A library catalog where each book is stored in multiple locations without tracking which shelf it belongs to.",  
+      "A recipe book with ingredients listed once per recipe, even if they are reused across recipes.",  
+      "A city’s postal system where each address is uniquely identified by a ZIP code but duplicates exist for similar streets.",  
+      "A spreadsheet containing all student data in one table, including repeated course names and instructor details.",  
+      "An online marketplace where product listings include redundant descriptions to avoid linking tables."  
+    ],  
+    "correct_answer": "A recipe book with ingredients listed once per recipe, even if they are reused across recipes.",  
+    "correct_answer_explanation": "This analogy reflects **normalization** (eliminating redundancy) and **relationships** (recipes as tables linked to ingredients). Normalized databases store data in separate tables (e.g., Ingredients table referenced by Recipes), avoiding duplication. Other options describe denormalization, redundancy, or lack of structured relationships."  
+  },  
+  {  
+    "id": "q_create_primary_003",  
+    "topic": "Introduction to Relational Databases and SQL",  
+    "question_text": "You need to create an SQL query that retrieves the **average GPA** for students in each department, but only for departments with more than 10 students. Which combination of SQL concepts must you synthesize to achieve this? (Select all that apply)",  
+    "bloom_level": "Creating",  
+    "question_type": "MCQ",  
+    "options": [  
+      "GROUP BY Clause with HAVING Condition on Department Count",  
+      "JOIN Operation Between Students and Departments Tables",  
+      "Subquery to Calculate Average GPA Per Student",  
+      "CASE Statement to Filter by Department Size",  
+      "WINDOW Function for Conditional Aggregation"  
+    ],  
+    "correct_answer": [  
+      "GROUP BY Clause with HAVING Condition on Department Count",  
+      "JOIN Operation Between Students and Departments Tables"  
+    ],  
+    "correct_answer_explanation": "**GROUP BY** with **HAVING** filters departments based on aggregated counts, while a **JOIN** combines student data with department information. Subqueries (Option C) are unnecessary here; the problem requires aggregation over joined tables, not nested queries. CASE (Option D) and WINDOW functions (E) do not directly solve this task."  
+  },  
+  {  
+    "id": "q_create_primary_004",  
+    "topic": "Introduction to Relational Databases and SQL",  
+    "question_text": "Design a **schema** for a hospital management system that tracks patients, doctors, appointments, and medical records. Which of the following design choices best ensures **referential integrity** and scalability? (Select all that apply)",  
+    "bloom_level": "Creating",  
+    "question_type": "MCQ",  
+    "options": [  
+      "A Patients table with a self-referencing foreign key for 'primary care physician'",  
+      "An Appointments table linking PatientID and DoctorID as composite primary keys",  
+      "MedicalRecords stored as BLOBs in the Patients table to avoid joins",  
+      "Doctors table with unique constraints on specialty and license number",  
+      "A normalized structure with separate tables for Diagnoses, Medications, and Procedures linked via foreign keys"  
+    ],  
+    "correct_answer": [  
+      "A Patients table with a self-referencing foreign key for 'primary care physician'",  
+      "Doctors table with unique constraints on specialty and license number",  
+      "A normalized structure with separate tables for Diagnoses, Medications, and Procedures linked via foreign keys"  
+    ],  
+    "correct_answer_explanation": "**Referential integrity** requires foreign keys (e.g., linking Patients to Doctors) and **unique constraints** to prevent duplicate entries. Normalization (Option E) ensures scalability by avoiding redundancy. Storing BLOBs in the Patients table (C) violates normalization, while composite primary keys (B) are less scalable than surrogate IDs."  
+  },  
+  {  
+    "id": "q_create_primary_005",  
+    "topic": "Introduction to Relational Databases and SQL",  
+    "question_text": "You are tasked with optimizing a slow-performing query that joins four large tables (A, B, C, D) frequently. Which combination of **indexing strategies** and **query restructuring** would you implement to improve performance? (Select all that apply)",  
+    "bloom_level": "Creating",  
+    "question_type": "MCQ",  
+    "options": [  
+      "Create indexes on foreign key columns used in JOIN conditions",  
+      "Replace the multi-table join with materialized views pre-aggregated by application logic",  
+      "Use a covering index that includes all selected columns to avoid table scans",  
+      "Reorganize tables into a star schema with fact and dimension tables",  
+      "Add indexes on every column of all four tables for broad coverage"  
+    ],  
+    "correct_answer": [  
+      "Create indexes on foreign key columns used in JOIN conditions",  
+      "Use a covering index that includes all selected columns to avoid table scans"  
+    ],  
+    "correct_answer_explanation": "**Indexing join keys** (A) and **covering indexes** (C) directly reduce I/O by enabling faster lookups. Materialized views (B) may help but depend on data freshness; star schemas (D) are more for OLAP than ad-hoc joins. Indexing all columns (E) is inefficient and increases write overhead."  
+  }  
+]

@@ -1,0 +1,53 @@
+[  
+  {  
+    "id": "q_evaluate_primary_001",  
+    "topic": "Core Relational Concepts and Terminology",  
+    "question_text": "A database designer proposes using the `StudentID` (primary key) as a foreign key in the `Enrollment` table to link to the `Students` table. Evaluate whether this design ensures referential integrity if `StudentID` allows NULL values.",  
+    "bloom_level": "Evaluating",  
+    "question_type": "MCQ",  
+    "options": [  
+      "This design ensures referential integrity because foreign keys inherently enforce relationships.",  
+      "This design fails to ensure referential integrity because a primary key cannot contain NULLs, making the foreign key invalid.",  
+      "This design is acceptable as long as `StudentID` in `Enrollment` is not used for mandatory lookups.",  
+      "This design ensures referential integrity if cascading constraints are applied during deletion.",  
+      "This design fails to ensure referential integrity because allowing NULLs in foreign keys violates the requirement for valid relationships."  
+    ],  
+    "correct_answer": "This design fails to ensure referential integrity because allowing NULLs in foreign keys violates the requirement for valid relationships.",  
+    "correct_answer_explanation": "Referential integrity requires that foreign key values must match existing primary key values or be NULL. However, by definition, a primary key (like `StudentID`) cannot contain NULLs. If the foreign key (`Enrollment.StudentID`) allows NULLs, it introduces invalid relationships where entries in `Enrollment` might reference non-existent students, violating referential integrity."  
+  },  
+  {  
+    "id": "q_evaluate_primary_002",  
+    "topic": "Structured Query Language (SQL) Overview",  
+    "question_text": "A developer claims that using PL/SQL exclusively for a PostgreSQL database is more efficient than using T-SQL. Evaluate the validity of this claim based on SQL standards and dialect-specific features.",  
+    "bloom_level": "Evaluating",  
+    "question_type": "MCQ",  
+    "options": [  
+      "This claim is valid because PL/SQL adheres strictly to ANSI SQL standards, making it universally efficient.",  
+      "This claim is invalid because PostgreSQL natively supports PL/pgSQL, not PL/SQL, and T-SQL is specific to Microsoft SQL Server.",  
+      "This claim is valid as both PL/SQL and T-SQL offer procedural extensions beyond standard SQL.",  
+      "This claim is invalid because PostgreSQL does not support any procedural language like PL/SQL or T-SQL.",  
+      "This claim is partially true: PL/SQL can be used in PostgreSQL, but it may introduce compatibility issues."  
+    ],  
+    "correct_answer": "This claim is invalid because PostgreSQL natively supports PL/pgSQL, not PL/SQL, and T-SQL is specific to Microsoft SQL Server.",  
+    "correct_answer_explanation": "PL/SQL is Oracle's procedural language, while T-SQL is Microsoft’s dialect for SQL Server. PostgreSQL uses PL/pgSQL as its native procedural language. Using PL/SQL in PostgreSQL would require additional configuration and may not be efficient due to compatibility gaps. Thus, the claim ignores database-specific native support and misrepresents SQL dialects."  
+  },  
+  {  
+    "id": "q_evaluate_primary_003",  
+    "topic": "Relational Database Management Systems (RDBMS)",  
+    "question_text": "A system administrator is choosing between MySQL and Oracle DB for a high-transaction e-commerce application. Evaluate which RDBMS better supports scalability, transaction control, and structured data management based on the provided notes.",  
+    "bloom_level": "Evaluating",  
+    "question_type": "MCQ",  
+    "options": [  
+      "MySQL is superior because it is open-source and optimized for web applications with high scalability.",  
+      "Oracle DB is superior due to its robustness, advanced transaction control features, and enterprise-level scalability.",  
+      "Both are equally suitable as they both support structured data and ACID compliance.",  
+      "Neither supports scalability; relational databases are inherently limited in handling high transactions.",  
+      "MySQL is better for small-scale applications while Oracle DB excels in complex, mission-critical systems."  
+    ],  
+    "correct_answer": [  
+      "Oracle DB is superior due to its robustness, advanced transaction control features, and enterprise-level scalability.",  
+      "MySQL is better for small-scale applications while Oracle DB excels in complex, mission-critical systems."  
+    ],  
+    "correct_answer_explanation": "The notes highlight that Oracle Database is known for robustness, scalability, and handling complex transactions, making it suitable for high-transaction e-commerce. MySQL is noted as open-source and widely used for web applications but may lack Oracle’s enterprise-level features. Thus, both options (B) and (E) are correct based on the trade-offs between scalability/robustness and use case appropriateness."  
+  }  
+]

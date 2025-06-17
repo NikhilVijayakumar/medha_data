@@ -1,0 +1,107 @@
+[
+  {
+    "id": "integrated_remember_001",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Remembering",
+    "front_prompt": "What is a database?",
+    "back_answer": "A database is an organized collection of data, generally stored and accessed electronically from a computer system. It stores, manages, and retrieves information efficiently."
+  },
+  {
+    "id": "integrated_remember_002",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Remembering",
+    "front_prompt": "What is an RDBMS?",
+    "back_answer": "An RDBMS (Relational Database Management System) is a software system designed to manage relational databases, organizing data into tables with defined relationships."
+  },
+  {
+    "id": "integrated_remember_003",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Remembering",
+    "front_prompt": "What is the purpose of SQL?",
+    "back_answer": "SQL (Structured Query Language) is a standard programming language for managing and manipulating data in RDBMS, allowing operations like querying, inserting, updating, deleting, defining schemas, and controlling transactions."
+  },
+  {
+    "id": "integrated_remember_004",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Remembering",
+    "front_prompt": "Define a table in the context of databases.",
+    "back_answer": "A table is a two-dimensional structure with rows and columns used to store data, similar to a spreadsheet."
+  },
+  {
+    "id": "integrated_remember_005",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Remembering",
+    "front_prompt": "What is a column (attribute) in a database table?",
+    "back_answer": "A column is a vertical set of data values of a specific type within a table, representing an attribute of the entity being stored."
+  },
+  {
+    "id": "integrated_remember_006",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Remembering",
+    "front_prompt": "What is a row (record/tuple) in a database table?",
+    "back_answer": "A row is a horizontal set of data values representing a single instance of the entity in a table."
+  },
+  {
+    "id": "integrated_remember_007",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Remembering",
+    "front_prompt": "What is a primary key?",
+    "back_answer": "A primary key is a column or set of columns that uniquely identifies each row in a table, ensuring no NULL values."
+  },
+  {
+    "id": "integrated_remember_008",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Remembering",
+    "front_prompt": "What is a foreign key?",
+    "back_answer": "A foreign key is a column or set of columns in one table that refers to the primary key of another table, establishing relationships between tables."
+  },
+  {
+    "id": "integrated_remember_009",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Remembering",
+    "front_prompt": "What is referential integrity?",
+    "back_answer": "Referential integrity ensures the links between tables (via foreign keys) are valid, maintaining consistency in relationships."
+  },
+  {
+    "id": "integrated_remember_010",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Remembering",
+    "front_prompt": "Provide an example of an RDBMS.",
+    "back_answer": "Examples include Microsoft SQL Server, MySQL, PostgreSQL, and Oracle Database."
+  },
+  {
+    "id": "integrated_remember_011",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Remembering",
+    "front_prompt": "What is T-SQL?",
+    "back_answer": "T-SQL (Transact-SQL) is a dialect of SQL used by Microsoft SQL Server, extending the standard language with additional features."
+  },
+  {
+    "id": "integrated_remember_012",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Remembering",
+    "front_prompt": "What is structured data?",
+    "back_answer": "Structured data is data within tables that has a defined structure, with columns having specific data types."
+  },
+  {
+    "id": "integrated_remember_013",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Remembering",
+    "front_prompt": "What are relationships in an RDBMS?",
+    "back_answer": "Relationships are links between tables defined by common columns, allowing data from multiple tables to be combined."
+  },
+  {
+    "id": "integrated_remember_014",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Remembering",
+    "front_prompt": "What is the role of a primary key in a table?",
+    "back_answer": "The primary key ensures each row in a table can be uniquely identified, preventing duplicate records."
+  },
+  {
+    "id": "integrated_remember_015",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Remembering",
+    "front_prompt": "Explain the purpose of foreign keys in a database.",
+    "back_answer": "Foreign keys establish relationships between tables, ensuring referential integrity by linking data across tables."
+  }
+]

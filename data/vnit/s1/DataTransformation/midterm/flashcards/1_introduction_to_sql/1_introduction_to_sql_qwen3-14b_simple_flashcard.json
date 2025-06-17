@@ -1,0 +1,107 @@
+[
+  {
+    "id": "simple_flash_001",
+    "topic": "Introduction to Relational Databases and SQL",
+    "front_prompt": "What is a database?",
+    "back_answer": "A structured collection of related data stored electronically, designed for efficient storage, management, and retrieval of information.",
+    "type": "simple"
+  },
+  {
+    "id": "simple_flash_002",
+    "topic": "Introduction to Relational Databases and SQL",
+    "front_prompt": "What is a Relational Database Management System (RDBMS)?",
+    "back_answer": "A software system that manages relational databases, organizing data into tables with defined relationships and using SQL for interaction.",
+    "type": "simple"
+  },
+  {
+    "id": "simple_flash_003",
+    "topic": "Introduction to Relational Databases and SQL",
+    "front_prompt": "What is Structured Query Language (SQL)?",
+    "back_answer": "A standard programming language used to manage, manipulate, and query data in relational databases.",
+    "type": "simple"
+  },
+  {
+    "id": "simple_flash_004",
+    "topic": "Introduction to Relational Databases and SQL",
+    "front_prompt": "What is a table in a relational database?",
+    "back_answer": "A two-dimensional structure with rows (records) and columns (attributes) used to store data.",
+    "type": "simple"
+  },
+  {
+    "id": "simple_flash_005",
+    "topic": "Introduction to Relational Databases and SQL",
+    "front_prompt": "Define a column (attribute) in a database table.",
+    "back_answer": "A vertical set of data values representing a specific characteristic or property of the entity stored in the table.",
+    "type": "simple"
+  },
+  {
+    "id": "simple_flash_006",
+    "topic": "Introduction to Relational Databases and SQL",
+    "front_prompt": "What is a row (record/tuple) in a database table?",
+    "back_answer": "A horizontal set of data values representing a single instance or entry of the entity described by the table.",
+    "type": "simple"
+  },
+  {
+    "id": "simple_flash_007",
+    "topic": "Introduction to Relational Databases and SQL",
+    "front_prompt": "What is a primary key in a database?",
+    "back_answer": "A column or set of columns that uniquely identifies each row in a table, ensuring no duplicate records.",
+    "type": "simple"
+  },
+  {
+    "id": "simple_flash_008",
+    "topic": "Introduction to Relational Databases and SQL",
+    "front_prompt": "What is a foreign key in a database?",
+    "back_answer": "A column or set of columns that references the primary key of another table, enforcing relationships between tables.",
+    "type": "simple"
+  },
+  {
+    "id": "simple_flash_009",
+    "topic": "Introduction to Relational Databases and SQL",
+    "front_prompt": "What is referential integrity?",
+    "back_answer": "A rule that ensures the validity of relationships between tables by requiring foreign keys to reference existing primary keys in related tables.",
+    "type": "simple"
+  },
+  {
+    "id": "simple_flash_010",
+    "topic": "Introduction to Relational Databases and SQL",
+    "front_prompt": "What is structured data?",
+    "back_answer": "Data organized into predefined formats (e.g., tables with specific columns) for consistent storage and retrieval.",
+    "type": "simple"
+  },
+  {
+    "id": "simple_flash_011",
+    "topic": "Introduction to Relational Databases and SQL",
+    "front_prompt": "What is an example of a common RDBMS?",
+    "back_answer": "Examples include Microsoft SQL Server, MySQL, PostgreSQL, and Oracle Database.",
+    "type": "simple"
+  },
+  {
+    "id": "simple_flash_012",
+    "topic": "Introduction to Relational Databases and SQL",
+    "front_prompt": "What is T-SQL?",
+    "back_answer": "A dialect of SQL used by Microsoft SQL Server, extending standard SQL with additional features.",
+    "type": "simple"
+  },
+  {
+    "id": "simple_flash_013",
+    "topic": "Introduction to Relational Databases and SQL",
+    "front_prompt": "What is PL/SQL?",
+    "back_answer": "A procedural extension of SQL used by Oracle Database for writing complex logic in databases.",
+    "type": "simple"
+  },
+  {
+    "id": "simple_flash_014",
+    "topic": "Introduction to Relational Databases and SQL",
+    "front_prompt": "What is the purpose of a foreign key relationship?",
+    "back_answer": "To enforce referential integrity between tables by linking data in one table to another via primary keys.",
+    "type": "simple"
+  },
+  {
+    "id": "simple_flash_015",
+    "topic": "Introduction to Relational Databases and SQL",
+    "front_prompt": "How are relationships defined in an RDBMS?",
+    "back_answer": "Through foreign keys that reference primary keys of other tables, creating links between datasets.",
+    "type": "simple"
+  }
+]

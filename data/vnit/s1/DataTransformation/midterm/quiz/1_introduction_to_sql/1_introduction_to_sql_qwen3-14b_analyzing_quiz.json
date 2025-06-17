@@ -1,0 +1,66 @@
+[  
+  {  
+    "id": "q_analyze_primary_001",  
+    "topic": "Introduction to Relational Databases and SQL",  
+    "question_text": "In the context of relational databases, which two components are essential for establishing referential integrity between tables?",  
+    "bloom_level": "Analyzing",  
+    "question_type": "MCQ",  
+    "options": [  
+      "Primary Key in the child table and Foreign Key in the parent table.",  
+      "Foreign Key in the child table and Primary Key in the parent table.",  
+      "Unique Constraint on the parent table and Index on the child table.",  
+      "Check Constraint on both tables and a Composite Key.",  
+      "Auto-incrementing ID column in both tables."  
+    ],  
+    "correct_answer": ["Foreign Key in the child table and Primary Key in the parent table."],  
+    "correct_answer_explanation": "Referential integrity is enforced by ensuring that a Foreign Key (in the 'child' table) references a valid Primary Key (in the 'parent' table). This ensures that relationships between tables remain consistent. The Enrollment table example in the notes illustrates this, where `StudentID` and `CourseID` are foreign keys referencing primary keys in other tables."  
+  },  
+  {  
+    "id": "q_analyze_primary_002",  
+    "topic": "Core Relational Concepts and Terminology",  
+    "question_text": "Consider a scenario where a database designer creates a `Students` table with columns `StudentID`, `Name`, and `Major`. Which of the following statements accurately describe the role of these components? (Select all that apply)",  
+    "bloom_level": "Analyzing",  
+    "question_type": "MCQ",  
+    "options": [  
+      "`StudentID` serves as a primary key, uniquely identifying each row.",  
+      "`Major` is a column attribute defining the data type for student majors.",  
+      "`Name` represents a row in the table, containing specific instance data.",  
+      "The `Students` table structure enforces structured data through defined columns and rows.",  
+      "All three columns collectively form a composite primary key."  
+    ],  
+    "correct_answer": ["StudentID serves as a primary key, uniquely identifying each row.", "`Major` is a column attribute defining the data type for student majors.", "The Students table structure enforces structured data through defined columns and rows."],  
+    "correct_answer_explanation": "`StudentID` is identified as the primary key in the notes' `Students` example. A 'column attribute' like `Major` defines properties (e.g., data type) for that column. The table's structure (rows/columns) enforces structured data, per the RDBMS characteristics described. However, `Name` is a row component, not a row itself, and there is no indication of a composite key."  
+  },  
+  {  
+    "id": "q_analyze_primary_003",  
+    "topic": "Structured Query Language (SQL) Overview",  
+    "question_text": "A developer writes the following SQL query: `SELECT * FROM Enrollment WHERE StudentID = 101;`. Which two aspects of this query require analysis to determine its behavior?",  
+    "bloom_level": "Analyzing",  
+    "question_type": "MCQ",  
+    "options": [  
+      "The use of `*` may retrieve unnecessary columns, impacting performance.",  
+      "The absence of a JOIN clause prevents relationship enforcement between tables.",  
+      "The WHERE condition assumes the existence of StudentID = 101 in the Students table only.",  
+      "This query violates referential integrity by not checking foreign key constraints.",  
+      "The `Enrollment` table must have an index on `StudentID` for efficient execution."  
+    ],  
+    "correct_answer": ["The use of * may retrieve unnecessary columns, impacting performance.", "The WHERE condition assumes the existence of StudentID = 101 in the Students table only."],  
+    "correct_answer_explanation": "'*' retrieves all columns, which might include redundant data and reduce efficiency. The `WHERE` clause assumes `StudentID = 101` exists in this table (not necessarily enforcing referential integrity checks). However, there is no violation of SQL syntax or direct enforcement of foreign key constraints here; JOINs are not required for simple queries."  
+  },  
+  {  
+    "id": "q_analyze_primary_004",  
+    "topic": "Relational Database Management Systems (RDBMS)",  
+    "question_text": "When comparing Microsoft SQL Server and MySQL, which two features represent differences in their implementation of structured data handling?",  
+    "bloom_level": "Analyzing",  
+    "question_type": "MCQ",  
+    "options": [  
+      "SQL Server uses T-SQL while MySQL supports PL/SQL dialects.",  
+      "MySQL enforces stricter referential integrity by default compared to SQL Server.",  
+      "SQL Server provides built-in support for stored procedures, whereas MySQL requires plugins.",  
+      "Both use the same ANSI SQL standard but differ in proprietary extensions.",  
+      "MySQL allows more flexible schema changes without transaction control."  
+    ],  
+    "correct_answer": ["SQL Server uses T-SQL while MySQL supports PL/SQL dialects.", "MySQL enforces stricter referential integrity by default compared to SQL Server."],  
+    "correct_answer_explanation": "The notes explicitly mention that SQL Server uses T-SQL, Oracle uses PL/SQL, and MySQL is open-source with variations. However, the claim about 'stricter referential integrity' in MySQL requires analysis: while both enforce constraints, differences may arise from default settings or configuration (not directly stated in the notes but inferred via comparative RDBMS characteristics)."  
+  }  
+]

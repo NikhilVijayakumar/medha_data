@@ -1,0 +1,67 @@
+[  
+  {  
+    "id": "feynman_q_001_related_to_primary_q_id_q_analyze_primary_001",  
+    "type": "analogy_creation",  
+    "question_text": "Which analogy best explains how referential integrity works between tables in a relational database?",  
+    "options": [  
+      "A book index that cross-references pages to chapter numbers, ensuring every page number exists in the chapters list.",  
+      "A family tree where children can have parents not listed in the family tree.",  
+      "A shopping cart that allows items to be added without checking if they exist in the inventory.",  
+      "A recipe book with ingredients listed but no connection to specific recipes.",  
+      "A phone directory where names and numbers are stored independently with no links."  
+    ],  
+    "correct_answer": "A book index that cross-references pages to chapter numbers, ensuring every page number exists in the chapters list.",  
+    "correct_answer_explanation": "This analogy captures referential integrity: foreign keys (page numbers) must reference valid primary keys (chapter numbers). Invalid options describe scenarios where relationships are broken or absent."  
+  },  
+  {  
+    "id": "feynman_q_002_related_to_primary_q_id_q_analyze_primary_002",  
+    "type": "simplification",  
+    "question_text": "Explain why `StudentID` is considered a primary key in the `Students` table, as if to a 10-year-old. (Select all that apply)",  
+    "options": [  
+      "`StudentID` is like a unique name tag for each student so teachers can tell them apart.",  
+      "`StudentID` ensures every student has exactly one major listed in the table.",  
+      "`StudentID` acts as a special number that no two students share, making it easy to find records.",  
+      "`StudentID` helps computers organize data faster by sorting numbers instead of names.",  
+      "`StudentID` is required because `Name` might have duplicates like 'John Smith'."  
+    ],  
+    "correct_answer": [  
+      "`StudentID` is like a unique name tag for each student so teachers can tell them apart.",  
+      "`StudentID` acts as a special number that no two students share, making it easy to find records.",  
+      "`StudentID` is required because `Name` might have duplicates like 'John Smith'."  
+    ],  
+    "correct_answer_explanation": "These options simplify the primary key concept: uniqueness, ease of lookup, and solving ambiguity in human-readable fields. Distractors conflate unrelated concepts (sorting speed) or misattribute purposes (ensuring one major)."  
+  },  
+  {  
+    "id": "feynman_q_003_related_to_primary_q_id_q_analyze_primary_003",  
+    "type": "underlying_mechanism_explanation",  
+    "question_text": "Why does the query `SELECT * FROM Enrollment WHERE StudentID = 101;` assume data consistency without enforcing referential integrity checks?",  
+    "options": [  
+      "The SQL engine trusts that foreign keys are already validated by application logic.",  
+      "Referential integrity is only enforced when using JOIN operations between tables.",  
+      "Queries cannot check for referential integrity because they don't modify data.",  
+      "The WHERE clause filters rows but does not validate relationships to other tables.",  
+      "Indexes on `StudentID` automatically verify the existence of records in related tables."  
+    ],  
+    "correct_answer": [  
+      "The SQL engine trusts that foreign keys are already validated by application logic.",  
+      "The WHERE clause filters rows but does not validate relationships to other tables."  
+    ],  
+    "correct_answer_explanation": "Referential integrity enforcement (e.g., checking if StudentID=101 exists in the Students table) is handled at the database level through constraints, not by SELECT queries. The query assumes consistency because it doesn't perform inserts/updates/deletes that could violate relationships."  
+  },  
+  {  
+    "id": "feynman_q_004_related_to_primary_q_id_q_analyze_primary_004",  
+    "type": "conceptual_transformation",  
+    "question_text": "How would you explain the difference in referential integrity enforcement between SQL Server and MySQL using a real-world analogy?",  
+    "options": [  
+      "SQL Server is like a strict librarian who checks every book's catalog entry, while MySQL is more relaxed.",  
+      "MySQL requires explicit permission to borrow books, while SQL Server allows borrowing freely.",  
+      "Both libraries enforce rules, but SQL Server uses a different language (T-SQL) for checking them.",  
+      "SQL Server automatically organizes books on shelves, while MySQL leaves it to users.",  
+      "MySQL stores all book data in one room, while SQL Server divides it into sections."  
+    ],  
+    "correct_answer": [  
+      "SQL Server is like a strict librarian who checks every book's catalog entry, while MySQL is more relaxed."  
+    ],  
+    "correct_answer_explanation": "This analogy captures the inferred difference in default referential integrity enforcement: SQL Server may enforce constraints more rigorously by default compared to MySQL. Other options focus on irrelevant features (T-SQL dialects) or misrepresent storage mechanisms."  
+  }  
+]

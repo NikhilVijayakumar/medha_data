@@ -1,0 +1,37 @@
+[  
+  {  
+    "id": "integrated_evaluate_001",  
+    "topic": "Fundamentals of Databases",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Critique the accuracy of the statement: 'A database is simply a digital filing cabinet for storing data.' Use examples from the notes to justify your answer.",  
+    "back_answer": "The statement oversimplifies databases. While they store data like a filing cabinet, their core value lies in structured organization, efficient querying, and relationships between data (e.g., linking student records to enrollment tables). The notes emphasize that databases manage information with defined schemas, ensuring consistency and enabling complex operations beyond simple storage."  
+  },  
+  {  
+    "id": "integrated_evaluate_002",  
+    "topic": "RDBMS vs. Non-RDBMS Systems",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Weigh the pros and cons of using MySQL (open-source RDBMS) versus a NoSQL database like MongoDB for managing student records with frequent updates and unstructured data fields.",  
+    "back_answer": "MySQL excels in structured data with ACID compliance, ensuring referential integrity via foreign keys (as shown in enrollment tables). However, it struggles with unstructured data. MongoDB offers flexibility for unstructured fields but lacks built-in relational constraints, risking orphaned records. For student records requiring both structure and scalability, a hybrid approach might be optimal."  
+  },  
+  {  
+    "id": "integrated_evaluate_003",  
+    "topic": "SQL vs. Dialects (T-SQL/PL/SQL)",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Evaluate the effectiveness of using T-SQL (Microsoft SQL Server) versus PL/SQL (Oracle) for cross-platform database applications.",  
+    "back_answer": "T-SQL and PL/SQL are vendor-specific, introducing portability challenges. While they add features like advanced procedural logic, reliance on dialects can increase development costs and reduce code reusability. For cross-platform apps, adhering to ANSI SQL standards is more efficient unless specific RDBMS features (e.g., T-SQL’s window functions) are critical."  
+  },  
+  {  
+    "id": "integrated_evaluate_004",  
+    "topic": "Primary Key Design",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Identify a potential flaw in using a non-unique column (e.g., 'Name') as the primary key for a Students table. Support your critique with principles from the notes.",  
+    "back_answer": "A non-unique column like 'Name' violates the primary key’s requirement to uniquely identify rows. The notes state that primary keys must enforce uniqueness and avoid NULLs. Using 'Name' risks duplicate entries (e.g., two students named John Smith) and undermines referential integrity in foreign key relationships."  
+  },  
+  {  
+    "id": "integrated_evaluate_005",  
+    "topic": "Referential Integrity",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Assess the trade-offs of enforcing foreign key constraints versus allowing manual data entry in an Enrollment table. Use examples from the notes to explain.",  
+    "back_answer": "Enforcing foreign keys prevents orphaned records (e.g., a student ID in Enrollment that doesn’t exist in Students), ensuring referential integrity. However, it may slow down inserts/updates if not indexed properly. Manual entry reduces overhead but increases risk of data inconsistency, as highlighted by the notes’ emphasis on relationships and validation."  
+  }  
+]

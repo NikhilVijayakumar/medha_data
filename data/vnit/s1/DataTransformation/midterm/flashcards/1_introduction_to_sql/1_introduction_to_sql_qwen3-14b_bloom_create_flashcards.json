@@ -1,0 +1,37 @@
+[
+  {
+    "id": "integrated_create_001",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Creating",
+    "front_prompt": "Design a relational database schema for a university system that includes students, courses, and enrollments. Define tables, columns, primary keys, and foreign key relationships.",
+    "back_answer": "University Database Schema:\n- **Students Table**: Columns = StudentID (PK), Name, Major, Email.\n- **Courses Table**: CourseID (PK), CourseName, Credits, Department.\n- **Enrollments Table**: EnrollmentID (PK), StudentID (FK to Students), CourseID (FK to Courses), Grade. \nForeign keys enforce referential integrity: A student cannot enroll in a course that doesn’t exist, and grades are tied to valid student-course pairs."
+  },
+  {
+    "id": "integrated_create_002",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Creating",
+    "front_prompt": "Invent a metaphor to explain primary keys and foreign keys in relational databases.",
+    "back_answer": "Imagine a library where each book has a unique ISBN (primary key). A shelf label (foreign key) on a student’s desk points to the ISBN of the book they’re reading. The ISBN ensures the book is uniquely identified, while the shelf label links the student to their specific book without duplicating the entire book’s data."
+  },
+  {
+    "id": "integrated_create_003",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Creating",
+    "front_prompt": "From first principles, reconstruct how a SELECT query retrieves data from multiple tables with a JOIN operation.",
+    "back_answer": "1. **Parse Query**: The database engine analyzes the SQL syntax to identify tables (e.g., Students, Enrollments) and columns needed.\n2. **Locate Tables**: Find the physical storage locations of Students and Enrollments tables.\n3. **Match Rows**: Use the foreign key (StudentID) in Enrollments to find matching rows in Students.\n4. **Combine Data**: Merge matching rows into a single result set, adding columns from both tables (e.g., StudentName, CourseID).\n5. **Return Result**: Output the combined data as specified by the query."
+  },
+  {
+    "id": "integrated_create_004",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Creating",
+    "front_prompt": "Synthesize an analogy that explains how referential integrity prevents orphaned records in a database.",
+    "back_answer": "Referential integrity is like a family tree: If a parent node (e.g., a 'Department' table entry) is deleted, all child nodes (e.g., 'Employees' linked to that department) must either be updated to point to another valid parent or also deleted. This prevents orphaned records where an employee has no department to belong to."
+  },
+  {
+    "id": "integrated_create_005",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Creating",
+    "front_prompt": "Design a system using SQL transactions to ensure that transferring funds between bank accounts is atomic and consistent.",
+    "back_answer": "Fund Transfer System:\n1. **BEGIN TRANSACTION**: Start a transaction.\n2. **DEBIT ACCOUNT A**: Subtract the amount from AccountA (with a CHECK constraint to prevent negative balances).\n3. **CREDIT ACCOUNT B**: Add the same amount to AccountB.\n4. **COMMIT**: If both steps succeed, save changes permanently.\n5. **ROLLBACK**: If an error occurs (e.g., insufficient funds), revert both steps to maintain consistency."
+  }
+]

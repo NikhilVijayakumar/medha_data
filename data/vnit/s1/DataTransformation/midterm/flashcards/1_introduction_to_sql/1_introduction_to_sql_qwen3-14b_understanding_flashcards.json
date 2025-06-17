@@ -1,0 +1,72 @@
+[  
+  {  
+    "id": "integrated_understand_001",  
+    "topic": "Introduction to Relational Databases and SQL",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain what a database is in your own words.",  
+    "back_answer": "A database is like a digital filing cabinet that stores information in an organized way. It keeps data such as student records or product details, making it easy to find and manage."  
+  },  
+  {  
+    "id": "integrated_understand_002",  
+    "topic": "Introduction to Relational Databases and SQL",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Give an analogy for a relational database management system (RDBMS).",  
+    "back_answer": "An RDBMS is like a recipe book. Each recipe (table) has ingredients (columns), and the same ingredient can appear in multiple recipes, linking them together."  
+  },  
+  {  
+    "id": "integrated_understand_003",  
+    "topic": "Introduction to Relational Databases and SQL",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain SQL to a 5-year-old.",  
+    "back_answer": "SQL is like a magic language you use to ask your toy box (database) questions, like 'Give me all the red blocks' or 'Add this new teddy bear to the box.'"  
+  },  
+  {  
+    "id": "integrated_understand_004",  
+    "topic": "Introduction to Relational Databases and SQL",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Paraphrase what a primary key is.",  
+    "back_answer": "A primary key is a special column in a table that acts like a unique ID for each row, ensuring no two rows are the same."  
+  },  
+  {  
+    "id": "integrated_understand_005",  
+    "topic": "Introduction to Relational Databases and SQL",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "How would you explain foreign keys using an analogy?",  
+    "back_answer": "Foreign keys are like address labels on packages. They link a package (row) in one box (table) to another box by matching the recipient's name (primary key)."  
+  },  
+  {  
+    "id": "integrated_understand_006",  
+    "topic": "Introduction to Relational Databases and SQL",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Simplify 'referential integrity' for someone with no prior knowledge.",  
+    "back_answer": "Referential integrity means that if a package (record) has an address label (foreign key), the name on it must exist in another box (table). It keeps data from getting lost or broken."  
+  },  
+  {  
+    "id": "integrated_understand_007",  
+    "topic": "Introduction to Relational Databases and SQL",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain how tables relate to each other in an RDBMS.",  
+    "back_answer": "Tables are connected through shared columns (like a common ingredient in recipes). This lets you combine data from different tables, such as linking students to their courses."  
+  },  
+  {  
+    "id": "integrated_understand_008",  
+    "topic": "Introduction to Relational Databases and SQL",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Describe 'structured data' in your own words.",  
+    "back_answer": "Structured data is information organized into a fixed format, like rows and columns, so it’s easy to search and analyze."  
+  },  
+  {  
+    "id": "integrated_understand_009",  
+    "topic": "Introduction to Relational Databases and SQL",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "What is the purpose of a primary key? Explain simply.",  
+    "back_answer": "A primary key ensures every item in a list (row) has a unique identifier, like a name tag that no one else shares."  
+  },  
+  {  
+    "id": "integrated_understand_010",  
+    "topic": "Introduction to Relational Databases and SQL",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "How do you explain 'table structure' to a child?",  
+    "back_answer": "A table is like a grid with rows (like lines) and columns (like categories), where each cell holds one piece of information, such as your name or favorite color."  
+  }  
+]

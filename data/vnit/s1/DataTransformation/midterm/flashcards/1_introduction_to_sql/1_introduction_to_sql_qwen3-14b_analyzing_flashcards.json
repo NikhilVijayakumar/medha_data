@@ -1,0 +1,30 @@
+[
+  {
+    "id": "integrated_analyze_001",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Analyzing",
+    "front_prompt": "Break down the structure of a relational database into its core components and explain how they interact.",
+    "back_answer": "A relational database consists of tables, columns (attributes), rows (records/tuples), primary keys, and foreign keys. Tables organize data in rows and columns. Columns define specific attributes (e.g., StudentID, Name). Rows represent individual records. Primary keys uniquely identify each row (e.g., StudentID in the Students table). Foreign keys link tables by referencing another table's primary key (e.g., StudentID in the Enrollment table references Students.StudentID), ensuring referential integrity and enabling relationships between data."
+  },
+  {
+    "id": "integrated_analyze_002",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Analyzing",
+    "front_prompt": "Compare and contrast a primary key and a foreign key in the context of relational databases.",
+    "back_answer": "A **primary key** uniquely identifies each row in a table (e.g., StudentID in the Students table) and enforces uniqueness and non-null constraints. A **foreign key** is a column or set of columns that links to another table's primary key (e.g., StudentID in the Enrollment table), establishing relationships between tables. While both ensure data integrity, the primary key ensures uniqueness within its own table, while the foreign key maintains referential integrity across tables."
+  },
+  {
+    "id": "integrated_analyze_003",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Analyzing",
+    "front_prompt": "Identify a potential flawed assumption in the design of a relational database without foreign key constraints.",
+    "back_answer": "A flawed assumption is that relationships between tables are automatically enforced. Without foreign keys, there is no guarantee that data in related tables (e.g., Enrollment.StudentID) corresponds to valid entries in another table (Students.StudentID). This can lead to orphaned records or inconsistencies, violating referential integrity and making the database prone to errors."
+  },
+  {
+    "id": "integrated_analyze_004",
+    "topic": "Introduction to Relational Databases and SQL",
+    "bloom_level": "Analyzing",
+    "front_prompt": "Compare T-SQL (Transact-SQL) and PL/SQL, highlighting their key differences and similarities.",
+    "back_answer": "T-SQL is Microsoft's dialect of SQL used with SQL Server, while PL/SQL is Oracle's procedural extension. Both support data manipulation, transaction control, and procedural logic but differ in syntax (e.g., T-SQL uses `BEGIN...END` for blocks, while PL/SQL uses `BEGIN...EXCEPTION`). They are similar in their adherence to SQL standards but include vendor-specific features tailored to their respective RDBMS."
+  }
+]

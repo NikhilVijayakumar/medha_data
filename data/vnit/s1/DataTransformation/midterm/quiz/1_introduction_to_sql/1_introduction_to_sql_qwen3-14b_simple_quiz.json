@@ -1,0 +1,42 @@
+[  
+  {  
+    "id": "q101",  
+    "topic": "Fundamentals of Databases",  
+    "question_text": "What is the primary purpose of a database, as described in the notes?",  
+    "options": ["To store unstructured data", "To act as an electronic filing cabinet for organized data storage", "To manage software applications", "To perform mathematical calculations"],  
+    "correct_answer": "To act as an electronic filing cabinet for organized data storage",  
+    "correct_answer_explanation": "The notes explicitly describe a database as 'an electronic filing cabinet that is structured to make finding and using information easier,' emphasizing organized data storage."  
+  },  
+  {  
+    "id": "q102",  
+    "topic": "Relational Database Management Systems (RDBMS)",  
+    "question_text": "Which of the following is a key characteristic of an RDBMS?",  
+    "options": ["Data is stored in hierarchical structures", "Tables are linked through relationships defined by common columns", "Data is stored as unstructured text", "It uses NoSQL queries for data retrieval"],  
+    "correct_answer": "Tables are linked through relationships defined by common columns",  
+    "correct_answer_explanation": "The notes state that RDBMS 'link tables based on common columns,' establishing structured relationships between tables."  
+  },  
+  {  
+    "id": "q103",  
+    "topic": "Structured Query Language (SQL) Overview",  
+    "question_text": "Which SQL operation is used to retrieve specific data from a table?",  
+    "options": ["INSERT", "UPDATE", "SELECT", "DELETE"],  
+    "correct_answer": "SELECT",  
+    "correct_answer_explanation": "The notes mention that SQL allows 'querying' (retrieving data) as one of its core functions, with SELECT being the standard command for this purpose."  
+  },  
+  {  
+    "id": "q104",  
+    "topic": "Core Relational Concepts and Terminology",  
+    "question_text": "What is the role of a primary key in a database table?",  
+    "options": ["To enforce relationships between tables", "To uniquely identify each row in a table", "To store foreign keys from other tables", "To define the data type of columns"],  
+    "correct_answer": "To uniquely identify each row in a table",  
+    "correct_answer_explanation": "The notes clarify that a primary key 'uniquely identifies each row in a table' and 'cannot contain NULL values,' ensuring distinct records."  
+  },  
+  {  
+    "id": "q105",  
+    "topic": "Core Relational Concepts and Terminology",  
+    "question_text": "In the provided Enrollment table example, which columns act as foreign keys?",  
+    "options": ["EnrollmentID", "StudentID and CourseID", "Grade", "CourseName"],  
+    "correct_answer": "StudentID and CourseID",  
+    "correct_answer_explanation": "The notes state that in the Enrollment table, 'StudentID and CourseID columns are foreign keys' referencing primary keys in the Students and Courses tables, respectively."  
+  }  
+]

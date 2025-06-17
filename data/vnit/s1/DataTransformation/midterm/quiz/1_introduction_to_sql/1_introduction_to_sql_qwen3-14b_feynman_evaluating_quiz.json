@@ -1,0 +1,47 @@
+[
+  {
+    "id": "feynman_q_001_related_to_primary_q_id_q_evaluate_primary_001",
+    "type": "simplification",
+    "question_text": "Explain why allowing NULLs in foreign keys breaks referential integrity using a simple analogy (e.g., 'explain like I'm 5').",
+    "options": [
+      "It's like having a broken link on the internet that points to nowhere.",
+      "It's like writing someone's name incorrectly on a letter, so it gets lost in the mail.",
+      "It's like leaving your house key under the mat so anyone can enter.",
+      "It's like using different languages when communicating with friends, causing confusion.",
+      "It's like having two clocks that show different times but never agree."
+    ],
+    "correct_answer": "It's like having a broken link on the internet that points to nowhere.",
+    "correct_answer_explanation": "A foreign key with NULL is like a broken link - it claims to connect to data (like a student record) but actually doesn't point to anything valid. Referential integrity requires every foreign key value to either match an existing primary key or be explicitly null, not just allowed to be missing by accident."
+  },
+  {
+    "id": "feynman_q_002_related_to_primary_q_id_q_evaluate_primary_002",
+    "type": "conceptual_transformation",
+    "question_text": "Which analogy best explains why using PL/SQL in PostgreSQL is like wearing the wrong shoes for a task?",
+    "options": [
+      "Putting on hiking boots to run a marathon.",
+      "Wearing slippers to climb Mount Everest.",
+      "Using roller skates to walk through a grocery store.",
+      "Trying to swim with flip-flops in the ocean.",
+      "Wearing snow boots during a summer picnic."
+    ],
+    "correct_answer": "Wearing slippers to climb Mount Everest.",
+    "correct_answer_explanation": "Just as slippers are inadequate for climbing mountains, PL/SQL (Oracle's procedural language) is not designed for PostgreSQL. Each database has native tools (like PL/pgSQL for PostgreSQL), and using foreign tools introduces inefficiencies and compatibility issues that compromise performance."
+  },
+  {
+    "id": "feynman_q_003_related_to_primary_q_id_q_evaluate_primary_003",
+    "type": "design_rationale_explanation",
+    "question_text": "Why is Oracle DB better suited for high-transaction e-commerce systems than MySQL? (Select all that apply)",
+    "options": [
+      "Oracle has built-in support for complex transactions with rollback capabilities.",
+      "MySQL lacks enterprise-level features like advanced security protocols.",
+      "Oracle provides automatic scaling while MySQL requires manual configuration.",
+      "Oracle's ACID compliance is stricter than MySQL's implementation.",
+      "Both databases have identical performance characteristics."
+    ],
+    "correct_answer": [
+      "Oracle has built-in support for complex transactions with rollback capabilities.",
+      "Oracle provides automatic scaling while MySQL requires manual configuration."
+    ],
+    "correct_answer_explanation": "Oracle DB excels in high-transaction environments due to its native transaction control features (like robust rollback mechanisms) and automated scalability. While both databases support ACID compliance, Oracle's enterprise-grade architecture is specifically engineered for mission-critical systems with automatic scaling, unlike MySQL which requires manual intervention for similar capabilities."
+  }
+]
