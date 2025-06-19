@@ -1,0 +1,44 @@
+[  
+  {  
+    "id": "integrated_apply_001",  
+    "topic": "Data Definition Language (DDL) Commands Overview",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Write a `CREATE TABLE` statement for a 'Students' table with columns: StudentID (primary key), Name (VARCHAR(50), NOT NULL), Age (INT, CHECK constraint to allow only values ≥ 18), and Major (VARCHAR(50) with DEFAULT value 'Undeclared').",  
+    "back_answer": "```sql\nCREATE TABLE Students (\n    StudentID INT PRIMARY KEY,\n    Name VARCHAR(50) NOT NULL,\n    Age INT CHECK (Age >= 18),\n    Major VARCHAR(50) DEFAULT 'Undeclared'\n);\n```\nThe table includes a primary key, NOT NULL constraint on Name, CHECK constraint for Age ≥ 18, and a DEFAULT value for Major."  
+  },  
+  {  
+    "id": "integrated_apply_002",  
+    "topic": "Modifying Tables with ALTER TABLE Statement",  
+    "bloom_level": "Applying",  
+    "front_prompt": "You need to add an 'Email' column (VARCHAR(100)) to the existing 'Employees' table. Then, add a UNIQUE constraint on the Email column. Write the SQL commands for this.",  
+    "back_answer": "```sql\nALTER TABLE Employees\nADD Email VARCHAR(100);\n\nALTER TABLE Employees\nADD CONSTRAINT UQ_Email UNIQUE (Email);\n```\nThe first command adds the Email column, and the second enforces uniqueness on it using a named constraint following SQL Server's `UQ_` prefix convention."  
+  },  
+  {  
+    "id": "integrated_apply_003",  
+    "topic": "Metadata Inspection with SP_HELP Stored Procedure",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Explain how to use `SP_HELP` to identify all foreign key constraints on the 'Orders' table and describe what metadata you would inspect to troubleshoot a missing constraint.",  
+    "back_answer": "Execute `EXEC sp_help Orders;`. This will display columns, data types, nullability, and constraints (including foreign keys). To troubleshoot a missing constraint, check the output for listed FOREIGN KEY relationships. If expected constraints are absent, verify that the constraint was added via `ALTER TABLE ... ADD CONSTRAINT` or check for typos in the constraint name."  
+  },  
+  {  
+    "id": "integrated_apply_004",  
+    "topic": "Database Object Renaming with SP_RENAME Procedure",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Rename the 'DepartmentID' column to 'DeptCode' in the 'Employees' table using `SP_RENAME`. Also, explain why this might break application code.",  
+    "back_answer": "```sql\nEXEC sp_rename 'Employees.DepartmentID', 'DeptCode', 'COLUMN';\n```\nRenaming a column breaks existing SQL queries, stored procedures, or application code that references the old column name ('DepartmentID'), leading to errors unless all dependencies are updated."  
+  },  
+  {  
+    "id": "integrated_apply_005",  
+    "topic": "Table Deletion with DROP TABLE Command",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Write a `DROP TABLE` command for the 'TempData' table. Explain why this operation is irreversible and how to prevent accidental deletion in production.",  
+    "back_answer": "```sql\nDROP TABLE TempData;\n```\nThis permanently deletes the table and its data without recovery options unless backups exist. To prevent accidents, use `DROP TABLE IF EXISTS` with caution, enforce approval workflows for DDL changes, or test in non-production environments first."  
+  },  
+  {  
+    "id": "integrated_apply_006",  
+    "topic": "SQL Server Specific DDL Implementation Details",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Create a table 'Projects' under the 'dbo' schema with a primary key named 'PK_Projects_ID'. Explain why using `dbo` is important.",  
+    "back_answer": "```sql\nCREATE TABLE dbo.Projects (\n    ProjectID INT CONSTRAINT PK_Projects_ID PRIMARY KEY,\n    Name VARCHAR(100) NOT NULL\n);\n```\nThe `dbo` schema (Database Owner) ensures the table is accessible to all users and follows SQL Server's default ownership model. It avoids ambiguity for objects not explicitly assigned to other schemas."  
+  }  
+]

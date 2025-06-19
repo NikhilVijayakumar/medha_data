@@ -1,0 +1,44 @@
+[  
+  {  
+    "id": "ddl_create_001",  
+    "topic": "Data Definition Language (DDL) Commands Overview",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Design a database schema for a university system using CREATE TABLE, ALTER TABLE, and DROP TABLE. Include tables for Students, Courses, and Enrollments with appropriate constraints and relationships.",  
+    "back_answer": "University Schema Design:\n- **Students**: `CREATE TABLE STUDENTS (StudentID INT PRIMARY KEY, Name VARCHAR(100) NOT NULL, Email VARCHAR(150) UNIQUE);`\n- **Courses**: `CREATE TABLE COURSES (CourseID CHAR(6) PRIMARY KEY, Title VARCHAR(200), Credits INT CHECK (Credits > 0));`\n- **Enrollments**: Use `ALTER TABLE ENROLLMENTS ADD CONSTRAINT FK_Student FOREIGN KEY (StudentID) REFERENCES STUDENTS(StudentID);` to link students. Drop tables with `DROP TABLE ENROLLMENTS;` if needed, ensuring no dependencies exist first."  
+  },  
+  {  
+    "id": "ddl_analogy_002",  
+    "topic": "Metadata Inspection with SP_HELP Stored Procedure",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Invent an analogy to explain how SP_HELP works, comparing it to a tool or process in everyday life.",  
+    "back_answer": "'SP_HELP is like a library catalog card. When you look up a book (table), the card shows its author (schema), pages (columns), and notes about its structure (constraints). If you want to know how the book connects to others, it lists references—like foreign keys linking chapters to other volumes.'"  
+  },  
+  {  
+    "id": "ddl_reconstruct_003",  
+    "topic": "Modifying Tables with ALTER TABLE Statement",  
+    "bloom_level": "Creating",  
+    "front_prompt": "From first principles, reconstruct the logic for adding a column and then dropping it using ALTER TABLE. Explain why caution is needed.",  
+    "back_answer": "1. **Add Column**: `ALTER TABLE EMPLOYEE ADD Email VARCHAR(100);` – this appends new storage space to each row without affecting existing data.\n2. **Drop Column**: `ALTER TABLE EMPLOYEE DROP COLUMN Email;` – permanently deletes the column and all its data, like erasing a notebook page. Caution is required because data loss is irreversible and may break dependent queries or applications."  
+  },  
+  {  
+    "id": "ddl_synthesis_004",  
+    "topic": "Database Object Renaming with SP_RENAME Procedure",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Synthesize an explanation of the risks and benefits of renaming a table using SP_RENAME, combining concepts from schema management and dependency analysis.",  
+    "back_answer": "'Renaming a table via SP_RENAME updates its name in metadata but does not change its data or relationships. Benefits include improved clarity (e.g., changing `EMP` to `Employees`). Risks involve breaking application code or views that reference the old name, akin to renaming a street without updating all maps—users may get lost unless dependencies are audited.'"  
+  },  
+  {  
+    "id": "ddl_invent_005",  
+    "topic": "Irreversible DDL Operations Considerations",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Invent a metaphor for the permanence of DROP TABLE, contrasting it with transactional operations like DELETE.",  
+    "back_answer": "'DROP TABLE is like burning a house down—it destroys the structure and all contents permanently. A DELETE operation is more like emptying rooms; you can always rebuild the house (table) from blueprints (schema), but once burned, recovery requires backups.'"  
+  },  
+  {  
+    "id": "ddl_design_006",  
+    "topic": "Constraint Management via ALTER TABLE",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Design a scenario where adding a FOREIGN KEY constraint with ALTER TABLE prevents data inconsistency, and explain how it works.",  
+    "back_answer": "'Scenario: A `Orders` table references `Customers.CustomerID`. Using `ALTER TABLE Orders ADD CONSTRAINT FK_Customer FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID);` ensures that only existing CustomerIDs can be entered in Orders. If a non-existent ID is attempted, SQL Server blocks the operation, preventing orphaned orders.'"  
+  }  
+]

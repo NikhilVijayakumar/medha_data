@@ -1,0 +1,107 @@
+[  
+  {  
+    "id": "integrated_remember_001",  
+    "topic": "Data Definition Language (DDL) Commands Overview",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the purpose of DDL commands in SQL Server?",  
+    "back_answer": "DDL commands are used to define and manage the structure of a database schema, including creating, altering, and deleting database objects such as tables."  
+  },  
+  {  
+    "id": "integrated_remember_002",  
+    "topic": "Core DDL Operations in SQL Server",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What are the three primary DDL commands for managing tables?",  
+    "back_answer": "'CREATE TABLE', 'ALTER TABLE', and 'DROP TABLE'."  
+  },  
+  {  
+    "id": "integrated_remember_003",  
+    "topic": "Schema and Object Management Concepts",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the default schema for user-created objects in SQL Server?",  
+    "back_answer": "'dbo' (Database Owner)."  
+  },  
+  {  
+    "id": "integrated_remember_004",  
+    "topic": "Table Creation with CREATE TABLE Statement",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the syntax structure for defining columns in a 'CREATE TABLE' statement?",  
+    "back_answer": "'ColumnName1 DataType1 [Constraint1] [Constraint2] ...', specifying column names, data types, and constraints."  
+  },  
+  {  
+    "id": "integrated_remember_005",  
+    "topic": "Inline Constraint Implementation",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "Which constraint ensures a column cannot contain NULL values?",  
+    "back_answer": "'NOT NULL' constraint."  
+  },  
+  {  
+    "id": "integrated_remember_006",  
+    "topic": "Modifying Tables with ALTER TABLE Statement",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the syntax for adding a new column to a table?",  
+    "back_answer": "'ALTER TABLE TableName ADD ColumnName DataType;'"  
+  },  
+  {  
+    "id": "integrated_remember_007",  
+    "topic": "Column Addition and Removal Operations",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is a critical warning when using 'DROP COLUMN'?",  
+    "back_answer": "'DROP COLUMN' permanently deletes data stored in those columns."  
+  },  
+  {  
+    "id": "integrated_remember_008",  
+    "topic": "Constraint Management via ALTER TABLE",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "How do you add a UNIQUE constraint to a column using 'ALTER TABLE'?",  
+    "back_answer": "'ALTER TABLE TableName ADD CONSTRAINT ConstraintName UNIQUE (ColumnName);'"  
+  },  
+  {  
+    "id": "integrated_remember_009",  
+    "topic": "Metadata Inspection with SP_HELP Stored Procedure",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the 'SP_HELP' stored procedure retrieve?",  
+    "back_answer": "'SP_HELP' retrieves metadata about a table, including columns, constraints, and other properties."  
+  },  
+  {  
+    "id": "integrated_remember_010",  
+    "topic": "Retrieving Table Metadata Details",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the syntax to execute 'SP_HELP' for a table named 'EMPLOYEE'?",  
+    "back_answer": "'EXEC sp_help EMPLOYEE;'"  
+  },  
+  {  
+    "id": "integrated_remember_011",  
+    "topic": "Database Object Renaming with SP_RENAME Procedure",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What parameter is required to rename a column using 'SP_RENAME'?",  
+    "back_answer": "'COLUMN' specifies that the object being renamed is a column."  
+  },  
+  {  
+    "id": "integrated_remember_012",  
+    "topic": "Column and Table Name Modification Syntax",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the syntax to rename a table 'EMPLOYEE' to 'Employees'?",  
+    "back_answer": "'SP_RENAME 'EMPLOYEE', 'Employees';'"  
+  },  
+  {  
+    "id": "integrated_remember_013",  
+    "topic": "Table Deletion with DROP TABLE Command",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the permanent consequence of executing 'DROP TABLE'?",  
+    "back_answer": "'DROP TABLE' permanently deletes a table and all its data, which cannot be easily recovered."  
+  },  
+  {  
+    "id": "integrated_remember_014",  
+    "topic": "Irreversible DDL Operations Considerations",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "Why should DDL commands be used cautiously in production environments?",  
+    "back_answer": "'Any DDL commands executed cannot be undone' without specific recovery mechanisms."  
+  },  
+  {  
+    "id": "integrated_remember_015",  
+    "topic": "SQL Server Specific DDL Implementation Details",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the standard naming convention for UNIQUE constraints in SQL Server?",  
+    "back_answer": "'UQ_' prefix."  
+  }  
+]

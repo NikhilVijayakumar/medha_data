@@ -1,0 +1,51 @@
+[  
+  {  
+    "id": "integrated_analyze_001",  
+    "topic": "Data Definition Language (DDL) Commands Overview",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Break down the core DDL operations in SQL Server (CREATE TABLE, ALTER TABLE, DROP TABLE) and explain their interdependencies in schema management.",  
+    "back_answer": "1. **CREATE TABLE** establishes new database objects with defined columns, data types, and constraints. It forms the foundation of table structure. 2. **ALTER TABLE** modifies existing tables by adding/removing columns or adjusting constraints, relying on prior CREATE operations. 3. **DROP TABLE** permanently deletes tables, requiring careful planning as it removes all dependent metadata (e.g., foreign keys). These commands interdepend: ALTER depends on a pre-existing table from CREATE, and DROP invalidates both."  
+  },  
+  {  
+    "id": "integrated_analyze_002",  
+    "topic": "Table Creation with CREATE TABLE Statement",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Compare inline constraint implementation (e.g., PRIMARY KEY, CHECK) with separate CONSTRAINT clauses in CREATE TABLE syntax. Highlight risks of each approach.",  
+    "back_answer": "**Inline constraints** are defined within column definitions (e.g., `ENAME VARCHAR(50) NOT NULL`). They are simpler but lack explicit naming, complicating future modifications. **Separate CONSTRAINT clauses** (e.g., `CONSTRAINT UQ_ENAME UNIQUE (ENAME)`) provide named, reusable constraints but require additional syntax. Risks: Inline constraints may obscure dependencies, while separate clauses demand precise naming to avoid conflicts."  
+  },  
+  {  
+    "id": "integrated_analyze_003",  
+    "topic": "Modifying Tables with ALTER TABLE Statement",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Identify a potential flawed assumption in using `ALTER TABLE ... DROP COLUMN` without first inspecting dependencies via SP_HELP. Explain the risk.",  
+    "back_answer": "A flawed assumption is that dropping a column does not affect dependent objects (e.g., views, stored procedures). The note warns that `DROP COLUMN` permanently deletes data and may break dependencies. Using `SP_HELP` first reveals relationships (e.g., foreign keys or application references), preventing schema integrity issues."  
+  },  
+  {  
+    "id": "integrated_analyze_004",  
+    "topic": "Metadata Inspection with SP_HELP Stored Procedure",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Analyze the role of `SP_HELP` in constraint identification. How does it aid in debugging foreign key relationships?",  
+    "back_answer": "`SP_HELP` retrieves metadata like column definitions, primary/foreign keys, and constraints. For debugging, it exposes foreign key relationships explicitly (e.g., which columns reference other tables), enabling verification of referential integrity. This is critical for troubleshooting errors like orphaned records or constraint violations."  
+  },  
+  {  
+    "id": "integrated_analyze_005",  
+    "topic": "Database Object Renaming with SP_RENAME Procedure",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Compare renaming a table versus renaming a column using `SP_RENAME`. What are the implications for application compatibility?",  
+    "back_answer": "**Renaming tables** (e.g., `EMPLOYEE` → `Employees`) may break queries or stored procedures referencing the old name. **Column renames** (e.g., `ENAME` → `EmployeeName`) also risk breaking code unless applications use abstraction layers. Both require updating dependent objects, but table renames are more disruptive due to broader usage in joins and DML operations."  
+  },  
+  {  
+    "id": "integrated_analyze_006",  
+    "topic": "Table Deletion with DROP TABLE Command",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Evaluate the assumption that `DROP TABLE` is 'irreversible.' How do recovery strategies mitigate this risk?",  
+    "back_answer": "`DROP TABLE` permanently deletes data and metadata, but recovery depends on database backups or transaction logs (if enabled). The note emphasizes production risks, so mitigation includes: 1) Verifying with `SP_HELP` before deletion, 2) Using transactions (where supported), and 3) Maintaining regular backups. However, SQL Server does not support rolling back DDL commands by default."  
+  },  
+  {  
+    "id": "integrated_analyze_007",  
+    "topic": "SQL Server Specific DDL Implementation Details",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Break down the `dbo` schema's role in object ownership. How does it impact constraint naming conventions (e.g., UQ_, FK_ prefixes)?",  
+    "back_answer": "`dbo` is the default schema for user-created objects, ensuring consistent ownership under the database owner (DBO). Constraint names like `UQ_ENAME` or `FK_DEPT` are prefixed to avoid conflicts. This standardization simplifies management but requires explicit naming when using `ALTER TABLE ADD CONSTRAINT`, as inline constraints lack automatic prefixes."  
+  }  
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "integrated_understand_001",
+    "topic": "Data Definition Language (DDL) Commands Overview",
+    "bloom_level": "Understanding",
+    "front_prompt": "Explain CREATE TABLE in your own words.",
+    "back_answer": "CREATE TABLE is a command used to design a new table in a database. You define its structure by naming columns, choosing data types, and adding rules like primary keys or default values."
+  },
+  {
+    "id": "integrated_understand_002",
+    "topic": "Data Definition Language (DDL) Commands Overview",
+    "bloom_level": "Understanding",
+    "front_prompt": "Give an analogy for ALTER TABLE.",
+    "back_answer": "ALTER TABLE is like editing a recipe. You can add new ingredients (columns), remove old ones, or adjust cooking instructions (constraints) without starting the dish from scratch."
+  },
+  {
+    "id": "integrated_understand_003",
+    "topic": "Data Definition Language (DDL) Commands Overview",
+    "bloom_level": "Understanding",
+    "front_prompt": "Explain DROP TABLE to a 5-year-old.",
+    "back_answer": "DROP TABLE is like erasing a drawing completely. Once you do it, the picture (table) and everything on it (data) disappear forever."
+  },
+  {
+    "id": "integrated_understand_004",
+    "topic": "Table Creation with CREATE TABLE Statement",
+    "bloom_level": "Understanding",
+    "front_prompt": "Explain primary key constraints in your own words.",
+    "back_answer": "A primary key is like a unique ID for each row in a table. It ensures no two rows are exactly the same and helps the database find data quickly."
+  },
+  {
+    "id": "integrated_understand_005",
+    "topic": "Table Creation with CREATE TABLE Statement",
+    "bloom_level": "Understanding",
+    "front_prompt": "Give an analogy for a CHECK constraint.",
+    "back_answer": "A CHECK constraint is like a parent checking if homework is done before letting you play. It enforces rules (e.g., salary can't be negative)."
+  },
+  {
+    "id": "integrated_understand_006",
+    "topic": "Modifying Tables with ALTER TABLE Statement",
+    "bloom_level": "Understanding",
+    "front_prompt": "Explain DROP COLUMN to a novice.",
+    "back_answer": "DROP COLUMN removes a column from a table, like tearing out a page from a notebook. All the information on that page is lost forever."
+  },
+  {
+    "id": "integrated_understand_007",
+    "topic": "Metadata Inspection with SP_HELP Stored Procedure",
+    "bloom_level": "Understanding",
+    "front_prompt": "Explain what SP_HELP does in your own words.",
+    "back_answer": "SP_HELP is a tool that shows details about a table, like its columns, data types, and rules. It’s like getting a report card for the table."
+  },
+  {
+    "id": "integrated_understand_008",
+    "topic": "Database Object Renaming with SP_RENAME Procedure",
+    "bloom_level": "Understanding",
+    "front_prompt": "Give an analogy for renaming a database object.",
+    "back_answer": "Renaming a table is like changing your nickname. The real name (table) stays the same, but others will use the new name to find it."
+  },
+  {
+    "id": "integrated_understand_009",
+    "topic": "Table Deletion with DROP TABLE Command",
+    "bloom_level": "Understanding",
+    "front_prompt": "Explain why DROP TABLE is irreversible.",
+    "back_answer": "DROP TABLE deletes a table and its data permanently, like throwing away a notebook. Once gone, you can’t recover the pages unless you have a backup."
+  },
+  {
+    "id": "integrated_understand_010",
+    "topic": "SQL Server Specific DDL Implementation Details",
+    "bloom_level": "Understanding",
+    "front_prompt": "Explain the 'dbo' schema to someone new.",
+    "back_answer": "'dbo' is the default organizer for tables in SQL Server. It’s like a labeled box where all your database items are stored unless you put them elsewhere."
+  }
+]

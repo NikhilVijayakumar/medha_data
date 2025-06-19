@@ -1,0 +1,44 @@
+[
+  {
+    "id": "integrated_evaluate_001",
+    "topic": "Data Definition Language (DDL) Commands Overview",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Critique the accuracy of using DROP TABLE as a reversible operation for data loss prevention.",
+    "back_answer": "The statement is inaccurate. DROP TABLE permanently deletes the table and its data, with no built-in recovery mechanism unless specific database backup/recovery strategies are in place. The notes emphasize that DDL commands like DROP TABLE cannot be undone easily, making it critical to avoid use in production without prior backups."
+  },
+  {
+    "id": "integrated_evaluate_002",
+    "topic": "Table Creation with CREATE TABLE Statement",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Weigh the pros and cons of defining constraints inline (e.g., PRIMARY KEY, CHECK) versus using ADD CONSTRAINT in ALTER TABLE.",
+    "back_answer": "Inline constraints simplify initial table creation but lack flexibility for renaming or modifying later. ADD CONSTRAINT allows explicit control over constraint names and enables easier management (e.g., dropping/revising). However, it requires additional syntax. For complex schemas, ADD CONSTRAINT offers better maintainability despite slightly more verbose code."
+  },
+  {
+    "id": "integrated_evaluate_003",
+    "topic": "Modifying Tables with ALTER TABLE Statement",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Evaluate the effectiveness of using ADD COLUMN versus creating a new table for adding data to an existing schema.",
+    "back_answer": "ADD COLUMN is more efficient for minor modifications, preserving existing data and relationships without disrupting applications. Creating a new table requires migrating data, updating foreign keys, and may break dependencies. However, if the change is major (e.g., adding complex columns with constraints), a new table might be better for structural clarity."
+  },
+  {
+    "id": "integrated_evaluate_004",
+    "topic": "Metadata Inspection with SP_HELP Stored Procedure",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Identify potential flaws in relying solely on SP_HELP for constraint identification and debugging.",
+    "back_answer": "SP_HELP provides basic metadata but lacks granular details about constraint definitions (e.g., exact CHECK conditions or FOREIGN KEY relationships). For advanced debugging, querying system views like sys.foreign_keys or sys.check_constraints is more effective. SP_HELP also does not show dependency chains, which are critical for schema integrity."
+  },
+  {
+    "id": "integrated_evaluate_005",
+    "topic": "Database Object Renaming with SP_RENAME Procedure",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Assess the risks of renaming a table with SP_RENAME in a production environment without prior dependency analysis.",
+    "back_answer": "Renaming a table breaks application code, stored procedures, and foreign key relationships that reference the old name. The notes warn about 'dependency management' and 'application compatibility.' Without updating all dependent objects (e.g., views, triggers), this leads to errors. A safer approach involves using synonyms or schema-bound dependencies for isolation."
+  },
+  {
+    "id": "integrated_evaluate_006",
+    "topic": "SQL Server Specific DDL Implementation Details",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Critique the effectiveness of default dbo schema usage versus custom schemas for large-scale database organization.",
+    "back_answer": "The dbo schema simplifies ownership but can lead to clutter in large databases. Custom schemas improve logical grouping (e.g., separating HR, Finance tables) and reduce naming conflicts. However, managing permissions across schemas adds complexity. The choice depends on whether organizational clarity outweighs administrative overhead."
+  }
+]

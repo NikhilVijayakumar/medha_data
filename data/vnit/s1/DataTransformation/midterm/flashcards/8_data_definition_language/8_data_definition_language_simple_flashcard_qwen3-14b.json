@@ -1,0 +1,107 @@
+[  
+  {  
+    "id": "simple_flash_001",  
+    "topic": "Data Definition Language (DDL) Commands Overview",  
+    "front_prompt": "What are the core DDL operations in SQL Server?",  
+    "back_answer": "The core DDL operations are CREATE TABLE, ALTER TABLE, DROP TABLE, SP_HELP, and SP_RENAME.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_002",  
+    "topic": "Data Definition Language (DDL) Commands Overview",  
+    "front_prompt": "What does the 'dbo' schema represent in SQL Server?",  
+    "back_answer": "'dbo' stands for Database Owner and is the default schema for user-created objects.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_003",  
+    "topic": "Table Creation with CREATE TABLE Statement",  
+    "front_prompt": "What is the syntax structure of the CREATE TABLE statement?",  
+    "back_answer": "`CREATE TABLE TableName (ColumnName1 DataType [Constraint], ColumnName2 DataType [Constraint], ...);`",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_004",  
+    "topic": "Table Creation with CREATE TABLE Statement",  
+    "front_prompt": "How are primary key constraints defined inline in CREATE TABLE?",  
+    "back_answer": "Using `PRIMARY KEY` directly after the column definition (e.g., `EMPID CHAR(5) PRIMARY KEY`).",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_005",  
+    "topic": "Modifying Tables with ALTER TABLE Statement",  
+    "front_prompt": "What is the syntax for adding a new column to a table?",  
+    "back_answer": "`ALTER TABLE TableName ADD ColumnName DataType;`",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_006",  
+    "topic": "Modifying Tables with ALTER TABLE Statement",  
+    "front_prompt": "What warning is associated with DROP COLUMN in ALTER TABLE?",  
+    "back_answer": "'DROP COLUMN' permanently deletes the column and its data; ensure backups are taken first.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_007",  
+    "topic": "Metadata Inspection with SP_HELP Stored Procedure",  
+    "front_prompt": "What does the SP_HELP stored procedure retrieve?",  
+    "back_answer": "'SP_HELP' retrieves metadata about a table, including columns, constraints, and data types.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_008",  
+    "topic": "Metadata Inspection with SP_HELP Stored Procedure",  
+    "front_prompt": "How do you execute the SP_HELP procedure for a table named 'EMPLOYEE'?",  
+    "back_answer": "`EXEC sp_help EMPLOYEE;`",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_009",  
+    "topic": "Database Object Renaming with SP_RENAME Procedure",  
+    "front_prompt": "What is the syntax to rename a column using SP_RENAME?",  
+    "back_answer": "`SP_RENAME 'TableName.OldColumnName', 'NewColumnName', 'COLUMN';`",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_010",  
+    "topic": "Database Object Renaming with SP_RENAME Procedure",  
+    "front_prompt": "What parameter is required to rename a column with SP_RENAME?",  
+    "back_answer": "'COLUMN' must be specified as the third parameter when renaming a column.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_011",  
+    "topic": "Table Deletion with DROP TABLE Command",  
+    "front_prompt": "What is the consequence of using DROP TABLE?",  
+    "back_answer": "'DROP TABLE' permanently deletes the table and all its data; this operation is irreversible.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_012",  
+    "topic": "SQL Server Specific DDL Implementation Details",  
+    "front_prompt": "What naming convention does SQL Server use for UNIQUE constraints?",  
+    "back_answer": "'UQ_' is the standard prefix for UNIQUE constraint names.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_013",  
+    "topic": "SQL Server Specific DDL Implementation Details",  
+    "front_prompt": "What is the default schema for user-created objects in SQL Server?",  
+    "back_answer": "'dbo' (Database Owner) is the default schema for user-created objects.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_014",  
+    "topic": "Modifying Tables with ALTER TABLE Statement",  
+    "front_prompt": "How do you add a FOREIGN KEY constraint using ALTER TABLE?",  
+    "back_answer": "`ALTER TABLE TableName ADD CONSTRAINT FK_Name FOREIGN KEY (Column) REFERENCES ParentTable(Column);`",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_015",  
+    "topic": "Modifying Tables with ALTER TABLE Statement",  
+    "front_prompt": "What is required to drop a constraint using ALTER TABLE?",  
+    "back_answer": "'DROP CONSTRAINT' requires the exact name of the constraint, which can be found via 'sp_help'.",  
+    "type": "simple"  
+  }  
+]
