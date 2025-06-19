@@ -99,7 +99,7 @@ if __name__ == "__main__":
     processor = DirectoryProcessor(settings.INPUT_CONFIG_PATH)
 
     # Step 1: Scan directory and generate content.json
-    #filenames = processor.scan_directory()
+    filenames = processor.scan_directory()
 
     # Step 2: Process content.json and generate topic.json
     #processor.process_filenames(filenames)
