@@ -1,0 +1,72 @@
+[  
+  {  
+    "id": "integrated_understand_001",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain LEN() in your own words.",  
+    "back_answer": "LEN() counts how many characters are in a string, like counting letters in a word. For example, LEN('Hello') returns 5 because there are five letters."  
+  },  
+  {  
+    "id": "integrated_understand_002",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Give an analogy for LEFT().",  
+    "back_answer": "LEFT() is like taking the first few pages from the start of a book. If you have 'HelloWorld' and take 5 characters, it gives you 'Hello', just like taking the first five pages of a book."  
+  },  
+  {  
+    "id": "integrated_understand_003",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain SUBSTRING() to a 5-year-old.",  
+    "back_answer": "SUBSTRING() is like picking a part of a word. If the word is 'HelloWorld', you can pick the middle part, like 'World', by telling it where to start and how many letters to take."  
+  },  
+  {  
+    "id": "integrated_understand_004",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain DATEPART() in your own words.",  
+    "back_answer": "DATEPART() pulls out a specific part of a date, like the month or day. For example, it can tell you that today's date is in the year 2025."  
+  },  
+  {  
+    "id": "integrated_understand_005",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Give an analogy for RANK().",  
+    "back_answer": "RANK() is like a race where if two runners tie, they both get the same rank, and the next runner gets a rank that skips a number. For example, if two people are first, the next person is third."  
+  },  
+  {  
+    "id": "integrated_understand_006",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain PARTITION BY to a novice.",  
+    "back_answer": "PARTITION BY divides data into groups, like sorting books by genre. Window functions then work within each group separately, so you can rank sales per category instead of all together."  
+  },  
+  {  
+    "id": "integrated_understand_007",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Simplify TRIM() for someone with no SQL knowledge.",  
+    "back_answer": "TRIM() removes extra spaces from the start and end of a word, like cleaning up '   Hello   ' to just 'Hello'."  
+  },  
+  {  
+    "id": "integrated_understand_008",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain DENSE_RANK() with an example.",  
+    "back_answer": "DENSE_RANK() gives ranks without skipping numbers. If two people tie for first, the next person gets second, unlike RANK(), which would skip to third."  
+  },  
+  {  
+    "id": "integrated_understand_009",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Analogize CHARINDEX() to everyday life.",  
+    "back_answer": "CHARINDEX() is like searching for a word in a sentence. It tells you where the word starts, such as finding 'World' starting at position 6 in 'HelloWorld'."  
+  },  
+  {  
+    "id": "integrated_understand_010",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain EOMONTH() simply.",  
+    "back_answer": "EOMONTH() finds the last day of a month, like knowing December 31 is the end of the year."  
+  }  
+]

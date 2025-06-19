@@ -1,1 +1,9 @@
-[]
+[
+    "7_built_in_functions_analyzing_flashcards_qwen3-14b.json",
+    "7_built_in_functions_applying_flashcards_qwen3-14b.json",
+    "7_built_in_functions_bloom_create_flashcards_qwen3-14b.json",
+    "7_built_in_functions_evaluating_flashcards_qwen3-14b.json",
+    "7_built_in_functions_remembering_flashcards_qwen3-14b.json",
+    "7_built_in_functions_simple_flashcard_qwen3-14b.json",
+    "7_built_in_functions_understanding_flashcards_qwen3-14b.json"
+]

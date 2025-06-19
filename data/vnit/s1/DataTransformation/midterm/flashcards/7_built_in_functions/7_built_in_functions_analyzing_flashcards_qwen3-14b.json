@@ -1,0 +1,37 @@
+[  
+  {  
+    "id": "integrated_analyze_001",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Break down the `RANK()` window function into its core components and explain how they interact.",  
+    "back_answer": "`RANK()` assigns a rank to each row within a partition based on the `ORDER BY` clause. If rows have equal values, they receive the same rank, but subsequent ranks are skipped (e.g., two first places result in the next rank being 3). The `PARTITION BY` clause divides data into groups for independent ranking, while `OVER()` defines the window frame. This interacts with `ORDER BY` to determine sorting and ranking logic."  
+  },  
+  {  
+    "id": "integrated_analyze_002",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Compare and contrast `RANK()` and `DENSE_RANK()` window functions, highlighting their key differences and similarities.",  
+    "back_answer": "Both `RANK()` and `DENSE_RANK()` assign ranks based on sorted values. However, `RANK()` skips subsequent ranks for ties (e.g., two rows with rank 1 result in the next row having rank 3), while `DENSE_RANK()` assigns consecutive ranks without gaps (e.g., two rows with rank 1 result in the next row having rank 2). They share similarities in using `PARTITION BY` and `ORDER BY` but differ in handling ties."  
+  },  
+  {  
+    "id": "integrated_analyze_003",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Identify a potential flawed assumption when using `LEN()` on a string column with trailing spaces.",  
+    "back_answer": "A flawed assumption is that `LEN()` returns the intended data length without considering trailing spaces. If a string has trailing spaces (e.g., 'Hello   '), `LEN()` counts them, leading to incorrect results. This flaw can be mitigated by using `TRIM()` first to remove extraneous whitespace before measuring length."  
+  },  
+  {  
+    "id": "integrated_analyze_004",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Compare and contrast `DATEPART()` and `DATENAME()` date functions, highlighting their key differences and similarities.",  
+    "back_answer": "`DATEPART()` extracts a numeric value (e.g., 12 for December) from a date, while `DATENAME()` returns the name as a string (e.g., 'December'). Both accept intervals like `month` or `year` and operate on date/time values. Their similarity lies in retrieving specific date components, but they differ in output format and use cases (numeric vs textual)."  
+  },  
+  {  
+    "id": "integrated_analyze_005",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Break down the components of a window function syntax and explain their roles in `ROW_NUMBER()` calculations.",  
+    "back_answer": "The syntax includes: 1) The function (`ROW_NUMBER()`), which assigns unique sequential integers. 2) `OVER()`, defining the window frame. Within this, `PARTITION BY` divides data into groups (optional), and `ORDER BY` specifies sorting logic. Together, they determine how rows are ordered and numbered within partitions."  
+  }  
+]

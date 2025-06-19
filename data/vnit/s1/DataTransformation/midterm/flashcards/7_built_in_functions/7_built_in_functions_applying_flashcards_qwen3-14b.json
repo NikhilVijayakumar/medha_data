@@ -1,0 +1,72 @@
+[
+  {
+    "id": "integrated_apply_001",
+    "topic": "SQL Server Built-in Functions",
+    "bloom_level": "Applying",
+    "front_prompt": "Write a SQL query to extract the last 5 characters of each product name in the 'SalesOrder' table using the RIGHT() function.",
+    "back_answer": "```sql\nSELECT [PRODUCT NAME], RIGHT([PRODUCT NAME], 5) AS LastFiveChars FROM SalesOrder;\n```\nThe RIGHT() function extracts a substring starting from the right end of the string. Here, it takes each product name and returns its last 5 characters."
+  },
+  {
+    "id": "integrated_apply_002",
+    "topic": "SQL Server Built-in Functions",
+    "bloom_level": "Applying",
+    "front_prompt": "How would you calculate the number of days between the earliest and latest order dates in the 'SalesOrder' table using DATEDIFF()?",
+    "back_answer": "```sql\nSELECT DATEDIFF(day, MIN([ORDER DATE]), MAX([ORDER DATE])) AS DaysBetweenOrders FROM SalesOrder;\n```\nThe DATEDIFF() function calculates the difference between two dates. Here, it computes the number of days between the minimum and maximum order dates in the table."
+  },
+  {
+    "id": "integrated_apply_003",
+    "topic": "SQL Server Built-in Functions",
+    "bloom_level": "Applying",
+    "front_prompt": "Write a query to rank customers by their total number of orders using DENSE_RANK() with a CTE.",
+    "back_answer": "```sql\nWITH CustomerOrderCount AS (\n  SELECT [CUSTOMER NAME], COUNT([ORDER ID]) AS TotalOrders\n  FROM SalesOrder\n  GROUP BY [CUSTOMER NAME]\n)\nSELECT [CUSTOMER NAME], TotalOrders,\n       DENSE_RANK() OVER (ORDER BY TotalOrders DESC) AS CustomerRankByOrders\nFROM CustomerOrderCount;\n```\nThe DENSE_RANK() function assigns consecutive ranks to customers based on their total orders, ensuring no gaps in ranking even with ties."
+  },
+  {
+    "id": "integrated_apply_004",
+    "topic": "SQL Server Built-in Functions",
+    "bloom_level": "Applying",
+    "front_prompt": "Create a query to format customer names by trimming spaces and concatenating with their city using TRIM() and CONCAT().",
+    "back_answer": "```sql\nSELECT CONCAT(TRIM([CUSTOMER NAME]), ' from ', City) AS CustomerLocation FROM SalesOrder;\n```\nThe TRIM() function removes leading/trailing spaces from the customer name, and CONCAT() combines it with the city column."
+  },
+  {
+    "id": "integrated_apply_005",
+    "topic": "SQL Server Built-in Functions",
+    "bloom_level": "Applying",
+    "front_prompt": "How would you find the position of a space in each customer name to split first and last names using CHARINDEX()?",
+    "back_answer": "```sql\nSELECT [CUSTOMER NAME], CHARINDEX(' ', [CUSTOMER NAME]) AS SpacePosition FROM SalesOrder;\n```\nThe CHARINDEX() function locates the starting position of the first space character in each customer name."
+  },
+  {
+    "id": "integrated_apply_006",
+    "topic": "SQL Server Built-in Functions",
+    "bloom_level": "Applying",
+    "front_prompt": "Write a query to get the last day of next month for each order date using EOMONTH().",
+    "back_answer": "```sql\nSELECT [ORDER DATE], EOMONTH([ORDER DATE], 1) AS EndOfNextMonth FROM SalesOrder;\n```\nThe EOMONTH() function returns the last day of the month that is 1 month ahead of each order date."
+  },
+  {
+    "id": "integrated_apply_007",
+    "topic": "SQL Server Built-in Functions",
+    "bloom_level": "Applying",
+    "front_prompt": "Describe a real-world scenario where ROW_NUMBER() would be useful for generating unique sequential IDs.",
+    "back_answer": "ROW_NUMBER() could generate unique invoice numbers sequentially within each sales region by partitioning data by region and ordering by date. This ensures unique numbering across regions without conflicts."
+  },
+  {
+    "id": "integrated_apply_008",
+    "topic": "SQL Server Built-in Functions",
+    "bloom_level": "Applying",
+    "front_prompt": "Write a query to convert the current system time to Indian Standard Time (IST) using SWITCHOFFSET().",
+    "back_answer": "```sql\nSELECT SWITCHOFFSET(SYSDATETIMEOFFSET(), '+05:30') AS ISTTime;\n```\nThe SWITCHOFFSET() function changes the timezone offset of SYSDATETIMEOFFSET() to +05:30, representing Indian Standard Time."
+  },
+  {
+    "id": "integrated_apply_009",
+    "topic": "SQL Server Built-in Functions",
+    "bloom_level": "Applying",
+    "front_prompt": "How would you calculate the number of months between two dates using DATEDIFF() with month interval?",
+    "back_answer": "```sql\nSELECT DATEDIFF(month, '2023-01-15', '2024-03-10') AS MonthsDifference;\n```\nThe DATEDIFF() function calculates the difference in months between two dates by counting how many month boundaries occur between them."
+  },
+  {
+    "id": "integrated_apply_010",
+    "topic": "SQL Server Built-in Functions",
+    "bloom_level": "Applying",
+    "front_prompt": "Write a query to extract the year from each order date and display it as 'Year: YYYY' using DATENAME() and CONCAT().",
+    "back_answer": "```sql\nSELECT CONCAT('Year: ', DATENAME(year, [ORDER DATE])) AS OrderYear FROM SalesOrder;\n```\nThe DATENAME() function extracts the year part of the date, which is then formatted into a string with CONCAT()."
+  }
+]

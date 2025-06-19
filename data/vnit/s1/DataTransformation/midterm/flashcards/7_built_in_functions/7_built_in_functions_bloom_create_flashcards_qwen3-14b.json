@@ -1,0 +1,37 @@
+[  
+  {  
+    "id": "sql_create_001",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Synthesize an explanation of how to use `SUBSTRING()` and `CHARINDEX()` together to extract a domain name from an email address (e.g., 'user@domain.com'). Reconstruct the logic step-by-step using first principles.",  
+    "back_answer": "Step 1: Use `CHARINDEX('@', email)` to find the position of '@'. Step 2: Use `SUBSTRING(email, CHARINDEX('@', email) + 1, LEN(email))` to extract everything after '@'. This isolates the domain. Example: For 'user@domain.com', `CHARINDEX` finds position 5, then `SUBSTRING` starts at 6 and takes remaining characters."  
+  },  
+  {  
+    "id": "sql_create_002",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Invent a metaphor to explain how `RANK()`, `DENSE_RANK()`, and `ROW_NUMBER()` differ when applied to a list of student grades.",  
+    "back_answer": "'RANK()' is like a race where tied runners share the same position, but skip the next spot. 'DENSE_RANK()' is like a league table with no gaps—tied teams share positions but the next team follows immediately. 'ROW_NUMBER()' is like numbered seats in a theater: each person gets a unique seat, even if they’re equally ranked."  
+  },  
+  {  
+    "id": "sql_create_003",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Design a system to clean and standardize customer names in a database using `TRIM()`, `CONCAT()`, and `LEFT()` functions. Describe the workflow for handling leading/trailing spaces, middle initials, and abbreviations.",  
+    "back_answer": "Workflow: 1) Use `TRIM()` to remove leading/trailing spaces. 2) Use `LEFT(name, 1)` to extract the first initial. 3) Concatenate with `CONCAT(LEFT(...), '.', SUBSTRING(name, ...))` for standardized formatting (e.g., 'John Doe' → 'J. Doe'). This ensures consistency in names like '   John   ', 'john', or 'JOHN DOE'."  
+  },  
+  {  
+    "id": "sql_create_004",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Reconstruct the logic of `EOMONTH()` from first principles. How would you calculate the last day of a month using only `DATEADD()`, `DATEDIFF()`, and `GETDATE()`?",  
+    "back_answer": "Step 1: Calculate days in the current month with `DATEDIFF(day, GETDATE(), DATEADD(month, 1, GETDATE()))`. Step 2: Subtract one day from the next month’s start using `DATEADD(day, -1, DATEADD(month, 1, GETDATE()))` to get the last day of the current month."  
+  },  
+  {  
+    "id": "sql_create_005",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Invent an analogy for `PARTITION BY` in window functions. How is it similar to a sports tournament bracket?",  
+    "back_answer": "'PARTITION BY' groups data like teams in a tournament bracket. Each partition operates independently—similar to how each round of a tournament resets standings, but the overall structure (bracket) defines which teams compete against whom."  
+  }  
+]

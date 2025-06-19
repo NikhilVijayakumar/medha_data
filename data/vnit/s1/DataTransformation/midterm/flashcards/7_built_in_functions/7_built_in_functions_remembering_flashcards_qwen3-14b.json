@@ -1,0 +1,156 @@
+[  
+  {  
+    "id": "integrated_remember_001",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the `LEN()` function do in SQL Server?",  
+    "back_answer": "Returns the length (number of characters) of the input string."  
+  },  
+  {  
+    "id": "integrated_remember_002",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the `LEFT(string, length)` function do in SQL Server?",  
+    "back_answer": "Returns the leftmost 'length' characters of the input string."  
+  },  
+  {  
+    "id": "integrated_remember_003",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the `RIGHT(string, length)` function do in SQL Server?",  
+    "back_answer": "Returns the rightmost 'length' characters of the input string."  
+  },  
+  {  
+    "id": "integrated_remember_004",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the `SUBSTRING(string, start, length)` function do in SQL Server?",  
+    "back_answer": "Extracts a substring of specified 'length' from the input string starting at position 'start' (1-based index)."  
+  },  
+  {  
+    "id": "integrated_remember_005",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the `CHARINDEX(substring, string)` function return in SQL Server?",  
+    "back_answer": "Returns the starting position of the first occurrence of 'substring' within 'string'. Returns 0 if not found."  
+  },  
+  {  
+    "id": "integrated_remember_006",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the `CONCAT(string1, string2, ...)` function do in SQL Server?",  
+    "back_answer": "Concatenates two or more strings together. In older versions, '+' may be used for concatenation."  
+  },  
+  {  
+    "id": "integrated_remember_007",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the `TRIM(string)` function do in SQL Server?",  
+    "back_answer": "Removes leading and trailing spaces from a string. Can specify characters to trim (e.g., TRIM('x' FROM 'xxHelloxx'))."  
+  },  
+  {  
+    "id": "integrated_remember_008",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the `DATEPART(interval, date)` function do in SQL Server?",  
+    "back_answer": "Extracts a specific part of a date (e.g., year, month) based on 'interval'."  
+  },  
+  {  
+    "id": "integrated_remember_009",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the `DATENAME(interval, date)` function return in SQL Server?",  
+    "back_answer": "Returns the name of a specific part of a date as a string (e.g., 'January', 'Monday')."  
+  },  
+  {  
+    "id": "integrated_remember_010",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the `DATEDIFF(interval, start_date, end_date)` function calculate in SQL Server?",  
+    "back_answer": "Calculates the difference between two dates based on 'interval' (e.g., day, year)."  
+  },  
+  {  
+    "id": "integrated_remember_011",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the `DATEADD(interval, number, date)` function do in SQL Server?",  
+    "back_answer": "Adds a specified 'number' of intervals to a given 'date'."  
+  },  
+  {  
+    "id": "integrated_remember_012",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the `EOMONTH(date, number_of_months)` function return in SQL Server?",  
+    "back_answer": "Returns the last day of the month that is 'number_of_months' after or before the input date."  
+  },  
+  {  
+    "id": "integrated_remember_013",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the `GETDATE()` function return in SQL Server?",  
+    "back_answer": "Returns the current database system date and time."  
+  },  
+  {  
+    "id": "integrated_remember_014",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the `SYSDATETIMEOFFSET()` function return in SQL Server?",  
+    "back_answer": "Returns the current database system date and time with the time zone offset."  
+  },  
+  {  
+    "id": "integrated_remember_015",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the `SWITCHOFFSET(datetimeoffset, time_zone)` function do in SQL Server?",  
+    "back_answer": "Changes the time zone offset of a 'datetimeoffset' value to the specified 'time_zone'."  
+  },  
+  {  
+    "id": "integrated_remember_016",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the `RANK()` window function do in SQL Server?",  
+    "back_answer": "Assigns a rank to each row within a partition based on ORDER BY. Rows with equal values receive the same rank, and subsequent ranks are skipped."  
+  },  
+  {  
+    "id": "integrated_remember_017",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the `DENSE_RANK()` window function do in SQL Server?",  
+    "back_answer": "Assigns consecutive ranks without gaps, even if there are ties (unlike RANK())."  
+  },  
+  {  
+    "id": "integrated_remember_018",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the `ROW_NUMBER()` window function do in SQL Server?",  
+    "back_answer": "Assigns a unique sequential integer to each row within a partition based on ORDER BY."  
+  },  
+  {  
+    "id": "integrated_remember_019",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the purpose of `PARTITION BY` in window functions?",  
+    "back_answer": "Divides rows into partitions (groups) to which the window function is applied independently."  
+  },  
+  {  
+    "id": "integrated_remember_020",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the `OVER()` clause do in window functions?",  
+    "back_answer": "Defines the window frame for calculations, including PARTITION BY and ORDER BY."  
+  },  
+  {  
+    "id": "integrated_remember_021",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is a 'Running Total' in the context of window functions?",  
+    "back_answer": "A cumulative sum calculated across a set of rows using window functions."  
+  },  
+  {  
+    "id": "integrated_remember_022",  
+    "topic": "SQL Server Built-in Functions",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What are 'Ranking Calculations' in SQL Server window functions?",  
+    "back_answer": "Calculations like RANK(), DENSE_RANK(), and ROW_NUMBER() used to assign ranks or positions within a dataset."  
+  }  
+]

@@ -1,0 +1,107 @@
+[  
+  {  
+    "id": "simple_flash_001",  
+    "topic": "SQL Server Built-in Functions",  
+    "front_prompt": "What does the `LEN(string)` function do?",  
+    "back_answer": "Returns the length (number of characters) of the input string. Example: `SELECT LEN('Hello')` returns 5.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_002",  
+    "topic": "SQL Server Built-in Functions",  
+    "front_prompt": "How does the `LEFT(string, length)` function work?",  
+    "back_answer": "Returns the leftmost 'length' characters of the input string. Example: `SELECT LEFT('HelloWorld', 5)` returns 'Hello'.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_003",  
+    "topic": "SQL Server Built-in Functions",  
+    "front_prompt": "What is the purpose of `SUBSTRING(string, start, length)`?",  
+    "back_answer": "Extracts a substring starting at 'start' position (1-based) with specified 'length'. Example: `SELECT SUBSTRING('HelloWorld', 6, 5)` returns 'World'.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_004",  
+    "topic": "SQL Server Built-in Functions",  
+    "front_prompt": "What does `CHARINDEX(substring, string)` return?",  
+    "back_answer": "Returns the starting position of the first occurrence of 'substring' in 'string'. Returns 0 if not found. Example: `SELECT CHARINDEX('World', 'HelloWorld')` returns 6.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_005",  
+    "topic": "SQL Server Built-in Functions",  
+    "front_prompt": "How does the `TRIM(string)` function work?",  
+    "back_answer": "Removes leading and trailing spaces from a string. Example: `SELECT TRIM('   Hello   ')` returns 'Hello'.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_006",  
+    "topic": "SQL Server Built-in Functions",  
+    "front_prompt": "What does `DATEPART(interval, date)` do?",  
+    "back_answer": "Extracts a specific part of a date (e.g., year, month). Example: `SELECT DATEPART(year, GETDATE())` returns the current year.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_007",  
+    "topic": "SQL Server Built-in Functions",  
+    "front_prompt": "What is the difference between `DATENAME(interval, date)` and `DATEPART(interval, date)`?",  
+    "back_answer": "`DATENAME` returns the name of a date part as a string (e.g., 'January'), while `DATEPART` returns it as an integer.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_008",  
+    "topic": "SQL Server Built-in Functions",  
+    "front_prompt": "How does `DATEDIFF(interval, start_date, end_date)` work?",  
+    "back_answer": "Calculates the difference between two dates in the specified interval (e.g., days, months). Example: `SELECT DATEDIFF(day, '2025-01-01', GETDATE())` returns days between dates.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_009",  
+    "topic": "SQL Server Built-in Functions",  
+    "front_prompt": "What does `EOMONTH(date, number_of_months)` return?",  
+    "back_answer": "Returns the last day of the month that is 'number_of_months' after or before the input date. Example: `SELECT EOMONTH(GETDATE(), 0)` returns last day of current month.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_010",  
+    "topic": "SQL Server Built-in Functions",  
+    "front_prompt": "What is the syntax for a window function in SQL Server?",  
+    "back_answer": "`window_function(column) OVER (PARTITION BY column ORDER BY column)` defines the calculation scope and sorting.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_011",  
+    "topic": "SQL Server Built-in Functions",  
+    "front_prompt": "How does `RANK()` differ from `DENSE_RANK()`?",  
+    "back_answer": "`RANK()` skips ranks for ties, while `DENSE_RANK()` assigns consecutive ranks. Example: Tied values get same rank in both, but next rank is skipped in RANK().",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_012",  
+    "topic": "SQL Server Built-in Functions",  
+    "front_prompt": "What does `ROW_NUMBER()` do?",  
+    "back_answer": "Assigns a unique sequential integer to each row within a partition. Example: `ROW_NUMBER() OVER (ORDER BY [ORDER DATE])` numbers rows by date.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_013",  
+    "topic": "SQL Server Built-in Functions",  
+    "front_prompt": "What is the purpose of `PARTITION BY` in window functions?",  
+    "back_answer": "'PARTITION BY' divides rows into groups (partitions) for independent window function calculations. Example: Ranking sales per category.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_014",  
+    "topic": "SQL Server Built-in Functions",  
+    "front_prompt": "What does `SWITCHOFFSET(datetimeoffset, time_zone)` do?",  
+    "back_answer": "Changes the time zone offset of a datetimeoffset value. Example: `SELECT SWITCHOFFSET(SYSDATETIMEOFFSET(), '+05:30')` converts to IST.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_015",  
+    "topic": "SQL Server Built-in Functions",  
+    "front_prompt": "What is the role of `OVER()` in window functions?",  
+    "back_answer": "`OVER()` defines the window frame for calculations. It includes optional `PARTITION BY` and `ORDER BY` clauses.",  
+    "type": "simple"  
+  }  
+]

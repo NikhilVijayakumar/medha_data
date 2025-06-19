@@ -1,0 +1,37 @@
+[
+  {
+    "id": "integrated_evaluate_001",
+    "topic": "SQL Server Built-in Functions",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Critique the effectiveness of using `SUBSTRING()` versus `CHARINDEX()` for extracting dynamic text segments in SQL queries.",
+    "back_answer": "`SUBSTRING()` is effective for fixed-position extraction (e.g., extracting 5 characters from position 10), but lacks flexibility for variable positions. `CHARINDEX()` excels at locating substrings dynamically (e.g., finding the position of a delimiter). However, combining both (e.g., using `CHARINDEX()` to determine start position then `SUBSTRING()`) is often more efficient than nested functions or regex alternatives in SQL Server."
+  },
+  {
+    "id": "integrated_evaluate_002",
+    "topic": "SQL Server Built-in Functions",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Evaluate the pros and cons of using `CONCAT()` versus the `+` operator for string concatenation in SQL Server.",
+    "back_answer": "`CONCAT()` simplifies syntax by automatically converting non-string types to strings and handling NULLs as empty strings, reducing errors. The `+` operator requires explicit type conversion and treats NULL as NULL (resulting in NULL output if any operand is null). However, `+` may be slightly faster in legacy systems, while `CONCAT()` improves readability and reduces bugs in modern practices."
+  },
+  {
+    "id": "integrated_evaluate_003",
+    "topic": "SQL Server Built-in Functions",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Which date function would be more efficient for calculating the number of months between two dates: `DATEDIFF(month, date1, date2)` or `DATEDIFF(day, date1, date2)/30`? Justify your answer.",
+    "back_answer": "`DATEDIFF(month, date1, date2)` is more accurate and efficient. It calculates based on calendar month boundaries (e.g., 2024-03-31 to 2024-05-01 returns 2 months), while dividing by 30 assumes uniform month lengths. The former aligns with SQL Server's date arithmetic logic and avoids approximation errors."
+  },
+  {
+    "id": "integrated_evaluate_004",
+    "topic": "SQL Server Built-in Functions",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Critique the use of `RANK()` versus `DENSE_RANK()` for ranking sales representatives by quarterly performance.",
+    "back_answer": "`RANK()` creates gaps in rankings when ties occur (e.g., two reps with 100 sales both rank #2, next rep ranks #4), which may obscure close competitors. `DENSE_RANK()` provides consecutive ranks without gaps (e.g., tied reps rank #2, next rep ranks #3), better reflecting relative performance proximity. Choice depends on whether ranking gaps are meaningful for the analysis."
+  },
+  {
+    "id": "integrated_evaluate_005",
+    "topic": "SQL Server Built-in Functions",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Identify a potential flaw in using `TRIM()` without specifying characters to remove for cleaning customer address data.",
+    "back_answer": "Using `TRIM()` without parameters only removes leading/trailing whitespace, leaving other unwanted characters (e.g., special symbols, extra spaces within the string). For example, ' 123 Main St.  ' becomes '123 Main St.' but '123@Main#St' remains unchanged. A flaw is incomplete data sanitization; `TRIM(' @#' FROM ...)` or custom logic would better handle diverse edge cases."
+  }
+]
