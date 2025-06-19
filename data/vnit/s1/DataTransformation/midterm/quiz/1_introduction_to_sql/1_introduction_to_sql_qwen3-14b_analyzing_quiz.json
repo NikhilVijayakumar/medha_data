@@ -1,66 +1,59 @@
-[  
-  {  
-    "id": "q_analyze_primary_001",  
-    "topic": "Introduction to Relational Databases and SQL",  
-    "question_text": "In the context of relational databases, which two components are essential for establishing referential integrity between tables?",  
-    "bloom_level": "Analyzing",  
-    "question_type": "MCQ",  
-    "options": [  
-      "Primary Key in the child table and Foreign Key in the parent table.",  
-      "Foreign Key in the child table and Primary Key in the parent table.",  
-      "Unique Constraint on the parent table and Index on the child table.",  
-      "Check Constraint on both tables and a Composite Key.",  
-      "Auto-incrementing ID column in both tables."  
-    ],  
-    "correct_answer": ["Foreign Key in the child table and Primary Key in the parent table."],  
-    "correct_answer_explanation": "Referential integrity is enforced by ensuring that a Foreign Key (in the 'child' table) references a valid Primary Key (in the 'parent' table). This ensures that relationships between tables remain consistent. The Enrollment table example in the notes illustrates this, where `StudentID` and `CourseID` are foreign keys referencing primary keys in other tables."  
-  },  
-  {  
-    "id": "q_analyze_primary_002",  
-    "topic": "Core Relational Concepts and Terminology",  
-    "question_text": "Consider a scenario where a database designer creates a `Students` table with columns `StudentID`, `Name`, and `Major`. Which of the following statements accurately describe the role of these components? (Select all that apply)",  
-    "bloom_level": "Analyzing",  
-    "question_type": "MCQ",  
-    "options": [  
-      "`StudentID` serves as a primary key, uniquely identifying each row.",  
-      "`Major` is a column attribute defining the data type for student majors.",  
-      "`Name` represents a row in the table, containing specific instance data.",  
-      "The `Students` table structure enforces structured data through defined columns and rows.",  
-      "All three columns collectively form a composite primary key."  
-    ],  
-    "correct_answer": ["StudentID serves as a primary key, uniquely identifying each row.", "`Major` is a column attribute defining the data type for student majors.", "The Students table structure enforces structured data through defined columns and rows."],  
-    "correct_answer_explanation": "`StudentID` is identified as the primary key in the notes' `Students` example. A 'column attribute' like `Major` defines properties (e.g., data type) for that column. The table's structure (rows/columns) enforces structured data, per the RDBMS characteristics described. However, `Name` is a row component, not a row itself, and there is no indication of a composite key."  
-  },  
-  {  
-    "id": "q_analyze_primary_003",  
-    "topic": "Structured Query Language (SQL) Overview",  
-    "question_text": "A developer writes the following SQL query: `SELECT * FROM Enrollment WHERE StudentID = 101;`. Which two aspects of this query require analysis to determine its behavior?",  
-    "bloom_level": "Analyzing",  
-    "question_type": "MCQ",  
-    "options": [  
-      "The use of `*` may retrieve unnecessary columns, impacting performance.",  
-      "The absence of a JOIN clause prevents relationship enforcement between tables.",  
-      "The WHERE condition assumes the existence of StudentID = 101 in the Students table only.",  
-      "This query violates referential integrity by not checking foreign key constraints.",  
-      "The `Enrollment` table must have an index on `StudentID` for efficient execution."  
-    ],  
-    "correct_answer": ["The use of * may retrieve unnecessary columns, impacting performance.", "The WHERE condition assumes the existence of StudentID = 101 in the Students table only."],  
-    "correct_answer_explanation": "'*' retrieves all columns, which might include redundant data and reduce efficiency. The `WHERE` clause assumes `StudentID = 101` exists in this table (not necessarily enforcing referential integrity checks). However, there is no violation of SQL syntax or direct enforcement of foreign key constraints here; JOINs are not required for simple queries."  
-  },  
-  {  
-    "id": "q_analyze_primary_004",  
-    "topic": "Relational Database Management Systems (RDBMS)",  
-    "question_text": "When comparing Microsoft SQL Server and MySQL, which two features represent differences in their implementation of structured data handling?",  
-    "bloom_level": "Analyzing",  
-    "question_type": "MCQ",  
-    "options": [  
-      "SQL Server uses T-SQL while MySQL supports PL/SQL dialects.",  
-      "MySQL enforces stricter referential integrity by default compared to SQL Server.",  
-      "SQL Server provides built-in support for stored procedures, whereas MySQL requires plugins.",  
-      "Both use the same ANSI SQL standard but differ in proprietary extensions.",  
-      "MySQL allows more flexible schema changes without transaction control."  
-    ],  
-    "correct_answer": ["SQL Server uses T-SQL while MySQL supports PL/SQL dialects.", "MySQL enforces stricter referential integrity by default compared to SQL Server."],  
-    "correct_answer_explanation": "The notes explicitly mention that SQL Server uses T-SQL, Oracle uses PL/SQL, and MySQL is open-source with variations. However, the claim about 'stricter referential integrity' in MySQL requires analysis: while both enforce constraints, differences may arise from default settings or configuration (not directly stated in the notes but inferred via comparative RDBMS characteristics)."  
-  }  
-]
+{
+  "title": "Relational Databases & SQL Analysis Quiz",
+  "description": "Analyze core concepts of relational databases, RDBMS, and SQL through scenarios involving table structures, key constraints, and query logic.",
+  "type": "Analyzing",
+  "questions": [
+    {
+      "id": "q_analyze_001",
+      "question": "Consider a Students table with (StudentID [PK], Name, Major) and an Enrollment table with (EnrollmentID, StudentID [FK], CourseID [FK], Grade). If the foreign key constraint on Enrollment.StudentID is removed, which of the following outcomes would **definitely** occur? (Select all that apply)",
+      "options": [
+        {"id": "opt1", "text": "Referential integrity between Students and Enrollment tables will be enforced automatically."],
+        {"id": "opt2", "text": "Enrollment records may reference non-existent StudentIDs, leading to orphaned data."},
+        {"id": "opt3", "text": "The primary key on the Students.StudentID column will become invalid."],
+        {"id": "opt4", "text": "SQL queries joining Students and Enrollment tables will fail syntax checks."},
+        {"id": "opt5", "text": "Data duplication between StudentID in Students and Enrollment tables will be prevented automatically."}
+      ],
+      "correctOptionIds": ["opt2"],
+      "explanation": "Foreign keys enforce referential integrity by ensuring values in the referencing column (Enrollment.StudentID) exist in the referenced column (Students.StudentID). Removing this constraint allows invalid StudentIDs in Enrollment, creating orphaned records. Other options are incorrect: PK validity is unaffected, JOIN syntax remains valid, and duplication prevention requires application logic, not FK constraints."
+    },
+    {
+      "id": "q_analyze_002",
+      "question": "Which of the following SQL statements correctly enforces a foreign key relationship between an Orders table (OrderID [PK], CustomerID) and a Customers table (CustomerID [PK], Name)? Analyze for both syntax and logical correctness.",
+      "options": [
+        {"id": "optA", "text": "ALTER TABLE Orders ADD CONSTRAINT fk_customer FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID);"},
+        {"id": "optB", "text": "ALTER TABLE Customers ADD CONSTRAINT fk_order FOREIGN KEY (OrderID) REFERENCES Orders(OrderID);"},
+        {"id": "optC", "text": "CREATE TABLE Orders (OrderID INT, CustomerID INT, FOREIGN KEY (CustomerID) REFERENCES Customers);"},
+        {"id": "optD", "text": "ALTER TABLE Orders ADD CONSTRAINT fk_customer UNIQUE (CustomerID) REFERENCES Customers(CustomerID);"},
+        {"id": "optE", "text": "CREATE TABLE Orders (... ) WITH (FOREIGN KEY = CustomerID -> Customers.CustomerID);}
+      ],
+      "correctOptionIds": ["optA"],
+      "explanation": "Option A uses proper syntax for adding a foreign key constraint. Option B references OrderID in Customers, which doesn't exist. Option C's CREATE TABLE syntax is invalid; FOREIGN KEY must specify the referenced column explicitly. Option D incorrectly combines UNIQUE and FOREIGN KEY constraints. Option E uses non-standard SQL syntax."
+    },
+    {
+      "id": "q_analyze_003",
+      "question": "Evaluate this SQL query for logical errors: SELECT StudentID, Name FROM Students WHERE Major = (SELECT Major FROM Courses WHERE CourseName = 'Database Systems'). Which of the following is a critical flaw in this query?",
+      "options": [
+        {"id": "optX", "text": "It will return students with any major matching a course's major attribute."},
+        {"id": "optY", "text": "The subquery may return multiple values, causing an error in the WHERE clause."],
+        {"id": "optZ", "text": "It uses invalid SQL syntax for correlated subqueries."},
+        {"id": "optAA", "text": "The query assumes that Courses.Major is a valid column name."},
+        {"id": "optBB", "text": "It will always return an empty result set if no course has 'Database Systems' as its CourseName."}
+      ],
+      "correctOptionIds": ["optY"],
+      "explanation": "The subquery (SELECT Major FROM Courses WHERE CourseName = ...) may return multiple rows if there are multiple courses named 'Database Systems'. The WHERE clause expects a single value for comparison, causing an error. Other options describe potential issues but aren't critical flaws: optX is the intended behavior, optZ refers to syntax that isn't used here, and optAA depends on table schema."
+    },
+    {
+      "id": "q_analyze_004",
+      "question": "Which of these scenarios demonstrate **normalization** principles? Analyze for both functional dependencies and redundancy elimination.",
+      "options": [
+        {"id": "optP", "text": "Storing customer address details (street, city, zip) in a separate Addresses table linked via CustomerID."},
+        {"id": "optQ", "text": "Repeating product prices in every order line item record instead of referencing a Products table."],
+        {"id": "optR", "text": "Using a single 'Notes' column to store all customer information in the Customers table."},
+        {"id": "optS", "text": "Creating multiple tables with identical columns for different departments (e.g., Sales_2023, Sales_2024)."},
+        {"id": "optT", "text": "Storing employee supervisor relationships as a separate Supervisors table instead of embedding manager names in the Employees table."}
+      ],
+      "correctOptionIds": ["optP", "optT"],
+      "explanation": "OptP and OptT demonstrate normalization by reducing redundancy through referential integrity. OptQ and OptR show denormalization/anti-patterns that increase data duplication. OptS is poor design with redundant table structures, violating first normal form."
+    }
+  ]
+}

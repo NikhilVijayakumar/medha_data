@@ -1,76 +1,46 @@
-[
-  {
-    "id": "feynman_q_001_related_to_primary_q_id_q_create_primary_001",
-    "type": "underlying_mechanism_explanation",
-    "question_text": "Why are foreign key constraints and trigger-based validation both necessary for enforcing enrollment rules, rather than relying solely on primary keys or application logic? (Select all that apply)",
-    "options": [
-      "Foreign keys ensure structural relationships between tables, while triggers enforce dynamic business rule checks during data modifications",
-      "Primary keys alone can prevent duplicate records but cannot validate complex prerequisite dependencies across tables",
-      "Triggers operate at the database level to guarantee integrity even if application code is bypassed or flawed",
-      "Indexing strategies on course catalogs directly verify enrollment eligibility through query optimization",
-      "Stored procedures are unnecessary because all validation logic should be handled by the application layer"
-    ],
-    "correct_answer": [
-      "Foreign keys ensure structural relationships between tables, while triggers enforce dynamic business rule checks during data modifications",
-      "Primary keys alone can prevent duplicate records but cannot validate complex prerequisite dependencies across tables",
-      "Triggers operate at the database level to guarantee integrity even if application code is bypassed or flawed"
-    ],
-    "correct_answer_explanation": "Foreign keys maintain table relationships (e.g., linking courses to prerequisites), while triggers enforce real-time validation of business rules like prerequisite completion. Primary keys ensure uniqueness but don't validate cross-table dependencies. Triggers provide database-level enforcement independent of application code, making them critical for data integrity."
-  },
-  {
-    "id": "feynman_q_002_related_to_primary_q_id_q_create_primary_002",
-    "type": "analogy_creation",
-    "question_text": "Design an analogy for a **denormalized database** using a real-world scenario that emphasizes redundancy and lack of relationships. Which option best captures these principles? (Select one)",
-    "options": [
-      "A library catalog where each book's location is repeated in every copy of the catalog",
-      "A recipe book with ingredients listed once per recipe, even if they are reused across recipes.",
-      "A city’s postal system where each address is uniquely identified by a ZIP code but duplicates exist for similar streets.",
-      "An online marketplace where product listings include redundant descriptions to avoid linking tables.",
-      "A spreadsheet containing all student data in one table, including repeated course names and instructor details."
-    ],
-    "correct_answer": "A library catalog where each book's location is repeated in every copy of the catalog",
-    "correct_answer_explanation": "This analogy highlights **redundancy** (duplicate location information) and **lack of structured relationships**. Unlike a normalized database, denormalization stores duplicate data across multiple locations (tables), leading to inefficiency and potential inconsistencies."
-  },
-  {
-    "id": "feynman_q_003_related_to_primary_q_id_q_create_primary_003",
-    "type": "simplification",
-    "question_text": "Explain how a 'GROUP BY' clause works in SQL to a novice, using an analogy they would understand. Which explanation is most accurate? (Select one)",
-    "options": [
-      "It's like sorting books on a shelf by genre so you can count how many are in each category",
-      "It's like creating separate folders for different types of files on your computer",
-      "It's like counting the number of people in a room who share the same birthday, grouping them together",
-      "It's like organizing mail into different boxes based on the recipient's address",
-      "It's like using a spreadsheet formula to sum values in specific rows"
-    ],
-    "correct_answer": "It's like sorting books on a shelf by genre so you can count how many are in each category",
-    "correct_answer_explanation": "'GROUP BY' organizes data into categories (genres) and allows aggregation (counting). This analogy simplifies the concept of grouping rows with identical values in a column to perform calculations, aligning with the 'average GPA per department' task."
-  },
-  {
-    "id": "feynman_q_004_related_to_primary_q_id_q_create_primary_004",
-    "type": "design_rationale_explanation",
-    "question_text": "Why is storing medical records as BLOBs in the Patients table considered poor database design? (Select one)",
-    "options": [
-      "It violates normalization principles by mixing unrelated data types into a single table",
-      "BLOB storage increases query performance for large datasets",
-      "It simplifies referential integrity checks between tables",
-      "Storing BLOBs improves scalability of the hospital management system",
-      "It reduces disk space requirements through compression"
-    ],
-    "correct_answer": "It violates normalization principles by mixing unrelated data types into a single table",
-    "correct_answer_explanation": "Normalization separates concerns: patient metadata (name, ID) should be in one table while medical records (which may include images, text, etc.) belong in another. Storing BLOBs in the Patients table creates redundancy and complicates updates, violating 1NF/2NF normalization rules."
-  },
-  {
-    "id": "feynman_q_005_related_to_primary_q_id_q_create_primary_005",
-    "type": "conceptual_transformation",
-    "question_text": "Which of these is the best analogy for a **covering index** that improves query performance? (Select one)",
-    "options": [
-      "A dictionary with all page numbers pre-printed next to each word entry, eliminating the need to flip pages",
-      "A library where books are stored in multiple locations without clear labels or maps",
-      "A spreadsheet containing only column headers and no actual data rows",
-      "An index card system that lists every book's title but not its location on shelves",
-      "A phone directory organized by last name, with each entry including the person's address and phone number"
-    ],
-    "correct_answer": "A dictionary with all page numbers pre-printed next to each word entry, eliminating the need to flip pages",
-    "correct_answer_explanation": "A covering index contains all columns needed for a query, allowing the database engine to retrieve data directly from the index without accessing the table. This is analogous to having both the word and its page number in one place (dictionary), avoiding additional lookups."
-  }
-]
+{
+  "title": "Relational Database Design & SQL Synthesis - Feynman Follow-up Quiz",
+  "description": "Deepen your understanding of database design principles and SQL optimization through conceptual transformations, simplifications, and mechanism explanations.",
+  "type": "Feynman",
+  "questions": [
+    {
+      "id": "feynman_q_001_related_to_primary_q_create_001_normalization_principles",
+      "question": "Which analogy best explains why normalization (as in opt1) prevents data redundancy and anomalies?",
+      "options": [
+        { "id": "optA", "text": "Sorting books alphabetically in a library to make finding them easier." },
+        { "id": "optB", "text": "Storing all student information, course details, and enrollment records in separate labeled boxes instead of mixing them in one box." },
+        { "id": "optC", "text": "Using a spreadsheet where each row represents a single fact about students or courses." },
+        { "id": "optD", "text": "Keeping your clothes folded neatly in drawers rather than throwing them into a pile on the floor." },
+        { "id": "optE", "text": "Writing down the same phone number multiple times in different address books to ensure everyone has it." }
+      ],
+      "correctOptionIds": ["optB"],
+      "explanation": "OptB captures normalization's core principle: separating related but distinct data into dedicated tables (boxes) prevents duplication and ensures each piece of information has a single, authoritative location. This avoids anomalies that occur when the same data is stored in multiple places."
+    },
+    {
+      "id": "feynman_q_002_related_to_primary_q_create_002_sql_optimization",
+      "question": "Explain like I'm 5: Why does rewriting a subquery as a JOIN (as in optA) make the query faster for large datasets?",
+      "options": [
+        { "id": "optX", "text": "It's like reading one storybook instead of flipping through multiple books to find the same page." },
+        { "id": "optY", "text": "It's like having a helper who pre-sorts your toys so you don't have to search for them yourself." },
+        { "id": "optZ", "text": "It's like using a magnifying glass to look at one part of a map instead of the whole map." },
+        { "id": "optW", "text": "It's like building a tower with blocks where each block is connected to the one below it." },
+        { "id": "optV", "text": "It's like having your friend repeat the same joke multiple times just so you can hear it better." }
+      ],
+      "correctOptionIds": ["optX"],
+      "explanation": "OptX simplifies the concept: A JOIN combines data once at the beginning (reading one book), while subqueries repeatedly search for the same information across datasets (flipping through multiple books). This reduces redundant processing, especially with large tables."
+    },
+    {
+      "id": "feynman_q_003_related_to_primary_q_create_003_null_handling",
+      "question": "Which mechanism explanation clarifies why LEFT JOIN (optX) is necessary to include students with no grades?",
+      "options": [
+        { "id": "opt1", "text": "LEFT JOIN acts like a net that catches all students, even those without matching grade records." },
+        { "id": "opt2", "text": "LEFT JOIN adds extra rows to the table where data is missing, filling them with zeros or blanks." },
+        { "id": "opt3", "text": "LEFT JOIN ensures the query runs faster by skipping students who don't have grades." },
+        { "id": "opt4", "text": "LEFT JOIN prevents errors by automatically converting NULL values to zero in calculations." },
+        { "id": "opt5", "text": "LEFT JOIN is just another name for INNER JOIN but with slightly different syntax." }
+      ],
+      "correctOptionIds": ["opt1"],
+      "explanation": "Opt1 correctly explains that LEFT JOIN preserves all records from the left table (Students) even if there are no matches in the right table (Grades). This ensures students without grades aren't excluded, unlike INNER JOIN which only returns matching pairs."
+    }
+  ]
+}

@@ -1,42 +1,72 @@
-[  
-  {  
-    "id": "q101",  
-    "topic": "Fundamentals of Databases",  
-    "question_text": "What is the primary purpose of a database, as described in the notes?",  
-    "options": ["To store unstructured data", "To act as an electronic filing cabinet for organized data storage", "To manage software applications", "To perform mathematical calculations"],  
-    "correct_answer": "To act as an electronic filing cabinet for organized data storage",  
-    "correct_answer_explanation": "The notes explicitly describe a database as 'an electronic filing cabinet that is structured to make finding and using information easier,' emphasizing organized data storage."  
-  },  
-  {  
-    "id": "q102",  
-    "topic": "Relational Database Management Systems (RDBMS)",  
-    "question_text": "Which of the following is a key characteristic of an RDBMS?",  
-    "options": ["Data is stored in hierarchical structures", "Tables are linked through relationships defined by common columns", "Data is stored as unstructured text", "It uses NoSQL queries for data retrieval"],  
-    "correct_answer": "Tables are linked through relationships defined by common columns",  
-    "correct_answer_explanation": "The notes state that RDBMS 'link tables based on common columns,' establishing structured relationships between tables."  
-  },  
-  {  
-    "id": "q103",  
-    "topic": "Structured Query Language (SQL) Overview",  
-    "question_text": "Which SQL operation is used to retrieve specific data from a table?",  
-    "options": ["INSERT", "UPDATE", "SELECT", "DELETE"],  
-    "correct_answer": "SELECT",  
-    "correct_answer_explanation": "The notes mention that SQL allows 'querying' (retrieving data) as one of its core functions, with SELECT being the standard command for this purpose."  
-  },  
-  {  
-    "id": "q104",  
-    "topic": "Core Relational Concepts and Terminology",  
-    "question_text": "What is the role of a primary key in a database table?",  
-    "options": ["To enforce relationships between tables", "To uniquely identify each row in a table", "To store foreign keys from other tables", "To define the data type of columns"],  
-    "correct_answer": "To uniquely identify each row in a table",  
-    "correct_answer_explanation": "The notes clarify that a primary key 'uniquely identifies each row in a table' and 'cannot contain NULL values,' ensuring distinct records."  
-  },  
-  {  
-    "id": "q105",  
-    "topic": "Core Relational Concepts and Terminology",  
-    "question_text": "In the provided Enrollment table example, which columns act as foreign keys?",  
-    "options": ["EnrollmentID", "StudentID and CourseID", "Grade", "CourseName"],  
-    "correct_answer": "StudentID and CourseID",  
-    "correct_answer_explanation": "The notes state that in the Enrollment table, 'StudentID and CourseID columns are foreign keys' referencing primary keys in the Students and Courses tables, respectively."  
-  }  
-]
+{  
+  "title": "Introduction to Relational Databases and SQL Quiz",  
+  "description": "Test your knowledge on fundamental concepts of relational databases and SQL.",  
+  "type": "Simple",  
+  "questions": [  
+    {  
+      "id": "q_simple_001",  
+      "question": "What is the primary purpose of a database?",  
+      "options": [  
+        {"id": "opt1", "text": "To store unstructured data"},  
+        {"id": "opt2", "text": "To manage and retrieve structured information efficiently"},  
+        {"id": "opt3", "text": "To perform complex mathematical calculations"},  
+        {"id": "opt4", "text": "To design user interfaces for applications"},  
+        {"id": "opt5", "text": "To execute operating system commands"}  
+      ],  
+      "correctOptionIds": ["opt2"],  
+      "explanation": "A database is an organized collection of data designed to store, manage, and retrieve information efficiently. It functions like a digital filing cabinet with structured storage."  
+    },  
+    {  
+      "id": "q_simple_002",  
+      "question": "Which of the following are examples of RDBMS? (Select all that apply)",  
+      "options": [  
+        {"id": "optA", "text": "Microsoft SQL Server"},  
+        {"id": "optB", "text": "MySQL"},  
+        {"id": "optC", "text": "PostgreSQL"},  
+        {"id": "optD", "text": "Oracle Database"},  
+        {"id": "optE", "text": "Python"}  
+      ],  
+      "correctOptionIds": ["optA", "optB", "optC", "optD"],  
+      "explanation": "Microsoft SQL Server, MySQL, PostgreSQL, and Oracle Database are all examples of RDBMS. Python is a programming language, not an RDBMS."  
+    },  
+    {  
+      "id": "q_simple_003",  
+      "question": "What does SQL stand for?",  
+      "options": [  
+        {"id": "opt1", "text": "Structured Query Language"},  
+        {"id": "opt2", "text": "Sequential Query Logic"},  
+        {"id": "opt3", "text": "Simple Question List"},  
+        {"id": "opt4", "text": "System Query Manager"},  
+        {"id": "opt5", "text": "Standardized Query Model"}  
+      ],  
+      "correctOptionIds": ["opt1"],  
+      "explanation": "SQL stands for Structured Query Language, which is the standard language used to interact with relational databases."  
+    },  
+    {  
+      "id": "q_simple_004",  
+      "question": "Which of these best describes a primary key in a database table?",  
+      "options": [  
+        {"id": "optA", "text": "A column that allows duplicate values"},  
+        {"id": "optB", "text": "A column or set of columns that uniquely identifies each row in a table"},  
+        {"id": "optC", "text": "A foreign key referencing another table's primary key"},  
+        {"id": "optD", "text": "A relationship between two tables"},  
+        {"id": "optE", "text": "A column with no constraints"}  
+      ],  
+      "correctOptionIds": ["optB"],  
+      "explanation": "A primary key uniquely identifies each row in a table and cannot contain NULL values. It ensures data integrity by enforcing uniqueness."  
+    },  
+    {  
+      "id": "q_simple_005",  
+      "question": "What is the role of a foreign key in a relational database?",  
+      "options": [  
+        {"id": "optX", "text": "To store data redundantly across multiple tables"},  
+        {"id": "optY", "text": "To enforce referential integrity between tables by referencing another table's primary key"},  
+        {"id": "optZ", "text": "To define the schema of a database"},  
+        {"id": "optAA", "text": "To manage transactions and rollbacks"},  
+        {"id": "optBB", "text": "To encrypt sensitive data"}  
+      ],  
+      "correctOptionIds": ["optY"],  
+      "explanation": "A foreign key establishes relationships between tables by referencing the primary key of another table, ensuring referential integrity."  
+    }  
+  ]  
+}

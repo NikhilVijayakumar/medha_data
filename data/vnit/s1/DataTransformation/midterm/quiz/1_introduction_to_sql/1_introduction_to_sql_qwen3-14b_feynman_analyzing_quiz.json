@@ -1,67 +1,59 @@
-[  
-  {  
-    "id": "feynman_q_001_related_to_primary_q_id_q_analyze_primary_001",  
-    "type": "analogy_creation",  
-    "question_text": "Which analogy best explains how referential integrity works between tables in a relational database?",  
-    "options": [  
-      "A book index that cross-references pages to chapter numbers, ensuring every page number exists in the chapters list.",  
-      "A family tree where children can have parents not listed in the family tree.",  
-      "A shopping cart that allows items to be added without checking if they exist in the inventory.",  
-      "A recipe book with ingredients listed but no connection to specific recipes.",  
-      "A phone directory where names and numbers are stored independently with no links."  
-    ],  
-    "correct_answer": "A book index that cross-references pages to chapter numbers, ensuring every page number exists in the chapters list.",  
-    "correct_answer_explanation": "This analogy captures referential integrity: foreign keys (page numbers) must reference valid primary keys (chapter numbers). Invalid options describe scenarios where relationships are broken or absent."  
-  },  
-  {  
-    "id": "feynman_q_002_related_to_primary_q_id_q_analyze_primary_002",  
-    "type": "simplification",  
-    "question_text": "Explain why `StudentID` is considered a primary key in the `Students` table, as if to a 10-year-old. (Select all that apply)",  
-    "options": [  
-      "`StudentID` is like a unique name tag for each student so teachers can tell them apart.",  
-      "`StudentID` ensures every student has exactly one major listed in the table.",  
-      "`StudentID` acts as a special number that no two students share, making it easy to find records.",  
-      "`StudentID` helps computers organize data faster by sorting numbers instead of names.",  
-      "`StudentID` is required because `Name` might have duplicates like 'John Smith'."  
-    ],  
-    "correct_answer": [  
-      "`StudentID` is like a unique name tag for each student so teachers can tell them apart.",  
-      "`StudentID` acts as a special number that no two students share, making it easy to find records.",  
-      "`StudentID` is required because `Name` might have duplicates like 'John Smith'."  
-    ],  
-    "correct_answer_explanation": "These options simplify the primary key concept: uniqueness, ease of lookup, and solving ambiguity in human-readable fields. Distractors conflate unrelated concepts (sorting speed) or misattribute purposes (ensuring one major)."  
-  },  
-  {  
-    "id": "feynman_q_003_related_to_primary_q_id_q_analyze_primary_003",  
-    "type": "underlying_mechanism_explanation",  
-    "question_text": "Why does the query `SELECT * FROM Enrollment WHERE StudentID = 101;` assume data consistency without enforcing referential integrity checks?",  
-    "options": [  
-      "The SQL engine trusts that foreign keys are already validated by application logic.",  
-      "Referential integrity is only enforced when using JOIN operations between tables.",  
-      "Queries cannot check for referential integrity because they don't modify data.",  
-      "The WHERE clause filters rows but does not validate relationships to other tables.",  
-      "Indexes on `StudentID` automatically verify the existence of records in related tables."  
-    ],  
-    "correct_answer": [  
-      "The SQL engine trusts that foreign keys are already validated by application logic.",  
-      "The WHERE clause filters rows but does not validate relationships to other tables."  
-    ],  
-    "correct_answer_explanation": "Referential integrity enforcement (e.g., checking if StudentID=101 exists in the Students table) is handled at the database level through constraints, not by SELECT queries. The query assumes consistency because it doesn't perform inserts/updates/deletes that could violate relationships."  
-  },  
-  {  
-    "id": "feynman_q_004_related_to_primary_q_id_q_analyze_primary_004",  
-    "type": "conceptual_transformation",  
-    "question_text": "How would you explain the difference in referential integrity enforcement between SQL Server and MySQL using a real-world analogy?",  
-    "options": [  
-      "SQL Server is like a strict librarian who checks every book's catalog entry, while MySQL is more relaxed.",  
-      "MySQL requires explicit permission to borrow books, while SQL Server allows borrowing freely.",  
-      "Both libraries enforce rules, but SQL Server uses a different language (T-SQL) for checking them.",  
-      "SQL Server automatically organizes books on shelves, while MySQL leaves it to users.",  
-      "MySQL stores all book data in one room, while SQL Server divides it into sections."  
-    ],  
-    "correct_answer": [  
-      "SQL Server is like a strict librarian who checks every book's catalog entry, while MySQL is more relaxed."  
-    ],  
-    "correct_answer_explanation": "This analogy captures the inferred difference in default referential integrity enforcement: SQL Server may enforce constraints more rigorously by default compared to MySQL. Other options focus on irrelevant features (T-SQL dialects) or misrepresent storage mechanisms."  
-  }  
-]
+{
+  "title": "Relational Databases & SQL Analysis Quiz - Feynman Follow-up Quiz",
+  "description": "Deepen your understanding of relational databases, RDBMS, and SQL through Feynman-style questions that probe conceptual transformations, simplifications, mechanisms, and design rationales.",
+  "type": "Feynman",
+  "questions": [
+    {
+      "id": "feynman_q_001_related_to_primary_q_analyze_001_referential_integrity",
+      "question": "Which analogy best explains 'referential integrity' to a non-technical person? (Select all that apply)",
+      "options": [
+        {"id": "optA", "text": "A library where every book has a valid author listed in the authors' catalog."},
+        {"id": "optB", "text": "A family tree with missing branches due to incomplete records."}, 
+        {"id": "optC", "text": "A puzzle where pieces can be placed anywhere without fitting rules."},
+        {"id": "optD", "text": "A phone directory that allows entries with non-existent phone numbers."},
+        {"id": "optE", "text": "A classroom where every student's name appears in the attendance list."}
+      ],
+      "correctOptionIds": ["optA", "optE"],
+      "explanation": "Referential integrity ensures relationships between tables are valid. OptA (library books with valid authors) and OptE (attendance lists with real students) capture this by enforcing that foreign key values exist in referenced tables. Other options describe violations or unrelated concepts."
+    },
+    {
+      "id": "feynman_q_002_related_to_primary_q_analyze_002_sql_foreign_key_syntax",
+      "question": "How would you explain the purpose of a FOREIGN KEY constraint to a 10-year-old? (Simplified explanation required)",
+      "options": [
+        {"id": "optX", "text": "It’s like a special rule that ensures your toy box only has toys from your collection."},
+        {"id": "optY", "text": "It’s a way to hide data from other people."}, 
+        {"id": "optZ", "text": "It speeds up computer calculations by using magic numbers."},
+        {"id": "optAA", "text": "It adds extra columns to tables for better organization."},
+        {"id": "optBB", "text": "It lets you write secret codes in SQL."}
+      ],
+      "correctOptionIds": ["optX"],
+      "explanation": "A FOREIGN KEY enforces that data in one table (e.g., Enrollment.StudentID) must match values in another table (Students.StudentID). OptX’s analogy of a toy box only containing toys from your collection captures this validation rule effectively."
+    },
+    {
+      "id": "feynman_q_003_related_to_primary_q_analyze_003_subquery_flaw",
+      "question": "Which scenario best explains why the subquery in the original question could fail? (Underlying mechanism explanation required)",
+      "options": [
+        {"id": "optM", "text": "It’s like asking for a specific color of paint, but the store has multiple shades with that name."},
+        {"id": "optN", "text": "It’s similar to requesting one book from a library where all books are identical."}, 
+        {"id": "optO", "text": "It guarantees exactly one result, like picking a single winner from a raffle."},
+        {"id": "optP", "text": "It’s akin to asking for the tallest person in a room with no people present."},
+        {"id": "optQ", "text": "It ensures data is always available instantly, like streaming video."}
+      ],
+      "correctOptionIds": ["optM"],
+      "explanation": "The subquery may return multiple values if there are multiple courses named 'Database Systems', causing a comparison error. OptM’s analogy of paint shades with the same name illustrates this ambiguity in results."
+    },
+    {
+      "id": "feynman_q_004_related_to_primary_q_analyze_004_normalization_principles",
+      "question": "Which scenario demonstrates denormalization? (Design rationale explanation required)",
+      "options": [
+        {"id": "optU", "text": "Storing customer addresses in a separate table linked by CustomerID."},
+        {"id": "optV", "text": "Repeating product prices in every order line item instead of referencing a Products table."}, 
+        {"id": "optW", "text": "Using a single 'Notes' column to store all customer details."},
+        {"id": "optX", "text": "Creating separate tables for different departments (e.g., Sales_2023, Sales_2024)."},
+        {"id": "optY", "text": "Storing supervisor relationships in a dedicated Supervisors table."}
+      ],
+      "correctOptionIds": ["optV", "optW", "optX"],
+      "explanation": "Denormalization increases redundancy. OptV (repeating prices), OptW (all-in-one Notes column), and OptX (department-specific tables) are anti-patterns that violate normalization principles by introducing duplication or structural inefficiencies."
+    }
+  ]
+}

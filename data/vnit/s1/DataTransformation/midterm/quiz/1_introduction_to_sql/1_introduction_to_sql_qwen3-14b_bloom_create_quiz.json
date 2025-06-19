@@ -1,96 +1,46 @@
-[  
-  {  
-    "id": "q_create_primary_001",  
-    "topic": "Introduction to Relational Databases and SQL",  
-    "question_text": "You are designing a university database system that needs to track student enrollments, course prerequisites, and faculty assignments. Which core relational concept would you **primarily leverage** to ensure data integrity when enforcing rules like 'a student cannot enroll in a course without completing its prerequisite'? (Select all that apply)",  
-    "bloom_level": "Creating",  
-    "question_type": "MCQ",  
-    "options": [  
-      "Primary Key Constraints on the Students table",  
-      "Foreign Key Relationships between Courses and Prerequisites tables",  
-      "Trigger-based Logic to Validate Enrollment Rules Dynamically",  
-      "Stored Procedures for Enrollments That Embed Business Rules",  
-      "Indexing Strategies on the Course Catalog Table"  
-    ],  
-    "correct_answer": [  
-      "Foreign Key Relationships between Courses and Prerequisites tables",  
-      "Trigger-based Logic to Validate Enrollment Rules Dynamically",  
-      "Stored Procedures for Enrollments That Embed Business Rules"  
-    ],  
-    "correct_answer_explanation": "Enforcing enrollment rules requires **foreign keys** (to link prerequisites to courses) and **dynamic validation mechanisms**. While foreign keys ensure structural relationships, triggers or stored procedures are needed for complex business logic like checking prerequisite completion. Primary keys (Option A) manage uniqueness but not integrity rules, while indexing (Option E) improves performance, not data integrity."  
-  },  
-  {  
-    "id": "q_create_primary_002",  
-    "topic": "Introduction to Relational Databases and SQL",  
-    "question_text": "Design an analogy for a relational database using a real-world scenario that emphasizes **table relationships** and **data normalization**. Which of the following analogies best captures these principles? (Select one)",  
-    "bloom_level": "Creating",  
-    "question_type": "MCQ",  
-    "options": [  
-      "A library catalog where each book is stored in multiple locations without tracking which shelf it belongs to.",  
-      "A recipe book with ingredients listed once per recipe, even if they are reused across recipes.",  
-      "A city’s postal system where each address is uniquely identified by a ZIP code but duplicates exist for similar streets.",  
-      "A spreadsheet containing all student data in one table, including repeated course names and instructor details.",  
-      "An online marketplace where product listings include redundant descriptions to avoid linking tables."  
-    ],  
-    "correct_answer": "A recipe book with ingredients listed once per recipe, even if they are reused across recipes.",  
-    "correct_answer_explanation": "This analogy reflects **normalization** (eliminating redundancy) and **relationships** (recipes as tables linked to ingredients). Normalized databases store data in separate tables (e.g., Ingredients table referenced by Recipes), avoiding duplication. Other options describe denormalization, redundancy, or lack of structured relationships."  
-  },  
-  {  
-    "id": "q_create_primary_003",  
-    "topic": "Introduction to Relational Databases and SQL",  
-    "question_text": "You need to create an SQL query that retrieves the **average GPA** for students in each department, but only for departments with more than 10 students. Which combination of SQL concepts must you synthesize to achieve this? (Select all that apply)",  
-    "bloom_level": "Creating",  
-    "question_type": "MCQ",  
-    "options": [  
-      "GROUP BY Clause with HAVING Condition on Department Count",  
-      "JOIN Operation Between Students and Departments Tables",  
-      "Subquery to Calculate Average GPA Per Student",  
-      "CASE Statement to Filter by Department Size",  
-      "WINDOW Function for Conditional Aggregation"  
-    ],  
-    "correct_answer": [  
-      "GROUP BY Clause with HAVING Condition on Department Count",  
-      "JOIN Operation Between Students and Departments Tables"  
-    ],  
-    "correct_answer_explanation": "**GROUP BY** with **HAVING** filters departments based on aggregated counts, while a **JOIN** combines student data with department information. Subqueries (Option C) are unnecessary here; the problem requires aggregation over joined tables, not nested queries. CASE (Option D) and WINDOW functions (E) do not directly solve this task."  
-  },  
-  {  
-    "id": "q_create_primary_004",  
-    "topic": "Introduction to Relational Databases and SQL",  
-    "question_text": "Design a **schema** for a hospital management system that tracks patients, doctors, appointments, and medical records. Which of the following design choices best ensures **referential integrity** and scalability? (Select all that apply)",  
-    "bloom_level": "Creating",  
-    "question_type": "MCQ",  
-    "options": [  
-      "A Patients table with a self-referencing foreign key for 'primary care physician'",  
-      "An Appointments table linking PatientID and DoctorID as composite primary keys",  
-      "MedicalRecords stored as BLOBs in the Patients table to avoid joins",  
-      "Doctors table with unique constraints on specialty and license number",  
-      "A normalized structure with separate tables for Diagnoses, Medications, and Procedures linked via foreign keys"  
-    ],  
-    "correct_answer": [  
-      "A Patients table with a self-referencing foreign key for 'primary care physician'",  
-      "Doctors table with unique constraints on specialty and license number",  
-      "A normalized structure with separate tables for Diagnoses, Medications, and Procedures linked via foreign keys"  
-    ],  
-    "correct_answer_explanation": "**Referential integrity** requires foreign keys (e.g., linking Patients to Doctors) and **unique constraints** to prevent duplicate entries. Normalization (Option E) ensures scalability by avoiding redundancy. Storing BLOBs in the Patients table (C) violates normalization, while composite primary keys (B) are less scalable than surrogate IDs."  
-  },  
-  {  
-    "id": "q_create_primary_005",  
-    "topic": "Introduction to Relational Databases and SQL",  
-    "question_text": "You are tasked with optimizing a slow-performing query that joins four large tables (A, B, C, D) frequently. Which combination of **indexing strategies** and **query restructuring** would you implement to improve performance? (Select all that apply)",  
-    "bloom_level": "Creating",  
-    "question_type": "MCQ",  
-    "options": [  
-      "Create indexes on foreign key columns used in JOIN conditions",  
-      "Replace the multi-table join with materialized views pre-aggregated by application logic",  
-      "Use a covering index that includes all selected columns to avoid table scans",  
-      "Reorganize tables into a star schema with fact and dimension tables",  
-      "Add indexes on every column of all four tables for broad coverage"  
-    ],  
-    "correct_answer": [  
-      "Create indexes on foreign key columns used in JOIN conditions",  
-      "Use a covering index that includes all selected columns to avoid table scans"  
-    ],  
-    "correct_answer_explanation": "**Indexing join keys** (A) and **covering indexes** (C) directly reduce I/O by enabling faster lookups. Materialized views (B) may help but depend on data freshness; star schemas (D) are more for OLAP than ad-hoc joins. Indexing all columns (E) is inefficient and increases write overhead."  
-  }  
-]
+{  
+  "title": "Relational Database Design & SQL Synthesis Quiz",  
+  "description": "Design relational databases, synthesize SQL queries, and solve complex data modeling challenges requiring multi-concept integration.",  
+  "type": "Creating",  
+  "questions": [  
+    {  
+      "id": "q_create_001",  
+      "question": "You are tasked with designing a database schema for a university system that tracks students, courses, and enrollments. To ensure **data integrity** and **efficient querying**, which of the following designs would you implement? (Select all correct answers)",  
+      "options": [  
+        { "id": "opt1", "text": "A `Students` table with StudentID as a primary key, a `Courses` table with CourseID as a primary key, and an `Enrollments` table linking them via foreign keys." },  
+        { "id": "opt2", "text": "A single denormalized `StudentCourses` table containing all student details, course details, and enrollment dates in one table." },  
+        { "id": "opt3", "text": "An `Enrollments` table with StudentID as a foreign key referencing Students.StudentID and CourseID as a foreign key referencing Courses.CourseID, but no primary key defined on Enrollments." },  
+        { "id": "opt4", "text": "A `Courses` table with a composite primary key (DepartmentCode, CourseNumber), and an `Enrollments` table with a unique constraint on StudentID and CourseID to prevent duplicate enrollments." },  
+        { "id": "opt5", "text": "An `Enrollments` table using triggers to enforce referential integrity instead of foreign key constraints for performance reasons." }  
+      ],  
+      "correctOptionIds": ["opt1", "opt4"],  
+      "explanation": "The correct answers are **opt1** and **opt4**. Opt1 enforces normalization by separating entities (Students, Courses) and using foreign keys in Enrollments to maintain referential integrity. Opt4 ensures uniqueness of enrollments via a composite constraint while allowing efficient querying. Opt2 violates normalization principles and leads to redundancy. Opt3 lacks a primary key for the Enrollments table, risking data anomalies. Opt5 is poor practice as triggers complicate maintenance and do not guarantee atomicity or consistency."  
+    },  
+    {  
+      "id": "q_create_002",  
+      "question": "You are given this SQL query: `SELECT Name FROM Students WHERE Major IN (SELECT Major FROM Students GROUP BY Major HAVING COUNT(*) > 5)`. What is the **most accurate description** of what this query accomplishes, and how would you rewrite it using a JOIN for performance optimization in large datasets?",  
+      "options": [  
+        { "id": "optA", "text": "Retrieves names of students whose majors have more than 5 students. Optimized version: `SELECT s1.Name FROM Students s1 INNER JOIN (SELECT Major FROM Students GROUP BY Major HAVING COUNT(*) > 5) s2 ON s1.Major = s2.Major`." },  
+        { "id": "optB", "text": "Retrieves names of students with a major that appears more than 5 times. Optimized version: `SELECT Name FROM Students WHERE Major IN (SELECT DISTINCT Major FROM Students GROUP BY Major HAVING COUNT(*) > 5)`." },  
+        { "id": "optC", "text": "Retrieves names of all students who are in the top 5 most popular majors. Optimized version: `SELECT Name FROM Students WHERE Major = ANY (SELECT Major FROM Students GROUP BY Major ORDER BY COUNT(*) DESC LIMIT 5)`." },  
+        { "id": "optD", "text": "Retrieves names of students whose major has exactly 5 students. Optimized version: `SELECT s1.Name FROM Students s1 INNER JOIN (SELECT Major FROM Students GROUP BY Major HAVING COUNT(*) = 5) s2 ON s1.Major = s2.Major`." },  
+        { "id": "optE", "text": "Retrieves names of students with a major that has at least one student. Optimized version: `SELECT Name FROM Students WHERE Major IN (SELECT Major FROM Students)`." }  
+      ],  
+      "correctOptionIds": ["optA"],  
+      "explanation": "**OptA** is correct. The original query retrieves students in majors with more than 5 enrollments. Rewriting it with a JOIN (as in optA) improves performance on large datasets by avoiding repeated subquery execution. OptB incorrectly uses DISTINCT, which doesn’t affect the result but adds overhead. OptC misinterprets the requirement as 'top 5' instead of 'majors with >5 students'. OptD changes the condition to =5, and optE is trivially true for all students."  
+    },  
+    {  
+      "id": "q_create_003",  
+      "question": "You are tasked with designing an SQL query to **calculate the average grade per student** from a `Grades` table containing StudentID, CourseID, and Grade columns. However, you must ensure that students who have **no grades recorded** (e.g., new students) still appear in the output with a NULL or 0 value. Which approach would achieve this requirement using only SQL constructs? (Select all correct answers)",  
+      "options": [  
+        { "id": "optX", "text": "Use `LEFT JOIN` between Students and Grades, then apply `COALESCE(AVG(Grade), 0)`." },  
+        { "id": "optY", "text": "Use a subquery with `GROUP BY StudentID` on the Grades table, then `RIGHT JOIN` to the Students table." },  
+        { "id": "optZ", "text": "Use `FULL OUTER JOIN` between Students and Grades, but this is not supported in all SQL dialects like MySQL." },  
+        { "id": "optW", "text": "Use a CTE with `GROUP BY StudentID` on the Grades table, then use `COALESCE` to replace NULLs with 0 in the final SELECT." },  
+        { "id": "optV", "text": "Use `INNER JOIN` between Students and Grades, but filter out students with no grades using a WHERE clause." }  
+      ],  
+      "correctOptionIds": ["optX", "optY", "optZ"],  
+      "explanation": "**OptX**, **OptY**, and **OptZ** are correct. OptX uses LEFT JOIN to include all students, then COALESCE handles NULL averages. OptY achieves the same with a RIGHT JOIN after grouping grades (though less common). OptZ is valid in dialects supporting FULL OUTER JOIN. OptW incorrectly applies COALESCE on grouped results, which would not handle missing students. OptV excludes unenrolled students entirely."  
+    }  
+  ]  
+}

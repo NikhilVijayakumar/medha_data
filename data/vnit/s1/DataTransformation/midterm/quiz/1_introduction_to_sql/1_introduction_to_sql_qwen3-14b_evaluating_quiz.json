@@ -1,53 +1,46 @@
-[  
-  {  
-    "id": "q_evaluate_primary_001",  
-    "topic": "Core Relational Concepts and Terminology",  
-    "question_text": "A database designer proposes using the `StudentID` (primary key) as a foreign key in the `Enrollment` table to link to the `Students` table. Evaluate whether this design ensures referential integrity if `StudentID` allows NULL values.",  
-    "bloom_level": "Evaluating",  
-    "question_type": "MCQ",  
-    "options": [  
-      "This design ensures referential integrity because foreign keys inherently enforce relationships.",  
-      "This design fails to ensure referential integrity because a primary key cannot contain NULLs, making the foreign key invalid.",  
-      "This design is acceptable as long as `StudentID` in `Enrollment` is not used for mandatory lookups.",  
-      "This design ensures referential integrity if cascading constraints are applied during deletion.",  
-      "This design fails to ensure referential integrity because allowing NULLs in foreign keys violates the requirement for valid relationships."  
-    ],  
-    "correct_answer": "This design fails to ensure referential integrity because allowing NULLs in foreign keys violates the requirement for valid relationships.",  
-    "correct_answer_explanation": "Referential integrity requires that foreign key values must match existing primary key values or be NULL. However, by definition, a primary key (like `StudentID`) cannot contain NULLs. If the foreign key (`Enrollment.StudentID`) allows NULLs, it introduces invalid relationships where entries in `Enrollment` might reference non-existent students, violating referential integrity."  
-  },  
-  {  
-    "id": "q_evaluate_primary_002",  
-    "topic": "Structured Query Language (SQL) Overview",  
-    "question_text": "A developer claims that using PL/SQL exclusively for a PostgreSQL database is more efficient than using T-SQL. Evaluate the validity of this claim based on SQL standards and dialect-specific features.",  
-    "bloom_level": "Evaluating",  
-    "question_type": "MCQ",  
-    "options": [  
-      "This claim is valid because PL/SQL adheres strictly to ANSI SQL standards, making it universally efficient.",  
-      "This claim is invalid because PostgreSQL natively supports PL/pgSQL, not PL/SQL, and T-SQL is specific to Microsoft SQL Server.",  
-      "This claim is valid as both PL/SQL and T-SQL offer procedural extensions beyond standard SQL.",  
-      "This claim is invalid because PostgreSQL does not support any procedural language like PL/SQL or T-SQL.",  
-      "This claim is partially true: PL/SQL can be used in PostgreSQL, but it may introduce compatibility issues."  
-    ],  
-    "correct_answer": "This claim is invalid because PostgreSQL natively supports PL/pgSQL, not PL/SQL, and T-SQL is specific to Microsoft SQL Server.",  
-    "correct_answer_explanation": "PL/SQL is Oracle's procedural language, while T-SQL is Microsoft’s dialect for SQL Server. PostgreSQL uses PL/pgSQL as its native procedural language. Using PL/SQL in PostgreSQL would require additional configuration and may not be efficient due to compatibility gaps. Thus, the claim ignores database-specific native support and misrepresents SQL dialects."  
-  },  
-  {  
-    "id": "q_evaluate_primary_003",  
-    "topic": "Relational Database Management Systems (RDBMS)",  
-    "question_text": "A system administrator is choosing between MySQL and Oracle DB for a high-transaction e-commerce application. Evaluate which RDBMS better supports scalability, transaction control, and structured data management based on the provided notes.",  
-    "bloom_level": "Evaluating",  
-    "question_type": "MCQ",  
-    "options": [  
-      "MySQL is superior because it is open-source and optimized for web applications with high scalability.",  
-      "Oracle DB is superior due to its robustness, advanced transaction control features, and enterprise-level scalability.",  
-      "Both are equally suitable as they both support structured data and ACID compliance.",  
-      "Neither supports scalability; relational databases are inherently limited in handling high transactions.",  
-      "MySQL is better for small-scale applications while Oracle DB excels in complex, mission-critical systems."  
-    ],  
-    "correct_answer": [  
-      "Oracle DB is superior due to its robustness, advanced transaction control features, and enterprise-level scalability.",  
-      "MySQL is better for small-scale applications while Oracle DB excels in complex, mission-critical systems."  
-    ],  
-    "correct_answer_explanation": "The notes highlight that Oracle Database is known for robustness, scalability, and handling complex transactions, making it suitable for high-transaction e-commerce. MySQL is noted as open-source and widely used for web applications but may lack Oracle’s enterprise-level features. Thus, both options (B) and (E) are correct based on the trade-offs between scalability/robustness and use case appropriateness."  
-  }  
-]
+{
+  "title": "Relational Databases and SQL Evaluation Quiz",
+  "description": "Evaluate key concepts in relational databases, RDBMS design, SQL efficiency, and core database terminology through scenario-based questions.",
+  "type": "Evaluating",
+  "questions": [
+    {
+      "id": "q_evaluate_001",
+      "question": "A developer is designing a `Students` table for an educational institution. The table must support frequent searches by `StudentID` (primary key) and occasional queries filtering by `Major`. Which indexing strategy best balances performance and storage efficiency?",
+      "options": [
+        { "id": "opt1", "text": "Create a clustered index on `StudentID` and a non-clustered index on `Major`." },
+        { "id": "opt2", "text": "Use only a clustered index on `Major` for faster filtering of majors." },
+        { "id": "opt3", "text": "Cluster the table by `Major` to optimize sorting operations." },
+        { "id": "opt4", "text": "Create non-clustered indexes on both `StudentID` and `Major`." },
+        { "id": "opt5", "text": "Avoid indexes entirely to reduce overhead for small datasets." }
+      ],
+      "correctOptionIds": ["opt1"],
+      "explanation": "A clustered index on the primary key (`StudentID`) ensures physical data storage aligns with lookup patterns, optimizing direct access. A non-clustered index on `Major` supports efficient filtering without reorganizing the table's physical structure. Other options either ignore primary key optimization (opt2), misalign indexes with usage patterns (opt3), or redundantly over-index (opt4)."
+    },
+    {
+      "id": "q_evaluate_002",
+      "question": "A team is normalizing a `Sales` table that contains redundant data about products and customers. The current design includes columns like `ProductID`, `ProductName`, `CustomerName`, and `Address`. Which normalization form should they aim for to eliminate redundancy while preserving efficient querying? (Select all that apply)",
+      "options": [
+        { "id": "optA", "text": "First Normal Form (1NF)" },
+        { "id": "optB", "text": "Second Normal Form (2NF)" },
+        { "id": "optC", "text": "Third Normal Form (3NF)" },
+        { "id": "optD", "text": "Fourth Normal Form (4NF)" },
+        { "id": "optE", "text": "Boyce-Codd Normal Form (BCNF)" }
+      ],
+      "correctOptionIds": ["optC"],
+      "explanation": "Third Normal Form (3NF) eliminates transitive dependencies, ensuring non-key attributes depend only on the primary key. While 2NF removes partial dependencies, 3NF is necessary to fully address redundancy in this scenario. Higher forms like 4NF and BCNF are irrelevant unless dealing with multi-valued attributes or complex constraints."
+    },
+    {
+      "id": "q_evaluate_003",
+      "question": "Consider an SQL query joining `Students` and `Enrollments` tables using a LEFT JOIN on `StudentID`. Which of the following outcomes would indicate that this join type is appropriate? (Select all that apply)",
+      "options": [
+        { "id": "optX", "text": "The result includes all students, even those without enrollment records." },
+        { "id": "optY", "text": "The query guarantees no duplicate rows in the output." },
+        { "id": "optZ", "text": "It ensures referential integrity between tables by enforcing foreign key constraints." },
+        { "id": "optAA", "text": "The result set contains only students who have enrolled in at least one course." },
+        { "id": "optBB", "text": "It is suitable for counting total enrollments per student, including those with zero enrollments." }
+      ],
+      "correctOptionIds": ["optX", "optBB"],
+      "explanation": "A LEFT JOIN preserves all rows from the left table (`Students`), even if no matches exist in `Enrollments`, which aligns with options X and BB. Option Y is incorrect because duplicates depend on data, not join type. Z refers to constraints, not joins. AA describes an INNER JOIN behavior."
+    }
+  ]
+}
