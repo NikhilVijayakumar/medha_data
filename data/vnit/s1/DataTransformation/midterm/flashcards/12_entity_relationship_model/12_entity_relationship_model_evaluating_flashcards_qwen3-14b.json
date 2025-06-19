@@ -1,0 +1,37 @@
+[  
+    {  
+        "id": "integrated_evaluate_001",  
+        "topic": "Entity-Relationship Modeling in Database Design",  
+        "bloom_level": "Evaluating",  
+        "front_prompt": "Critique the effectiveness of using multi-valued attributes directly in an ER diagram instead of creating a separate entity for them. Justify your answer with examples from the notes.",  
+        "back_answer": "Using multi-valued attributes (e.g., 'Skills' for a Teacher) directly in an ER diagram is less effective because it violates normalization principles and complicates querying. The notes suggest that such attributes are better represented as separate entities or junction tables to maintain data integrity and simplify relationships. For example, storing 'Skills' as a standalone entity with foreign keys to Teachers allows efficient retrieval and updates without altering the structure of the main Teacher table."  
+    },  
+    {  
+        "id": "integrated_evaluate_002",  
+        "topic": "Entity-Relationship Modeling in Database Design",  
+        "bloom_level": "Evaluating",  
+        "front_prompt": "Evaluate whether a ternary relationship (e.g., Doctor Prescribes Medicine to Patient) is more efficient than decomposing it into binary relationships. Use principles from the notes to support your answer.",  
+        "back_answer": "A ternary relationship can be less efficient in practice because relational databases inherently support only binary relationships. The notes mention that higher-degree relationships are often decomposed into multiple binary ones for implementation (e.g., separate 'Prescribes' tables linking Doctor-Medicine and Medicine-Patient). This decomposition improves query efficiency, reduces complexity, and aligns with normalization rules, even though it may require additional tables."  
+    },  
+    {  
+        "id": "integrated_evaluate_003",  
+        "topic": "Entity-Relationship Modeling in Database Design",  
+        "bloom_level": "Evaluating",  
+        "front_prompt": "Weigh the pros and cons of using derived attributes (e.g., Age calculated from DateOfBirth) versus storing them directly in a database. Consider data accuracy, storage, and query efficiency.",  
+        "back_answer": "Derived attributes reduce storage needs and ensure real-time accuracy by calculating values (e.g., Age = CURRENT_DATE - DateOfBirth). However, they may increase computational overhead during queries. Storing derived attributes improves read performance but risks inconsistencies if the source data (e.g., DateOfBirth) changes without updating the derived value. The notes suggest using dashed ovals for derived attributes in ER diagrams to indicate their dependency on other attributes."  
+    },  
+    {  
+        "id": "integrated_evaluate_004",  
+        "topic": "Entity-Relationship Modeling in Database Design",  
+        "bloom_level": "Evaluating",  
+        "front_prompt": "Is the statement 'A primary key must always be a single attribute' accurate? Critique this claim using examples from the notes.",  
+        "back_answer": "The statement is inaccurate. The notes explicitly define a primary key as an attribute (or set of attributes) that uniquely identifies each instance of an entity. For example, a composite primary key like (StudentID, CourseCode) could be used for an Enrollment entity. Underlining multiple attributes in ER diagrams signifies this composite structure."  
+    },  
+    {  
+        "id": "integrated_evaluate_005",  
+        "topic": "Entity-Relationship Modeling in Database Design",  
+        "bloom_level": "Evaluating",  
+        "front_prompt": "Which approach is more effective for modeling a many-to-many relationship: using a junction entity or allowing direct connections between entities? Justify your choice based on the notes.",  
+        "back_answer": "Using a junction entity (e.g., Enrollment linking Students and Courses) is far more effective. The notes emphasize that many-to-many relationships require intermediary entities to resolve into two one-to-many relationships, which aligns with relational database principles. Direct connections would violate normalization rules and make querying or updating data inefficient."  
+    }  
+]

@@ -1,0 +1,37 @@
+[  
+  {  
+    "id": "integrated_apply_001",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Draw an ER diagram for a university system where 'Students' enroll in 'Courses', and each course is taught by one 'Instructor'. Represent entities, relationships, and cardinality constraints.",  
+    "back_answer": "1. **Entities**: Use rectangles for `Student`, `Course`, and `Instructor`. 2. **Relationships**: Use a diamond labeled `ENROLLS IN` connecting `Student` and `Course`; use a diamond labeled `TEACHES` connecting `Instructor` and `Course`. 3. **Cardinality**: For `ENROLLS IN`, mark 'many' on `Student` and 'many' on `Course` (M:N). For `TEACHES`, mark 'one' on `Instructor` and 'many' on `Course` (1:M). Use a junction entity like `Enrollment` for M:N if required."  
+  },  
+  {  
+    "id": "integrated_apply_002",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Identify and classify the attributes of the 'Order' entity in an e-commerce system. Include key, composite, multi-valued, and derived attributes.",  
+    "back_answer": "1. **Key Attribute**: `OrderID` (underlined). 2. **Simple Attribute**: `OrderDate`. 3. **Composite Attribute**: `ShippingAddress` (composed of `Street`, `City`, `PostalCode`). 4. **Multi-valued Attribute**: `ProductsOrdered` (a list of product IDs or names, represented as a double oval). 5. **Derived Attribute**: `TotalAmount` (calculated from individual product prices and quantities, shown as a dashed oval)."  
+  },  
+  {  
+    "id": "integrated_apply_003",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Model the relationship 'Employees manage Departments' where one employee can manage multiple departments, and a department is managed by exactly one employee. Specify cardinality and degree.",  
+    "back_answer": "1. **Entities**: `Employee` (rectangle) and `Department` (rectangle). 2. **Relationship**: A diamond labeled `MANAGES`. 3. **Cardinality**: 'One' on `Department` (each department has one manager) and 'many' on `Employee` (one employee can manage many departments), indicating a 1:M relationship. 4. **Degree**: Binary (degree 2), as it involves two entities."  
+  },  
+  {  
+    "id": "integrated_apply_004",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Explain how to resolve a many-to-many (M:N) relationship between 'Students' and 'Courses' using a junction entity. Provide an example.",  
+    "back_answer": "1. **Junction Entity**: Create an `Enrollment` entity (rectangle) with attributes like `StudentID` and `CourseID`. 2. **Relationships**: Connect `Student` to `Enrollment` (1:M) and `Course` to `Enrollment` (1:M). 3. **Cardinality**: Each enrollment links one student to one course, resolving the M:N into two 1:M relationships. Example: A student can enroll in multiple courses, and a course has many students via the junction table."  
+  },  
+  {  
+    "id": "integrated_apply_005",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Design an ER diagram for a library system where 'Books' are borrowed by 'Members', and each book can have multiple copies. Include cardinality and entity types.",  
+    "back_answer": "1. **Entities**: `Book` (rectangle), `Member` (rectangle), and `Copy` (rectangle). 2. **Relationships**: A diamond labeled `BORROWS` connecting `Member` and `Book`. A diamond labeled `HAS` connecting `Book` and `Copy`. 3. **Cardinality**: For `BORROWS`, mark 'many' on both sides (M:N, requiring a junction entity like `Borrowing`). For `HAS`, mark 'one' on `Book` and 'many' on `Copy` (1:M)."  
+  }  
+]

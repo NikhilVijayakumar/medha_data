@@ -1,0 +1,107 @@
+[  
+  {  
+    "id": "entity_relationship_remember_001",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What are entities in the context of ER models?",  
+    "back_answer": "Entities are real-world objects, concepts, or things about which data needs to be stored. They are represented by rectangles in ER diagrams."  
+  },  
+  {  
+    "id": "entity_relationship_remember_002",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "How are entities visually represented in an ER diagram?",  
+    "back_answer": "Entities are typically represented by rectangles."  
+  },  
+  {  
+    "id": "entity_relationship_remember_003",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is a key attribute?",  
+    "back_answer": "A key attribute is an attribute (or set of attributes) that uniquely identifies each instance of an entity. It is often underlined in ER diagrams."  
+  },  
+  {  
+    "id": "entity_relationship_remember_004",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What distinguishes a composite attribute from a simple attribute?",  
+    "back_answer": "A composite attribute is composed of multiple sub-attributes (e.g., Address with Street, City, PostalCode), whereas a simple attribute has a single atomic value (e.g., StudentName)."  
+  },  
+  {  
+    "id": "entity_relationship_remember_005",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is a multi-valued attribute?",  
+    "back_answer": "A multi-valued attribute can have multiple values for a single entity instance (e.g., Skills of a Teacher) and is sometimes represented by double ovals."  
+  },  
+  {  
+    "id": "entity_relationship_remember_006",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "Define a derived attribute.",  
+    "back_answer": "A derived attribute is an attribute whose value can be calculated from other attributes (e.g., Age derived from DateOfBirth) and is sometimes represented by dashed ovals."  
+  },  
+  {  
+    "id": "entity_relationship_remember_007",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "How are relationships depicted in an ER diagram?",  
+    "back_answer": "Relationships are represented by diamond shapes connected to the entities they relate, with the relationship name written inside the diamond."  
+  },  
+  {  
+    "id": "entity_relationship_remember_008",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is cardinality in ER models?",  
+    "back_answer": "Cardinality specifies the number of instances of one entity that can be associated with the number of instances of another entity participating in a relationship."  
+  },  
+  {  
+    "id": "entity_relationship_remember_009",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "Explain one-to-many (1:M) cardinality.",  
+    "back_answer": "One instance of entity A can be associated with zero, one, or many instances of entity B, but each instance of entity B is associated with exactly one instance of entity A."  
+  },  
+  {  
+    "id": "entity_relationship_remember_010",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is a many-to-many (M:N) relationship?",  
+    "back_answer": "A many-to-many relationship allows multiple instances of entity A to be associated with multiple instances of entity B, and vice versa. It typically requires an intermediary junction entity."  
+  },  
+  {  
+    "id": "entity_relationship_remember_011",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the degree of a relationship?",  
+    "back_answer": "The degree of a relationship refers to the number of entity types involved in the relationship."  
+  },  
+  {  
+    "id": "entity_relationship_remember_012",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "Define a unary (degree 1) relationship.",  
+    "back_answer": "A unary relationship exists between instances of the same entity type, also known as a recursive relationship (e.g., Employee MANAGES another Employee)."  
+  },  
+  {  
+    "id": "entity_relationship_remember_013",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is a ternary (degree 3) relationship?",  
+    "back_answer": "A ternary relationship involves three different entity types simultaneously (e.g., Doctor PRESCRIBES Medicine to Patient)."  
+  },  
+  {  
+    "id": "entity_relationship_remember_014",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is a junction entity?",  
+    "back_answer": "A junction entity is an intermediary entity used to resolve many-to-many relationships into two one-to-many relationships in the relational database schema."  
+  },  
+  {  
+    "id": "entity_relationship_remember_015",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What are foreign keys used for?",  
+    "back_answer": "Foreign keys are used to establish relationships between tables by referencing the primary key of another table."  
+  }  
+]

@@ -1,0 +1,72 @@
+[  
+  {  
+    "id": "integrated_understand_001",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain 'entities' in your own words.",  
+    "back_answer": "Entities are real-world objects or concepts (like Students, Courses, Teachers) that store data. In ER diagrams, they’re drawn as rectangles to show what the database tracks."  
+  },  
+  {  
+    "id": "integrated_understand_002",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Give an analogy for 'attributes' of an entity.",  
+    "back_answer": "'Attributes' are like the traits of a person. For example, a Student entity has attributes like Name (simple), Address (composite: Street + City), or Skills (multi-valued)."  
+  },  
+  {  
+    "id": "integrated_understand_003",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain 'relationships' to a 5-year-old.",  
+    "back_answer": "A relationship is like a friendship between two things. For example, a Student can be friends (connected) with a Course, or a Teacher can teach a Course."  
+  },  
+  {  
+    "id": "integrated_understand_004",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "What is 'cardinality'? Simplify it.",  
+    "back_answer": "'Cardinality' means how many of one thing connect to another. Like, one Teacher can teach many Students (1:Many), or a Student can take only one Passport (1:1)."  
+  },  
+  {  
+    "id": "integrated_understand_005",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain 'many-to-many' relationships with an example.",  
+    "back_answer": "'Many-to-many' means many of one thing connect to many of another. For example, Students can take many Courses, and Courses have many Students. We fix this by adding a middle table (like Enrollment) to track each pair."  
+  },  
+  {  
+    "id": "integrated_understand_006",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "What is a 'degree of relationship'? Use an analogy.",  
+    "back_answer": "'Degree' means how many things are connected. Binary (2) is like a friendship between two people. Ternary (3) is like a group project with three friends: Doctor, Medicine, and Patient."  
+  },  
+  {  
+    "id": "integrated_understand_007",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Why are 'key attributes' important? Explain simply.",  
+    "back_answer": "'Key attributes' (like StudentID) uniquely identify each entity. They’re like a person’s name—without them, you can’t tell one Student from another."  
+  },  
+  {  
+    "id": "integrated_understand_008",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "How do 'foreign keys' work? Use an example.",  
+    "back_answer": "'Foreign keys' link tables. For instance, the Enrollment table has a StudentID (from Student) and CourseID (from Course), acting as bridges between them."  
+  },  
+  {  
+    "id": "integrated_understand_009",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain 'derived attributes' with an example.",  
+    "back_answer": "'Derived attributes' are calculated from others. For example, Age is derived from DateOfBirth—no need to store it separately."  
+  },  
+  {  
+    "id": "integrated_understand_010",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "What’s a 'junction entity'? Describe it.",  
+    "back_answer": "'Junction entities' solve many-to-many relationships. Like an Enrollment table that connects Students and Courses, storing pairs like (Student123, Course456)."  
+  }  
+]

@@ -1,0 +1,37 @@
+[  
+  {  
+    "id": "integrated_analyze_001",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Break down the Entity-Relationship (ER) Model into its core components and explain how they interact.",  
+    "back_answer": "The ER model consists of entities (rectangles), attributes (ovals), relationships (diamonds), and cardinality constraints. Entities represent real-world objects, attributes describe their properties, and relationships connect entities. Primary keys uniquely identify entity instances, while cardinality defines the number of associations between entities. For example, a `Student` entity with a key attribute `StudentID` connects via an `ENROLLS IN` relationship to a `Course` entity, governed by one-to-many (1:M) cardinality."  
+  },  
+  {  
+    "id": "integrated_analyze_002",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Compare and contrast simple attributes and composite attributes in ER modeling.",  
+    "back_answer": "Simple attributes are atomic values (e.g., `StudentName`), while composite attributes consist of multiple sub-attributes (e.g., `Address` composed of `Street`, `City`, and `PostalCode`). Simple attributes cannot be further divided, whereas composite attributes can be decomposed into their constituent parts. Both types describe entity characteristics but differ in complexity and data storage requirements."  
+  },  
+  {  
+    "id": "integrated_analyze_003",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Compare and contrast relationships and entities in an ER diagram.",  
+    "back_answer": "Entities (rectangles) represent real-world objects like `Student` or `Course`, while relationships (diamonds) depict associations between them, such as `ENROLLS IN`. Entities have attributes, but relationships are defined by their name and cardinality. Relationships connect entities but do not store data themselves; they enforce how entity instances interact based on constraints."  
+  },  
+  {  
+    "id": "integrated_analyze_004",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Identify a potential flawed assumption in modeling many-to-many (M:N) relationships without using a junction entity.",  
+    "back_answer": "A flawed assumption is that M:N relationships can be directly mapped to tables without an intermediary. This ignores the need for a junction entity (e.g., `Enrollment`) with foreign keys to resolve the relationship into two 1:M links. Without this, data integrity and query complexity increase significantly."  
+  },  
+  {  
+    "id": "integrated_analyze_005",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Compare and contrast binary (degree 2) and ternary (degree 3) relationships, using examples from the notes.",  
+    "back_answer": "Binary relationships involve two entities (e.g., `Student` `ENROLLS IN` `Course`), while ternary relationships connect three entities simultaneously (e.g., `Doctor` `PRESCRIBES` `Medicine` to a `Patient`). Binary relationships are more common and easier to model, whereas ternary ones require careful decomposition into binary links for relational databases."  
+  }  
+]

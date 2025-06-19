@@ -1,0 +1,107 @@
+[
+    {
+        "id": "simple_flash_001",
+        "topic": "Entity-Relationship Modeling in Database Design",
+        "front_prompt": "What are entities in Entity-Relationship (ER) modeling?",
+        "back_answer": "Entities are real-world objects, concepts, or things about which data needs to be stored. In ER diagrams, they are represented by rectangles.",
+        "type": "simple"
+    },
+    {
+        "id": "simple_flash_002",
+        "topic": "Entity-Relationship Modeling in Database Design",
+        "front_prompt": "How are entities represented graphically in an ER diagram?",
+        "back_answer": "Entities are represented by rectangles in an Entity-Relationship (ER) diagram.",
+        "type": "simple"
+    },
+    {
+        "id": "simple_flash_003",
+        "topic": "Entity-Relationship Modeling in Database Design",
+        "front_prompt": "What is a key attribute in ER modeling?",
+        "back_answer": "A key attribute is an attribute (or set of attributes) that uniquely identifies each instance of an entity. It is typically underlined in ER diagrams.",
+        "type": "simple"
+    },
+    {
+        "id": "simple_flash_004",
+        "topic": "Entity-Relationship Modeling in Database Design",
+        "front_prompt": "Define a composite attribute with an example.",
+        "back_answer": "A composite attribute is composed of multiple sub-attributes. Example: `Address` can be composed of `Street`, `City`, and `PostalCode`.",
+        "type": "simple"
+    },
+    {
+        "id": "simple_flash_005",
+        "topic": "Entity-Relationship Modeling in Database Design",
+        "front_prompt": "What is a multi-valued attribute? Provide an example.",
+        "back_answer": "A multi-valued attribute can have multiple values for a single entity instance. Example: `Skills` of a `Teacher` (e.g., 'Teaching', 'Research').",
+        "type": "simple"
+    },
+    {
+        "id": "simple_flash_006",
+        "topic": "Entity-Relationship Modeling in Database Design",
+        "front_prompt": "What is a derived attribute? Provide an example.",
+        "back_answer": "A derived attribute is calculated from other attributes. Example: `Age` can be derived from `DateOfBirth`.",
+        "type": "simple"
+    },
+    {
+        "id": "simple_flash_007",
+        "topic": "Entity-Relationship Modeling in Database Design",
+        "front_prompt": "How are relationships represented graphically in an ER diagram?",
+        "back_answer": "Relationships are represented by diamond shapes connected to the entities they relate. The relationship name is written inside the diamond.",
+        "type": "simple"
+    },
+    {
+        "id": "simple_flash_008",
+        "topic": "Entity-Relationship Modeling in Database Design",
+        "front_prompt": "What does a one-to-one (1:1) cardinality constraint mean?",
+        "back_answer": "Each instance of entity A is associated with at most one instance of entity B, and vice versa. Example: `Person` has one `Passport`.",
+        "type": "simple"
+    },
+    {
+        "id": "simple_flash_009",
+        "topic": "Entity-Relationship Modeling in Database Design",
+        "front_prompt": "Explain a one-to-many (1:M) cardinality constraint with an example.",
+        "back_answer": "One instance of entity A can be associated with zero, one, or many instances of entity B. Example: `Teacher` teaches many `Students`.",
+        "type": "simple"
+    },
+    {
+        "id": "simple_flash_010",
+        "topic": "Entity-Relationship Modeling in Database Design",
+        "front_prompt": "What is a many-to-many (M:N) cardinality constraint? How is it resolved?",
+        "back_answer": "Many instances of entity A can be associated with many instances of entity B. Resolved using an intermediary (junction) entity. Example: `Students` enroll in `Courses` via an `Enrollment` entity.",
+        "type": "simple"
+    },
+    {
+        "id": "simple_flash_011",
+        "topic": "Entity-Relationship Modeling in Database Design",
+        "front_prompt": "What is the degree of a relationship? Provide examples for unary, binary, and ternary relationships.",
+        "back_answer": "The degree of a relationship refers to the number of entity types involved. Example: Unary (1) - `Employee` manages another `Employee`; Binary (2) - `Student` enrolls in a `Course`; Ternary (3) - `Doctor` prescribes a `Medicine` to a `Patient`.",
+        "type": "simple"
+    },
+    {
+        "id": "simple_flash_012",
+        "topic": "Entity-Relationship Modeling in Database Design",
+        "front_prompt": "What is a recursive relationship? Provide an example.",
+        "back_answer": "A recursive relationship (unary, degree 1) exists between instances of the same entity type. Example: `Employee` manages another `Employee`.",
+        "type": "simple"
+    },
+    {
+        "id": "simple_flash_013",
+        "topic": "Entity-Relationship Modeling in Database Design",
+        "front_prompt": "What is a junction entity? When is it used?",
+        "back_answer": "A junction entity (also called an associative entity) resolves many-to-many relationships by linking two entities. Example: `Enrollment` links `Student` and `Course`.",
+        "type": "simple"
+    },
+    {
+        "id": "simple_flash_014",
+        "topic": "Entity-Relationship Modeling in Database Design",
+        "front_prompt": "What is the purpose of an ER model in database design?",
+        "back_answer": "The ER model provides a conceptual blueprint for databases, visually representing entities, attributes, and relationships to communicate data requirements before designing the relational schema.",
+        "type": "simple"
+    },
+    {
+        "id": "simple_flash_015",
+        "topic": "Entity-Relationship Modeling in Database Design",
+        "front_prompt": "Define a primary key in ER modeling.",
+        "back_answer": "A primary key is an attribute (or set of attributes) that uniquely identifies each instance of an entity. It forms the basis for foreign keys in relationships.",
+        "type": "simple"
+    }
+]

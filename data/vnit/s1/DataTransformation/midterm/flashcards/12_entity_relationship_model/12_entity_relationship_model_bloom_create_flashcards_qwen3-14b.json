@@ -1,0 +1,37 @@
+[  
+  {  
+    "id": "er_create_001",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Design an ER diagram for a university system involving Students, Courses, and Professors. Include entities, attributes (with at least one composite and one multi-valued attribute), relationships with cardinality constraints, and resolve any many-to-many relationships using junction entities.",  
+    "back_answer": "ER Diagram Design:\n- **Entities**: `Student` (attributes: StudentID [key], Name, Email, Address [composite: Street, City, ZIP]), `Course` (CourseCode [key], Title, Credits), `Professor` (ProfID [key], Name, Department).\n- **Relationships**:\n  - `ENROLLS IN`: Students to Courses (many-to-many → resolve with junction entity `Enrollment` with foreign keys StudentID and CourseCode).\n  - `TEACHES`: Professors to Courses (one-to-many: one professor teaches many courses, but a course is taught by only one professor).\n- **Attributes**: Email is multi-valued for Students (e.g., personal & university emails). Address is composite."  
+  },  
+  {  
+    "id": "er_create_002",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Invent a metaphor to explain the difference between a 'composite attribute' and a 'multi-valued attribute' using everyday objects or scenarios.",  
+    "back_answer": "Imagine an address as a **composite attribute** (like a puzzle: Street, City, ZIP code are parts that fit together to form the whole). A **multi-valued attribute** is like a fruit basket—each fruit (value) exists independently but belongs to the same category (e.g., Apples, Bananas, Oranges in one basket)."  
+  },  
+  {  
+    "id": "er_create_003",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Creating",  
+    "front_prompt": "From first principles, reconstruct the logic for modeling a 'many-to-many' relationship between two entities. Explain how this differs from a 'one-to-many' relationship and why a junction entity is required.",  
+    "back_answer": "'Many-to-Many' Logic:\n1. **Identify Entities**: e.g., Students and Courses.\n2. **Recognize Relationship**: A student can enroll in many courses; a course has many students.\n3. **Challenge**: Directly linking them would require storing lists (invalid in relational models).\n4. **Solution**: Create a junction entity (`Enrollment`) with foreign keys to both entities, enabling two one-to-many relationships:\n   - `Student` → `Enrollment` (one student many enrollments)\n   - `Course` → `Enrollment` (one course many enrollments). This avoids redundancy and ensures normalization."  
+  },  
+  {  
+    "id": "er_create_004",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Synthesize an explanation of 'cardinality constraints' by combining the concepts of primary keys, foreign keys, and relationship types (1:1, 1:M, M:N). Use a real-world example to illustrate all three.",  
+    "back_answer": "'Cardinality Constraints' Synthesis:\n- **Primary Key**: Uniquely identifies an entity instance (e.g., StudentID for Students).\n- **Foreign Key**: Links entities via relationships (e.g., Enrollment.StudentID references Student.StudentID).\n- **Relationship Types**:\n  - **1:1** (Person → Passport): One person has one passport; the foreign key in Passport points to Person.\n  - **1:M** (Department → Employees): One department has many employees; Employee.DepartmentID references Department.DepartmentID.\n  - **M:N** (Students ↔ Courses): Resolved with a junction entity (`Enrollment`), which stores pairs of StudentID and CourseCode."  
+  },  
+  {  
+    "id": "er_create_005",  
+    "topic": "Entity-Relationship Modeling in Database Design",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Create an example of a 'ternary relationship' (degree 3) involving three entities and explain how it would be decomposed into binary relationships for implementation in a relational database.",  
+    "back_answer": "'Ternary Relationship' Example:\n- **Entities**: Doctor, Medicine, Patient.\n- **Relationship**: `PRESCRIBES` (a doctor prescribes a medicine to a patient). This requires all three entities simultaneously.\n**Decomposition into Binary Relationships**:\n1. Create two junction tables: \n   - `Prescription` (DoctorID, MedicineID) → captures the many-to-many relationship between Doctor and Medicine.\n   - Add PatientID as an attribute in `Prescription`, linking to Patient via a foreign key."  
+  }  
+]
