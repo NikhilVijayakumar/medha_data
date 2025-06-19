@@ -1,0 +1,14 @@
+[
+    "10_rules_constraints.md",
+    "11_database_normalisation.md",
+    "12_entity_relationship_model.md",
+    "1_introduction_to_sql.md",
+    "2_core_sql_fundamentals.md",
+    "3_data_query_language.md",
+    "4_sorting_and_limiting_results.md",
+    "5_aggregate_functions.md",
+    "6_joining_tables.md",
+    "7_built_in_functions.md",
+    "8_data_definition_language.md",
+    "9_data_manipulation_language.md"
+]
