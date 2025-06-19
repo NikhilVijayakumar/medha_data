@@ -1,52 +1,86 @@
 import os
+import re
 import yaml
 import json
-import argparse
 
 from src.nikhil.medha_data.config.settings import Settings
 
 
-def process_directory(config_file_path):
-    try:
-        with open(config_file_path, 'r') as file:
-            config = yaml.safe_load(file)
+class DirectoryProcessor:
+    def __init__(self, config_path: str):
+        self.config = self._load_config(config_path)
+        self.directory_path = os.path.abspath(self.config.get('directory_to_scan', ''))
+        self.output_file_path = self.config.get('output_file_path')
+        self.content_json_path = os.path.join(self.directory_path, 'content.json')
 
-        directory_path = config.get('directory_to_scan')
-        if not directory_path:
-            print("Error: 'directory_to_scan' not found in the YAML configuration.")
-            return
+    def _load_config(self, path):
+        try:
+            with open(path, 'r') as file:
+                return yaml.safe_load(file)
+        except FileNotFoundError:
+            raise FileNotFoundError(f"Configuration file '{path}' not found.")
+        except yaml.YAMLError as e:
+            raise ValueError(f"Error parsing YAML configuration: {e}")
+        except Exception as e:
+            raise RuntimeError(f"Unexpected error loading config: {e}")
 
-        directory_path = os.path.abspath(directory_path)
+    def scan_directory(self):
+        """Scans the directory and stores all filenames (excluding content.json) into content.json."""
+        if not os.path.isdir(self.directory_path):
+            raise NotADirectoryError(f"Directory '{self.directory_path}' does not exist.")
+        print(f"Scanning directory: {self.directory_path}")
 
-        if not os.path.isdir(directory_path):
-            print(f"Error: Directory '{directory_path}' does not exist.")
-            return
+        file_list = [
+            f for f in os.listdir(self.directory_path)
+            if os.path.isfile(os.path.join(self.directory_path, f)) and f != 'content.json'
+        ]
 
-        print(f"Scanning directory: {directory_path}")
+        with open(self.content_json_path, 'w') as f:
+            json.dump(file_list, f, indent=4)
 
-        content_json_path = os.path.join(directory_path, 'content.json')
+        print(f"Saved {len(file_list)} files to '{self.content_json_path}'")
+        return file_list
 
-        file_list = []
-        for item in os.listdir(directory_path):
-            item_path = os.path.join(directory_path, item)
-            if os.path.isfile(item_path) and item != 'content.json':
-                file_list.append(item)
+    def load_content_json(self):
+        """Loads the content.json file."""
+        if not os.path.exists(self.content_json_path):
+            raise FileNotFoundError(f"'{self.content_json_path}' does not exist.")
 
+        with open(self.content_json_path, 'r') as f:
+            try:
+                data = json.load(f)
+                print(f"Loaded {len(data)} entries from '{self.content_json_path}'")
+                return data
+            except json.JSONDecodeError:
+                raise ValueError(f"Invalid JSON format in '{self.content_json_path}'")
 
+    @staticmethod
+    def _natural_keys(text):
+        def convert(segment):
+            return int(segment) if segment.isdigit() else segment.lower()
+        return [convert(c) for c in re.split(r'([0-9]+)', text)]
 
-        with open(content_json_path, 'w') as json_file:
-            json.dump(file_list, json_file, indent=4)
+    def process_filenames(self, filenames):
+        """Removes file extensions and sorts filenames naturally, then writes to topic.json."""
+        if not isinstance(filenames, list):
+            raise TypeError("Input must be a list of filenames.")
 
-        print(f"Successfully saved file list to '{content_json_path}'")
+        processed = [os.path.splitext(name)[0] for name in filenames]
+        processed.sort(key=self._natural_keys)
 
-    except FileNotFoundError:
-        print(f"Error: Configuration file '{config_file_path}' not found.")
-    except yaml.YAMLError as e:
-        print(f"Error parsing YAML configuration: {e}")
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+        with open(self.output_file_path, 'w') as f:
+            json.dump(processed, f, indent=4)
+
+        print(f"Processed and saved {len(processed)} sorted entries to '{self.output_file_path}'")
+        return processed
 
 
 if __name__ == "__main__":
     settings = Settings()
-    process_directory(settings.INPUT_CONFIG_PATH)
+    processor = DirectoryProcessor(settings.INPUT_CONFIG_PATH)
+
+    # Step 1: Scan directory and generate content.json
+    filenames = processor.scan_directory()
+
+    # Step 2: Process content.json and generate topic.json
+    processor.process_filenames(filenames)
