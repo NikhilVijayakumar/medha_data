@@ -1,0 +1,37 @@
+[  
+  {  
+    "id": "integrated_create_001",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Design a relational database schema for an online library system that eliminates all insertion, update, and deletion anomalies. Apply 3NF principles explicitly. Explain how your design prevents these anomalies.",  
+    "back_answer": "Library Database Schema Design:\n- **Tables:** `Books`, `Authors`, `Publishers`, `Members`, `Loans`\n- **Normalization Steps:**\n  - Split multi-valued data (e.g., multiple authors per book) into separate tables with foreign keys.\n  - Ensure all non-key attributes depend only on the primary key (no transitive dependencies). For example, store `Publisher` details in a standalone table instead of repeating them in `Books`. \n- **Anomaly Prevention:**\n  - *Insertion:* Add a new author to `Authors` without needing to create a book first.\n  - *Update:* Change a publisher’s address once in the `Publishers` table, not across multiple books.\n  - *Deletion:* Remove a book without losing author or publisher data."  
+  },  
+  {  
+    "id": "integrated_create_002",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Invent an analogy to explain the difference between 1NF, 2NF, and 3NF using a real-world scenario (e.g., organizing a kitchen, managing a school). Ensure it clarifies functional dependencies and elimination of redundancies.",  
+    "back_answer": "Kitchen Organization Analogy:\n- **1NF:** All items are stored in labeled containers with single-purpose use. No 'multi-valued' drawers (e.g., one drawer for utensils only, not mixing spoons and forks).\n- **2NF:** Remove partial dependencies. For example, if a ‘Cooking Tools’ table has `ToolID`, `ToolName`, and `CabinetLocation` (where the tool is stored), split into two tables: one for tools (`ToolID`, `ToolName`) and another linking to cabinet locations (`ToolID`, `CabinetLocation`).\n- **3NF:** Eliminate transitive dependencies. If a ‘Cabinets’ table has `CabinetID`, `Location`, and `ManagerName` (where the manager is determined by the location), move `ManagerName` to a separate table linked via `Location`."  
+  },  
+  {  
+    "id": "integrated_create_003",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Creating",  
+    "front_prompt": "From first principles, reconstruct the logic for achieving BCNF. Assume a table with attributes `A`, `B`, `C` where `A → B` and `B → C`. Explain how to decompose this into BCNF while preserving dependencies.",  
+    "back_answer": "**Step-by-Step BCNF Reconstruction:**\n1. **Identify Dependencies:** Given functional dependencies: A → B, B → C.\n2. **Check for Violations:** The table is not in BCNF if any determinant (A or B) is not a candidate key. Assume `A` is the primary key.\n3. **Decompose Tables:\n   - First, split into two tables: \n     - Table1 (`A`, `B`) with dependency A → B.\n     - Table2 (`B`, `C`) with dependency B → C.\n4. **Verify BCNF:** In each table, the determinant (A in Table1, B in Table2) is a candidate key. Dependencies are preserved without redundancy."  
+  },  
+  {  
+    "id": "integrated_create_004",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Design an analogy to explain de-normalisation as a trade-off between performance and integrity, using a metaphor from transportation or logistics. How would this apply in practice?",  
+    "back_answer": "Logistics Metaphor:\n- **Normalised Database:** A city with strict zoning laws where goods are stored in specialized warehouses (reducing redundancy but requiring multiple trips to retrieve items).\n- **De-normalised Database:** A mega-warehouse combining all goods for faster access, but risking stock inconsistencies if updates aren’t synchronized across copies. \n*Practical Example:* In an e-commerce app, de-normalising by storing product prices directly in order tables (instead of joining with a products table) speeds up read queries but risks price discrepancies during promotions."  
+  },  
+  {  
+    "id": "integrated_create_005",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Synthesize an explanation of insertion anomalies using a real-world example (not from the notes). Then, show how normalization resolves this issue.",  
+    "back_answer": "**Example:** A hospital records patient visits in a table with `PatientID`, `DoctorName`, and `Diagnosis`. If a new patient has no assigned doctor yet, inserting their record is impossible without violating constraints.\n**Normalization Fix:** Split into tables: \n- `Patients` (`PatientID`, name) — allows insertion of new patients.\n- `Appointments` (`AppointmentID`, `PatientID`, `DoctorName`, `Diagnosis`) — ensures doctors and diagnoses are only added once a patient has an appointment."  
+  }  
+]

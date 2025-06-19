@@ -1,0 +1,37 @@
+[  
+    {  
+        "id": "integrated_apply_001",  
+        "topic": "Database Normalization Principles and Practices",  
+        "bloom_level": "Applying",  
+        "front_prompt": "A table 'Students' contains columns: StudentID, Name, Course, Instructor. If a student can enroll in multiple courses, describe how to normalize this table to eliminate redundancy and insertion anomalies.",  
+        "back_answer": "1. Identify the issue: Storing multiple courses per student in a single row violates 1NF (repeating groups). 2. Split into two tables: 'Students' (StudentID, Name) and 'Enrollments' (StudentID, Course, Instructor). 3. Ensure each table has atomic values and unique keys. This prevents insertion anomalies (e.g., adding a new course without duplicating student data)."  
+    },  
+    {  
+        "id": "integrated_apply_002",  
+        "topic": "Database Normalization Principles and Practices",  
+        "bloom_level": "Applying",  
+        "front_prompt": "Given the 'Employees' table from the notes (EmployeeID, EmployeeName, DepartmentID, DepartmentName), explain how to resolve the transitive dependency to achieve 3NF.",  
+        "back_answer": "1. Identify the transitive dependency: DepartmentName depends on DepartmentID, not directly on EmployeeID. 2. Split into two tables: 'Employees' (EmployeeID, EmployeeName, DepartmentID) and 'Departments' (DepartmentID, DepartmentName). 3. Add a foreign key constraint in 'Employees' to maintain referential integrity. This eliminates the transitive dependency."  
+    },  
+    {  
+        "id": "integrated_apply_003",  
+        "topic": "Database Normalization Principles and Practices",  
+        "bloom_level": "Applying",  
+        "front_prompt": "A database for an online store has a 'Orders' table with OrderID, CustomerName, ProductName, Quantity. How would you normalize this to 2NF, assuming OrderID is the primary key?",  
+        "back_answer": "1. Identify partial dependencies: CustomerName and ProductName are not fully dependent on OrderID (they belong to Customers and Products entities). 2. Split into three tables: 'Orders' (OrderID, CustomerID), 'Customers' (CustomerID, CustomerName), 'Products' (ProductID, ProductName), and 'OrderDetails' (OrderID, ProductID, Quantity). This ensures all non-key attributes depend fully on the primary key."  
+    },  
+    {  
+        "id": "integrated_apply_004",  
+        "topic": "Database Normalization Principles and Practices",  
+        "bloom_level": "Applying",  
+        "front_prompt": "When would you choose to de-normalize a database? Provide an example scenario and explain the trade-offs involved.",  
+        "back_answer": "De-normalization is used in read-heavy applications (e.g., reporting systems) to reduce join operations. Example: Merging 'Orders' and 'Customers' tables into one to speed up queries. Trade-offs include increased redundancy, higher storage costs, and potential data inconsistencies requiring careful management."  
+    },  
+    {  
+        "id": "integrated_apply_005",  
+        "topic": "Database Normalization Principles and Practices",  
+        "bloom_level": "Applying",  
+        "front_prompt": "A table 'Sales' has columns: SaleID, ProductID, ProductName, Quantity, Price. Identify the normal form this table violates and explain how to fix it.",  
+        "back_answer": "This table violates 3NF because ProductName and Price depend on ProductID (a non-key attribute). Fix: Split into 'Sales' (SaleID, ProductID, Quantity) and 'Products' (ProductID, ProductName, Price). This removes transitive dependencies and ensures all non-key attributes are directly dependent on the primary key."  
+    }  
+]

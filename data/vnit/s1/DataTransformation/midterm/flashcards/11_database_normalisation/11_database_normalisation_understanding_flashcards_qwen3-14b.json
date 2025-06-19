@@ -1,0 +1,58 @@
+[  
+  {  
+    "id": "integrated_understand_001",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain 'Data Redundancy Reduction' in your own words.",  
+    "back_answer": "Reducing data redundancy means storing the same information in multiple places. This wastes space and can cause errors if updates are missed. Normalization fixes this by organizing data into separate tables so each piece of info is stored only once."  
+  },  
+  {  
+    "id": "integrated_understand_002",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Give an analogy for an 'Insertion Anomaly'.",  
+    "back_answer": "Imagine trying to add a new student to a class roster, but you can’t unless you already know their favorite subject. It’s like needing a puzzle piece that doesn’t exist yet to complete the picture."  
+  },  
+  {  
+    "id": "integrated_understand_003",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain '1NF (First Normal Form)' to a 5-year-old.",  
+    "back_answer": "Imagine a box that can only hold one toy at a time. If you have multiple toys, you need separate boxes. 1NF makes sure each row in a table holds just one piece of data, not a list."  
+  },  
+  {  
+    "id": "integrated_understand_004",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Why is '2NF (Second Normal Form)' important?",  
+    "back_answer": "2NF stops partial dependencies by ensuring all non-key data depends on the whole primary key, not just part of it. Think of a recipe book: ingredients should depend on the full recipe name, not just part of it."  
+  },  
+  {  
+    "id": "integrated_understand_005",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain 'Transitive Dependency' with an example.",  
+    "back_answer": "A transitive dependency is when one non-key field depends on another non-key field. For example, if a table has EmployeeID, DepartmentID, and DepartmentName, DepartmentName depends on DepartmentID (a non-key), not directly on EmployeeID."  
+  },  
+  {  
+    "id": "integrated_understand_006",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "What is the trade-off of 'De-Normalisation'?",  
+    "back_answer": "De-normalisation speeds up reads by adding redundancy (storing data in multiple places), but it risks inconsistencies. It’s like copying a book into many libraries for faster access, but if one copy changes, others might not match."  
+  },  
+  {  
+    "id": "integrated_understand_007",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "How does 'BCNF (Boyce-Codd Normal Form)' differ from 3NF?",  
+    "back_answer": "BCNF is stricter than 3NF. It requires every determinant (a field that controls another) to be a candidate key, ensuring no non-key fields indirectly control others. This prevents odd cases where multiple keys exist but don’t align."  
+  },  
+  {  
+    "id": "integrated_understand_008",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain 'Data Integrity Assurance' in simple terms.",  
+    "back_answer": "Data integrity ensures all data is accurate and consistent. Like a puzzle, every piece must fit perfectly—no missing or duplicate pieces—to create the full picture without errors."  
+  }  
+]

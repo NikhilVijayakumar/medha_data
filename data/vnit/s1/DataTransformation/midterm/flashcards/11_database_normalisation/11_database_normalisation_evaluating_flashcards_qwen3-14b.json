@@ -1,0 +1,37 @@
+[  
+  {  
+    "id": "integrated_evaluate_001",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Critique the statement: 'Normalization always improves query performance.' Justify your answer using principles from the notes.",  
+    "back_answer": "The statement is inaccurate. While normalization reduces redundancy and ensures data integrity, it can introduce performance overhead due to increased table joins. For example, a highly normalized design may require multiple JOIN operations for complex queries, slowing down read-heavy applications. De-normalization trade-offs (e.g., introducing controlled redundancy) are sometimes necessary to optimize query speed in such scenarios. The effectiveness depends on balancing data integrity with performance needs."  
+  },  
+  {  
+    "id": "integrated_evaluate_002",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Which normal form (3NF or BCNF) would better address a table with multiple overlapping candidate keys? Explain your reasoning.",  
+    "back_answer": "BCNF is more suitable for tables with multiple overlapping candidate keys. While 3NF eliminates transitive dependencies, it allows non-trivial functional dependencies where the determinant is not a candidate key. BCNF enforces stricter rules: every determinant must be a candidate key, ensuring no redundancy from such dependencies. This directly addresses anomalies caused by overlapping keys, making BCNF superior in this context."  
+  },  
+  {  
+    "id": "integrated_evaluate_003",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Evaluate the trade-offs of de-normalizing a database for read-heavy applications. What are the risks and benefits?",  
+    "back_answer": "De-normalization improves read performance by reducing joins and enabling faster data retrieval, which is ideal for read-heavy scenarios like reporting. However, it introduces risks: increased redundancy leads to higher storage costs, greater potential for data inconsistencies (e.g., update anomalies), and reduced flexibility in modifying schemas. The decision must weigh these trade-offs against the specific application's needs."  
+  },  
+  {  
+    "id": "integrated_evaluate_004",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Is it always necessary to normalize a database to 3NF? Justify your answer with examples from the notes.",  
+    "back_answer": "No, normalizing to 3NF is not universally required. For instance, in read-heavy applications where query speed is critical, de-normalization (e.g., merging tables) may be preferable despite redundancy. Additionally, higher normal forms like BCNF or 4NF address specific dependency issues but are rarely needed unless multi-valued dependencies or join anomalies exist. The choice depends on the application's performance vs. integrity priorities."  
+  },  
+  {  
+    "id": "integrated_evaluate_005",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Compare the effectiveness of using a composite primary key versus a single-column surrogate key in 2NF. What are the implications for normalization?",  
+    "back_answer": "A composite primary key (e.g., OrderID + ProductID) can lead to partial dependencies if non-key attributes depend on only part of the key, violating 2NF. A single-column surrogate key (e.g., OrderItemID) avoids this by ensuring all non-key attributes fully depend on a single, atomic key. This simplifies normalization and reduces risks of partial dependencies, making surrogate keys often preferable in complex designs."  
+  }  
+]

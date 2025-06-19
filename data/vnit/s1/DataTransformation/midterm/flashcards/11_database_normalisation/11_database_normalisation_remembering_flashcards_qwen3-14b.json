@@ -1,0 +1,72 @@
+[  
+  {  
+    "id": "integrated_remember_001",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the primary objective of database normalization?",  
+    "back_answer": "To reduce data redundancy, eliminate anomalies (insertion/update/deletion), improve query performance, and ensure data integrity."  
+  },  
+  {  
+    "id": "integrated_remember_002",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is an insertion anomaly?",  
+    "back_answer": "A problem where inserting a new record becomes difficult because required information is not yet available."  
+  },  
+  {  
+    "id": "integrated_remember_003",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is an update anomaly?",  
+    "back_answer": "A problem where updating the same piece of information in multiple rows becomes necessary due to redundant data storage."  
+  },  
+  {  
+    "id": "integrated_remember_004",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is a deletion anomaly?",  
+    "back_answer": "A problem where deleting a record unintentionally removes related information from the database."  
+  },  
+  {  
+    "id": "integrated_remember_005",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the requirement for a table to be in First Normal Form (1NF)?",  
+    "back_answer": "Each column must contain atomic values, no multi-valued columns or repeating groups are allowed, and each record must have a unique identifier (primary key)."  
+  },  
+  {  
+    "id": "integrated_remember_006",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is a partial dependency in Second Normal Form (2NF)?",  
+    "back_answer": "A situation where non-key attributes depend on only part of a composite primary key."  
+  },  
+  {  
+    "id": "integrated_remember_007",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is a transitive dependency in Third Normal Form (3NF)?",  
+    "back_answer": "A situation where a non-key attribute depends on another non-key attribute rather than directly on the primary key."  
+  },  
+  {  
+    "id": "integrated_remember_008",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is Boyce-Codd Normal Form (BCNF)?",  
+    "back_answer": "A stricter form of 3NF where every determinant must be a candidate key, ensuring no non-trivial dependencies exist except those on candidate keys."  
+  },  
+  {  
+    "id": "integrated_remember_009",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is de-normalisation?",  
+    "back_answer": "A technique to reintroduce redundancy into a database design to improve query performance, particularly in read-heavy applications."  
+  },  
+  {  
+    "id": "integrated_remember_010",  
+    "topic": "Database Normalization Principles and Practices",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is a trade-off of de-normalisation?",  
+    "back_answer": "Improved read performance at the cost of increased data redundancy, potential data inconsistencies, and higher storage requirements."  
+  }  
+]

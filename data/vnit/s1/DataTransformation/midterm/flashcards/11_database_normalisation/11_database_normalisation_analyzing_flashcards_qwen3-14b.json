@@ -1,0 +1,37 @@
+[
+    {
+        "id": "integrated_analyze_001",
+        "topic": "Database Normalization Principles and Practices",
+        "bloom_level": "Analyzing",
+        "front_prompt": "Compare and contrast 2NF (Second Normal Form) and 3NF (Third Normal Form) in database design.",
+        "back_answer": "2NF eliminates partial dependencies by ensuring all non-key attributes are fully dependent on the entire primary key. 3NF goes further by removing transitive dependencies, where non-key attributes depend on other non-key attributes. A table in 3NF is always in 2NF but not vice versa. For example, in an 'Employees' table, if 'DepartmentName' depends on 'DepartmentID' (a non-key attribute), this violates 3NF but might be acceptable in 2NF."
+    },
+    {
+        "id": "integrated_analyze_002",
+        "topic": "Database Normalization Principles and Practices",
+        "bloom_level": "Analyzing",
+        "front_prompt": "Break down the concept of 'data anomalies' into its core components (insertion, update, deletion) and explain how normalization addresses each.",
+        "back_answer": "'Data anomalies' consist of: 1) **Insertion Anomaly**: Inability to add data without unrelated information (e.g., inserting a new product without an order). Normalization separates tables to allow independent inserts. 2) **Update Anomaly**: Needing to update redundant data in multiple rows (e.g., changing a product price across many orders). Normalization ensures single points of truth via related tables. 3) **Deletion Anomaly**: Losing unrelated data when deleting records (e.g., removing an order and losing product details). Normalization preserves data integrity by splitting entities into distinct tables."
+    },
+    {
+        "id": "integrated_analyze_003",
+        "topic": "Database Normalization Principles and Practices",
+        "bloom_level": "Analyzing",
+        "front_prompt": "Identify a potential flawed assumption in de-normalisation practices, referencing trade-offs between data integrity and performance.",
+        "back_answer": "A flawed assumption is that de-normalisation always improves query performance without consequences. While it reduces joins for read-heavy applications, it reintroduces redundancy risks (e.g., inconsistent 'Price' values across tables) and compromises data integrity. The trade-off lies in balancing the speed benefits of reduced join operations against potential anomalies and increased storage costs."
+    },
+    {
+        "id": "integrated_analyze_004",
+        "topic": "Database Normalization Principles and Practices",
+        "bloom_level": "Analyzing",
+        "front_prompt": "Compare 1NF (First Normal Form) and BCNF (Boyce-Codd Normal Form), highlighting their key differences in dependency handling.",
+        "back_answer": "1NF enforces atomic values and eliminates repeating groups, ensuring each column contains single, indivisible values. BCNF is stricter: every determinant (attribute or set of attributes that determines another attribute) must be a candidate key. This means 1NF focuses on atomicity, while BCNF addresses functional dependencies to prevent anomalies even when multiple candidate keys exist."
+    },
+    {
+        "id": "integrated_analyze_005",
+        "topic": "Database Normalization Principles and Practices",
+        "bloom_level": "Analyzing",
+        "front_prompt": "Analyze the relationship between 'functional dependencies' and normal forms, using examples from 3NF to BCNF.",
+        "back_answer": "'Functional dependencies' define how attributes rely on others (e.g., 'ProductID → Price'). In 3NF, non-key attributes must depend only on the primary key. However, if a determinant is not a candidate key (e.g., a table with multiple candidate keys where one dependency violates BCNF), normalization to BCNF ensures all determinants are candidate keys, eliminating redundancy risks even in complex relationships."
+    }
+]

@@ -1,0 +1,72 @@
+[  
+  {  
+    "id": "simple_flash_001",  
+    "topic": "Database Normalization Principles and Practices",  
+    "front_prompt": "What is the primary objective of database normalization?",  
+    "back_answer": "The primary objective is to reduce data redundancy, eliminate anomalies (insertion/update/deletion), optimize query performance, and ensure data integrity.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_002",  
+    "topic": "Database Normalization Principles and Practices",  
+    "front_prompt": "Define an insertion anomaly.",  
+    "back_answer": "An insertion anomaly occurs when a new record cannot be inserted because required information is missing or dependent on other data.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_003",  
+    "topic": "Database Normalization Principles and Practices",  
+    "front_prompt": "What is a transitive dependency in database normalization?",  
+    "back_answer": "A transitive dependency occurs when a non-key attribute depends on another non-key attribute, violating third normal form (3NF).",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_004",  
+    "topic": "Database Normalization Principles and Practices",  
+    "front_prompt": "What is the requirement for a table to be in first normal form (1NF)?",  
+    "back_answer": "A table must have atomic values, no repeating groups, unique column names, and a primary key to be in 1NF.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_005",  
+    "topic": "Database Normalization Principles and Practices",  
+    "front_prompt": "Explain partial dependency and its relevance to second normal form (2NF).",  
+    "back_answer": "Partial dependency occurs when a non-key attribute depends on part of a composite primary key. 2NF eliminates this by ensuring all non-key attributes depend on the entire primary key.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_006",  
+    "topic": "Database Normalization Principles and Practices",  
+    "front_prompt": "What is Boyce-Codd Normal Form (BCNF)?",  
+    "back_answer": "BCNF is a stricter version of 3NF where every determinant must be a candidate key, ensuring no redundancy from non-trivial dependencies.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_007",  
+    "topic": "Database Normalization Principles and Practices",  
+    "front_prompt": "What is de-normalisation, and when is it used?",  
+    "back_answer": "De-normalisation introduces redundancy to improve read performance in heavy-read applications by reducing joins, though it risks data anomalies.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_008",  
+    "topic": "Database Normalization Principles and Practices",  
+    "front_prompt": "What is a multi-valued column, and why is it problematic for 1NF?",  
+    "back_answer": "A multi-valued column contains multiple values in a single cell (e.g., {Laptop, Mouse}), violating 1NF's requirement for atomic values.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_009",  
+    "topic": "Database Normalization Principles and Practices",  
+    "front_prompt": "How does normalization improve data integrity?",  
+    "back_answer": "Normalization reduces redundancy, ensuring consistent data across tables by enforcing relationships and minimizing duplicate storage.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_010",  
+    "topic": "Database Normalization Principles and Practices",  
+    "front_prompt": "What is a composite primary key?",  
+    "back_answer": "A composite primary key consists of two or more columns that collectively uniquely identify a row in a table.",  
+    "type": "simple"  
+  }  
+]
