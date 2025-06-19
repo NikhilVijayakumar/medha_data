@@ -83,4 +83,4 @@ if __name__ == "__main__":
     filenames = processor.scan_directory()
 
     # Step 2: Process content.json and generate topic.json
-    processor.process_filenames(filenames)
+    #processor.process_filenames(filenames)
