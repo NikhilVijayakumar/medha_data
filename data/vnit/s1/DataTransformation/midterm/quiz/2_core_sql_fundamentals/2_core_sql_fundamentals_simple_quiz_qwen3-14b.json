@@ -1,0 +1,137 @@
+{
+  "title": "SQL DDL/DML/DQL/TCL Fundamentals Quiz",
+  "description": "Test your knowledge on core SQL language components and database operations.",
+  "type": "Simple",
+  "questions": [
+    {
+      "id": "q_simple_001",
+      "question": "Which SQL command is used to create a new database object like a table?",
+      "options": [
+        {"id": "opt1", "text": "ALTER TABLE"},
+        {"id": "opt2", "text": "DROP TABLE"},
+        {"id": "opt3", "text": "CREATE DATABASE"},
+        {"id": "opt4", "text": "COMMIT"},
+        {"id": "opt5", "text": "SAVEPOINT"}
+      ],
+      "correctOptionIds": ["opt3"],
+      "explanation": "'CREATE DATABASE' is a Data Definition Language (DDL) command used to create new database objects. ALTER TABLE and DROP TABLE modify or delete existing structures, while COMMIT and SAVEPOINT belong to Transaction Control Language (TCL)."
+    },
+    {
+      "id": "q_simple_002",
+      "question": "Which DDL command is used to add a new column to an existing table?",
+      "options": [
+        {"id": "optA", "text": "CREATE TABLE"},
+        {"id": "optB", "text": "ALTER TABLE ADD COLUMN"},
+        {"id": "optC", "text": "UPDATE"},
+        {"id": "optD", "text": "INSERT INTO"},
+        {"id": "optE", "text": "TRUNCATE"}
+      ],
+      "correctOptionIds": ["optB"],
+      "explanation": "'ALTER TABLE ADD COLUMN' is the correct syntax for modifying table structures. CREATE TABLE builds new tables, UPDATE and INSERT modify data (DML), while TRUNCATE deletes all records."
+    },
+    {
+      "id": "q_simple_003",
+      "question": "Which SQL command permanently removes a table and its data from the database?",
+      "options": [
+        {"id": "optX", "text": "DELETE FROM"},
+        {"id": "optY", "text": "TRUNCATE TABLE"},
+        {"id": "optZ", "text": "DROP TABLE"},
+        {"id": "optAA", "text": "RENAME TABLE"},
+        {"id": "optBB", "text": "ALTER TABLE"}
+      ],
+      "correctOptionIds": ["optZ"],
+      "explanation": "'DROP TABLE' is a destructive DDL operation that removes the table structure and data permanently. DELETE/TRUNCATE only remove data, while RENAME/ALTER modify metadata."
+    },
+    {
+      "id": "q_simple_004",
+      "question": "Which clause in a SELECT statement is used to filter records based on specific conditions?",
+      "options": [
+        {"id": "opt1", "text": "ORDER BY"},
+        {"id": "opt2", "text": "WHERE"},
+        {"id": "opt3", "text": "HAVING"},
+        {"id": "opt4", "text": "FROM"},
+        {"id": "opt5", "text": "*"}
+      ],
+      "correctOptionIds": ["opt2"],
+      "explanation": "'WHERE' is the correct clause for filtering individual records. ORDER BY sorts results, HAVING filters groups, FROM specifies tables, and * is a wildcard operator."
+    },
+    {
+      "id": "q_simple_005",
+      "question": "Which ACID property ensures that transactions are fully completed or entirely rolled back?",
+      "options": [
+        {"id": "optA", "text": "Consistency"},
+        {"id": "optB", "text": "Durability"},
+        {"id": "optC", "text": "Isolation"},
+        {"id": "optD", "text": "Atomicity"},
+        {"id": "optE", "text": "Availability"}
+      ],
+      "correctOptionIds": ["optD"],
+      "explanation": "'Atomicity' ensures all operations in a transaction succeed or fail as a single unit. Durability guarantees persistence, Isolation prevents interference between transactions, and Consistency maintains database validity."
+    },
+    {
+      "id": "q_simple_006",
+      "question": "Which DML command is used to insert new records into a table?",
+      "options": [
+        {"id": "optP", "text": "UPDATE"},
+        {"id": "optQ", "text": "INSERT INTO"},
+        {"id": "optR", "text": "SELECT"},
+        {"id": "optS", "text": "DELETE"},
+        {"id": "optT", "text": "MERGE"}
+      ],
+      "correctOptionIds": ["optQ"],
+      "explanation": "'INSERT INTO' is the correct DML command for adding new records. UPDATE modifies existing data, SELECT retrieves data, DELETE removes records, and MERGE combines operations."
+    },
+    {
+      "id": "q_simple_007",
+      "question": "Which SQL feature allows partial updates to specific columns in a table?",
+      "options": [
+        {"id": "optU", "text": "UPDATE ... SET"},
+        {"id": "optV", "text": "ALTER TABLE"},
+        {"id": "optW", "text": "TRUNCATE"},
+        {"id": "optX", "text": "RENAME COLUMN"},
+        {"id": "optY", "text": "COMMIT"}
+      ],
+      "correctOptionIds": ["optU"],
+      "explanation": "'UPDATE ... SET' allows targeted column modifications. ALTER TABLE modifies structure, TRUNCATE deletes data, RENAME changes names, and COMMIT finalizes transactions."
+    },
+    {
+      "id": "q_simple_008",
+      "question": "Which SQL command is used to sort query results in ascending or descending order?",
+      "options": [
+        {"id": "optM", "text": "ORDER BY"},
+        {"id": "optN", "text": "WHERE"},
+        {"id": "optO", "text": "GROUP BY"},
+        {"id": "optP", "text": "HAVING"},
+        {"id": "optQ", "text": "*"}
+      ],
+      "correctOptionIds": ["optM"],
+      "explanation": "'ORDER BY' is used for sorting results. WHERE filters records, GROUP BY aggregates data, HAVING filters groups, and * selects all columns."
+    },
+    {
+      "id": "q_simple_009",
+      "question": "Which transaction control command makes changes permanent in the database?",
+      "options": [
+        {"id": "optR", "text": "SAVEPOINT"},
+        {"id": "optS", "text": "ROLLBACK"},
+        {"id": "optT", "text": "COMMIT"},
+        {"id": "optU", "text": "SET TRANSACTION"},
+        {"id": "optV", "text": "BEGIN"}
+      ],
+      "correctOptionIds": ["optT"],
+      "explanation": "'COMMIT' finalizes transactions and makes changes permanent. ROLLBACK undoes them, SAVEPOINT creates markers for partial rollbacks, and BEGIN starts a transaction."
+    },
+    {
+      "id": "q_simple_010",
+      "question": "Which DDL command is used to define the structure of a new table including primary keys?",
+      "options": [
+        {"id": "optW", "text": "ALTER TABLE"},
+        {"id": "optX", "text": "CREATE TABLE"},
+        {"id": "optY", "text": "TRUNCATE"},
+        {"id": "optZ", "text": "DROP INDEX"},
+        {"id": "optAA", "text": "RENAME"}
+      ],
+      "correctOptionIds": ["optX"],
+      "explanation": "'CREATE TABLE' defines new table structures with column definitions and constraints like primary keys. ALTER modifies existing tables, TRUNCATE deletes data, DROP INDEX removes indexes, and RENAME changes names."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "title": "SQL Concepts Evaluation Quiz",
+  "description": "Evaluate SQL concepts across Data Definition Language (DDL), Data Manipulation Language (DML), Data Query Language (DQL), and Transaction Control Language (TCL) for accuracy, efficiency, and trade-offs in implementation.",
+  "type": "Evaluating",
+  "questions": [
+    {
+      "id": "q_evaluate_001",
+      "question": "A database administrator is tasked with creating a `Transactions` table for a banking system. The table requires frequent lookups by `AccountNumber` (primary key) and occasional range queries on `TransactionDate`. Which indexing strategy would be most effective for this scenario? (Select all that apply)",
+      "options": [
+        {"id": "opt1", "text": "Create a clustered index on `AccountNumber` and a non-clustered index on `TransactionDate`."},
+        {"id": "opt2", "text": "Use a composite clustered index on (`AccountNumber`, `TransactionDate`) for both lookups."],
+        {"id": "opt3", "text": "Create a non-clustered index on `AccountNumber` and a filtered index on `TransactionDate`."},
+        {"id": "opt4", "text": "Rely solely on the primary key index; no additional indexes are needed for performance."},
+        {"id": "opt5", "text": "Use a clustered index on `TransactionDate` to optimize range queries, even though it may degrade lookup speed for `AccountNumber`."}
+      ],
+      "correctOptionIds": ["opt1"],
+      "explanation": "A clustered index on the primary key (`AccountNumber`) ensures physical ordering of data, which is optimal for frequent lookups. A non-clustered index on `TransactionDate` supports range queries without disrupting the clustered index structure. Option 2 sacrifices lookup efficiency for `AccountNumber`, and option 5 reverses the priority, leading to poor performance for primary key access."
+    },
+    {
+      "id": "q_evaluate_002",
+      "question": "A developer is tasked with updating user records in a large table (`Users`) where only rows with `Status = 'Inactive'` should be modified. Which approach best balances correctness, efficiency, and safety? (Select all that apply)",
+      "options": [
+        {"id": "optA", "text": "Use an `UPDATE` statement without a `WHERE` clause to ensure all records are reviewed."},
+        {"id": "optB", "text": "Apply the update with a precise `WHERE Status = 'Inactive'` clause and test the query on a subset of data first."],
+        {"id": "optC", "text": "Use a transaction with `BEGIN`, `UPDATE`, and `COMMIT` to ensure atomicity, even for single-row updates."},
+        {"id": "optD", "text": "Leverage a stored procedure to encapsulate the update logic and enforce business rules."],
+        {"id": "optE", "text": "Use a `DELETE` statement instead of an `UPDATE` to avoid potential data corruption risks."}
+      ],
+      "correctOptionIds": ["optB", "optD"],
+      "explanation": "A precise `WHERE` clause with testing (option B) ensures correctness and efficiency. Stored procedures (option D) add encapsulation and enforce business logic. Option A is unsafe, option C is unnecessary for single updates, and option E incorrectly replaces the requirement with deletion."
+    },
+    {
+      "id": "q_evaluate_003",
+      "question": "A system requires querying a `Sales` table with 10 million rows. The query filters on `RegionID` (with low selectivity) and joins with a `Products` table. Which optimization strategy would most effectively improve performance?",
+      "options": [
+        {"id": "optX", "text": "Create an index on `RegionID` to speed up the filter."],
+        {"id": "optY", "text": "Create a covering index on (`RegionID`, `ProductID`, `SalesAmount`) to avoid key lookups."},
+        {"id": "optZ", "text": "Replace the join with subqueries for better query plan optimization."},
+        {"id": "optAA", "text": "Use a full table scan since low selectivity on `RegionID` makes indexes ineffective."],
+        {"id": "optAB", "text": "Partition the `Sales` table by `RegionID` to reduce I/O during queries."}
+      ],
+      "correctOptionIds": ["optAA"],
+      "explanation": "Low selectivity on `RegionID` means a large percentage of rows match, making indexes less effective. A full table scan (option AA) is optimal here. Option Y creates a covering index but may not help with low selectivity; option AB requires upfront partitioning effort without guaranteed benefits."
+    },
+    {
+      "id": "q_evaluate_004",
+      "question": "A database has two concurrent transactions: Transaction A updates `AccountBalance` for Account X, and Transaction B reads the same balance. If both use the default isolation level (READ COMMITTED), which outcome is most likely?",
+      "options": [
+        {"id": "optP", "text": "Transaction B will read uncommitted changes from Transaction A if they overlap."],
+        {"id": "optQ", "text": "Transaction B may encounter a deadlock with Transaction A during the update-read cycle."},
+        {"id": "optR", "text": "Transaction B will see only committed data, avoiding dirty reads but risking nonrepeatable reads."},
+        {"id": "optS", "text": "Both transactions will automatically escalate to SERIALIZABLE isolation level."],
+        {"id": "optT", "text": "No conflicts occur because the default isolation level prevents all concurrency issues."}
+      ],
+      "correctOptionIds": ["optR"],
+      "explanation": "READ COMMITTED ensures Transaction B sees only committed data (preventing dirty reads) but allows nonrepeatable reads if Transaction A commits between B's reads. Options P and Q describe higher isolation levels, while S and T are incorrect about default behavior."
+    }
+  ]
+}

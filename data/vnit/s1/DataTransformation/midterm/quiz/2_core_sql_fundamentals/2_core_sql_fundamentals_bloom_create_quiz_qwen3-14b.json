@@ -1,0 +1,48 @@
+```json
+{
+  "title": "Database Design & Operations Creating Quiz",
+  "description": "Design and synthesize database schemas, optimize queries, and implement transaction strategies across SQL operations.",
+  "type": "Creating",
+  "questions": [
+    {
+      "id": "q_create_001",
+      "question": "You are tasked with designing a relational schema for an e-commerce platform that tracks orders, customers, products, and inventory. Which of the following designs ensures **referential integrity**, minimizes redundancy, and enforces business rules such as 'each order must belong to one customer' and 'a product cannot be sold if its stock is zero'? (Select all that apply)",
+      "options": [
+        { "id": "opt1", "text": "Use a single table `orders` with columns for customer name, product details, and stock levels." },
+        { "id": "opt2", "text": "Create normalized tables: `customers`, `products`, `inventory`, and `orders` with foreign keys to `customers.id` and `products.id`. Use triggers on the `orders` table to check inventory availability before insertion." },
+        { "id": "opt3", "text": "Implement a denormalized schema by embedding product stock directly into the `orders` table, allowing direct updates without joins." },
+        { "id": "opt4", "text": "Use CHECK constraints on the `products` table for stock > 0 and foreign key constraints in the `orders` table to reference valid customer IDs." },
+        { "id": "opt5", "text": "Apply a star schema with a central `fact_orders` table linked to dimension tables for customers, products, and inventory." }
+      ],
+      "correctOptionIds": ["opt2", "opt4"],
+      "explanation": "A normalized design (option 2) ensures referential integrity via foreign keys and minimizes redundancy. Adding triggers for inventory checks aligns with the 'stock zero' rule. CHECK constraints on `products` (option 4) enforce stock positivity, while foreign key constraints ensure valid customer references. Options 1 and 3 violate normalization principles; option 5 is unsuitable for enforcing business rules."
+    },
+    {
+      "id": "q_create_002",
+      "question": "You are debugging an SQL script where the following query runs slowly: `SELECT * FROM orders WHERE order_date BETWEEN '2023-01-01' AND '2023-12-31';`. Which of the following strategies would **most effectively** optimize this query? (Select all that apply)",
+      "options": [
+        { "id": "optA", "text": "Add an index on the `order_date` column." },
+        { "id": "optB", "text": "Rewrite the query as `SELECT * FROM orders WHERE order_date >= '2023-01-01' AND order_date <= '2023-12-31';` to leverage index ranges more efficiently." },
+        { "id": "optC", "text": "Replace `SELECT *` with specific columns needed and add a covering index on those columns plus `order_date`." },
+        { "id": "optD", "text": "Partition the `orders` table by year to isolate data for 2023 in one partition." },
+        { "id": "optE", "text": "Use a full-text search on the `order_date` column." }
+      ],
+      "correctOptionIds": ["optA", "optC", "optD"],
+      "explanation": "Adding an index (option A) improves date-based filtering. A covering index with specific columns (option C) reduces I/O by allowing the query to retrieve data from the index alone. Partitioning by year (option D) limits scans to relevant partitions. Option B is redundant as BETWEEN already uses range logic; option E is irrelevant for date ranges."
+    },
+    {
+      "id": "q_create_003",
+      "question": "Design a transaction block that ensures **atomicity** and **consistency** when transferring funds between two accounts in a banking system. Which of the following approaches would correctly implement this logic? (Select all that apply)",
+      "options": [
+        { "id": "optX", "text": "Use `BEGIN; UPDATE account1 SET balance = balance - 100 WHERE id = 1; UPDATE account2 SET balance = balance + 100 WHERE id = 2; COMMIT;" without explicit transaction control." },
+        { "id": "optY", "text": "Wrap the updates in a `BEGIN TRANSACTION` block with a `SAVEPOINT` before each update, and use `ROLLBACK TO SAVEPOINT` on errors." },
+        { "id": "optZ", "text": "Use a stored procedure that includes `START TRANSACTION; UPDATE account1...; UPDATE account2...; COMMIT;` and handle exceptions with `ROLLBACK` if any step fails." },
+        { "id": "optAA", "text": "Perform both updates in separate transactions to avoid blocking other users during the transfer." },
+        { "id": "optBB", "text": "Use a single `UPDATE` statement that adjusts balances for both accounts using a subquery with atomic guarantees." }
+      ],
+      "correctOptionIds": ["optZ", "optBB"],
+      "explanation": "A stored procedure with explicit transaction control (option Z) ensures atomicity. A single atomic UPDATE via subquery (option BB) avoids race conditions. Option X lacks error handling; option Y introduces unnecessary complexity without full atomicity guarantees. Option AA violates consistency by allowing partial transfers."
+    }
+  ]
+}
+```

@@ -1,0 +1,74 @@
+```json
+{
+  "title": "SQL & Database Operations Analysis Quiz",
+  "description": "Analyze SQL syntax, schema management, data manipulation/query techniques, and transaction control mechanisms to evaluate deeper understanding of database operations.",
+  "type": "Analyzing",
+  "questions": [
+    {
+      "id": "q_analyze_001",
+      "question": "Consider the following CREATE TABLE statement: \nCREATE TABLE Employees (\n  EmpID INT PRIMARY KEY,\n  Name VARCHAR(50) NOT NULL,\n  Salary DECIMAL(10,2) CHECK (Salary > 0),\n  DeptID INT FOREIGN KEY REFERENCES Departments(DeptID)\n);\nWhich component of the schema blueprint ensures referential integrity between Employees and Departments tables?",
+      "options": [
+        {"id": "opt1", "text": "PRIMARY KEY constraint on EmpID"},
+        {"id": "opt2", "text": "NOT NULL constraint on Name"},
+        {"id": "opt3", "text": "CHECK constraint on Salary"},
+        {"id": "opt4", "text": "FOREIGN KEY reference to Departments(DeptID)"},
+        {"id": "opt5", "text": "DECIMAL data type for Salary"}
+      ],
+      "correctOptionIds": ["opt4"],
+      "explanation": "The FOREIGN KEY constraint (option 4) enforces referential integrity by ensuring that every value in the DeptID column of Employees matches a valid entry in the Departments table. Other constraints handle uniqueness (PRIMARY KEY), non-nullability, and domain validity but not cross-table relationships."
+    },
+    {
+      "id": "q_analyze_002",
+      "question": "A developer executes: \nALTER TABLE Orders ADD COLUMN OrderStatus VARCHAR(20) DEFAULT 'Pending';\nWhat is the potential flaw in this approach for schema evolution?",
+      "options": [
+        {"id": "optA", "text": "Adding a column without specifying NOT NULL may cause data inconsistency"},
+        {"id": "optB", "text": "The DEFAULT value must be numeric, not string"},
+        {"id": "optC", "text": "ALTER TABLE is invalid for adding columns in SQL standards"},
+        {"id": "optD", "text": "This operation permanently deletes existing data in the Orders table"},
+        {"id": "optE", "text": "The column name 'OrderStatus' violates naming conventions"}
+      ],
+      "correctOptionIds": ["optA"],
+      "explanation": "Adding a nullable column with a DEFAULT value (option A) risks inconsistency if some rows are not updated, as older rows will have NULL values unless explicitly set. The DEFAULT ensures new rows get 'Pending', but existing data remains unchanged without additional logic."
+    },
+    {
+      "id": "q_analyze_003",
+      "question": "When using the DELETE FROM statement, which scenario best illustrates a critical flaw in assuming cascading deletes will prevent orphaned records?",
+      "options": [
+        {"id": "optX", "text": "Deleting a parent record with foreign key constraints"},
+        {"id": "optY", "text": "Using soft delete flags instead of physical deletion"},
+        {"id": "optZ", "text": "Failing to use the CASCADE option explicitly"},
+        {"id": "optW", "text": "Deleting child records first without checking parent existence"},
+        {"id": "optV", "text": "Not backing up data before performing deletions"}
+      ],
+      "correctOptionIds": ["optX"],
+      "explanation": "Deleting a parent record (option X) with cascading deletes risks orphaning dependent child records if the foreign key relationships are not properly defined or enforced. Cascading deletes should be used cautiously to avoid unintended data loss."
+    },
+    {
+      "id": "q_analyze_004",
+      "question": "Which of these practices would most effectively reduce the risk of SQL injection when using an INSERT INTO statement? (Select all that apply)",
+      "options": [
+        {"id": "optP", "text": "Using string concatenation for user inputs"},
+        {"id": "optQ", "text": "Validating input data types and ranges before insertion"},
+        {"id": "optR", "text": "Employing parameterized queries or prepared statements"},
+        {"id": "optS", "text": "Avoiding dynamic SQL construction entirely"},
+        {"id": "optT", "text": "Using the DROP TABLE command for cleanup"}
+      ],
+      "correctOptionIds": ["optQ", "optR", "optS"],
+      "explanation": "Input validation (option Q), parameterized queries (option R), and avoiding dynamic SQL construction (option S) all mitigate SQL injection risks. String concatenation (P) introduces vulnerabilities, while DROP TABLE is unrelated to injection."
+    },
+    {
+      "id": "q_analyze_005",
+      "question": "Consider this query: \nSELECT * FROM Orders WHERE OrderDate BETWEEN '2023-01-01' AND '2023-12-31';\nWhat is the most likely performance implication of using the wildcard '*' in the SELECT clause?",
+      "options": [
+        {"id": "optM", "text": "It forces a full table scan, ignoring indexes"},
+        {"id": "optN", "text": "It reduces query execution time by fetching fewer columns"},
+        {"id": "optO", "text": "It automatically applies filters to date ranges more efficiently"},
+        {"id": "optP", "text": "It improves index utilization for the OrderDate column"},
+        {"id": "optQ", "text": "It has no impact on query performance"}
+      ],
+      "correctOptionIds": ["optM"],
+      "explanation": "Using SELECT * (option M) typically results in full table scans because the database cannot predict which columns are needed, preventing index optimization. Specific column selection enables better use of indexes for filtering and sorting."
+    }
+  ]
+}
+```
