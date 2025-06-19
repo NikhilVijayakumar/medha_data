@@ -74,13 +74,39 @@ class DirectoryProcessor:
         print(f"Processed and saved {len(processed)} sorted entries to '{self.output_file_path}'")
         return processed
 
+    def create_topic_directories_with_json(self, topic_list):
+        if not os.path.isdir(self.directory_path):
+            raise NotADirectoryError(f"Base directory '{self.directory_path}' does not exist.")
+
+        if not isinstance(topic_list, list):
+            raise TypeError("Provided topic_list must be a list of strings.")
+
+        for topic in topic_list:
+            topic_dir = os.path.join(self.directory_path, topic)
+            os.makedirs(topic_dir, exist_ok=True)
+
+            content_json_path = os.path.join(topic_dir, 'content.json')
+            if not os.path.exists(content_json_path):
+                with open(content_json_path, 'w') as f:
+                    json.dump([], f, indent=4)
+
+        print(f"Created {len(topic_list)} topic directories with empty content.json files.")
+
+
 
 if __name__ == "__main__":
     settings = Settings()
     processor = DirectoryProcessor(settings.INPUT_CONFIG_PATH)
 
     # Step 1: Scan directory and generate content.json
-    filenames = processor.scan_directory()
+    #filenames = processor.scan_directory()
 
     # Step 2: Process content.json and generate topic.json
     #processor.process_filenames(filenames)
+
+    # content_json_path = r""
+    # with open(content_json_path, 'r') as f:
+    #     data = json.load(f)
+
+    # Step 3: Create folders for each topic with an empty content.json inside
+    #processor.create_topic_directories_with_json(data)
