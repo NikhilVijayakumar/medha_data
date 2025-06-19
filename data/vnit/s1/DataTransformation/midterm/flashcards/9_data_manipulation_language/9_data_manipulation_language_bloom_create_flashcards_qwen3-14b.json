@@ -1,0 +1,37 @@
+[  
+  {  
+    "id": "integrated_create_001",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Design a database workflow for a library system that uses `INSERT`, `UPDATE`, and `DELETE` commands with constraints. Explain how each command interacts with foreign key relationships and data integrity rules.",  
+    "back_answer": "Library System Workflow Design:\n- **`INSERT`:** Add new books to the `BOOKS` table, ensuring `ISBN` (primary key) is unique and `AUTHOR_ID` (foreign key) references valid entries in the `AUTHORS` table. Default values for `AVAILABILITY` set to 'Available'.\n- **`UPDATE`:** Modify a book's availability status when it’s checked out (`SET AVAILABILITY = 'Checked Out' WHERE ISBN = ...`). Use a `WHERE` clause with `ISBN` to avoid mass updates.\n- **`DELETE`:** Remove a book from the system, but only if no loans exist in the `LOANS` table (enforced via foreign key constraints). If attempting to delete an author, use cascading deletes or first remove associated books.\n- **Constraints:** Foreign keys ensure referential integrity; unique constraints prevent duplicate ISBNs. Transactions group these operations for atomicity."  
+  },  
+  {  
+    "id": "integrated_create_002",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Invent a metaphor to explain the difference between `DELETE` and `TRUNCATE TABLE`, emphasizing logging, rollbacks, and foreign key constraints.",  
+    "back_answer": "`DELETE` is like carefully removing items from a shelf one by one while keeping a detailed log of each action. You can undo it if you make a mistake (rollback), but it’s slower. `TRUNCATE TABLE` is like emptying an entire shelf instantly, without logging individual items—faster but irreversible. However, you can’t use `TRUNCATE` on shelves (tables) that are linked to other shelves (foreign key constraints)."  
+  },  
+  {  
+    "id": "integrated_create_003",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Creating",  
+    "front_prompt": "From first principles, reconstruct the logic of an `UPDATE` statement with a `WHERE` clause. Explain how it interacts with transaction logging and data consistency.",  
+    "back_answer": "Reconstructed Logic:\n1. **Identify Target Rows:** The `WHERE` condition filters rows in the table (e.g., `SALARY > 50000`).\n2. **Modify Values:** The `SET` clause applies new values to specified columns (e.g., `BONUS = BONUS * 1.10`).\n3. **Transaction Logging:** Each change is logged in the transaction log for rollback capability if a failure occurs.\n4. **Consistency Check:** Before committing, the database checks constraints (e.g., foreign keys, unique fields) to ensure data remains valid."  
+  },  
+  {  
+    "id": "integrated_create_004",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Synthesize an explanation of `INSERT` with column-specific values by combining the concepts of 'value order matching' and 'default constraints'. Use this to design a table schema for a customer registration system.",  
+    "back_answer": "Explanation & Schema Design:\n- **Column-Specific Insertion:** Explicitly list columns in `INSERT INTO (EMAIL, USERNAME)` to avoid assuming value order. Values like `DEFAULT` or omitted fields use column-defined defaults (e.g., `CREATED_AT DEFAULT GETDATE()`).\n- **Customer Table Example:**\n  ```sql\n  CREATE TABLE CUSTOMERS (\n    USERID INT IDENTITY(1,1) PRIMARY KEY,\n    EMAIL VARCHAR(255) UNIQUE NOT NULL,\n    USERNAME VARCHAR(50) NOT NULL,\n    REGISTRATION_DATE DATETIME DEFAULT GETDATE()\n  );\n  INSERT INTO CUSTOMERS (EMAIL, USERNAME)\n  VALUES ('user@example.com', 'johndoe'); -- REGISTRATION_DATE auto-filled\n  ```"  
+  },  
+  {  
+    "id": "integrated_create_005",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Create an analogy comparing `TRUNCATE TABLE` and `DELETE` to data recovery scenarios. Highlight why one is reversible and the other isn’t.",  
+    "back_answer": "`DELETE` is like throwing papers into a recycling bin—you can retrieve them if the bin hasn’t been emptied. `TRUNCATE TABLE` is like burning all papers in a fire; once ash, they’re gone forever. The recycle bin (transaction log) keeps track of deleted pages for recovery, but fire (minimal logging) leaves no trace."  
+  }  
+]

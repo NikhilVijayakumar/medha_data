@@ -1,0 +1,37 @@
+[  
+  {  
+    "id": "integrated_evaluate_001",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Critique the effectiveness of omitting column specifications in an `INSERT INTO` statement for data integrity and readability.",  
+    "back_answer": "Omitting column specifications requires values to strictly match table schema order, increasing risk of errors if columns are added/removed. It also hides which data is being inserted, reducing readability. Specifying columns explicitly ensures clarity, allows partial inserts with defaults, and improves maintainability. The notes emphasize this as a safer practice for avoiding unintended NULLs or constraint violations."  
+  },  
+  {  
+    "id": "integrated_evaluate_002",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Evaluate the risks of executing an `UPDATE` statement without a `WHERE` clause. Justify your answer using principles from the notes.",  
+    "back_answer": "An `UPDATE` without a `WHERE` clause modifies all rows in the table, risking irreversible data loss or corruption. The notes explicitly warn against this practice, as it can overwrite critical data globally (e.g., increasing all salaries by 5% accidentally). This violates data integrity principles and highlights the necessity of precise row targeting via conditions."  
+  },  
+  {  
+    "id": "integrated_evaluate_003",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Compare `DELETE` and `TRUNCATE TABLE` for clearing all records from a table. Which is more efficient, and why? Reference logging mechanisms and recovery options.",  
+    "back_answer": "`TRUNCATE TABLE` is faster and uses minimal logging (unlike `DELETE`, which logs each row). It also resets identity seeds but cannot be rolled back if not in a transaction. However, `DELETE` allows conditional removal and supports rollback within transactions. For irreversible mass deletions with no recovery needs, `TRUNCATE` is more efficient; for scenarios requiring flexibility or reversibility, `DELETE` is better."  
+  },  
+  {  
+    "id": "integrated_evaluate_004",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Identify a potential flaw in using `TRUNCATE TABLE` on a table with foreign key constraints. How could this be resolved?",  
+    "back_answer": "`TRUNCATE TABLE` cannot be used if the table has foreign key constraints referencing it, as it would violate referential integrity. This is a critical flaw for tables involved in relationships. To resolve this, either drop dependent constraints first or use `DELETE` with cascading deletes to maintain consistency."  
+  },  
+  {  
+    "id": "integrated_evaluate_005",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Weigh the alternatives: Should you use `DELETE` or `TRUNCATE TABLE` to remove all records from a table with no foreign key dependencies? Justify based on speed, logging, and data recovery.",  
+    "back_answer": "`TRUNCATE TABLE` is preferable here due to its minimal logging and faster execution. Since there are no foreign key constraints, the risk of referential integrity issues is eliminated. However, `TRUNCATE` is irreversible without a transaction, while `DELETE` allows rollback if wrapped in a transaction. For speed and efficiency with no recovery needs, choose `TRUNCATE`; for flexibility/rollback, use `DELETE`."  
+  }  
+]

@@ -1,0 +1,37 @@
+[  
+  {  
+    "id": "integrated_apply_001",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Write an SQL `INSERT` statement to add two new employees into the EMPLOYEE table with specific column values: one for 'Sales' department and another for 'Finance'. Use explicit column specification.",  
+    "back_answer": "```sql\nINSERT INTO EMPLOYEE (EMPID, ENAME, SAL, DEPTNAME)\nVALUES ('E105', 'Alice Johnson', 65000.00, 'Sales'),\n       ('E106', 'Bob Williams', 75000.00, 'Finance');\n``` This explicitly lists columns and inserts multiple rows while adhering to value order matching."  
+  },  
+  {  
+    "id": "integrated_apply_002",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Construct an `UPDATE` statement to increase the salary of all employees in the 'Sales' department by 15%, ensuring data consistency using a `WHERE` clause.",  
+    "back_answer": "```sql\nUPDATE EMPLOYEE\nSET SAL = SAL * 1.15\nWHERE DEPTNAME = 'Sales';\n``` The `WHERE` clause ensures only relevant rows are updated, avoiding unintended modifications."  
+  },  
+  {  
+    "id": "integrated_apply_003",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Explain how to delete all records from the EMPLOYEE table while preserving its structure. Mention two methods and their trade-offs regarding foreign key constraints.",  
+    "back_answer": "Use `DELETE FROM EMPLOYEE;` (logs each row, allows rollback) or `TRUNCATE TABLE EMPLOYEE;` (minimal logging, faster). However, `TRUNCATE` may fail if foreign keys reference the table unless constraints are disabled first."  
+  },  
+  {  
+    "id": "integrated_apply_004",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Design a real-world scenario where `TRUNCATE TABLE` is preferred over `DELETE`, and justify your choice using performance and data recovery considerations.",  
+    "back_answer": "A monthly reset of a 'Logs' table with 1M+ entries. `TRUNCATE` is faster (minimal logging) and resets identity seeds, but it’s irreversible. Use it when no need for row-level recovery exists."  
+  },  
+  {  
+    "id": "integrated_apply_005",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Write an `INSERT` statement that uses default values for the DOJ (Date of Joining) column and ensures uniqueness via a constraint. Explain how constraints enforce data integrity here.",  
+    "back_answer": "```sql\nINSERT INTO EMPLOYEE (EMPID, ENAME, SAL)\nVALUES ('E107', 'Charlie Brown', 58000.00);\n``` If DOJ allows NULLs or has a default, it’s automatically populated. A `UNIQUE` constraint on EMPID ensures no duplicates are inserted."  
+  }  
+]

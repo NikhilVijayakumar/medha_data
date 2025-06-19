@@ -1,1 +1,9 @@
-[]
+[
+    "9_data_manipulation_language_analyzing_flashcards_qwen3-14b.json",
+    "9_data_manipulation_language_applying_flashcards_qwen3-14b.json",
+    "9_data_manipulation_language_bloom_create_flashcards_qwen3-14b.json",
+    "9_data_manipulation_language_evaluating_flashcards_qwen3-14b.json",
+    "9_data_manipulation_language_remembering_flashcards_qwen3-14b.json",
+    "9_data_manipulation_language_simple_flashcard_qwen3-14b.json",
+    "9_data_manipulation_language_understanding_flashcards_qwen3-14b.json"
+]

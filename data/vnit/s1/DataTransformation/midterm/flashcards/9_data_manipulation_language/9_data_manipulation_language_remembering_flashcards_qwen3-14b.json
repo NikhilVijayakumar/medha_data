@@ -1,0 +1,107 @@
+[  
+  {  
+    "id": "integrated_remember_001",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the purpose of the `INSERT` command in SQL?",  
+    "back_answer": "The `INSERT` command is used to add new rows (records) into a table."  
+  },  
+  {  
+    "id": "integrated_remember_002",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What happens if you omit the column list in an `INSERT INTO` statement?",  
+    "back_answer": "The order of values in the `VALUES` clause must exactly match the order of columns in the table definition."  
+  },  
+  {  
+    "id": "integrated_remember_003",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is an advantage of explicitly specifying columns in an `INSERT` statement?",  
+    "back_answer": "It allows inserting data into a subset of columns and in any order, with unspecified columns taking default values or NULL."  
+  },  
+  {  
+    "id": "integrated_remember_004",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "How can multiple rows be inserted with a single `INSERT` statement?",  
+    "back_answer": "By separating value sets with commas in the `VALUES` clause."  
+  },  
+  {  
+    "id": "integrated_remember_005",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the `UPDATE` command do in SQL?",  
+    "back_answer": "The `UPDATE` command modifies existing rows in a table, typically using a `WHERE` clause to specify which rows to update."  
+  },  
+  {  
+    "id": "integrated_remember_006",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the role of the `SET` clause in an `UPDATE` statement?",  
+    "back_answer": "The `SET` clause specifies the columns to be updated and their new values."  
+  },  
+  {  
+    "id": "integrated_remember_007",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the consequence of omitting a `WHERE` clause in an `UPDATE` statement?",  
+    "back_answer": "All rows in the table will be updated, which can have significant and unintended effects."  
+  },  
+  {  
+    "id": "integrated_remember_008",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "How does the `DELETE` command differ from `TRUNCATE TABLE` in SQL Server?",  
+    "back_answer": "`DELETE` removes specified rows and logs individual deletions, while `TRUNCATE TABLE` removes all rows with minimal logging and resets identity seeds."  
+  },  
+  {  
+    "id": "integrated_remember_009",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is a key limitation of the `TRUNCATE TABLE` command?",  
+    "back_answer": "`TRUNCATE TABLE` cannot be used if the table has foreign key constraints referencing it unless those constraints are dropped first."  
+  },  
+  {  
+    "id": "integrated_remember_010",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the primary difference in logging between `DELETE` and `TRUNCATE TABLE`?",  
+    "back_answer": "`DELETE` logs each row deletion, while `TRUNCATE TABLE` uses minimal logging."  
+  },  
+  {  
+    "id": "integrated_remember_011",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the `TRUNCATE TABLE` command reset in SQL Server?",  
+    "back_answer": "`TRUNCATE TABLE` resets identity seeds to their initial values."  
+  },  
+  {  
+    "id": "integrated_remember_012",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "Can `TRUNCATE TABLE` be rolled back within a transaction?",  
+    "back_answer": "No, `TRUNCATE TABLE` cannot be rolled back once executed."  
+  },  
+  {  
+    "id": "integrated_remember_013",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the purpose of constraints like `UNIQUE` or `PRIMARY KEY` in an `INSERT` operation?",  
+    "back_answer": "They enforce data integrity rules during insertion to prevent duplicates or invalid data."  
+  },  
+  {  
+    "id": "integrated_remember_014",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is a critical caution when using `DELETE` without a `WHERE` clause?",  
+    "back_answer": "It deletes all rows in the table, which can lead to irreversible data loss."  
+  },  
+  {  
+    "id": "integrated_remember_015",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the `SET` clause allow in an `UPDATE` statement?",  
+    "back_answer": "It allows partial updates to specific columns and can include expressions like percentage adjustments."  
+  }  
+]

@@ -1,0 +1,37 @@
+[  
+  {  
+    "id": "integrated_analyze_001",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Compare and contrast the `DELETE` and `TRUNCATE TABLE` commands, highlighting their key differences in logging, rollback capabilities, and identity seed behavior.",  
+    "back_answer": "`DELETE` logs each row deletion individually, allows transaction rollbacks, preserves identity seeds, and respects foreign key constraints (if defined). `TRUNCATE TABLE` uses minimal logging, cannot be rolled back once committed, resets identity seeds to the initial value, and may require dropping foreign key constraints before execution. Both remove data but differ in performance, recovery options, and structural impact."  
+  },  
+  {  
+    "id": "integrated_analyze_002",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Break down the `INSERT` statement into its core components and explain how they interact to ensure data integrity.",  
+    "back_answer": "The `INSERT INTO` clause specifies the target table and columns. The `VALUES` clause provides corresponding data, ensuring value-order matching with column definitions. Constraints like `UNIQUE` or `PRIMARY KEY` enforce validity during insertion. Omitting columns assigns default values (if defined) or NULLs, while multiple-row inserts use comma-separated value sets. Data integrity relies on explicit constraints rather than inherent validation in the command itself."  
+  },  
+  {  
+    "id": "integrated_analyze_003",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Identify a potential flawed assumption in using the `UPDATE` command without a `WHERE` clause and explain its consequences.",  
+    "back_answer": "A flawed assumption is that updating all rows with an `UPDATE` statement without a `WHERE` clause will only affect intended records. In reality, this modifies every row in the table, risking unintended data alterations (e.g., salary increases for all employees). This highlights the critical need to use precise conditions and test queries before execution to avoid irreversible errors."  
+  },  
+  {  
+    "id": "integrated_analyze_004",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Compare the `SET` clause in `UPDATE` operations with the conditional deletion mechanism of `DELETE`, focusing on their impact on data consistency.",  
+    "back_answer": "The `SET` clause modifies specific columns based on a condition, allowing partial updates (e.g., adjusting salaries by percentage) while maintaining existing data. In contrast, `DELETE` removes entire rows based on conditions, which can break relationships if foreign key constraints exist. Both require careful use of `WHERE` clauses to ensure consistency; however, `UPDATE` preserves structural integrity whereas `DELETE` risks orphaned records or cascading deletions."  
+  },  
+  {  
+    "id": "integrated_analyze_005",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Explain the role of constraints enforcement in `INSERT` operations and identify a scenario where it might fail to prevent duplicate entries.",  
+    "back_answer": "Constraints like `UNIQUE` or `PRIMARY KEY` enforce data integrity during insertion by rejecting duplicates. However, if multiple users simultaneously insert identical values without transaction isolation (e.g., in concurrent sessions), the database might allow duplicates due to race conditions. This highlights a limitation of constraint enforcement and underscores the need for application-level checks or serialized transactions."  
+  }  
+]

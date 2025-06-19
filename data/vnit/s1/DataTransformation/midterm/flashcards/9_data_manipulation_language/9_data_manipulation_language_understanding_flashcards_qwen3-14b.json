@@ -1,0 +1,58 @@
+[
+  {
+    "id": "integrated_understand_001",
+    "topic": "Data Manipulation Language (DML) Operations",
+    "bloom_level": "Understanding",
+    "front_prompt": "Explain the INSERT statement in your own words.",
+    "back_answer": "The INSERT command adds new records to a database table. You specify which table and columns you're adding data to, then provide the values. If you don't list columns explicitly, the value order must match the table's column sequence."
+  },
+  {
+    "id": "integrated_understand_002",
+    "topic": "Data Manipulation Language (DML) Operations",
+    "bloom_level": "Understanding",
+    "front_prompt": "Give an analogy for inserting multiple rows with a single INSERT statement.",
+    "back_answer": "It's like adding several books to a shelf at once: you list all the book titles and authors in separate groups, and the library system places them on the shelf in order."
+  },
+  {
+    "id": "integrated_understand_003",
+    "topic": "Data Manipulation Language (DML) Operations",
+    "bloom_level": "Understanding",
+    "front_prompt": "Explain how default values work during an INSERT to a 5-year-old.",
+    "back_answer": "If you're putting toys in a box and forget to name one, the box has a rule that says 'if no name is given, call it Toy #1.' That's like a default value—it fills in missing information automatically."
+  },
+  {
+    "id": "integrated_understand_004",
+    "topic": "Data Manipulation Language (DML) Operations",
+    "bloom_level": "Understanding",
+    "front_prompt": "Explain the UPDATE clause implementation in your own words.",
+    "back_answer": "The UPDATE command changes existing data in a table. You use the SET clause to specify which columns get new values, and the WHERE clause tells SQL exactly which rows to update."
+  },
+  {
+    "id": "integrated_understand_005",
+    "topic": "Data Manipulation Language (DML) Operations",
+    "bloom_level": "Understanding",
+    "front_prompt": "Give an analogy for a conditional UPDATE operation.",
+    "back_answer": "It's like telling your dog to sit only if it's wearing a red collar. The 'WHERE' condition acts as the rule that determines which rows (or dogs) get updated."
+  },
+  {
+    "id": "integrated_understand_006",
+    "topic": "Data Manipulation Language (DML) Operations",
+    "bloom_level": "Understanding",
+    "front_prompt": "Explain DELETE vs TRUNCATE in simple terms.",
+    "back_answer": "'DELETE' is like throwing away specific toys from a box, while 'TRUNCATE' is emptying the entire box quickly. TRUNCATE doesn't track which toys were removed and can't be undone easily."
+  },
+  {
+    "id": "integrated_understand_007",
+    "topic": "Data Manipulation Language (DML) Operations",
+    "bloom_level": "Understanding",
+    "front_prompt": "Explain why TRUNCATE resets identity seeds to a child.",
+    "back_answer": "'TRUNCATE' is like starting fresh with a new set of numbered stickers. It wipes everything out and goes back to the first number, unlike deleting individual items which leaves the counter where it was."
+  },
+  {
+    "id": "integrated_understand_008",
+    "topic": "Data Manipulation Language (DML) Operations",
+    "bloom_level": "Understanding",
+    "front_prompt": "Explain data consistency in UPDATE operations.",
+    "back_answer": "'Data consistency' means making sure changes to some records don't break rules or relationships. For example, if you update a customer's address, related orders should still match that customer correctly."
+  }
+]

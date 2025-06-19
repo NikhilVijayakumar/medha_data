@@ -1,0 +1,72 @@
+[  
+  {  
+    "id": "simple_flash_001",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "front_prompt": "What is the purpose of the `INSERT` statement in SQL?",  
+    "back_answer": "The `INSERT` statement adds new rows (records) into a table.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_002",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "front_prompt": "When can you omit the column list in an `INSERT INTO` statement?",  
+    "back_answer": "You can omit the column list if providing values for all columns, but the value order must match the table's column definition.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_003",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "front_prompt": "What is a benefit of explicitly specifying columns in an `INSERT` statement?",  
+    "back_answer": "It allows inserting data into a subset of columns in any order, with unspecified columns taking default values or NULLs.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_004",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "front_prompt": "How do you insert multiple rows with a single `INSERT` statement?",  
+    "back_answer": "Separate value sets with commas in the `VALUES` clause, e.g., `VALUES (value1), (value2)`.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_005",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "front_prompt": "What does the `UPDATE` statement do?",  
+    "back_answer": "The `UPDATE` statement modifies existing rows in a table, using the `SET` clause to specify changes and a `WHERE` clause to target specific rows.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_006",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "front_prompt": "What happens if you omit the `WHERE` clause in an `UPDATE` statement?",  
+    "back_answer": "All rows in the table will be updated, which can have significant and unintended consequences.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_007",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "front_prompt": "How do you delete specific rows using the `DELETE` statement?",  
+    "back_answer": "Use a `WHERE` clause to specify conditions for row deletion, e.g., `DELETE FROM table WHERE condition`.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_008",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "front_prompt": "What is the difference between `DELETE` and `TRUNCATE TABLE`?",  
+    "back_answer": "`DELETE` logs individual row deletions and allows rollbacks, while `TRUNCATE TABLE` uses minimal logging, cannot be rolled back, and resets identity seeds.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_009",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "front_prompt": "What does `TRUNCATE TABLE` do to identity columns?",  
+    "back_answer": "`TRUNCATE TABLE` resets the identity seed to its initial value.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_010",  
+    "topic": "Data Manipulation Language (DML) Operations",  
+    "front_prompt": "Why is `TRUNCATE TABLE` faster than `DELETE` for large tables?",  
+    "back_answer": "`TRUNCATE TABLE` uses minimal transaction logging and does not log individual row deletions, making it more efficient.",  
+    "type": "simple"  
+  }  
+]
