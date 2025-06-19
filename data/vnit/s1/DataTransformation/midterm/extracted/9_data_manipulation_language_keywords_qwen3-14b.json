@@ -1,0 +1,24 @@
+```json  
+{  
+  "keywords": [  
+    "Data Manipulation Language (DML)",  
+    "SQL Server",  
+    "INSERT Command",  
+    "Column-Specific Insertions",  
+    "Multiple Row Insertion",  
+    "Data Integrity Constraints",  
+    "UPDATE Command",  
+    "Conditional Data Updates",  
+    "Row Modification Operations",  
+    "DELETE Command",  
+    "TRUNCATE TABLE Command",  
+    "Row Deletion Operations",  
+    "Transaction Logging",  
+    "Rollback Capabilities",  
+    "Identity Seed Reset",  
+    "Foreign Key Constraints",  
+    "Transactions (TCL)",  
+    "Data Integrity Enforcement"  
+  ]  
+}  
+```

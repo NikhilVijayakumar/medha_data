@@ -1,0 +1,7 @@
+[  
+  {"source": "Entities", "type": "prerequisite"},  
+  {"source": "Attributes", "type": "sequential"},  
+  {"source": "Relationships", "type": "prerequisite"},  
+  {"source": "Primary Keys", "type": "advanced_application_of"},  
+  {"source": "Cardinality and Degree of Relationship", "type": "advanced_application_of"}  
+]

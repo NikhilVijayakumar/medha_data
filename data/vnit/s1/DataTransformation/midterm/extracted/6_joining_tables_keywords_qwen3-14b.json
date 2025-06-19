@@ -1,0 +1,23 @@
+```json
+{
+  "keywords": [
+    "Relational Database", 
+    "JOIN Operation", 
+    "INNER JOIN", 
+    "LEFT JOIN", 
+    "RIGHT JOIN", 
+    "FULL JOIN", 
+    "CROSS JOIN", 
+    "SELF JOIN", 
+    "SEMI JOIN", 
+    "ANTI JOIN", 
+    "UNION", 
+    "UNION ALL", 
+    "INTERSECT", 
+    "EXCEPT", 
+    "MINUS", 
+    "ON Clause", 
+    "Table Aliases"
+  ]
+}
+```

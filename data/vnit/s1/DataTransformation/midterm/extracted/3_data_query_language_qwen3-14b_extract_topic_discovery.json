@@ -1,0 +1,43 @@
+[  
+  {  
+    "topic_name": "SQL Querying Fundamentals",  
+    "sub_topics": [  
+      {  
+        "name": "Basic SELECT Statement Syntax",  
+        "keywords": ["SELECT", "FROM", "asterisk (*", "column lists", "table names"]  
+      },  
+      {  
+        "name": "Handling Special Column Names",  
+        "keywords": ["square brackets [ ]", "hyphenated columns", "space-separated columns", "special characters in SQL Server", "identifier quoting"]  
+      },  
+      {  
+        "name": "Filtering Data with WHERE Clause",  
+        "keywords": ["WHERE clause", "row filtering", "condition evaluation", "result set constraints", "data subsets"]  
+      },  
+      {  
+        "name": "Comparison Operators in Filtering",  
+        "keywords": ["= equal to", "> greater than", "< less than", ">= greater or equal", "<= less or equal", "<> not equal"]  
+      },  
+      {  
+        "name": "Combining Conditions with Logical Operators",  
+        "keywords": ["AND operator", "OR operator", "compound conditions", "multi-criteria filtering", "truth table logic"]  
+      },  
+      {  
+        "name": "IN and NOT IN Operators for List Matching",  
+        "keywords": ["IN clause", "NOT IN clause", "value lists", "multiple value checks", "discrete set matching"]  
+      },  
+      {  
+        "name": "BETWEEN and NOT BETWEEN Range Filters",  
+        "keywords": ["BETWEEN operator", "range boundaries", "inclusive ranges", "numerical filtering", "date/time range queries"]  
+      },  
+      {  
+        "name": "LIKE Pattern Matching with Wildcards",  
+        "keywords": ["LIKE clause", "% wildcard (any characters)", "_ wildcard (single character)", "string pattern matching", "partial matches"]  
+      },  
+      {  
+        "name": "NULL Value Handling in Queries",  
+        "keywords": ["IS NULL check", "IS NOT NULL check", "missing data detection", "undefined values", "null-safe comparisons"]  
+      }  
+    ]  
+  }  
+]

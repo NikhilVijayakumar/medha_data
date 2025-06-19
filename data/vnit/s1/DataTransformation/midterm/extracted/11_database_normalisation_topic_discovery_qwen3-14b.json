@@ -1,0 +1,23 @@
+[  
+    {  
+        "topic_name": "Database Normalization Principles and Practices",  
+        "sub_topics": [  
+            {  
+                "name": "Objectives of Database Normalization",  
+                "keywords": ["Data Redundancy Reduction", "Anomaly Elimination (Insertion/Update/Deletion)", "Query Performance Optimization", "Data Integrity Assurance"]  
+            },  
+            {  
+                "name": "Understanding Data Anomalies",  
+                "keywords": ["Insertion Anomaly", "Update Anomaly", "Deletion Anomaly", "Inconsistent Data", "Dependency Issues"]  
+            },  
+            {  
+                "name": "Types and Characteristics of Normal Forms",  
+                "keywords": ["1NF (Atomic Values, Primary Key)", "2NF (Partial Dependencies)", "3NF (Transitive Dependencies)", "BCNF (Determinants as Candidate Keys)", "Functional Dependencies"]  
+            },  
+            {  
+                "name": "De-Normalisation Techniques and Trade-offs",  
+                "keywords": ["Performance Optimization", "Data Redundancy Introduction", "Read-Heavy Applications", "Trade-offs Between Integrity and Speed", "Join Reduction Strategies"]  
+            }  
+        ]  
+    }  
+]

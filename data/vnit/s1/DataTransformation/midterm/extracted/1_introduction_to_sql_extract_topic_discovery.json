@@ -1,0 +1,23 @@
+[  
+  {  
+    "topic_name": "Introduction to Relational Databases and SQL",  
+    "sub_topics": [  
+      {  
+        "name": "Fundamentals of Databases",  
+        "keywords": ["Database definition", "Data storage", "Information management", "Electronic filing cabinet", "Student records"]  
+      },  
+      {  
+        "name": "Relational Database Management Systems (RDBMS)",  
+        "keywords": ["Table structure", "Relationships", "Structured data", "SQL integration", "Microsoft SQL Server", "MySQL examples"]  
+      },  
+      {  
+        "name": "Structured Query Language (SQL) Overview",  
+        "keywords": ["Data retrieval", "Record insertion", "Row updates", "Schema creation", "Transaction control", "T-SQL dialects"]  
+      },  
+      {  
+        "name": "Core Relational Concepts and Terminology",  
+        "keywords": ["Table structure (rows/columns)", "Column attributes", "Row records", "Primary key enforcement", "Foreign key relationships", "Students table example", "Enrollment table example"]  
+      }  
+    ]  
+  }  
+]

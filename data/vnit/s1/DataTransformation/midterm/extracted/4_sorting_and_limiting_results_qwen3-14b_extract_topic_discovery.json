@@ -1,0 +1,19 @@
+[  
+  {  
+    "topic_name": "Sorting and Limiting Results in SQL",  
+    "sub_topics": [  
+      {  
+        "name": "ORDER BY Clause Usage",  
+        "keywords": ["ascending order", "descending order", "multiple columns", "sorting syntax", "WHERE clause placement"]  
+      },  
+      {  
+        "name": "LIMIT Clause Variations",  
+        "keywords": ["MySQL LIMIT", "PostgreSQL OFFSET", "SQL Server TOP", "row restriction", "WITH TIES"]  
+      },  
+      {  
+        "name": "DISTINCT Clause for Uniqueness",  
+        "keywords": ["unique rows", "duplicate elimination", "column combinations", "ORDER BY with DISTINCT"]  
+      }  
+    ]  
+  }  
+]

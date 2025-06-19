@@ -1,0 +1,6 @@
+[  
+  {"source": "Section VI: Aggregate Functions", "type": "prerequisite"},  
+  {"source": "Text Functions", "type": "sequential"},  
+  {"source": "Date Functions", "type": "sequential"},  
+  {"source": "Window Functions", "type": "advanced_application_of"}  
+]

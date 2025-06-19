@@ -1,0 +1,27 @@
+[  
+    {  
+        "topic_name": "Entity-Relationship Modeling in Database Design",  
+        "sub_topics": [  
+            {  
+                "name": "Entities and Their Representation",  
+                "keywords": ["entities", "rectangles", "real-world objects", "Student", "Course", "Teacher", "Order"]  
+            },  
+            {  
+                "name": "Attributes of Entities",  
+                "keywords": ["attributes", "key attribute", "simple attribute", "composite attribute", "multi-valued attribute", "derived attribute", "underlined attributes"]  
+            },  
+            {  
+                "name": "Relationships Between Entities",  
+                "keywords": ["relationships", "diamond shapes", "associations", "ENROLLS IN", "TEACHES", "entity connections", "relationship names"]  
+            },  
+            {  
+                "name": "Cardinality Constraints in Relationships",  
+                "keywords": ["cardinality", "one-to-one (1:1)", "one-to-many (1:M)", "many-to-one (M:1)", "many-to-many (M:N)", "junction entity", "foreign keys"]  
+            },  
+            {  
+                "name": "Degree of Relationships in ER Models",  
+                "keywords": ["degree of relationship", "unary (degree 1)", "binary (degree 2)", "ternary (degree 3)", "recursive relationships", "multi-entity relationships", "decomposition"]  
+            }  
+        ]  
+    }  
+]

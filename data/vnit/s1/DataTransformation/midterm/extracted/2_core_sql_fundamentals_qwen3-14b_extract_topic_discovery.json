@@ -1,0 +1,70 @@
+[  
+  {  
+    "topic_name": "Data Definition & Schema Management (DDL)",  
+    "sub_topics": [  
+      {  
+        "name": "Database Object Creation",  
+        "keywords": ["CREATE TABLE", "CREATE DATABASE", "Schema Blueprint", "Primary Key", "Column Definitions", "SQL Syntax"]  
+      },  
+      {  
+        "name": "Structural Modifications",  
+        "keywords": ["ALTER TABLE", "Add Column", "Modify Column Constraints", "Schema Evolution", "DDL Alteration Commands"]  
+      },  
+      {  
+        "name": "Object Deletion & Caution",  
+        "keywords": ["DROP TABLE", "Data Loss Warning", "Permanent Deletion", "Database Cleanup", "CASCADE Option"]  
+      }  
+    ]  
+  },  
+  {  
+    "topic_name": "Data Manipulation Operations (DML)",  
+    "sub_topics": [  
+      {  
+        "name": "Record Insertion Techniques",  
+        "keywords": ["INSERT INTO", "Value Assignment", "Column-Specific Inserts", "Bulk Data Loading", "SQL Injection Risks"]  
+      },  
+      {  
+        "name": "Data Updates & Filters",  
+        "keywords": ["UPDATE Statement", "WHERE Clause Precision", "Partial Row Modifications", "Conditional Updates", "Data Consistency Checks"]  
+      },  
+      {  
+        "name": "Record Deletion Strategies",  
+        "keywords": ["DELETE FROM", "Selective Row Removal", "Cascading Deletes", "Soft Delete Patterns", "Irreversible Operations"]  
+      }  
+    ]  
+  },  
+  {  
+    "topic_name": "Data Retrieval Techniques (DQL)",  
+    "sub_topics": [  
+      {  
+        "name": "Query Construction Basics",  
+        "keywords": ["SELECT Statement", "Column Selection", "Wildcard Usage (*), Filtering Conditions, Data Projection"]  
+      },  
+      {  
+        "name": "Filtering & Sorting Results",  
+        "keywords": ["WHERE Clause", "Equality/Range Checks", "ORDER BY", "Sorting Order (ASC/DESC)", "Search Predicates"]  
+      },  
+      {  
+        "name": "Query Optimization Principles",  
+        "keywords": ["Execution Plans", "Index Utilization", "SELECTivity Analysis", "Avoiding Full Table Scans", "Query Performance Tuning"]  
+      }  
+    ]  
+  },  
+  {  
+    "topic_name": "Transaction Control & Integrity (TCL)",  
+    "sub_topics": [  
+      {  
+        "name": "ACID Compliance Mechanics",  
+        "keywords": ["Atomicity", "Consistency Checks", "Isolation Levels", "Durability Guarantees", "Transaction Logging"]  
+      },  
+      {  
+        "name": "Commit & Rollback Operations",  
+        "keywords": ["COMMIT Transaction", "ROLLBACK to Savepoint", "Data Persistence", "Error Recovery Patterns", "Implicit vs Explicit Commits"]  
+      },  
+      {  
+        "name": "Savepoint Management",  
+        "keywords": ["SAVEPOINT Declaration", "Partial Rollbacks", "Transaction Segmentation", "Nested Transactions", "Rollback-to-Savepoint Syntax"]  
+      }  
+    ]  
+  }  
+]

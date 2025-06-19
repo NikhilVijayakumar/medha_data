@@ -1,0 +1,1 @@
+[{"source": "Data Definition Language (DDL)", "type": "prerequisite"}, {"source": "Data Manipulation Language (DML)", "type": "sequential"}, {"source": "Transaction Control Language (TCL)", "type": "advanced_application_of"}, {"source": "Data Query Language (DQL)", "type": "conceptual_support"}]

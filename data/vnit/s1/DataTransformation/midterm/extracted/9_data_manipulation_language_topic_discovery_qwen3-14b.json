@@ -1,0 +1,27 @@
+[  
+  {  
+    "topic_name": "Data Manipulation Language (DML) Operations",  
+    "sub_topics": [  
+      {  
+        "name": "INSERT Statement Techniques",  
+        "keywords": ["INSERT INTO", "Column Specification", "Multiple Rows Insertion", "Value Order Matching", "Default Values", "Constraints Enforcement"]  
+      },  
+      {  
+        "name": "UPDATE Clause Implementation",  
+        "keywords": ["SET Clause", "WHERE Condition", "Row Modification", "Partial Updates", "Percentage Adjustments", "Data Consistency"]  
+      },  
+      {  
+        "name": "DELETE Statement Operations",  
+        "keywords": ["DELETE FROM", "Conditional Deletion", "Full Table Clearance", "Foreign Key Constraints", "Transaction Safety", "Data Integrity"]  
+      },  
+      {  
+        "name": "TRUNCATE TABLE Command Overview",  
+        "keywords": ["Minimal Logging", "Identity Seed Reset", "Constraint Limitations", "Performance Optimization", "Irreversible Deletion", "Table Structure Preservation"]  
+      },  
+      {  
+        "name": "DELETE vs TRUNCATE Table Comparison",  
+        "keywords": ["Logging Mechanisms", "Transaction Rollback", "Foreign Key Handling", "Data Recovery Options", "Speed Efficiency", "Identity Reset Behavior"]  
+      }  
+    ]  
+  }  
+]

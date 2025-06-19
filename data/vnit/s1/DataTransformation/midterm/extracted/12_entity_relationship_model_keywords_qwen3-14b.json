@@ -1,0 +1,26 @@
+```json  
+{  
+  "keywords": [  
+    "Entity Relationship Model",  
+    "ER Diagrams",  
+    "Entities",  
+    "Attributes",  
+    "Key Attribute",  
+    "Simple Attribute",  
+    "Composite Attribute",  
+    "Multi-valued Attribute",  
+    "Derived Attribute",  
+    "Relationships",  
+    "Primary Keys",  
+    "Cardinality",  
+    "One-to-One",  
+    "One-to-Many",  
+    "Many-to-One",  
+    "Many-to-Many",  
+    "Degree of Relationship",  
+    "Unary (Degree 1)",  
+    "Binary (Degree 2)",  
+    "Ternary (Degree 3)"  
+  ]  
+}  
+```

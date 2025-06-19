@@ -1,0 +1,19 @@
+[  
+  {  
+    "topic_name": "SQL Join Operations and Set Theory",  
+    "sub_topics": [  
+      {  
+        "name": "Types of Joins (INNER, LEFT, RIGHT, FULL, CROSS)",  
+        "keywords": ["INNER JOIN", "LEFT JOIN", "RIGHT JOIN", "FULL OUTER JOIN", "CROSS JOIN", "JOIN Conditions", "Table Aliases"]  
+      },  
+      {  
+        "name": "Specialized Joins (SELF, SEMI, ANTI)",  
+        "keywords": ["SELF JOIN", "SEMI JOIN", "ANTI JOIN", "WHERE EXISTS", "WHERE NOT EXISTS"]  
+      },  
+      {  
+        "name": "Set Operators (UNION, INTERSECT, EXCEPT/minus)",  
+        "keywords": ["UNION", "UNION ALL", "INTERSECT", "EXCEPT", "MINUS", "Duplicate Removal", "Result Set Combination"]  
+      }  
+    ]  
+  }  
+]

@@ -1,0 +1,19 @@
+[  
+  {  
+    "topic_name": "SQL Server Built-in Functions",  
+    "sub_topics": [  
+      {  
+        "name": "Text Manipulation Functions",  
+        "keywords": ["LEN()", "LEFT()", "RIGHT()", "SUBSTRING()", "CHARINDEX()", "CONCAT()", "TRIM()"]  
+      },  
+      {  
+        "name": "Date and Time Functions",  
+        "keywords": ["DATEPART()", "DATENAME()", "DATEDIFF()", "DATEADD()", "EOMONTH()", "GETDATE()", "SYSDATETIMEOFFSET()"]  
+      },  
+      {  
+        "name": "Window Functions for Advanced Analysis",  
+        "keywords": ["RANK()", "DENSE_RANK()", "ROW_NUMBER()", "PARTITION BY", "OVER()", "Running Totals", "Ranking Calculations"]  
+      }  
+    ]  
+  }  
+]

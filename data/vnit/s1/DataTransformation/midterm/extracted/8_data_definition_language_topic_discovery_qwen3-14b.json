@@ -1,0 +1,93 @@
+[  
+  {  
+    "topic_name": "Data Definition Language (DDL) Commands Overview",  
+    "sub_topics": [  
+      {  
+        "name": "Core DDL Operations in SQL Server",  
+        "keywords": ["CREATE TABLE", "ALTER TABLE", "DROP TABLE", "SP_HELP", "SP_RENAME"]  
+      },  
+      {  
+        "name": "Schema and Object Management Concepts",  
+        "keywords": ["dbo schema", "database owner", "object renaming", "metadata inspection", "constraint management"]  
+      }  
+    ]  
+  },  
+  {  
+    "topic_name": "Table Creation with CREATE TABLE Statement",  
+    "sub_topics": [  
+      {  
+        "name": "Syntax Structure and Column Definitions",  
+        "keywords": ["CREATE TABLE syntax", "column data types", "primary key constraints", "foreign key references"]  
+      },  
+      {  
+        "name": "Inline Constraint Implementation",  
+        "keywords": ["NOT NULL constraint", "CHECK constraint", "DEFAULT value", "PRIMARY KEY inline"]  
+      }  
+    ]  
+  },  
+  {  
+    "topic_name": "Modifying Tables with ALTER TABLE Statement",  
+    "sub_topics": [  
+      {  
+        "name": "Column Addition and Removal Operations",  
+        "keywords": ["ADD COLUMN syntax", "DROP COLUMN warning", "data loss prevention", "schema modification"]  
+      },  
+      {  
+        "name": "Constraint Management via ALTER TABLE",  
+        "keywords": ["ADD CONSTRAINT operation", "DROP CONSTRAINT requirement", "UNIQUE constraint", "FOREIGN KEY constraints"]  
+      }  
+    ]  
+  },  
+  {  
+    "topic_name": "Metadata Inspection with SP_HELP Stored Procedure",  
+    "sub_topics": [  
+      {  
+        "name": "Retrieving Table Metadata Details",  
+        "keywords": ["SP_HELP execution syntax", "column metadata retrieval", "constraint visibility", "table properties inspection"]  
+      },  
+      {  
+        "name": "Constraint Identification and Troubleshooting",  
+        "keywords": ["primary key identification", "foreign key relationships", "metadata debugging"]  
+      }  
+    ]  
+  },  
+  {  
+    "topic_name": "Database Object Renaming with SP_RENAME Procedure",  
+    "sub_topics": [  
+      {  
+        "name": "Column and Table Name Modification Syntax",  
+        "keywords": ["SP_RENAME parameter syntax", "COLUMN specification", "table renaming conventions"]  
+      },  
+      {  
+        "name": "Impact Analysis of Object Renaming Operations",  
+        "keywords": ["dependency management", "application compatibility", "schema integrity preservation"]  
+      }  
+    ]  
+  },  
+  {  
+    "topic_name": "Table Deletion with DROP TABLE Command",  
+    "sub_topics": [  
+      {  
+        "name": "Data Removal and Schema Impact Analysis",  
+        "keywords": ["DROP TABLE permanence", "data loss prevention", "schema dependency removal"]  
+      },  
+      {  
+        "name": "Irreversible DDL Operations Considerations",  
+        "keywords": ["DDL transaction safety", "production environment risks", "database recovery strategies"]  
+      }  
+    ]  
+  },  
+  {  
+    "topic_name": "SQL Server Specific DDL Implementation Details",  
+    "sub_topics": [  
+      {  
+        "name": "'dbo' Schema and Object Ownership Concepts",  
+        "keywords": ["default schema assignment", "user-created objects ownership", "database owner role"]  
+      },  
+      {  
+        "name": "Constraint Naming Conventions in SQL Server",  
+        "keywords": ["constraint naming rules", "UQ_ prefix convention", "FK_ prefix standardization"]  
+      }  
+    ]  
+  }  
+]

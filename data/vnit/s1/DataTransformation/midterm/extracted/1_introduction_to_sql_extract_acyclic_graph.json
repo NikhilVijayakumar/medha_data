@@ -1,0 +1,9 @@
+[  
+  {"source": "Introduction to Databases", "type": "prerequisite"},  
+  {"source": "RDBMS (Relational Database Management System)", "type": "sequential"},  
+  {"source": "SQL Basics", "type": "advanced_application_of"},  
+  {"source": "Table Structure and Schema Design", "type": "conceptual_support"},  
+  {"source": "Primary Key and Foreign Key Concepts", "type": "prerequisite"},  
+  {"source": "Relational Model Fundamentals", "type": "sequential"},  
+  {"source": "SQL Dialects (T-SQL, PL/SQL)", "type": "advanced_application_of"}  
+]

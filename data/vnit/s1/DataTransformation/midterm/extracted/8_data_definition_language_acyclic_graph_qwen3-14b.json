@@ -1,0 +1,7 @@
+[  
+  {"source": "CREATE TABLE", "type": "prerequisite"},  
+  {"source": "ALTER TABLE", "type": "sequential"},  
+  {"source": "SP_HELP TableName", "type": "conceptual_support"},  
+  {"source": "SP_RENAME Object", "type": "advanced_application_of"},  
+  {"source": "DROP TABLE", "type": "prerequisite"}  
+]

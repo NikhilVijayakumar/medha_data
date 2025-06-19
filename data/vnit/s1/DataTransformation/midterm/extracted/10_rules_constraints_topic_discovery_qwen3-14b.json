@@ -1,0 +1,39 @@
+[  
+  {  
+    "topic_name": "SQL Constraints and Data Integrity",  
+    "sub_topics": [  
+      {  
+        "name": "NOT NULL Constraint",  
+        "keywords": ["Data Integrity", "Null Values", "Column Constraints", "Insert Operations", "Update Operations"]  
+      },  
+      {  
+        "name": "UNIQUE Constraint",  
+        "keywords": ["Unique Values", "Composite Key", "Primary Key Difference", "Index Creation", "Duplicate Prevention"]  
+      },  
+      {  
+        "name": "CHECK Constraint",  
+        "keywords": ["Validation Rules", "Boolean Expressions", "Data Range Restrictions", "Constraint Naming", "Enforcement of Business Rules"]  
+      },  
+      {  
+        "name": "DEFAULT Constraint",  
+        "keywords": ["Default Values", "Column Initialization", "INSERT Commands", "Constraint Modification", "Automatic Fallback"]  
+      },  
+      {  
+        "name": "PRIMARY KEY Constraint",  
+        "keywords": ["Uniqueness Enforcement", "Composite Keys", "NOT NULL Requirement", "Table Identification", "Index Optimization"]  
+      },  
+      {  
+        "name": "FOREIGN KEY Constraint",  
+        "keywords": ["Referential Integrity", "Parent-Child Tables", "Cascading Actions", "Constraint Naming", "Data Consistency"]  
+      },  
+      {  
+        "name": "COMPOSITE Key Constraints",  
+        "keywords": ["Multi-column Constraints", "Unique Combination", "Primary Key Variants", "Relationship Definition", "Data Modeling"]  
+      },  
+      {  
+        "name": "IDENTITY Property",  
+        "keywords": ["Auto-incrementing Values", "Sequence Generation", "Column Properties", "Primary Key Usage", "Sequential IDs"]  
+      }  
+    ]  
+  }  
+]

@@ -1,0 +1,10 @@
+[  
+  {"source": "NOT NULL Constraint", "type": "prerequisite"},  
+  {"source": "UNIQUE Constraint", "type": "prerequisite"},  
+  {"source": "PRIMARY KEY", "type": "advanced_application_of"},  
+  {"source": "FOREIGN KEY", "type": "sequential"},  
+  {"source": "COMPOSITE KEY", "type": "advanced_application_of"},  
+  {"source": "CHECK Constraint", "type": "sequential"},  
+  {"source": "DEFAULT Constraint", "type": "conceptual_support"},  
+  {"source": "IDENTITY Property", "type": "advanced_application_of"}  
+]

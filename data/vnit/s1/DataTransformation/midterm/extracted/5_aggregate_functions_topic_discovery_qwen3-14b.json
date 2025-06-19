@@ -1,0 +1,23 @@
+[  
+  {  
+    "topic_name": "Data Aggregation with SQL",  
+    "sub_topics": [  
+      {  
+        "name": "Common Aggregate Functions",  
+        "keywords": ["COUNT()", "SUM()", "AVG()", "MAX()", "MIN()", "non-NULL values", "numeric columns"]  
+      },  
+      {  
+        "name": "GROUP BY Clause Syntax and Usage",  
+        "keywords": ["GROUP BY", "column grouping", "aggregate functions", "SELECT clause", "ORDER BY placement", "grouped results"]  
+      },  
+      {  
+        "name": "HAVING Clause for Group Filtering",  
+        "keywords": ["HAVING", "group conditions", "aggregated results", "WHERE vs HAVING", "region filtering", "category thresholds"]  
+      },  
+      {  
+        "name": "ROLLUP Extension for Hierarchical Aggregation",  
+        "keywords": ["ROLLUP()", "subtotals", "grand totals", "multi-level aggregations", "NULL placeholders", "ORDER BY with ROLLUP"]  
+      }  
+    ]  
+  }  
+]

@@ -1,0 +1,17 @@
+```json
+{
+  "keywords": [
+    "Data Query Language (DQL)",
+    "SELECT Statement",
+    "WHERE Clause",
+    "Comparison Operators",
+    "Logical Operators (AND/OR)",
+    "IN Operator",
+    "BETWEEN Operator",
+    "LIKE Operator with Wildcards (% and _)",
+    "NULL Handling (IS NULL/NOT NULL)",
+    "Asterisk (*) Wildcard",
+    "Square Brackets in SQL Server"
+  ]
+}
+```

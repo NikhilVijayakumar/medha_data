@@ -1,0 +1,27 @@
+```json
+{
+  "keywords": [
+    "Text Functions",
+    "Date Functions",
+    "Window Functions",
+    "LEN",
+    "LEFT",
+    "RIGHT",
+    "SUBSTRING",
+    "CHARINDEX",
+    "CONCAT",
+    "TRIM",
+    "DATEPART",
+    "DATENAME",
+    "DATEDIFF",
+    "DATEADD",
+    "EOMONTH",
+    "GETDATE",
+    "SYSDATETIMEOFFSET",
+    "SWITCHOFFSET",
+    "RANK",
+    "DENSE_RANK",
+    "ROW_NUMBER"
+  ]
+}
+```

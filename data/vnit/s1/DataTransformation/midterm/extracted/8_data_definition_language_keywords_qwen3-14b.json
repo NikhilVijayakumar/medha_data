@@ -1,0 +1,22 @@
+```json
+{
+  "keywords": [
+    "Data Definition Language (DDL)",
+    "CREATE TABLE",
+    "ALTER TABLE",
+    "DROP TABLE",
+    "PRIMARY KEY constraint",
+    "FOREIGN KEY constraint",
+    "CHECK constraint",
+    "UNIQUE constraint",
+    "DEFAULT constraint",
+    "SP_HELP system stored procedure",
+    "SP_RENAME system stored procedure",
+    "System Stored Procedures",
+    "Database schema management",
+    "Table structure modification",
+    "dbo prefix (Database Owner)",
+    "Irreversible DDL Operations"
+  ]
+}
+```

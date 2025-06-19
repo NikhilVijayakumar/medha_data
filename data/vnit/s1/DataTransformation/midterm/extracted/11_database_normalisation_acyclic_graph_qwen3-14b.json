@@ -1,0 +1,10 @@
+[  
+  {"source": "Database Normalisation", "type": "prerequisite"},  
+  {"source": "1st Normal Form (1NF)", "type": "sequential"},  
+  {"source": "2nd Normal Form (2NF)", "type": "sequential"},  
+  {"source": "3rd Normal Form (3NF)", "type": "sequential"},  
+  {"source": "Boyce-Codd Normal Form (BCNF)", "type": "advanced_application_of"},  
+  {"source": "4th Normal Form (4NF) and 5th Normal Form (5NF)", "type": "advanced_application_of"},  
+  {"source": "Goals of Normalisation", "type": "conceptual_support"},  
+  {"source": "De-Normalisation", "type": "prerequisite"}  
+]

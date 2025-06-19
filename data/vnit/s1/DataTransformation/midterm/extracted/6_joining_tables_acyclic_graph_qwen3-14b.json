@@ -1,0 +1,14 @@
+[  
+  {"source": "Joining Tables", "type": "prerequisite"},  
+  {"source": "INNER JOIN", "type": "sequential"},  
+  {"source": "LEFT JOIN / LEFT OUTER JOIN", "type": "advanced_application_of"},  
+  {"source": "RIGHT JOIN / RIGHT OUTER JOIN", "type": "advanced_application_of"},  
+  {"source": "FULL JOIN / FULL OUTER JOIN", "type": "advanced_application_of"},  
+  {"source": "CROSS JOIN", "type": "sequential"},  
+  {"source": "SELF JOIN", "type": "conceptual_support"},  
+  {"source": "SEMI JOIN (WHERE EXISTS)", "type": "advanced_application_of"},  
+  {"source": "ANTI JOIN (WHERE NOT EXISTS)", "type": "advanced_application_of"},  
+  {"source": "UNION / UNION ALL", "type": "sequential"},  
+  {"source": "INTERSECT", "type": "conceptual_support"},  
+  {"source": "EXCEPT / MINUS", "type": "conceptual_support"}  
+]

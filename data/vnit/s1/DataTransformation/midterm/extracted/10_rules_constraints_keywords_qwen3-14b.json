@@ -1,0 +1,15 @@
+```json  
+{  
+  "keywords": [  
+    "NOT NULL",  
+    "UNIQUE Constraint",  
+    "CHECK Constraint",  
+    "DEFAULT Constraint",  
+    "PRIMARY KEY",  
+    "FOREIGN KEY",  
+    "COMPOSITE KEY",  
+    "IDENTITY Property",  
+    "ALTER TABLE"  
+  ]  
+}  
+```
