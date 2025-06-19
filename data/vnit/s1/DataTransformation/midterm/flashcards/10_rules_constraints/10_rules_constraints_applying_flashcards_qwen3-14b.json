@@ -1,0 +1,58 @@
+[
+    {
+        "id": "integrated_apply_001",
+        "topic": "SQL Constraints and Data Integrity",
+        "bloom_level": "Applying",
+        "front_prompt": "Write SQL to create a 'Students' table with a 'StudentID' column that autoincrements, a 'Name' column that cannot be null, and an 'Email' column with unique values.",
+        "back_answer": "```sql\nCREATE TABLE Students (\n    StudentID INT IDENTITY(1,1) PRIMARY KEY,\n    Name VARCHAR(100) NOT NULL,\n    Email VARCHAR(255) UNIQUE\n);\n```\n- `IDENTITY(1,1)` auto-generates sequential IDs.\n- `NOT NULL` ensures 'Name' is always filled.\n- `UNIQUE` prevents duplicate emails."
+    },
+    {
+        "id": "integrated_apply_002",
+        "topic": "SQL Constraints and Data Integrity",
+        "bloom_level": "Applying",
+        "front_prompt": "Add a CHECK constraint to the 'Employees' table to ensure 'Salary' is between 15000 and 50000, and rename it as 'CK_SalaryRange'.",
+        "back_answer": "```sql\nALTER TABLE Employees\nADD CONSTRAINT CK_SalaryRange CHECK (Salary >= 15000 AND Salary <= 50000);\n```\n- The `CHECK` constraint enforces the salary range.\n- Naming it 'CK_SalaryRange' allows future management via `ALTER TABLE ... DROP CONSTRAINT`."
+    },
+    {
+        "id": "integrated_apply_003",
+        "topic": "SQL Constraints and Data Integrity",
+        "bloom_level": "Applying",
+        "front_prompt": "Modify the 'Orders' table to set a default value of GETDATE() for the 'OrderDate' column if not provided during insertion.",
+        "back_answer": "```sql\nALTER TABLE Orders\nALTER COLUMN OrderDate DATE DEFAULT GETDATE();\n```\n- `DEFAULT GETDATE()` automatically fills 'OrderDate' with the current date when inserting a new row."
+    },
+    {
+        "id": "integrated_apply_004",
+        "topic": "SQL Constraints and Data Integrity",
+        "bloom_level": "Applying",
+        "front_prompt": "Create a composite primary key on 'ProductID' and 'SupplierID' in the 'Inventory' table. Explain why this might be necessary.",
+        "back_answer": "```sql\nCREATE TABLE Inventory (\n    ProductID INT NOT NULL,\n    SupplierID INT NOT NULL,\n    Quantity INT,\n    PRIMARY KEY (ProductID, SupplierID)\n);\n```\n- A composite key ensures that each product from a supplier is unique in the inventory, preventing duplicate entries for the same product-supplier pair."
+    },
+    {
+        "id": "integrated_apply_005",
+        "topic": "SQL Constraints and Data Integrity",
+        "bloom_level": "Applying",
+        "front_prompt": "Add a FOREIGN KEY constraint to link 'CustomerID' in the 'Orders' table to the 'Customers' table's primary key. Enable cascading deletes.",
+        "back_answer": "```sql\nALTER TABLE Orders\nADD CONSTRAINT FK_CustomerOrders FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)\nON DELETE CASCADE;\n```\n- Ensures that deleting a customer in 'Customers' automatically deletes their orders in 'Orders'."
+    },
+    {
+        "id": "integrated_apply_006",
+        "topic": "SQL Constraints and Data Integrity",
+        "bloom_level": "Applying",
+        "front_prompt": "Design a table for storing user login attempts with a composite unique constraint on 'UserID' and 'LoginTime' (to prevent duplicate login records per minute).",
+        "back_answer": "```sql\nCREATE TABLE LoginAttempts (\n    UserID INT NOT NULL,\n    LoginTime DATETIME NOT NULL,\n    Status VARCHAR(50),\n    CONSTRAINT UQ_Login UNIQUE (UserID, DATEADD(MINUTE, DATEDIFF(MINUTE, 0, LoginTime), 0))\n);\n```\n- The composite unique constraint prevents duplicate entries for the same user within the same minute."
+    },
+    {
+        "id": "integrated_apply_007",
+        "topic": "SQL Constraints and Data Integrity",
+        "bloom_level": "Applying",
+        "front_prompt": "Explain how to remove a DEFAULT constraint from the 'Country' column in the 'Employees' table.",
+        "back_answer": "```sql\nALTER TABLE Employees\nALTER COLUMN Country DROP DEFAULT;\n```\n- This removes any default value previously set for the 'Country' column, allowing inserts without specifying it."
+    },
+    {
+        "id": "integrated_apply_008",
+        "topic": "SQL Constraints and Data Integrity",
+        "bloom_level": "Applying",
+        "front_prompt": "Write a query to list all tables in the database that have foreign key constraints referencing the 'Customers' table.",
+        "back_answer": "```sql\nSELECT \n    fk.name AS ForeignKeyName,\n    OBJECT_NAME(fk.parent_object_id) AS TableName\nFROM sys.foreign_keys fk\nJOIN sys.foreign_key_columns fkc ON fk.object_id = fkc.constraint_object_id\nWHERE fk.referenced_entity_name = 'Customers';\n```\n- Uses system views to find all foreign keys pointing to the 'Customers' table."
+    }
+]

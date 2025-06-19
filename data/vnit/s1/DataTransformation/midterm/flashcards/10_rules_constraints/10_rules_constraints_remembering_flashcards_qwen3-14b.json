@@ -1,0 +1,107 @@
+[  
+  {  
+    "id": "integrated_remember_001",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the NOT NULL constraint enforce?",  
+    "back_answer": "The NOT NULL constraint ensures that a column cannot contain NULL values."  
+  },  
+  {  
+    "id": "integrated_remember_002",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "How is the UNIQUE constraint different from PRIMARY KEY?",  
+    "back_answer": "A UNIQUE constraint allows one NULL value (unless combined with NOT NULL), while a PRIMARY KEY enforces both NOT NULL and UNIQUE."  
+  },  
+  {  
+    "id": "integrated_remember_003",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the purpose of a CHECK constraint?",  
+    "back_answer": "A CHECK constraint defines validation rules using Boolean expressions to restrict values in a column."  
+  },  
+  {  
+    "id": "integrated_remember_004",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the DEFAULT constraint specify?",  
+    "back_answer": "The DEFAULT constraint specifies a default value for a column if no value is provided during an INSERT operation."  
+  },  
+  {  
+    "id": "integrated_remember_005",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does a PRIMARY KEY constraint enforce?",  
+    "back_answer": "A PRIMARY KEY constraint enforces both NOT NULL and UNIQUE constraints on the specified column(s)."  
+  },  
+  {  
+    "id": "integrated_remember_006",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is referential integrity enforced by FOREIGN KEY?",  
+    "back_answer": "Referential integrity ensures relationships between tables are valid, preventing actions that break parent-child table links."  
+  },  
+  {  
+    "id": "integrated_remember_007",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What defines a COMPOSITE KEY constraint?",  
+    "back_answer": "A COMPOSITE KEY is a primary key or unique key consisting of two or more columns with unique combinations."  
+  },  
+  {  
+    "id": "integrated_remember_008",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the IDENTITY property used for?",  
+    "back_answer": "The IDENTITY property automatically generates sequential numeric values for a column, often used as primary keys."  
+  },  
+  {  
+    "id": "integrated_remember_009",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "How do you add a NOT NULL constraint to an existing column?",  
+    "back_answer": "Use ALTER TABLE with ALTER COLUMN, ensuring the column has no existing NULL values."  
+  },  
+  {  
+    "id": "integrated_remember_010",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What SQL command is used to drop a CHECK constraint?",  
+    "back_answer": "ALTER TABLE ... DROP CONSTRAINT with the constraint name."  
+  },  
+  {  
+    "id": "integrated_remember_011",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "Can a COMPOSITE KEY include NULL values?",  
+    "back_answer": "No, a composite key must enforce NOT NULL for all columns in the combination."  
+  },  
+  {  
+    "id": "integrated_remember_012",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "How is a FOREIGN KEY constraint added to an existing table?",  
+    "back_answer": "Using ALTER TABLE ... ADD CONSTRAINT with the foreign key definition."  
+  },  
+  {  
+    "id": "integrated_remember_013",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What happens if a CHECK constraint is violated during an INSERT?",  
+    "back_answer": "The operation fails, preventing invalid data from being inserted."  
+  },  
+  {  
+    "id": "integrated_remember_014",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the syntax for defining a UNIQUE constraint on multiple columns?",  
+    "back_answer": "CONSTRAINT UQ_Name UNIQUE (Column1, Column2, ...)."  
+  },  
+  {  
+    "id": "integrated_remember_015",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is required to modify an IDENTITY column?",  
+    "back_answer": "You must create a new column with the IDENTITY property and drop the old one."  
+  }  
+]

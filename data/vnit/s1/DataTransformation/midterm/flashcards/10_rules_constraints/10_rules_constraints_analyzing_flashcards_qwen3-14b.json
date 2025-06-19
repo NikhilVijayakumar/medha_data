@@ -1,0 +1,44 @@
+[  
+  {  
+    "id": "integrated_analyze_001",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Compare and contrast the PRIMARY KEY constraint and the UNIQUE constraint. Highlight their similarities, differences, and use cases.",  
+    "back_answer": "Both enforce uniqueness in a column (or set of columns). However, a PRIMARY KEY enforces NOT NULL by default and uniquely identifies table rows, while UNIQUE allows one NULL value unless combined with NOT NULL. PRIMARY KEY is used for table identification, whereas UNIQUE ensures distinct values without being tied to row identity."  
+  },  
+  {  
+    "id": "integrated_analyze_002",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Break down the FOREIGN KEY constraint into its core components. Explain how each component interacts to enforce referential integrity.",  
+    "back_answer": "A FOREIGN KEY links a column (or set of columns) in one table to a PRIMARY KEY or UNIQUE constraint in another table. Components include: 1) The referencing column(s), 2) The referenced table and column, 3) Cascading actions (e.g., ON DELETE CASCADE). These work together to prevent orphaned records and ensure data consistency between related tables."  
+  },  
+  {  
+    "id": "integrated_analyze_003",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Identify a potential flaw in relying solely on CHECK constraints for data validation. How might this limitation affect database integrity?",  
+    "back_answer": "CHECK constraints cannot reference other tables or columns, limiting their ability to enforce complex business rules that depend on external data. For example, validating that a salary is within a department’s budget range would require cross-table checks, which CHECK alone cannot handle, risking inconsistent data."  
+  },  
+  {  
+    "id": "integrated_analyze_004",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Analyze the process of modifying constraints using ALTER TABLE. What are the critical considerations when adding or removing a NOT NULL constraint?",  
+    "back_answer": "When adding a NOT NULL constraint, the column must already contain no NULL values. Removing it requires reverting to allowing NULLs. The process demands careful data validation to avoid violating existing records. Additionally, altering constraints like DEFAULT or CHECK may require specifying constraint names for clarity and manageability."  
+  },  
+  {  
+    "id": "integrated_analyze_005",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Compare the IDENTITY property with a DEFAULT constraint. How do they differ in ensuring data consistency during insert operations?",  
+    "back_answer": "IDENTITY automatically generates sequential numeric values for a column (e.g., auto-incrementing IDs), ensuring uniqueness without manual input. DEFAULT provides a fallback value if no explicit value is given, but it does not guarantee uniqueness. IDENTITY is ideal for primary keys, while DEFAULT supports data initialization with static or dynamic defaults."  
+  },  
+  {  
+    "id": "integrated_analyze_006",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Evaluate the role of COMPOSITE keys in defining relationships. How do they differ from single-column primary keys in terms of data modeling?",  
+    "back_answer": "COMPOSITE keys use multiple columns to uniquely identify rows, reflecting natural relationships (e.g., OrderID + ProductID in OrderDetails). Unlike single-column keys, they enforce uniqueness across combinations rather than individual values. This is critical for many-to-many relationships but may complicate queries and indexing strategies."  
+  }  
+]

@@ -1,0 +1,44 @@
+[  
+  {  
+    "id": "integrated_evaluate_001",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Critique the effectiveness of using a UNIQUE constraint versus a PRIMARY KEY for enforcing uniqueness in a table with a single-column identifier.",  
+    "back_answer": "A PRIMARY KEY enforces both NOT NULL and UNIQUEness, making it ideal for single-column identifiers that must always contain valid data. A UNIQUE constraint allows NULL values (unless paired with NOT NULL) and is better suited for optional unique fields. Using PRIMARY KEY ensures stricter data integrity for critical identifiers, while UNIQUE offers flexibility for non-essential uniqueness requirements."  
+  },  
+  {  
+    "id": "integrated_evaluate_002",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Evaluate the pros and cons of using CHECK constraints versus triggers for enforcing complex business rules in a database.",  
+    "back_answer": "CHECK constraints are simpler, declarative, and enforced at the column level during inserts/updates. They improve readability and performance but lack flexibility for complex logic. Triggers allow arbitrary code execution and handle intricate validation but are harder to debug, slower, and may bypass application-level checks if not carefully managed. Use CHECK for simple rules; use triggers for dynamic or multi-table dependencies."  
+  },  
+  {  
+    "id": "integrated_evaluate_003",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Which approach is more efficient for maintaining referential integrity: FOREIGN KEY constraints with cascading actions or application-layer logic? Justify your answer.",  
+    "back_answer": "FOREIGN KEY constraints are more efficient and reliable because they enforce consistency at the database level, preventing invalid data automatically. Cascading actions (e.g., ON DELETE CASCADE) ensure referential integrity without requiring application code changes. Application-layer logic is error-prone, harder to maintain, and may fail if not synchronized with database operations."  
+  },  
+  {  
+    "id": "integrated_evaluate_004",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Identify a potential flaw in relying solely on DEFAULT constraints for initializing column values during INSERT operations.",  
+    "back_answer": "DEFAULT constraints assume the default value is always appropriate, but they may lead to incorrect data if not reviewed. For example, using 'PUNE' as a default city might be invalid for global datasets. Additionally, DEFAULTs cannot enforce complex logic or dynamic calculations that require application context."  
+  },  
+  {  
+    "id": "integrated_evaluate_005",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Weigh the alternatives: Should a COMPOSITE PRIMARY KEY be used for a table with frequent JOIN operations, or is a single-column surrogate key better? Explain.",  
+    "back_answer": "A COMPOSITE PRIMARY KEY can improve query performance for joins if the composite columns are frequently used in WHERE clauses. However, it may complicate queries and indexing. A single-column surrogate key (e.g., IDENTITY) simplifies joins and indexing but adds storage overhead. Choose COMPOSITE keys when natural keys are stable and small; use surrogates for flexibility and performance in large datasets."  
+  },  
+  {  
+    "id": "integrated_evaluate_006",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Is it accurate to say that FOREIGN KEY constraints prevent all data inconsistencies between related tables? Justify your answer.",  
+    "back_answer": "No. FOREIGN KEY constraints enforce referential integrity by preventing invalid foreign key values, but they do not address other consistency issues like missing or outdated data in the referenced table. For example, a foreign key might reference a valid customer ID, but if the customer’s details are incorrect (e.g., wrong email), the constraint does not resolve this application-level error."  
+  }  
+]

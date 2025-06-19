@@ -1,0 +1,58 @@
+[  
+  {  
+    "id": "integrated_understand_001",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain the NOT NULL constraint in your own words.",  
+    "back_answer": "The NOT NULL constraint ensures a column cannot have empty (NULL) values. It’s like requiring every student to fill out their name on a form—no leaving it blank."  
+  },  
+  {  
+    "id": "integrated_understand_002",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Give an analogy for the UNIQUE constraint.",  
+    "back_answer": "The UNIQUE constraint is like a classroom where no two students can share the same nickname. Everyone must have a distinct one, even if some names are allowed to be empty (NULL)."  
+  },  
+  {  
+    "id": "integrated_understand_003",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain the CHECK constraint to a 5-year-old.",  
+    "back_answer": "A CHECK constraint is like a rule that says, 'You can only pick red or blue candies.' It stops you from choosing green if the rule doesn’t allow it."  
+  },  
+  {  
+    "id": "integrated_understand_004",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "How does the DEFAULT constraint work? Simplify it.",  
+    "back_answer": "The DEFAULT constraint is like setting a default option on a menu. If you don’t choose anything, it automatically picks 'Pune' for city or today’s date for a join date."  
+  },  
+  {  
+    "id": "integrated_understand_005",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "What is the PRIMARY KEY constraint? Paraphrase.",  
+    "back_answer": "The PRIMARY KEY constraint uniquely identifies each row in a table, like a student ID. It combines NOT NULL (no empty values) and UNIQUE (no duplicates) rules."  
+  },  
+  {  
+    "id": "integrated_understand_006",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Analogize the FOREIGN KEY constraint.",  
+    "back_answer": "A FOREIGN KEY is like a library card that only works if your name exists in the library’s member list. It ensures relationships between tables are valid."  
+  },  
+  {  
+    "id": "integrated_understand_007",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain COMPOSITE KEY constraints simply.",  
+    "back_answer": "A composite key uses two or more columns to uniquely identify a row, like needing both your first and last name to find your friend in a crowd."  
+  },  
+  {  
+    "id": "integrated_understand_008",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "How is the IDENTITY property different from other constraints?",  
+    "back_answer": "The IDENTITY property automatically generates numbers (like ticket IDs) when new rows are added, acting more like a counter than a rule enforcing data integrity."  
+  }  
+]

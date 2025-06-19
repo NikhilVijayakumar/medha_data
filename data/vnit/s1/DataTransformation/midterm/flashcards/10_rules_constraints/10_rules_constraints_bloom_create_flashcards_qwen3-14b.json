@@ -1,0 +1,58 @@
+[
+  {
+    "id": "integrated_create_001",
+    "topic": "SQL Constraints and Data Integrity",
+    "bloom_level": "Creating",
+    "front_prompt": "Design a database schema for a university enrollment system that uses PRIMARY KEY, FOREIGN KEY, and CHECK constraints to enforce data integrity. Explain how each constraint ensures correctness.",
+    "back_answer": "University Enrollment System Schema:\n- **PRIMARY KEY:** Apply to `StudentID` in the Students table (ensures uniqueness and NOT NULL). Use composite primary keys for Enrollments (`StudentID`, `CourseID`) to uniquely identify enrollments.\n- **FOREIGN KEY:** Link `CourseID` in Enrollments to Courses table, ensuring only valid courses are enrolled. Cascade updates/deletes if needed.\n- **CHECK Constraint:** Validate that `Grade` values in Enrollments are between 0 and 100 (e.g., CHECK(Grade >= 0 AND Grade <= 100))."
+  },
+  {
+    "id": "integrated_create_002",
+    "topic": "SQL Constraints and Data Integrity",
+    "bloom_level": "Creating",
+    "front_prompt": "Invent a metaphor to explain FOREIGN KEY constraints as 'guardians' of referential integrity between tables.",
+    "back_answer": "'Guardian Gatekeepers': Imagine two kingdoms (tables) connected by a bridge. The gatekeeper (FOREIGN KEY) checks if visitors (data entries) from the child kingdom have valid passes (matching values in the parent table's primary key). If invalid, they're denied entry to maintain order between realms."
+  },
+  {
+    "id": "integrated_create_003",
+    "topic": "SQL Constraints and Data Integrity",
+    "bloom_level": "Creating",
+    "front_prompt": "Reconstruct the logic for creating a table with a COMPOSITE KEY constraint from first principles, without using SQL syntax directly.",
+    "back_answer": "1. Identify two or more columns whose combined values must be unique (e.g., OrderID and ProductID in an order details table). 2. Ensure these columns cannot contain NULLs (via NOT NULL constraints). 3. Define a rule that any combination of values across these columns must appear only once in the table to enforce uniqueness."
+  },
+  {
+    "id": "integrated_create_004",
+    "topic": "SQL Constraints and Data Integrity",
+    "bloom_level": "Creating",
+    "front_prompt": "Synthesize an analogy that explains DEFAULT constraints as 'fallback plans' for columns in a database.",
+    "back_answer": "'Backup Plan for Columns': Imagine filling out a form where some fields have pre-filled defaults (like 'Country: USA'). If a user skips those fields, the system automatically fills them with the default value, ensuring critical data isn't left blank."
+  },
+  {
+    "id": "integrated_create_005",
+    "topic": "SQL Constraints and Data Integrity",
+    "bloom_level": "Creating",
+    "front_prompt": "Design a scenario where CHECK constraints enforce business rules beyond basic data validation (e.g., for a banking application).",
+    "back_answer": "'Bank Transaction Rules': Use CHECK to ensure transfers cannot exceed account balances (CHECK(Amount <= Balance)), prevent negative deposits (CHECK(Amount > 0)), and restrict transaction types to 'Deposit' or 'Withdrawal' via enumerated values."
+  },
+  {
+    "id": "integrated_create_006",
+    "topic": "SQL Constraints and Data Integrity",
+    "bloom_level": "Creating",
+    "front_prompt": "Create a metaphor for UNIQUE constraints that differentiates them from PRIMARY KEY constraints.",
+    "back_answer": "'Library Bookshelf': A UNIQUE constraint is like ensuring no two books have the same ISBN (unique per book). The PRIMARY KEY is like assigning each shelf a unique number (ensuring both uniqueness and acting as the table's 'identity')."
+  },
+  {
+    "id": "integrated_create_007",
+    "topic": "SQL Constraints and Data Integrity",
+    "bloom_level": "Creating",
+    "front_prompt": "Reconstruct the process of modifying an existing table to add a CHECK constraint that restricts values in a 'Status' column (e.g., only 'Active', 'Inactive', or 'Pending').",
+    "back_answer": "1. Use ALTER TABLE with ADD CONSTRAINT. 2. Define the constraint as CHECK(Status IN ('Active', 'Inactive', 'Pending')). 3. Test by attempting to insert invalid values, which should trigger an error."
+  },
+  {
+    "id": "integrated_create_008",
+    "topic": "SQL Constraints and Data Integrity",
+    "bloom_level": "Creating",
+    "front_prompt": "Invent a scenario where IDENTITY property and PRIMARY KEY constraints work together to auto-generate unique identifiers for records.",
+    "back_answer": "'Inventory Tracking System': Use an IDENTITY column (e.g., ItemID) with increment 1, set as the PRIMARY KEY. Each new item automatically receives a sequential number (ItemID=1,2,3...), ensuring uniqueness and eliminating manual entry errors."
+  }
+]

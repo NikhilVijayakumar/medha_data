@@ -1,0 +1,107 @@
+[  
+  {  
+    "id": "simple_flash_001",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "front_prompt": "What does the NOT NULL constraint enforce?",  
+    "back_answer": "The NOT NULL constraint ensures that a column cannot contain NULL values. Insert or update operations with NULL in such columns will fail.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_002",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "front_prompt": "How is the NOT NULL constraint added to an existing column?",  
+    "back_answer": "Using `ALTER TABLE table_name ALTER COLUMN column_name data_type NOT NULL;` (only if the column has no existing NULL values).",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_003",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "front_prompt": "What is the purpose of a UNIQUE constraint?",  
+    "back_answer": "The UNIQUE constraint ensures all values in a column (or set of columns) are distinct. It allows one NULL value unless combined with NOT NULL.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_004",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "front_prompt": "How to define a composite unique key during table creation?",  
+    "back_answer": "Use `CONSTRAINT UQ_Name UNIQUE (column1, column2,...)` in the CREATE TABLE statement.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_005",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "front_prompt": "What does a CHECK constraint enforce?",  
+    "back_answer": "A CHECK constraint enforces validation rules via Boolean expressions (e.g., `CHECK (SAL >= 10000)`). It prevents invalid data from being inserted or updated.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_006",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "front_prompt": "How to add a named CHECK constraint using ALTER TABLE?",  
+    "back_answer": "`ALTER TABLE table_name ADD CONSTRAINT CK_Name CHECK (condition);`",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_007",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "front_prompt": "What does the DEFAULT constraint specify?",  
+    "back_answer": "The DEFAULT constraint specifies a default value for a column if no explicit value is provided during an INSERT operation.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_008",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "front_prompt": "How to modify a DEFAULT constraint using ALTER TABLE?",  
+    "back_answer": "`ALTER TABLE table_name ALTER COLUMN column_name SET DEFAULT 'value';` (syntax may vary by DBMS).",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_009",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "front_prompt": "What does a PRIMARY KEY constraint enforce?",  
+    "back_answer": "A PRIMARY KEY enforces both NOT NULL and UNIQUE constraints on one or more columns, uniquely identifying each row in a table.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_010",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "front_prompt": "How to define a composite primary key during table creation?",  
+    "back_answer": "`PRIMARY KEY (column1, column2,...)` in the CREATE TABLE statement or via `ALTER TABLE ADD CONSTRAINT PK_Name PRIMARY KEY (columns);`.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_011",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "front_prompt": "What is the purpose of a FOREIGN KEY constraint?",  
+    "back_answer": "A FOREIGN KEY enforces referential integrity by linking a column (or set of columns) in one table to the PRIMARY KEY of another table.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_012",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "front_prompt": "How is a FOREIGN KEY constraint added using ALTER TABLE?",  
+    "back_answer": "`ALTER TABLE table_name ADD CONSTRAINT FK_Name FOREIGN KEY (column) REFERENCES referenced_table(referenced_column);`",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_013",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "front_prompt": "What defines a COMPOSITE KEY constraint?",  
+    "back_answer": "A composite key is a primary or unique key composed of two or more columns whose combination must be unique.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_014",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "front_prompt": "What is the IDENTITY property used for in SQL?",  
+    "back_answer": "The IDENTITY property auto-generates sequential numeric values (e.g., `INT IDENTITY(1,1)`) when new rows are inserted into a table.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_015",  
+    "topic": "SQL Constraints and Data Integrity",  
+    "front_prompt": "How to define an IDENTITY column with a custom start/increment?",  
+    "back_answer": "`column_name INT IDENTITY(start_value, increment_value)` (e.g., `IDENTITY(100,5)` starts at 100 and increments by 5).",  
+    "type": "simple"  
+  }  
+]
