@@ -1,0 +1,44 @@
+[  
+  {  
+    "id": "integrated_analyze_001",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Break down the `FULL OUTER JOIN` into its core components and explain how they interact.",  
+    "back_answer": "A FULL OUTER JOIN combines all rows from both tables. If there is no match in one table, NULL values are returned for columns of that table. It requires an ON clause to define the join condition. The interaction involves retrieving all records from Table1 and Table2, with unmatched rows filled with NULLs."  
+  },  
+  {  
+    "id": "integrated_analyze_002",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Compare and contrast `LEFT JOIN` and `RIGHT JOIN`, highlighting their key differences and similarities.",  
+    "back_answer": "Both LEFT JOIN and RIGHT JOIN return all rows from one table and matched rows from another. A LEFT JOIN returns all rows from the left table (Table1) with matching rows from the right table (Table2), filling unmatched rows in Table2 with NULLs. A RIGHT JOIN does the opposite, returning all rows from Table2 and filling unmatched rows in Table1 with NULLs. They are symmetrical but depend on the order of tables in the query."  
+  },  
+  {  
+    "id": "integrated_analyze_003",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Identify a potential flawed assumption when using `CROSS JOIN` without an explicit `ON` clause.",  
+    "back_answer": "A flawed assumption is that the Cartesian product will be intentional or meaningful. CROSS JOINs can produce extremely large result sets (e.g., 100 rows × 10 rows = 1,000 rows) and are often unintended if the ON clause is omitted, leading to performance issues or incorrect data interpretation."  
+  },  
+  {  
+    "id": "integrated_analyze_004",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Compare `UNION` and `UNION ALL`, explaining their differences in result set handling.",  
+    "back_answer": "Both UNION and UNION ALL combine results from multiple SELECT statements. However, UNION removes duplicate rows, ensuring uniqueness in the final output, while UNION ALL retains all rows, including duplicates. This difference affects performance (UNION is slower due to deduplication) and data integrity requirements."  
+  },  
+  {  
+    "id": "integrated_analyze_005",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Break down the `SELF JOIN` process, including its purpose and implementation using table aliases.",  
+    "back_answer": "A SELF JOIN connects a table to itself, typically for hierarchical data (e.g., employee-manager relationships). It requires aliases to differentiate between instances of the same table. For example, Employees e INNER JOIN Employees m ON e.ManagerID = m.EmployeeID compares rows within the same table."  
+  },  
+  {  
+    "id": "integrated_analyze_006",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Identify a logical flaw in using `EXCEPT` to find customers with no returns, assuming the `Returns` table has all possible customer IDs.",  
+    "back_answer": "A logical flaw arises if the `Returns` table does not contain all customer IDs (e.g., new customers without returns). The EXCEPT operator would incorrectly exclude these customers from the result set, as their absence in `Returns` is misinterpreted as a lack of activity rather than a data gap."  
+  }  
+]

@@ -1,0 +1,37 @@
+[  
+  {  
+    "id": "sql_create_001",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Design a database schema for tracking employee hierarchies in a company, incorporating a SELF JOIN to display each employee's manager. Explain how this join operates within the context of set theory.",  
+    "back_answer": "Database Schema Design:\n- **Tables:** `Employees(EmployeeID, Name, ManagerID)`.\n- **SELF JOIN Logic:** Join `EmployeeID` (left table) with `ManagerID` (right table) to map each employee to their manager. This mirrors a set intersection where the domain of `EmployeeID` overlaps with the range of `ManagerID`, forming hierarchical pairs. For example, if Employee A has Manager B, and Manager B has Manager C, the join reveals this chain via recursive relationships."  
+  },  
+  {  
+    "id": "sql_create_002",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Invent a metaphor to explain the difference between an INNER JOIN and a FULL OUTER JOIN, ensuring it clarifies how each handles unmatched rows.",  
+    "back_answer": "Imagine two overlapping circles in a Venn diagram. An **INNER JOIN** is like the intersection zone—only where both circles overlap (matched rows) are included. A **FULL OUTER JOIN** is like combining both entire circles: all areas of both tables are preserved, with unmatched rows appearing as 'NULL' in the other table’s columns, akin to empty spaces outside the overlap."  
+  },  
+  {  
+    "id": "sql_create_003",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Creating",  
+    "front_prompt": "From first principles, reconstruct the logic of a SEMI JOIN using basic set theory and SQL syntax. How does it differ from an INNER JOIN?",  
+    "back_answer": "A **SEMI JOIN** is equivalent to the *subset* operation in set theory: it returns all elements (rows) from the left table that exist in the right table’s subset, without duplicating rows. Implemented via `WHERE EXISTS`, it avoids Cartesian products. Unlike an INNER JOIN (which projects matched pairs), a SEMI JOIN only retains left-table data, akin to asking ‘Which students are enrolled in at least one class?’ rather than listing all student-class pairings."  
+  },  
+  {  
+    "id": "sql_create_004",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Synthesize an explanation of the UNION operator by combining concepts from set theory, duplicate removal, and SQL syntax. Why is it distinct from a JOIN?",  
+    "back_answer": "**UNION** operates as a *set union* in mathematics: it combines two result sets into one, removing duplicates (via `DISTINCT`). Unlike joins (which merge rows based on column relationships), UNION merges entire rowsets vertically. For example, combining ‘ActiveCustomers’ and ‘ArchivedCustomers’ creates a single list of unique customer IDs, treating each table’s output as separate sets to be merged."  
+  },  
+  {  
+    "id": "sql_create_005",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Design a query using an ANTI JOIN (via `WHERE NOT EXISTS`) to find all orders with no returns. Reconstruct the logic from first principles, explaining how it leverages set theory’s complement operation.",  
+    "back_answer": "**ANTI JOIN Logic:** This query identifies rows in the left table (Orders) that have *no intersection* with the right table (Returns). Using `WHERE NOT EXISTS`, it filters out any order IDs present in Returns. Mathematically, this represents the *complement* of a set intersection: all elements in Orders not shared with Returns."  
+  }  
+]

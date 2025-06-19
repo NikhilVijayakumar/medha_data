@@ -1,0 +1,37 @@
+[  
+  {  
+    "id": "integrated_evaluate_001",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Critique the effectiveness of using a FULL OUTER JOIN versus combining LEFT and RIGHT JOINs to achieve the same result set. What are the trade-offs?",  
+    "back_answer": "A FULL OUTER JOIN directly returns all rows from both tables, including unmatched ones, with clear NULLs for missing matches. Combining LEFT and RIGHT JOINs requires additional logic (e.g., UNION) and risks redundancy or errors in handling overlaps. FULL OUTER JOIN is more efficient and readable for this purpose, but databases may optimize combined joins differently depending on execution plans."  
+  },  
+  {  
+    "id": "integrated_evaluate_002",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Evaluate the accuracy of the statement: 'CROSS JOIN is equivalent to a Cartesian product, but it should be avoided unless explicitly needed.' Justify your answer with examples from the notes.",  
+    "back_answer": "Accurate. A CROSS JOIN indeed produces a Cartesian product (all possible row combinations), which can lead to massive result sets (e.g., 100 rows × 10 rows = 1,000 rows). This is inefficient for most use cases and risks unintended data explosion. It should only be used when explicitly required, such as generating all permutations of values."  
+  },  
+  {  
+    "id": "integrated_evaluate_003",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Weigh the pros and cons of using SEMI JOIN (WITH EXISTS) versus INNER JOIN for retrieving rows from a table that have matching entries in another table.",  
+    "back_answer": "SEMI JOIN (EXISTS): Pros - Avoids duplicating data from the right table, ensuring unique left-table rows even with multiple matches. Cons - Less intuitive for some developers. INNER JOIN: Pros - Familiar syntax; shows matching data from both tables. Cons - Risks duplicate rows if multiple matches exist, requiring DISTINCT to clean results."  
+  },  
+  {  
+    "id": "integrated_evaluate_004",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Identify a potential flaw in using UNION instead of UNION ALL when combining large datasets. Explain how this impacts performance.",  
+    "back_answer": "UNION removes duplicates by sorting and comparing rows, which is computationally expensive for large datasets. This can drastically slow query execution compared to UNION ALL, which simply appends results without checking for duplicates. If duplicates are not a concern, UNION ALL should be preferred for efficiency."  
+  },  
+  {  
+    "id": "integrated_evaluate_005",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Which join type (SELF JOIN or INNER JOIN) would be more suitable for retrieving hierarchical employee-manager relationships? Justify your choice.",  
+    "back_answer": "A SELF JOIN is more suitable because it explicitly joins a table to itself, using aliases to differentiate between the two instances (e.g., 'Employees e' and 'Employees m'). This clearly communicates the hierarchical relationship in the query. An INNER JOIN could technically achieve this but would require ambiguous column references without aliases, reducing readability."  
+  }  
+]

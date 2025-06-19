@@ -1,0 +1,44 @@
+[  
+  {  
+    "id": "integrated_apply_001",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Write an SQL query to retrieve all sales orders along with their corresponding returns, including orders that have no returns. Use a `LEFT JOIN`.",  
+    "back_answer": "```sql\nSELECT SO.[Order ID], SO.[Customer Name], RT.Returned\nFROM SalesOrder SO\nLEFT JOIN Returns RT ON SO.[Order ID] = RT.[Order ID];\n```\nThis query uses a LEFT JOIN to ensure all sales orders are included, even if there is no matching return record. If no return exists, the `Returned` column will be NULL."  
+  },  
+  {  
+    "id": "integrated_apply_002",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Construct an SQL query to find all customers who have placed at least one order but have never submitted a return. Use an `ANTI JOIN`.",  
+    "back_answer": "```sql\nSELECT O.CustomerID\nFROM Orders O\nWHERE NOT EXISTS (SELECT 1 FROM Returns R WHERE O.OrderID = R.OrderID);\n```\nThis query uses a NOT EXISTS clause to filter orders where there is no corresponding return record, effectively implementing an ANTI JOIN."  
+  },  
+  {  
+    "id": "integrated_apply_003",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Write a SQL query to combine the list of active customers from `ActiveCustomers` with recently archived customers from `ArchivedCustomers`, removing duplicates. Use `UNION`.",  
+    "back_answer": "```sql\nSELECT CustomerID, Name, City FROM ActiveCustomers\nUNION\nSELECT CustomerID, Name, City FROM ArchivedCustomers;\n```\nThe UNION operator combines the two result sets and removes duplicate rows, ensuring each customer appears only once in the final output."  
+  },  
+  {  
+    "id": "integrated_apply_004",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Explain how to use a `SELF JOIN` to find all employees and their respective managers from an `Employees` table with columns `EmployeeID` and `ManagerID`.",  
+    "back_answer": "Use aliases for the same table to differentiate between employee and manager rows:\n```sql\nSELECT e.EmployeeName AS Employee, m.EmployeeName AS Manager\nFROM Employees e\nINNER JOIN Employees m ON e.ManagerID = m.EmployeeID;\n```\nThis self-join matches each employee's `ManagerID` with another employee's `EmployeeID` to retrieve their manager's name."  
+  },  
+  {  
+    "id": "integrated_apply_005",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Describe a practical use case for `FULL OUTER JOIN` in a relational database.",  
+    "back_answer": "A FULL OUTER JOIN is useful when you need all records from both tables, even if there are no matches. For example, combining sales orders and returns data to identify unmatched entries: orders without returns and returns without corresponding orders."  
+  },  
+  {  
+    "id": "integrated_apply_006",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Write an SQL query to find the intersection of customers who have both placed orders and submitted returns using `INTERSECT`.",  
+    "back_answer": "```sql\nSELECT CustomerID FROM Orders\nINTERSECT\nSELECT CustomerID FROM Returns;\n```\nThe INTERSECT operator returns only the rows (CustomerIDs) that exist in both result sets, showing customers who have both orders and returns."  
+  }  
+]

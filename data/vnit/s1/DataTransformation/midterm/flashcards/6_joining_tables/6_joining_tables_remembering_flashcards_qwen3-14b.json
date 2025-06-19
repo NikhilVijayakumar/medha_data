@@ -1,0 +1,100 @@
+[
+  {
+    "id": "integrated_remember_001",
+    "topic": "SQL Join Operations and Set Theory",
+    "bloom_level": "Remembering",
+    "front_prompt": "What is an INNER JOIN?",
+    "back_answer": "Returns only the rows where there is a match in both tables based on the specified join condition. Rows without matches are excluded."
+  },
+  {
+    "id": "integrated_remember_002",
+    "topic": "SQL Join Operations and Set Theory",
+    "bloom_level": "Remembering",
+    "front_prompt": "What does a LEFT JOIN return?",
+    "back_answer": "Returns all rows from the left table and matching rows from the right table. If no match exists, NULL values are returned for the right table's columns."
+  },
+  {
+    "id": "integrated_remember_003",
+    "topic": "SQL Join Operations and Set Theory",
+    "bloom_level": "Remembering",
+    "front_prompt": "What is a RIGHT JOIN?",
+    "back_answer": "Returns all rows from the right table and matching rows from the left table. If no match exists, NULL values are returned for the left table's columns."
+  },
+  {
+    "id": "integrated_remember_004",
+    "topic": "SQL Join Operations and Set Theory",
+    "bloom_level": "Remembering",
+    "front_prompt": "What is a FULL JOIN?",
+    "back_answer": "Returns all rows from both tables. If no match exists in one table, NULL values are returned for columns of the unmatched table."
+  },
+  {
+    "id": "integrated_remember_005",
+    "topic": "SQL Join Operations and Set Theory",
+    "bloom_level": "Remembering",
+    "front_prompt": "What is a CROSS JOIN?",
+    "back_answer": "Returns the Cartesian product of two tables, combining every row from the first table with every row from the second table."
+  },
+  {
+    "id": "integrated_remember_006",
+    "topic": "SQL Join Operations and Set Theory",
+    "bloom_level": "Remembering",
+    "front_prompt": "What is a SELF JOIN?",
+    "back_answer": "A join of a table to itself, often used to compare rows within the same table (e.g., hierarchical relationships). Requires table aliases."
+  },
+  {
+    "id": "integrated_remember_007",
+    "topic": "SQL Join Operations and Set Theory",
+    "bloom_level": "Remembering",
+    "front_prompt": "What is a SEMI JOIN?",
+    "back_answer": "Returns rows from the left table where a condition is met in the right table, without duplicating rows for multiple matches. Implemented using WHERE EXISTS."
+  },
+  {
+    "id": "integrated_remember_008",
+    "topic": "SQL Join Operations and Set Theory",
+    "bloom_level": "Remembering",
+    "front_prompt": "What is an ANTI JOIN?",
+    "back_answer": "Returns rows from the left table where a condition is *not* met in the right table. Implemented using WHERE NOT EXISTS."
+  },
+  {
+    "id": "integrated_remember_009",
+    "topic": "SQL Join Operations and Set Theory",
+    "bloom_level": "Remembering",
+    "front_prompt": "What does UNION do?",
+    "back_answer": "Combines result sets of two or more SELECT statements, removing duplicate rows from the final result."
+  },
+  {
+    "id": "integrated_remember_010",
+    "topic": "SQL Join Operations and Set Theory",
+    "bloom_level": "Remembering",
+    "front_prompt": "What is the difference between UNION and UNION ALL?",
+    "back_answer": "UNION removes duplicates, while UNION ALL retains all rows, including duplicates."
+  },
+  {
+    "id": "integrated_remember_011",
+    "topic": "SQL Join Operations and Set Theory",
+    "bloom_level": "Remembering",
+    "front_prompt": "What does INTERSECT return?",
+    "back_answer": "Returns only the rows present in the result sets of both (or all) SELECT statements being combined."
+  },
+  {
+    "id": "integrated_remember_012",
+    "topic": "SQL Join Operations and Set Theory",
+    "bloom_level": "Remembering",
+    "front_prompt": "What does EXCEPT (or MINUS) do?",
+    "back_answer": "Returns rows from the first result set that are not present in the second result set."
+  },
+  {
+    "id": "integrated_remember_013",
+    "topic": "SQL Join Operations and Set Theory",
+    "bloom_level": "Remembering",
+    "front_prompt": "What is the purpose of the ON clause?",
+    "back_answer": "Defines the join condition to specify how rows from two tables should be matched."
+  },
+  {
+    "id": "integrated_remember_014",
+    "topic": "SQL Join Operations and Set Theory",
+    "bloom_level": "Remembering",
+    "front_prompt": "What are table aliases used for?",
+    "back_answer": "To shorten queries and improve readability by assigning temporary names to tables in a JOIN operation."
+  }
+]

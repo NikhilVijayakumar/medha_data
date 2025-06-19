@@ -1,0 +1,107 @@
+[  
+  {  
+    "id": "simple_flash_001",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "front_prompt": "What is an INNER JOIN?",  
+    "back_answer": "Returns only the rows where there is a match in both tables based on the specified join condition. Excludes rows without matches in either table.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_002",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "front_prompt": "What is a LEFT JOIN (or LEFT OUTER JOIN)?",  
+    "back_answer": "Returns all rows from the left table and matching rows from the right table. Returns NULL for right table columns where there is no match.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_003",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "front_prompt": "What is a RIGHT JOIN (or RIGHT OUTER JOIN)?",  
+    "back_answer": "Returns all rows from the right table and matching rows from the left table. Returns NULL for left table columns where there is no match.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_004",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "front_prompt": "What is a FULL JOIN (or FULL OUTER JOIN)?",  
+    "back_answer": "Returns all rows from both tables. Returns NULL for columns in either table where there is no match.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_005",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "front_prompt": "What is a CROSS JOIN?",  
+    "back_answer": "Returns the Cartesian product of two tables. Combines every row from the first table with every row from the second table.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_006",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "front_prompt": "What is a SELF JOIN?",  
+    "back_answer": "Joins a table to itself, often used for hierarchical data. Requires aliases to differentiate between the two instances of the table.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_007",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "front_prompt": "What is a SEMI JOIN?",  
+    "back_answer": "Returns rows from the left table where a condition is met in the right table. Implemented using WHERE EXISTS or WHERE column IN (SELECT ...).",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_008",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "front_prompt": "What is an ANTI JOIN?",  
+    "back_answer": "Returns rows from the left table where a condition is not met in the right table. Implemented using WHERE NOT EXISTS or WHERE column NOT IN (SELECT ...).",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_009",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "front_prompt": "What is the syntax for an INNER JOIN?",  
+    "back_answer": "`SELECT column1, column2 FROM Table1 INNER JOIN Table2 ON Table1.MatchingColumn = Table2.MatchingColumn;`",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_010",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "front_prompt": "What is the purpose of a SELF JOIN?",  
+    "back_answer": "To compare different rows within the same table, often for hierarchical relationships (e.g., employees and their managers).",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_011",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "front_prompt": "What is the difference between UNION and UNION ALL?",  
+    "back_answer": "`UNION` removes duplicate rows from the combined result, while `UNION ALL` retains duplicates.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_012",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "front_prompt": "What does INTERSECT do in SQL?",  
+    "back_answer": "Returns only the rows that are present in both result sets of the `SELECT` statements being combined.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_013",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "front_prompt": "What is EXCEPT (or MINUS) used for?",  
+    "back_answer": "Returns rows from the first result set that are not present in the second result set.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_014",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "front_prompt": "What is required for using UNION, INTERSECT, or EXCEPT?",  
+    "back_answer": "All `SELECT` statements must have the same number of columns with compatible data types in the same order.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_015",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "front_prompt": "What is a table alias in SQL?",  
+    "back_answer": "A temporary name assigned to a table in a query (e.g., `SO` for SalesOrder) to make the query shorter and more readable.",  
+    "type": "simple"  
+  }  
+]

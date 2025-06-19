@@ -1,1 +1,9 @@
-[]
+[
+    "6_joining_tables_analyzing_flashcards_qwen3-14b.json",
+    "6_joining_tables_applying_flashcards_qwen3-14b.json",
+    "6_joining_tables_bloom_create_flashcards_qwen3-14b.json",
+    "6_joining_tables_evaluating_flashcards_qwen3-14b.json",
+    "6_joining_tables_remembering_flashcards_qwen3-14b.json",
+    "6_joining_tables_simple_flashcard_qwen3-14b.json",
+    "6_joining_tables_understanding_flashcards_qwen3-14b.json"
+]

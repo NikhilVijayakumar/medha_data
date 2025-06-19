@@ -1,0 +1,72 @@
+[  
+  {  
+    "id": "integrated_understand_001",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain INNER JOIN in your own words.",  
+    "back_answer": "An INNER JOIN combines two tables by matching rows where the specified columns have equal values. Only the rows with matches in both tables are included; others are excluded."  
+  },  
+  {  
+    "id": "integrated_understand_002",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Give an analogy for a LEFT JOIN.",  
+    "back_answer": "A LEFT JOIN is like inviting all your friends to a party (left table) and checking if they have a date (right table). If they do, you list their date’s name; if not, you write 'No Date' instead of leaving them out."  
+  },  
+  {  
+    "id": "integrated_understand_003",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain FULL OUTER JOIN to a 5-year-old.",  
+    "back_answer": "A FULL OUTER JOIN is like combining two lists of names (e.g., kids in two classrooms). It includes everyone from both classes, even if some names are only in one list. If someone isn’t in the other list, their spot just has an empty space."  
+  },  
+  {  
+    "id": "integrated_understand_004",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain SELF JOIN in your own words.",  
+    "back_answer": "A SELF JOIN connects a table to itself, like comparing siblings in a family tree. It uses aliases to differentiate between the two instances of the same table."  
+  },  
+  {  
+    "id": "integrated_understand_005",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Give an analogy for a SEMI JOIN.",  
+    "back_answer": "A SEMI JOIN is like checking if your friends have a pet. You list all your friends (left table) but only include those who have at least one pet in the right table—no duplicates, even if they own multiple pets."  
+  },  
+  {  
+    "id": "integrated_understand_006",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain CROSS JOIN to a novice.",  
+    "back_answer": "A CROSS JOIN pairs every row from the first table with every row from the second table, like creating all possible combinations of ice cream flavors and toppings."  
+  },  
+  {  
+    "id": "integrated_understand_007",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain UNION in your own words.",  
+    "back_answer": "UNION combines the results of two or more SELECT queries into one list, removing duplicates so each entry appears only once."  
+  },  
+  {  
+    "id": "integrated_understand_008",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Give an analogy for INTERSECT.",  
+    "back_answer": "INTERSECT is like finding the common books in two friends’ libraries. It lists only the titles that appear in both collections."  
+  },  
+  {  
+    "id": "integrated_understand_009",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain EXCEPT to a 5-year-old.",  
+    "back_answer": "EXCEPT is like finding the toys you have that your friend doesn’t. It shows what’s in your list but not in theirs."  
+  },  
+  {  
+    "id": "integrated_understand_010",  
+    "topic": "SQL Join Operations and Set Theory",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain why FULL JOIN is rarely used.",  
+    "back_answer": "A FULL JOIN includes all rows from both tables, even if there’s no match. It’s rare because it often returns many NULLs unless the data has overlapping entries, making results harder to interpret."  
+  }  
+]
