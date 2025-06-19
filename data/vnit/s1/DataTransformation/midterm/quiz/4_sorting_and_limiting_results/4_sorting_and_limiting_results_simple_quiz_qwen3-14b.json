@@ -1,0 +1,98 @@
+{  
+  "title": "Sorting and Limiting Results in SQL Quiz",  
+  "description": "Test your knowledge on sorting and limiting query results using SQL clauses like ORDER BY, LIMIT, and DISTINCT.",  
+  "type": "Simple",  
+  "questions": [  
+    {  
+      "id": "q_simple_001",  
+      "question": "What is the default sort order when using the `ORDER BY` clause in SQL?",  
+      "options": [  
+        {"id": "opt1", "text": "DESCENDING"},  
+        {"id": "opt2", "text": "ASCENDING"},  
+        {"id": "opt3", "text": "RANDOM"},  
+        {"id": "opt4", "text": "UNDEFINED"},  
+        {"id": "opt5", "text": "DEPENDS ON DATABASE"}  
+      ],  
+      "correctOptionIds": ["opt2"],  
+      "explanation": "`ASC` is the default sorting order in SQL when using the `ORDER BY` clause, as specified in the notes."  
+    },  
+    {  
+      "id": "q_simple_002",  
+      "question": "Which SQL dialect uses the `TOP` keyword to limit rows?",  
+      "options": [  
+        {"id": "optA", "text": "MySQL"},  
+        {"id": "optB", "text": "PostgreSQL"},  
+        {"id": "optC", "text": "SQL Server"},  
+        {"id": "optD", "text": "SQLite"},  
+        {"id": "optE", "text": "Oracle"}  
+      ],  
+      "correctOptionIds": ["optC"],  
+      "explanation": "The `TOP` keyword is specific to SQL Server for limiting rows, as described in the notes."  
+    },  
+    {  
+      "id": "q_simple_003",  
+      "question": "How can you sort by multiple columns in ascending and descending order?",  
+      "options": [  
+        {"id": "opt1", "text": "`ORDER BY column1 ASC, column2 DESC`"},  
+        {"id": "opt2", "text": "`ORDER BY column1, column2 DESC`"},  
+        {"id": "opt3", "text": "`ORDER BY column1 ASC; ORDER BY column2 DESC`"},  
+        {"id": "opt4", "text": "`SORT column1 ASC, column2 DESC`"},  
+        {"id": "opt5", "text": "`ORDER MULTIPLE column1 ASC, column2 DESC`"}  
+      ],  
+      "correctOptionIds": ["opt1"],  
+      "explanation": "The correct syntax for sorting by multiple columns with mixed orders is `ORDER BY column1 ASC, column2 DESC`, as shown in the examples."  
+    },  
+    {  
+      "id": "q_simple_004",  
+      "question": "What does the `DISTINCT` clause eliminate from query results?",  
+      "options": [  
+        {"id": "optA", "text": "Duplicate rows"},  
+        {"id": "optB", "text": "Null values"},  
+        {"id": "optC", "text": "Rows with zero values"},  
+        {"id": "optD", "text": "Rows with negative numbers"},  
+        {"id": "optE", "text": "Columns with text"}  
+      ],  
+      "correctOptionIds": ["optA"],  
+      "explanation": "`DISTINCT` eliminates duplicate rows by ensuring unique combinations of specified columns, as explained in the notes."  
+    },  
+    {  
+      "id": "q_simple_005",  
+      "question": "Which clause is used to restrict the number of rows returned in MySQL?",  
+      "options": [  
+        {"id": "opt1", "text": "`TOP`"},  
+        {"id": "opt2", "text": "`LIMIT`"},  
+        {"id": "opt3", "text": "`ROW_LIMIT`"},  
+        {"id": "opt4", "text": "`CUTOFF`"},  
+        {"id": "opt5", "text": "`CAP`"}  
+      ],  
+      "correctOptionIds": ["opt2"],  
+      "explanation": "MySQL uses the `LIMIT` clause to restrict rows, as detailed in the notes under 'LIMIT Clause Variations'."  
+    },  
+    {  
+      "id": "q_simple_006",  
+      "question": "What is the purpose of `WITH TIES` in SQL Server?",  
+      "options": [  
+        {"id": "optA", "text": "To include rows with the same value as the last row in the result set"},  
+        {"id": "optB", "text": "To skip duplicate values"},  
+        {"id": "optC", "text": "To sort data alphabetically"},  
+        {"id": "optD", "text": "To limit rows to a specific number only"},  
+        {"id": "optE", "text": "To calculate averages"}  
+      ],  
+      "correctOptionIds": ["optA"],  
+      "explanation": "`WITH TIES` includes additional rows with the same value as the last row in the sorted result, as described for SQL Server's `TOP` clause."  
+    },  
+    {  
+      "id": "q_simple_007",  
+      "question": "Where is the `ORDER BY` clause placed in a query?",  
+      "options": [  
+        {"id": "opt1", "text": "Before the `FROM` clause"},  
+        {"id": "opt2", "text": "After the `WHERE` clause (if used)"},  
+        {"id": "opt3", "text": "Inside the `SELECT` statement"},  
+        {"id": "opt4", "text": "After the `LIMIT` clause"},  
+        {"id": "opt5", "text": "Before the `GROUP BY` clause"}  
+      ],  
+      "correctOptionIds": ["opt2"],  
+      "explanation": "`ORDER BY` is placed after the `WHERE` clause (if present) in a query, as illustrated in the example queries."  
+    }  
+  ]  
+}

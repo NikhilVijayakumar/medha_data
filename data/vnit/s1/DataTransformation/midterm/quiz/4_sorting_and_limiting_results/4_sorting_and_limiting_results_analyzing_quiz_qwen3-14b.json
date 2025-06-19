@@ -1,0 +1,72 @@
+{
+  "title": "Sorting and Limiting Results in SQL Analysis Quiz",
+  "description": "Analyze SQL clauses for sorting, limiting results, and ensuring uniqueness across different database systems.",
+  "type": "Analyzing",
+  "questions": [
+    {
+      "id": "q_analyze_001",
+      "question": "Consider the following SQL query: `SELECT * FROM SalesOrder WHERE REGION = 'CENTRAL' ORDER BY SALES ASC;`. Which of the following statements accurately describes the logical flow and purpose of this query?",
+      "options": [
+        { "id": "opt1", "text": "The WHERE clause filters rows after sorting, ensuring only Central region sales are ordered." },
+        { "id": "opt2", "text": "The ORDER BY clause executes first to sort the entire table before applying the WHERE filter." },
+        { "id": "opt3", "text": "The query will return all rows from SalesOrder sorted by SALES in ascending order, regardless of REGION." },
+        { "id": "opt4", "text": "The WHERE and ORDER BY clauses are interchangeable in this context; both operate on the full table." },
+        { "id": "opt5", "text": "The query will throw a syntax error because ORDER BY cannot follow WHERE." }
+      ],
+      "correctOptionIds": ["opt1"],
+      "explanation": "In SQL, the logical processing order is: FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY. The WHERE clause filters rows first, and then the ORDER BY sorts the filtered results. Option 1 correctly reflects this sequence, while options 2–5 misunderstand the execution flow or syntax."
+    },
+    {
+      "id": "q_analyze_002",
+      "question": "Which of the following SQL snippets will return exactly 3 rows from a table named 'Products' using PostgreSQL? (Select all that apply)",
+      "options": [
+        { "id": "optA", "text": "`SELECT * FROM Products LIMIT 3;`" },
+        { "id": "optB", "text": "`SELECT TOP 3 * FROM Products;`" },
+        { "id": "optC", "text": "`SELECT * FROM Products ORDER BY PRICE DESC LIMIT 3;`" },
+        { "id": "optD", "text": "`SELECT * FROM Products FETCH FIRST 3 ROWS ONLY;`" },
+        { "id": "optE", "text": "`SELECT * FROM Products WHERE ROWNUM <= 3;`" }
+      ],
+      "correctOptionIds": ["optA", "optC"],
+      "explanation": "PostgreSQL uses `LIMIT` for row restriction (options A and C). Option B uses SQL Server's `TOP`, D uses Oracle syntax (`FETCH FIRST`), and E uses Oracle's `ROWNUM`. Only PostgreSQL-compatible clauses are correct here."
+    },
+    {
+      "id": "q_analyze_003",
+      "question": "A query includes `SELECT DISTINCT REGION, CATEGORY FROM SalesOrder ORDER BY REGION ASC, SALES DESC;`. Why might this query fail to execute as intended?",
+      "options": [
+        { "id": "optX", "text": "'SALES' is not in the SELECT clause and cannot be used in ORDER BY." },
+        { "id": "optY", "text": "'DISTINCT' applies only to 'REGION', not 'CATEGORY'." },
+        { "id": "optZ", "text": "Multiple columns in ORDER BY are invalid unless grouped with parentheses." },
+        { "id": "optAA", "text": "'ORDER BY' cannot be used with 'DISTINCT' in PostgreSQL." },
+        { "id": "optBB", "text": "The query is valid and will execute without issues." }
+      ],
+      "correctOptionIds": ["optX"],
+      "explanation": "In SQL, columns referenced in ORDER BY must appear in the SELECT clause unless they are functionally dependent on it. Since 'SALES' is not selected, using it in ORDER BY causes an error (option X). The other options incorrectly describe how DISTINCT and ORDER BY interact."
+    },
+    {
+      "id": "q_analyze_004",
+      "question": "Which of the following statements about the `WITH TIES` option in SQL Server is correct?",
+      "options": [
+        { "id": "optP", "text": "`WITH TIES` ensures that only unique rows are returned, similar to DISTINCT." },
+        { "id": "optQ", "text": "`WITH TIES` includes additional rows with the same value in the ORDER BY column as the last row in the result set." },
+        { "id": "optR", "text": "`WITH TIES` is required when using `TOP` to avoid truncating results." },
+        { "id": "optS", "text": "`WITH TIES` modifies the WHERE clause behavior for filtering rows." },
+        { "id": "optT", "text": "`WITH TIES` is only valid in MySQL and not supported by SQL Server." }
+      ],
+      "correctOptionIds": ["optQ"],
+      "explanation": "`WITH TIES` extends `TOP` to include all tied rows that match the last row's ORDER BY value. For example, if three rows have the same highest sales, `SELECT TOP 3 WITH TIES...` will return all three. Options P and R misrepresent its purpose; S and T are incorrect about functionality and syntax."
+    },
+    {
+      "id": "q_analyze_005",
+      "question": "A developer writes: `SELECT * FROM Employees ORDER BY DEPARTMENT ASC, SALARY DESC LIMIT 10 OFFSET 5;`. What does this query achieve?",
+      "options": [
+        { "id": "optU", "text": "Returns the top 10 highest salaries in each department." },
+        { "id": "optV", "text": "Returns rows 6–15 sorted by DEPARTMENT ascending and SALARY descending." },
+        { "id": "optW", "text": "Returns the first 10 employees, skipping the next 5 based on salary." },
+        { "id": "optX", "text": "Groups employees by department and limits to 5 rows per group." },
+        { "id": "optY", "text": "Throws an error because OFFSET cannot be used with ORDER BY." }
+      ],
+      "correctOptionIds": ["optV"],
+      "explanation": "`LIMIT 10 OFFSET 5` skips the first 5 rows and returns the next 10, while `ORDER BY DEPARTMENT ASC, SALARY DESC` sorts them. This matches option V. Other options misinterpret how LIMIT/OFFSET interacts with sorting or grouping."
+    }
+  ]
+}

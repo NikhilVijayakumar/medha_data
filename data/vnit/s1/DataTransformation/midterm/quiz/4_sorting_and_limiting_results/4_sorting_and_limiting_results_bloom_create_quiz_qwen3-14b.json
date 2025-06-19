@@ -1,0 +1,46 @@
+{
+  "title": "SQL Sorting and Limiting Design Quiz",
+  "description": "Design complex SQL queries involving sorting, limiting results, and eliminating duplicates across different database systems.",
+  "type": "Creating",
+  "questions": [
+    {
+      "id": "q_create_001",
+      "question": "You are tasked with designing a query to retrieve the top 3 most profitable sales from each region in a `SalesOrder` table, ensuring ties (e.g., same profit) are included. Which SQL dialect-specific syntax and clauses would you use to achieve this? (Select all that apply)",
+      "options": [
+        {"id": "opt1", "text": "MySQL: SELECT REGION, PROFIT FROM SalesOrder ORDER BY PROFIT DESC GROUP BY REGION LIMIT 3"},
+        {"id": "opt2", "text": "SQL Server: SELECT TOP 3 WITH TIES REGION, PROFIT FROM SalesOrder ORDER BY PROFIT DESC"},
+        {"id": "opt3", "text": "PostgreSQL: SELECT DISTINCT ON (REGION) REGION, PROFIT FROM SalesOrder ORDER BY REGION, PROFIT DESC LIMIT 3"},
+        {"id": "opt4", "text": "SQL Server: SELECT TOP 3 REGION, PROFIT FROM SalesOrder ORDER BY PROFIT DESC"},
+        {"id": "opt5", "text": "MySQL: SELECT REGION, PROFIT FROM SalesOrder ORDER BY REGION, PROFIT DESC GROUP BY REGION WITH ROLLUP LIMIT 3"}
+      ],
+      "correctOptionIds": ["opt2"],
+      "explanation": "SQL Server's `TOP (n) WITH TIES` explicitly includes tied rows matching the last returned value. Option 1 is invalid because MySQL lacks `GROUP BY` with `LIMIT` for this purpose; it also ignores ties. Option 3 uses PostgreSQL’s `DISTINCT ON`, which does not handle ties in sorting. Option 4 omits `WITH TIES`, excluding tied rows. Option 5 incorrectly applies `WITH ROLLUP` and misuses grouping."
+    },
+    {
+      "id": "q_create_002",
+      "question": "Design a query to return unique combinations of `REGION` and `CATEGORY` from the `SalesOrder` table, sorted by ascending region name and descending sales total. Which SQL syntax would correctly implement this requirement?",
+      "options": [
+        {"id": "optA", "text": "SELECT DISTINCT REGION, CATEGORY FROM SalesOrder ORDER BY REGION ASC, SALES DESC"},
+        {"id": "optB", "text": "SELECT UNIQUE REGION, CATEGORY FROM SalesOrder ORDER BY REGION, SUM(SALES) DESC"},
+        {"id": "optC", "text": "SELECT REGION, CATEGORY FROM SalesOrder GROUP BY REGION, CATEGORY ORDER BY REGION ASC, SUM(SALES) DESC"},
+        {"id": "optD", "text": "SELECT DISTINCT REGION, CATEGORY, SALES FROM SalesOrder ORDER BY REGION ASC, SALES DESC"},
+        {"id": "optE", "text": "SELECT DISTINCT ON (REGION, CATEGORY) REGION, CATEGORY FROM SalesOrder ORDER BY REGION ASC, SUM(SALES) DESC"}
+      ],
+      "correctOptionIds": ["optC"],
+      "explanation": "Option C correctly uses `GROUP BY` with aggregate (`SUM`) to ensure unique combinations of `REGION` and `CATEGORY`, then sorts by region ascending and total sales descending. Option A retrieves distinct rows but does not aggregate sales totals. Options B, D, E misuse syntax (e.g., `UNIQUE`, `DISTINCT ON` without proper grouping or aggregation)."
+    },
+    {
+      "id": "q_create_003",
+      "question": "You are optimizing a query for a PostgreSQL database that must return 10 rows starting from the 25th row in a sorted list of `ORDER ID`s. Which clause and syntax would you use to implement this efficiently? (Select all applicable)",
+      "options": [
+        {"id": "optX", "text": "LIMIT 10 OFFSET 24"},
+        {"id": "optY", "text": "LIMIT 10 STARTING AT 25"},
+        {"id": "optZ", "text": "FETCH NEXT 10 ROWS ONLY OFFSET 24"},
+        {"id": "optAA", "text": "ROW_NUMBER() OVER (ORDER BY ORDER_ID) AS rn FROM ... WHERE rn BETWEEN 25 AND 34"},
+        {"id": "optBB", "text": "LIMIT 25, 10"}
+      ],
+      "correctOptionIds": ["optX", "optAA"],
+      "explanation": "PostgreSQL uses `LIMIT n OFFSET m` (option X) to skip the first *m* rows and return *n*. Option AA uses window functions for explicit row numbering. Options Y, Z use non-PostgreSQL syntax; BB is MySQL’s deprecated comma-based offset syntax."
+    }
+  ]
+}

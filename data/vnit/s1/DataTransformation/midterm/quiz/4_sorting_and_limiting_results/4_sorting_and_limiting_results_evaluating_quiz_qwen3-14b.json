@@ -1,0 +1,46 @@
+{
+  "title": "SQL Sorting and Limiting Strategies Evaluation Quiz",
+  "description": "Evaluate the effectiveness of SQL sorting, limiting, and uniqueness strategies in various database scenarios.",
+  "type": "Evaluating",
+  "questions": [
+    {
+      "id": "q_evaluate_001",
+      "question": "A data analyst needs to retrieve the top 5 most profitable sales orders from a large dataset. They propose using `SELECT * FROM SalesOrder ORDER BY PROFIT DESC LIMIT 5` in PostgreSQL. Evaluate this approach for performance and accuracy.",
+      "options": [
+        { "id": "opt1", "text": "Optimal: This will efficiently return the top 5 rows with correct sorting." },
+        { "id": "opt2", "text": "Suboptimal: LIMIT should be placed before ORDER BY in PostgreSQL syntax." },
+        { "id": "opt3", "text": "Incorrect: The query may miss ties if multiple orders have identical profits." },
+        { "id": "opt4", "text": "Incomplete: This doesn't account for potential NULL values in the PROFIT column." },
+        { "id": "opt5", "text": "Inefficient: Sorting the entire table is unnecessary; a covering index could be used instead." }
+      ],
+      "correctOptionIds": ["opt1"],
+      "explanation": "The query is correct for PostgreSQL syntax. `ORDER BY` must precede `LIMIT`. The approach will return accurate top 5 rows sorted by profit descending. While 'WITH TIES' would include ties, the question doesn't specify this requirement. NULL handling and index usage are secondary considerations not directly addressed in the question."
+    },
+    {
+      "id": "q_evaluate_002",
+      "question": "A developer wants to retrieve unique customer regions from a SalesOrder table with potential duplicates. They consider three approaches: 1) `SELECT DISTINCT REGION FROM SalesOrder`, 2) `SELECT REGION FROM (SELECT DISTINCT * FROM SalesOrder) AS subquery`, 3) `SELECT UNIQUE REGION FROM SalesOrder` (in Oracle). Evaluate the effectiveness and efficiency of these options.",
+      "options": [
+        { "id": "optA", "text": "Approach 1 is optimal for PostgreSQL/MySQL, while Approach 3 works in Oracle but requires additional syntax." },
+        { "id": "optB", "text": "All approaches are equally valid across all SQL dialects." },
+        { "id": "optC", "text": "Approach 2 is unnecessary and inefficient as it creates redundant distinctness." },
+        { "id": "optD", "text": "Approach 3 is invalid syntax in Oracle; the correct keyword is 'DISTINCT' not 'UNIQUE'." },
+        { "id": "optE", "text": "Approach 1 will include NULL regions if present, which may be undesired." }
+      ],
+      "correctOptionIds": ["optA", "optC"],
+      "explanation": "Approach 1 is valid for PostgreSQL/MySQL. Approach 3 uses Oracle's 'UNIQUE' but it's functionally equivalent to DISTINCT and less commonly used. Approach 2 unnecessarily applies DISTINCT to all columns before selecting only REGION, making it inefficient. All options are syntactically correct in their respective dialects."
+    },
+    {
+      "id": "q_evaluate_003",
+      "question": "A database administrator needs to retrieve the first 10 orders from each region sorted by sales amount. They consider three SQL variants: A) `SELECT * FROM (SELECT *, ROW_NUMBER() OVER(PARTITION BY REGION ORDER BY SALES DESC) rn FROM SalesOrder) t WHERE rn <= 10`, B) `SELECT * FROM SalesOrder ORDER BY REGION, SALES DESC LIMIT 10`, C) `SELECT TOP 10 WITH TIES * FROM SalesOrder ORDER BY REGION, SALES DESC`. Evaluate which approaches achieve the goal and their limitations.",
+      "options": [
+        { "id": "optX", "text": "Only A is correct as B and C fail to limit by region group." },
+        { "id": "optY", "text": "B will return arbitrary 10 rows, not top 10 per region." },
+        { "id": "optZ", "text": "C works in SQL Server but may include extra rows with ties across regions." },
+        { "id": "optAA", "text": "A and C are valid; B is incorrect for the requirement." },
+        { "id": "optBB", "text": "All approaches will correctly return top 10 per region when executed." }
+      ],
+      "correctOptionIds": ["optX", "optY"],
+      "explanation": "Approach A uses window functions to properly limit to top 10 per region. B incorrectly applies LIMIT globally, not by region group. C (SQL Server) with TOP 10 WITH TIES might include extra rows if there are ties across regions. Only approach A meets the exact requirement."
+    }
+  ]
+}
