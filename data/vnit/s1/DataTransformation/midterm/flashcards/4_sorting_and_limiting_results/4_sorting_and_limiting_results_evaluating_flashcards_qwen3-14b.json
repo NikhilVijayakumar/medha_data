@@ -1,0 +1,37 @@
+[
+  {
+    "id": "integrated_evaluate_001",
+    "topic": "Sorting and Limiting Results in SQL",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Critique the effectiveness of using multiple columns in an `ORDER BY` clause for sorting results. When might this be advantageous or problematic?",
+    "back_answer": "Using multiple columns in `ORDER BY` is effective when hierarchical sorting is needed (e.g., sort by REGION first, then SALES within each region). This ensures predictable ordering for complex datasets. However, it can become problematic if the additional columns introduce unnecessary complexity or reduce performance on large tables due to increased sorting overhead. The notes confirm this with examples like `ORDER BY REGION ASC, SALES DESC`."
+  },
+  {
+    "id": "integrated_evaluate_002",
+    "topic": "Sorting and Limiting Results in SQL",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Which is more efficient for retrieving the top 5 most profitable orders: MySQL’s `LIMIT 5` after sorting or SQL Server’s `TOP (5)`? Justify your answer.",
+    "back_answer": "Both approaches are similarly efficient in terms of query execution, but syntax and context matter. MySQL requires `ORDER BY ... LIMIT`, while SQL Server uses `SELECT TOP (5) ... ORDER BY`. The choice depends on the database system. However, efficiency is comparable if indexes align with the sort column (e.g., PROFIT). The notes highlight both methods as valid, with no inherent performance advantage of one over the other."
+  },
+  {
+    "id": "integrated_evaluate_003",
+    "topic": "Sorting and Limiting Results in SQL",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Is using `DISTINCT` on multiple columns (e.g., REGION and CATEGORY) more effective than using it on a single column? Explain with examples from the notes.",
+    "back_answer": "Using `DISTINCT` on multiple columns is more effective when eliminating duplicates based on combinations of values, such as ensuring unique REGION-CATEGORY pairs. For example, `SELECT DISTINCT REGION, CATEGORY FROM SalesOrder` avoids redundant rows where both columns together are unique. However, this may reduce performance if the dataset is large due to increased processing overhead for combination checks."
+  },
+  {
+    "id": "integrated_evaluate_004",
+    "topic": "Sorting and Limiting Results in SQL",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Weigh the pros and cons of using `WITH TIES` in SQL Server’s `TOP` clause for retrieving tied rows. When might this be necessary?",
+    "back_answer": "Pros: `WITH TIES` ensures all rows with the same value in the `ORDER BY` column as the last returned row are included, avoiding arbitrary cutoffs (e.g., including ties in sales rankings). Cons: It may return more rows than requested, potentially increasing data transfer. This is necessary when fairness or completeness in ranking matters, such as selecting top 3 products by SALES with ties."
+  },
+  {
+    "id": "integrated_evaluate_005",
+    "topic": "Sorting and Limiting Results in SQL",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Evaluate the accuracy of the statement: 'The `ORDER BY` clause can be placed before the `WHERE` clause.' Use examples from the notes to justify.",
+    "back_answer": "The statement is inaccurate. The `ORDER BY` clause must come after the `WHERE` clause in a query, as shown in the example: `SELECT * FROM SalesOrder WHERE REGION = 'CENTRAL' ORDER BY SALES ASC;`. Placing `ORDER BY` before `WHERE` would cause a syntax error because filtering happens before sorting."
+  }
+]

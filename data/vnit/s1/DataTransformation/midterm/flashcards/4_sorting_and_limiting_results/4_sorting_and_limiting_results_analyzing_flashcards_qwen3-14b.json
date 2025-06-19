@@ -1,0 +1,37 @@
+[
+  {
+    "id": "integrated_analyze_001",
+    "topic": "Sorting and Limiting Results in SQL",
+    "bloom_level": "Analyzing",
+    "front_prompt": "Compare and contrast the use of `ORDER BY` with multiple columns versus a single column. How does specifying additional columns affect sorting behavior?",
+    "back_answer": "When using `ORDER BY` with a single column, results are sorted strictly by that column's values. With multiple columns (e.g., `ORDER BY REGION ASC, SALES DESC`), the result set is first sorted by the first column (REGION in ascending order). Within each group of identical REGION values, it then sorts by the second column (SALES in descending order). This hierarchical sorting allows for more nuanced organization but requires careful consideration of data distribution and query intent."
+  },
+  {
+    "id": "integrated_analyze_002",
+    "topic": "Sorting and Limiting Results in SQL",
+    "bloom_level": "Analyzing",
+    "front_prompt": "Identify a potential flaw or limitation in using `ORDER BY` without a `WHERE` clause when working with large datasets.",
+    "back_answer": "Using `ORDER BY` without a `WHERE` clause on large tables can lead to performance degradation because the database must sort the entire result set. This is inefficient compared to filtering first (via `WHERE`) and then sorting, which reduces the number of rows needing to be processed during ordering."
+  },
+  {
+    "id": "integrated_analyze_003",
+    "topic": "Sorting and Limiting Results in SQL",
+    "bloom_level": "Analyzing",
+    "front_prompt": "Compare and contrast `LIMIT` (MySQL/PostgreSQL) with `TOP` (SQL Server). What are the key syntactical differences and use cases?",
+    "back_answer": "`LIMIT` is used in MySQL, PostgreSQL, and SQLite with a straightforward syntax (`LIMIT N`) or with an offset (`LIMIT N OFFSET M`). SQL Server uses `TOP` instead, requiring it to be placed directly after `SELECT`. Additionally, SQL Server supports `WITH TIES`, which includes tied rows in the result set. Use cases vary by database dialect: `LIMIT` is more portable across systems, while `TOP` is specific to SQL Server."
+  },
+  {
+    "id": "integrated_analyze_004",
+    "topic": "Sorting and Limiting Results in SQL",
+    "bloom_level": "Analyzing",
+    "front_prompt": "Break down the components of the `DISTINCT` clause. How does it interact with other clauses like `ORDER BY`, and what are its limitations?",
+    "back_answer": "`DISTINCT` eliminates duplicate rows based on the combination of columns specified in the `SELECT` statement. It interacts with `ORDER BY` by sorting the unique results, but only after duplicates are removed. Limitations include potential performance overhead from scanning and deduplicating data, as well as the inability to apply conditions for uniqueness using `WHERE` unless explicitly combined."
+  },
+  {
+    "id": "integrated_analyze_005",
+    "topic": "Sorting and Limiting Results in SQL",
+    "bloom_level": "Analyzing",
+    "front_prompt": "Compare the use of `DISTINCT` on a single column versus multiple columns. How does this affect the uniqueness criteria?",
+    "back_answer": "`DISTINCT` on a single column ensures that only unique values for that column are returned, while duplicates in other columns are ignored. When applied to multiple columns (e.g., `SELECT DISTINCT REGION, CATEGORY`), a row is considered unique only if both its REGION and CATEGORY values are distinct from all others. This makes the uniqueness criteria stricter when combining columns."
+  }
+]

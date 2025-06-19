@@ -1,0 +1,58 @@
+[  
+  {  
+    "id": "integrated_understand_001",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain the ORDER BY clause in your own words.",  
+    "back_answer": "The ORDER BY clause sorts query results by one or more columns. You can choose ascending (A-Z, smallest to largest) or descending order (Z-A, largest to smallest). If multiple columns are used, it sorts first by the first column, then by the next within each group."  
+  },  
+  {  
+    "id": "integrated_understand_002",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Give an analogy for the LIMIT clause.",  
+    "back_answer": "The LIMIT clause is like a filter that lets only a certain number of items through. For example, if you have a long list of names and only want to see the first 5, LIMIT acts as a gatekeeper letting just those 5 pass."  
+  },  
+  {  
+    "id": "integrated_understand_003",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain DISTINCT to a 5-year-old.",  
+    "back_answer": "DISTINCT is like when you have a box of crayons and you want only one of each color. It removes extra copies so you see every unique color just once."  
+  },  
+  {  
+    "id": "integrated_understand_004",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Why is the ORDER BY clause usually placed after WHERE?",  
+    "back_answer": "ORDER BY comes after WHERE because you first filter the data (WHERE) and then sort what’s left. It’s like cleaning your room (filtering) before arranging toys in order."  
+  },  
+  {  
+    "id": "integrated_understand_005",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "What’s the difference between MySQL LIMIT and SQL Server TOP?",  
+    "back_answer": "MySQL uses LIMIT to restrict rows, while SQL Server uses TOP. Think of LIMIT as a bucket that fills up with a certain number of items, and TOP as a label on the bucket saying ‘only fill this much’."  
+  },  
+  {  
+    "id": "integrated_understand_006",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain OFFSET in your own words.",  
+    "back_answer": "OFFSET skips a certain number of rows before starting to return results. It’s like skipping the first 10 pages of a book and starting to read from page 11."  
+  },  
+  {  
+    "id": "integrated_understand_007",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "What does WITH TIES do in SQL Server?",  
+    "back_answer": "'WITH TIES' includes extra rows that have the same value as the last row returned by TOP. It’s like if you’re picking top 3 fastest runners, but two tied for third—both get included."  
+  },  
+  {  
+    "id": "integrated_understand_008",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "How does DISTINCT work with multiple columns?",  
+    "back_answer": "DISTINCT checks all selected columns together. A row is unique only if the combination of values across those columns isn’t repeated, like ensuring no duplicate pairs in a list."  
+  }  
+]

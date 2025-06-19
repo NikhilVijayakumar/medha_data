@@ -1,0 +1,37 @@
+[  
+  {  
+    "id": "integrated_create_001",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Design a query that retrieves the top 3 unique customer regions with the highest total sales, using `DISTINCT`, `ORDER BY`, and `LIMIT` (or equivalent) clauses. Explain how each component contributes to the result.",  
+    "back_answer": "Query Design:\n1. Use `SELECT DISTINCT REGION` to eliminate duplicate regions.\n2. Calculate total sales per region with `SUM(SALES)` in a subquery or CTE.\n3. Apply `ORDER BY SUM(SALES) DESC` to sort regions by descending total sales.\n4. Use `LIMIT 3` (MySQL/PostgreSQL) or `TOP 3` (SQL Server) to restrict results to the top 3 regions. This combines uniqueness filtering, sorting logic, and row restriction to achieve the goal."  
+  },  
+  {  
+    "id": "integrated_create_002",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Invent a metaphor to explain how `ORDER BY` with multiple columns works, using a real-world scenario.",  
+    "back_answer": "Imagine sorting books on a library shelf. First, you organize them by genre (e.g., 'Fiction', 'Non-Fiction')—this is like the first column in `ORDER BY`. Within each genre, you sort by author's last name alphabetically—this is the second column. If two books share the same genre and author, they might be ordered by publication year. This layered sorting mirrors how SQL applies multiple columns to define a precise order."  
+  },  
+  {  
+    "id": "integrated_create_003",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Reconstruct the logic of the `LIMIT` clause from first principles, explaining how it interacts with `ORDER BY` to return paginated results.",  
+    "back_answer": "From First Principles:\n1. **Sorting**: Use `ORDER BY` to define a deterministic sequence (e.g., alphabetical order). Without sorting, pagination is arbitrary.\n2. **Row Identification**: Assign an implicit rank to each row based on the sorted order (row 1, row 2, etc.).\n3. **Restriction**: Apply `LIMIT N OFFSET M` to select rows starting at position *M* and return *N* rows. For example, `LIMIT 5 OFFSET 10` retrieves rows 11–15 in a zero-indexed list. This mimics physically slicing a sorted dataset into pages, like flipping through a book's chapters."  
+  },  
+  {  
+    "id": "integrated_create_004",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Synthesize an explanation of `WITH TIES` by combining concepts from `ORDER BY`, `TOP`, and pagination logic.",  
+    "back_answer": "`WITH TIES` ensures that if multiple rows share the same value in the `ORDER BY` column as the last row in a `TOP N` result, they are included to maintain fairness. For example, if querying top 3 salespeople with `TOP 3 WITH TIES`, and two people have the same third-highest sale, both are returned (making it 4 rows). This prevents arbitrary exclusion of tied entries, ensuring results align with the logical intent of 'top N' while respecting data integrity."  
+  },  
+  {  
+    "id": "integrated_create_005",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Design a system to efficiently retrieve the most recent 10 transactions per user from a large dataset, using `ORDER BY`, `DISTINCT`, and dialect-specific clauses.",  
+    "back_answer": "System Design:\n1. **Partition Data**: Use `PARTITION BY USER_ID` (in window functions) to sort transactions per user by date (`ORDER BY TRANSACTION_DATE DESC`).\n2. **Filter Top 10**: Apply a subquery with `ROW_NUMBER()` to assign ranks and filter `RANK <= 10`.\n3. **Optimize for Dialects**: In SQL Server, use `TOP 10 WITH TIES` per partition; in PostgreSQL, combine `DISTINCT ON (USER_ID)` with `ORDER BY USER_ID, TRANSACTION_DATE DESC` and limit rows via `LIMIT 10` per group using a CTE. This balances uniqueness, sorting, and performance for large datasets."  
+  }  
+]

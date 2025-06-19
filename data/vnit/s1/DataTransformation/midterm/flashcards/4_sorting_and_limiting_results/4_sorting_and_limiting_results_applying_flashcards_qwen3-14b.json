@@ -1,0 +1,44 @@
+[  
+  {  
+    "id": "integrated_apply_001",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Write an SQL query to retrieve the top 3 highest-selling products from the 'SalesOrder' table, including ties if multiple products have the same sales value. Use the appropriate syntax for PostgreSQL.",  
+    "back_answer": "```sql\nSELECT [PRODUCT NAME], SALES\nFROM SalesOrder\nORDER BY SALES DESC\nLIMIT 3 OFFSET 0;\n-- To include ties (e.g., if two products tie for 3rd place), use:\nSELECT DISTINCT ON (SALES) [PRODUCT NAME], SALES\nFROM SalesOrder\nORDER BY SALES DESC, [PRODUCT NAME] ASC;\n```"  
+  },  
+  {  
+    "id": "integrated_apply_002",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Explain how to retrieve a paginated list of customers ordered by city (ascending) and then customer name (descending), showing 10 customers per page. Provide syntax for MySQL.",  
+    "back_answer": "Use the `LIMIT` clause with an `OFFSET` to paginate results:\n```sql\nSELECT [CUSTOMER NAME], CITY\nFROM Customers\nORDER BY CITY ASC, [CUSTOMER NAME] DESC\nLIMIT 10 OFFSET 0; -- Page 1\n-- For page 2: LIMIT 10 OFFSET 10;\n```"  
+  },  
+  {  
+    "id": "integrated_apply_003",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Write a query to select unique combinations of 'REGION' and 'CATEGORY' from the 'SalesOrder' table, sorted by region (ascending) and category (descending). Use `DISTINCT`.",  
+    "back_answer": "```sql\nSELECT DISTINCT REGION, CATEGORY\nFROM SalesOrder\nORDER BY REGION ASC, CATEGORY DESC;\n```"  
+  },  
+  {  
+    "id": "integrated_apply_004",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Describe a real-world scenario where using `ORDER BY` with multiple columns would be essential. Explain the logic of sorting priorities.",  
+    "back_answer": "A real-world example is generating a leaderboard for a game where players are sorted first by score (descending) and then by time played (ascending) to break ties. This ensures higher scores come first, and among equal scores, players who spent less time achieve higher ranks."  
+  },  
+  {  
+    "id": "integrated_apply_005",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Write an SQL query for Microsoft SQL Server to fetch the top 5 most profitable orders, including any tied orders with the same profit value. Use `TOP` with `WITH TIES`.",  
+    "back_answer": "```sql\nSELECT TOP (5) WITH TIES [ORDER ID], PROFIT\nFROM SalesOrder\nORDER BY PROFIT DESC;\n```"  
+  },  
+  {  
+    "id": "integrated_apply_006",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Explain how to modify a query using `DISTINCT` and `ORDER BY` to list all unique customer cities from the 'Customers' table in alphabetical order.",  
+    "back_answer": "Use `SELECT DISTINCT` on the city column and apply `ORDER BY`: \n```sql\nSELECT DISTINCT CITY\nFROM Customers\nORDER BY CITY ASC;\n```"  
+  }  
+]

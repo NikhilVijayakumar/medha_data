@@ -1,0 +1,86 @@
+[  
+  {  
+    "id": "integrated_remember_001",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the purpose of the ORDER BY clause in SQL?",  
+    "back_answer": "The ORDER BY clause sorts rows in the result set based on one or more columns."  
+  },  
+  {  
+    "id": "integrated_remember_002",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the ASC keyword specify in an ORDER BY clause?",  
+    "back_answer": "The ASC keyword specifies sorting in ascending order (A-Z, 1-9), which is the default if not specified."  
+  },  
+  {  
+    "id": "integrated_remember_003",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "How do you sort results in descending order using the ORDER BY clause?",  
+    "back_answer": "Use the DESC keyword with the column name (e.g., ORDER BY column_to_sort DESC)."  
+  },  
+  {  
+    "id": "integrated_remember_004",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "How can you sort by multiple columns in an ORDER BY clause?",  
+    "back_answer": "List the columns separated by commas, specifying sorting order for each (e.g., ORDER BY REGION ASC, SALES DESC)."  
+  },  
+  {  
+    "id": "integrated_remember_005",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "Where is the ORDER BY clause typically placed in a query?",  
+    "back_answer": "The ORDER BY clause is typically placed after the WHERE clause (if used)."  
+  },  
+  {  
+    "id": "integrated_remember_006",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the syntax for restricting rows in MySQL, PostgreSQL, or SQLite?",  
+    "back_answer": "Use LIMIT number_of_rows (e.g., SELECT * FROM TableName LIMIT 5)."  
+  },  
+  {  
+    "id": "integrated_remember_007",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "How does PostgreSQL handle row offset with the LIMIT clause?",  
+    "back_answer": "Use OFFSET starting_row_number (e.g., LIMIT 5 OFFSET 5)."  
+  },  
+  {  
+    "id": "integrated_remember_008",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What keyword does SQL Server use instead of LIMIT to restrict rows?",  
+    "back_answer": "SQL Server uses the TOP keyword (e.g., SELECT TOP (5) * FROM TableName)."  
+  },  
+  {  
+    "id": "integrated_remember_009",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the WITH TIES option do when used with TOP in SQL Server?",  
+    "back_answer": "The WITH TIES option includes rows that have the same value as the last row returned by the ORDER BY clause."  
+  },  
+  {  
+    "id": "integrated_remember_010",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the purpose of the DISTINCT clause in SQL?",  
+    "back_answer": "The DISTINCT clause retrieves only unique rows, eliminating duplicate values in the specified column(s)."  
+  },  
+  {  
+    "id": "integrated_remember_011",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "How does DISTINCT handle multiple columns in a SELECT statement?",  
+    "back_answer": "DISTINCT applies to all listed columns; a row is unique only if the combination of values across all specified columns is distinct."  
+  },  
+  {  
+    "id": "integrated_remember_012",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "Can the ORDER BY clause be used with DISTINCT? If so, where is it placed?",  
+    "back_answer": "Yes; ORDER BY can be used with DISTINCT and must follow the SELECT statement (e.g., SELECT DISTINCT City FROM Customers ORDER BY City ASC)."  
+  }  
+]

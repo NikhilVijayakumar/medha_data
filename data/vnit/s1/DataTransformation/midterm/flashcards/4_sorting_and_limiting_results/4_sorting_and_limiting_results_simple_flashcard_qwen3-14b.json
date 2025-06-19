@@ -1,0 +1,72 @@
+[  
+  {  
+    "id": "simple_flash_001",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "front_prompt": "What is the purpose of the `ORDER BY` clause in SQL?",  
+    "back_answer": "The `ORDER BY` clause sorts rows in a result set based on one or more columns in ascending (default) or descending order.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_002",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "front_prompt": "How do you specify ascending or descending order in `ORDER BY`?",  
+    "back_answer": "Use `ASC` for ascending (default) or `DESC` for descending after the column name in `ORDER BY`.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_003",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "front_prompt": "What is the correct syntax for sorting by multiple columns?",  
+    "back_answer": "`ORDER BY column1 ASC|DESC, column2 ASC|DESC` (e.g., `ORDER BY REGION ASC, SALES DESC`).",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_004",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "front_prompt": "Where is the `ORDER BY` clause placed in a query?",  
+    "back_answer": "`ORDER BY` is typically placed after the `WHERE` clause (if used) in the query structure.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_005",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "front_prompt": "What is the syntax for limiting rows in MySQL/PostgreSQL?",  
+    "back_answer": "`LIMIT number_of_rows` or `LIMIT number_of_rows OFFSET starting_row_number`.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_006",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "front_prompt": "How does SQL Server handle row limitation?",  
+    "back_answer": "SQL Server uses `TOP (number_of_rows)` instead of `LIMIT`, e.g., `SELECT TOP 5 * FROM SalesOrder`.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_007",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "front_prompt": "What does the `WITH TIES` option do in SQL Server?",  
+    "back_answer": "`WITH TIES` includes rows with the same value in the `ORDER BY` column as the last row returned.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_008",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "front_prompt": "What is the purpose of the `DISTINCT` clause?",  
+    "back_answer": "`DISTINCT` retrieves only unique rows by eliminating duplicate values in specified columns.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_009",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "front_prompt": "How does `DISTINCT` work with multiple columns?",  
+    "back_answer": "`DISTINCT` applies to all listed columns; a row is unique only if the combination of column values is unique.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_010",  
+    "topic": "Sorting and Limiting Results in SQL",  
+    "front_prompt": "Can `ORDER BY` be used with `DISTINCT`? If so, how?",  
+    "back_answer": "Yes: `SELECT DISTINCT column FROM table ORDER BY column;` sorts unique values retrieved by `DISTINCT`.",  
+    "type": "simple"  
+  }  
+]
