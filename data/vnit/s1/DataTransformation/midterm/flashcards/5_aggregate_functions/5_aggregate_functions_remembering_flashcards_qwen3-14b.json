@@ -1,0 +1,93 @@
+[  
+  {  
+    "id": "integrated_remember_001",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the purpose of aggregate functions in SQL?",  
+    "back_answer": "Aggregate functions perform calculations on a set of rows and return a single summary value."  
+  },  
+  {  
+    "id": "integrated_remember_002",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the COUNT() function do?",  
+    "back_answer": "COUNT() returns the number of rows in a group or the number of non-NULL values in a specified column."  
+  },  
+  {  
+    "id": "integrated_remember_003",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What data type is required for the SUM() function?",  
+    "back_answer": "SUM() requires a specified numeric column."  
+  },  
+  {  
+    "id": "integrated_remember_004",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "How does the AVG() function handle NULL values?",  
+    "back_answer": "AVG() typically ignores NULL values in its calculation."  
+  },  
+  {  
+    "id": "integrated_remember_005",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the MAX() function return?",  
+    "back_answer": "MAX() returns the maximum value in a specified column, applicable to numeric, string, and date/time data types."  
+  },  
+  {  
+    "id": "integrated_remember_006",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the role of the GROUP BY clause?",  
+    "back_answer": "The GROUP BY clause groups rows with the same values in one or more columns into summary rows for aggregate functions."  
+  },  
+  {  
+    "id": "integrated_remember_007",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "Where is the GROUP BY clause placed in a query?",  
+    "back_answer": "The GROUP BY clause is placed after the WHERE clause (if used) and before the ORDER BY clause."  
+  },  
+  {  
+    "id": "integrated_remember_008",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What rule applies to non-aggregated columns in the SELECT list?",  
+    "back_answer": "Any non-aggregated column in the SELECT list must also be included in the GROUP BY clause."  
+  },  
+  {  
+    "id": "integrated_remember_009",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the purpose of the HAVING clause?",  
+    "back_answer": "The HAVING clause filters grouped results based on conditions applied to aggregated values."  
+  },  
+  {  
+    "id": "integrated_remember_010",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "How does HAVING differ from WHERE?",  
+    "back_answer": "WHERE filters individual rows, while HAVING filters groups created by GROUP BY based on aggregated results."  
+  },  
+  {  
+    "id": "integrated_remember_011",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does the ROLLUP extension enable?",  
+    "back_answer": "ROLLUP generates subtotals and grand totals for hierarchical aggregations across grouped columns."  
+  },  
+  {  
+    "id": "integrated_remember_012",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What does ROLLUP(Region, State) produce in a query?",  
+    "back_answer": "ROLLUP(Region, State) produces total sales for each REGION/STATE combination, subtotals for each REGION (with STATE as NULL), and a grand total (both REGION and STATE as NULL)."  
+  },  
+  {  
+    "id": "integrated_remember_013",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Remembering",  
+    "front_prompt": "What is the primary use case for ROLLUP?",  
+    "back_answer": "ROLLUP is used to create multi-level aggregations, such as subtotals and grand totals, in hierarchical data analysis."  
+  }  
+]

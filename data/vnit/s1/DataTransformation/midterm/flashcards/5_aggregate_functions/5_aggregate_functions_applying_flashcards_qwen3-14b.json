@@ -1,0 +1,37 @@
+[  
+  {  
+    "id": "integrated_apply_001",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Write an SQL query to calculate the total sales per region and filter regions where total sales exceed $600,000 using `GROUP BY` and `HAVING`.",  
+    "back_answer": "```sql\nSELECT REGION, SUM(SALES) AS TotalSales\nFROM SalesOrder\nGROUP BY REGION\nHAVING SUM(SALES) > 600000;\n```\nThe query groups sales by region (`GROUP BY REGION`) and calculates the sum of sales for each group. The `HAVING` clause filters only those regions where the aggregated total exceeds $600,000."  
+  },  
+  {  
+    "id": "integrated_apply_002",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Write an SQL query to find the average discount for each category in the 'SalesOrder' table, including only categories with more than 50 orders.",  
+    "back_answer": "```sql\nSELECT Category, AVG(DISCOUNT) AS AvgDiscount\nFROM SalesOrder\nGROUP BY Category\nHAVING COUNT([ORDER ID]) > 50;\n```\nThe query groups rows by `Category`, calculates the average discount per category using `AVG()`, and filters categories with more than 50 orders via `HAVING COUNT([ORDER ID]) > 50`."  
+  },  
+  {  
+    "id": "integrated_apply_003",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Use the `ROLLUP` extension to generate subtotals and grand totals for sales by region and state in the 'SalesOrder' table.",  
+    "back_answer": "```sql\nSELECT REGION, STATE, SUM(SALES) AS TotalSales\nFROM SalesOrder\nGROUP BY ROLLUP(Region, State)\nORDER BY REGION, STATE;\n```\nThe `ROLLUP(Region, State)` creates subtotals for each region (with `STATE` as NULL) and a grand total (both `REGION` and `STATE` as NULL). The `ORDER BY` ensures results are grouped logically."  
+  },  
+  {  
+    "id": "integrated_apply_004",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Explain how to use `COUNT()` to find the number of non-NULL values in the 'Category' column of the 'SalesOrder' table.",  
+    "back_answer": "Use `COUNT(Category)` instead of `COUNT(*)` to count only non-NULL entries. Example: ```sql SELECT COUNT(Category) AS CategoriesFilled FROM SalesOrder;``` This works because `COUNT()` ignores NULLs by default when applied to a column."  
+  },  
+  {  
+    "id": "integrated_apply_005",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Applying",  
+    "front_prompt": "Describe a real-world scenario where `ROLLUP` would be useful for analyzing sales data.",  
+    "back_answer": "'ROLLUP' is useful for generating hierarchical summaries, such as showing total sales per region, subtotals for each state within regions, and a grand total. For example, a retail company might use it to analyze quarterly sales across multiple regions and states simultaneously."  
+  }  
+]

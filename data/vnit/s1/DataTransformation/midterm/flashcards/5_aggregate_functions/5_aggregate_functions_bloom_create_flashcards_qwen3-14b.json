@@ -1,0 +1,37 @@
+[  
+  {  
+    "id": "data_agg_create_001",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Synthesize an explanation of how `GROUP BY` and `HAVING` work together to filter aggregated data, using the example of calculating total sales per region and filtering regions with sales above a threshold.",  
+    "back_answer": "`GROUP BY` organizes rows into groups (e.g., by 'REGION'), then applies aggregate functions like SUM() to each group. `HAVING` filters these grouped results based on conditions applied to aggregated values (e.g., 'SUM(SALES) > 600000'). Together, they first summarize data and then narrow down which summaries meet criteria, unlike `WHERE`, which filters rows before aggregation."  
+  },  
+  {  
+    "id": "data_agg_create_002",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Invent a metaphor to explain the `ROLLUP` extension for hierarchical aggregation, using concepts from everyday life.",  
+    "back_answer": "'Rollup' is like creating a summary of expenses in a household. First, you list individual bills (e.g., rent, groceries), then subtotal each category (monthly totals), and finally calculate the grand total for the year. `ROLLUP(Region, State)` generates subtotals for each state within regions and a grand total across all regions."  
+  },  
+  {  
+    "id": "data_agg_create_003",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Reconstruct the logic of `COUNT()` and `SUM()` from first principles, explaining how they process data differently.",  
+    "back_answer": "`COUNT()` tallies the number of rows or non-NULL values in a column by iterating through each row and incrementing a counter. `SUM()` adds numeric values in a column by initializing a total to 0 and adding each value sequentially. They differ in purpose: one counts items, the other calculates their collective value."  
+  },  
+  {  
+    "id": "data_agg_create_004",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Design a query using `GROUP BY` and `ROLLUP` to generate sales reports with subtotals for each region and a grand total, ensuring proper `ORDER BY` placement.",  
+    "back_answer": "```sql\nSELECT REGION, STATE, SUM(SALES) AS TotalSales\nFROM SalesOrder\nGROUP BY ROLLUP(REGION, STATE)\nORDER BY REGION NULLS LAST, STATE NULLS LAST;\n```\nThis query groups by region and state, computes subtotals for each region (with STATE = NULL), and a grand total (REGION = NULL). `ORDER BY` ensures regions/state appear first, followed by subtotals/grand totals."  
+  },  
+  {  
+    "id": "data_agg_create_005",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Explain the difference between `WHERE` and `HAVING` using a scenario where you filter orders by region and then by average profit per region.",  
+    "back_answer": "`WHERE REGION = 'WEST'` filters individual rows to include only Western region orders before aggregation. `HAVING AVG(PROFIT) > 1000` filters grouped results, retaining only regions where the average profit exceeds $1000. `WHERE` acts on raw data; `HAVING` on aggregated groups."  
+  }  
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "integrated_understand_001",
+    "topic": "Data Aggregation with SQL",
+    "bloom_level": "Understanding",
+    "front_prompt": "Explain COUNT() in your own words.",
+    "back_answer": "COUNT() counts the number of rows or non-NULL values in a column. For example, it could count how many orders exist in a table or how many customers have filled out their category information."
+  },
+  {
+    "id": "integrated_understand_002",
+    "topic": "Data Aggregation with SQL",
+    "bloom_level": "Understanding",
+    "front_prompt": "Give an analogy for SUM() and AVG().",
+    "back_answer": "'SUM()' is like adding up all the candies in a jar to know the total. 'AVG()' is like dividing that total by how many kids share the candy to find out how much each kid gets on average."
+  },
+  {
+    "id": "integrated_understand_003",
+    "topic": "Data Aggregation with SQL",
+    "bloom_level": "Understanding",
+    "front_prompt": "Explain MAX() and MIN() to a 5-year-old.",
+    "back_answer": "'MAX()' finds the biggest number, like finding the tallest kid in class. 'MIN()' finds the smallest number, like finding the shortest kid."
+  },
+  {
+    "id": "integrated_understand_004",
+    "topic": "Data Aggregation with SQL",
+    "bloom_level": "Understanding",
+    "front_prompt": "Paraphrase what GROUP BY does.",
+    "back_answer": "'GROUP BY' organizes rows into groups based on column values, like sorting books by author. Then you can calculate totals or averages for each group."
+  },
+  {
+    "id": "integrated_understand_005",
+    "topic": "Data Aggregation with SQL",
+    "bloom_level": "Understanding",
+    "front_prompt": "Give an analogy for HAVING vs WHERE.",
+    "back_answer": "'WHERE' filters individual rows before grouping, like picking only red apples. 'HAVING' filters groups after aggregation, like asking which baskets of apples have a total weight over 10 pounds."
+  },
+  {
+    "id": "integrated_understand_006",
+    "topic": "Data Aggregation with SQL",
+    "bloom_level": "Understanding",
+    "front_prompt": "Explain ROLLUP in simple terms.",
+    "back_answer": "'ROLLUP' creates nested totals. For example, if you group sales by region and state, it will show each state's total, then the entire region's total, and finally the grand total for all regions."
+  },
+  {
+    "id": "integrated_understand_007",
+    "topic": "Data Aggregation with SQL",
+    "bloom_level": "Understanding",
+    "front_prompt": "Simplify: Why can't you use HAVING without GROUP BY?",
+    "back_answer": "'HAVING' filters groups, but if there's no 'GROUP BY', there are no groups to filter. It's like trying to sort a pile of toys by color when they're all mixed together—there’s nothing to group!"
+  },
+  {
+    "id": "integrated_understand_008",
+    "topic": "Data Aggregation with SQL",
+    "bloom_level": "Understanding",
+    "front_prompt": "Analogize how ROLLUP handles NULLs in results.",
+    "back_answer": "'ROLLUP' uses NULLs as placeholders for totals. Imagine a spreadsheet where blank cells indicate 'all previous categories combined.' For example, a NULL region might mean 'total sales across all regions.'"
+  }
+]

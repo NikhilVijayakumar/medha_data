@@ -1,1 +1,9 @@
-[]
+[
+    "5_aggregate_functions_analyzing_flashcards_qwen3-14b.json",
+    "5_aggregate_functions_applying_flashcards_qwen3-14b.json",
+    "5_aggregate_functions_bloom_create_flashcards_qwen3-14b.json",
+    "5_aggregate_functions_evaluating_flashcards_qwen3-14b.json",
+    "5_aggregate_functions_remembering_flashcards_qwen3-14b.json",
+    "5_aggregate_functions_simple_flashcard_qwen3-14b.json",
+    "5_aggregate_functions_understanding_flashcards_qwen3-14b.json"
+]

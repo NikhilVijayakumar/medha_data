@@ -1,0 +1,37 @@
+[
+  {
+    "id": "integrated_analyze_001",
+    "topic": "Data Aggregation with SQL",
+    "bloom_level": "Analyzing",
+    "front_prompt": "Compare and contrast COUNT(*) and COUNT([column]) in terms of how they handle NULL values.",
+    "back_answer": "COUNT(*) counts all rows in a group, including those with NULL values. COUNT([column]) only counts non-NULL values in the specified column. This distinction is critical for accurate data analysis when dealing with incomplete datasets."
+  },
+  {
+    "id": "integrated_analyze_002",
+    "topic": "Data Aggregation with SQL",
+    "bloom_level": "Analyzing",
+    "front_prompt": "Break down the interaction between the GROUP BY clause and aggregate functions. Why must non-aggregated columns in the SELECT list be included in GROUP BY?",
+    "back_answer": "The GROUP BY clause organizes rows into groups based on specified columns. Aggregate functions (e.g., SUM, AVG) operate on these groups. Non-aggregated columns in the SELECT list must be in GROUP BY to ensure SQL knows which group each row belongs to, avoiding ambiguous results."
+  },
+  {
+    "id": "integrated_analyze_003",
+    "topic": "Data Aggregation with SQL",
+    "bloom_level": "Analyzing",
+    "front_prompt": "Contrast the WHERE and HAVING clauses. What are their respective scopes and use cases?",
+    "back_answer": "WHERE filters rows before grouping, while HAVING filters groups after aggregation. WHERE operates on individual row values, whereas HAVING uses aggregate functions to filter grouped results (e.g., 'HAVING SUM(SALES) > 600000')."
+  },
+  {
+    "id": "integrated_analyze_004",
+    "topic": "Data Aggregation with SQL",
+    "bloom_level": "Analyzing",
+    "front_prompt": "Identify a potential flaw in using ROLLUP without carefully ordering the GROUP BY columns. How might this affect result interpretation?",
+    "back_answer": "ROLLUP generates subtotals and grand totals based on column order. If columns are not ordered logically (e.g., REGION, STATE vs. STATE, REGION), subtotals may appear nonsensical or misrepresent hierarchical relationships in the data."
+  },
+  {
+    "id": "integrated_analyze_005",
+    "topic": "Data Aggregation with SQL",
+    "bloom_level": "Analyzing",
+    "front_prompt": "Analyze the role of NULL placeholders in ROLLUP output. How do they signify hierarchical levels?",
+    "back_answer": "ROLLUP uses NULL values to indicate higher-level aggregation tiers (e.g., a NULL in the STATE column signifies a subtotal for all states within a REGION). This allows users to distinguish between granular data and aggregated summaries."
+  }
+]

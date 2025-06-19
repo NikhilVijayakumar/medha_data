@@ -1,0 +1,37 @@
+[  
+  {  
+    "id": "integrated_evaluate_001",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Critique the accuracy of using `COUNT(*)` versus `COUNT(column_name)` in scenarios where some rows contain NULL values. Justify your answer.",  
+    "back_answer": "`COUNT(*)` counts all rows in a group, including those with NULLs in any column, while `COUNT(column_name)` only counts non-NULL values in the specified column. Using `COUNT(*)` is accurate for total row counts but may overstate 'filled' entries if NULLs exist. For example, counting orders with `COUNT([ORDER ID])` ensures only valid order IDs are counted, avoiding false positives from NULLs."  
+  },  
+  {  
+    "id": "integrated_evaluate_002",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Weigh the effectiveness of using `GROUP BY REGION` versus `GROUP BY REGION, STATE` for analyzing sales data. Which approach provides better insights and why?",  
+    "back_answer": "`GROUP BY REGION` provides high-level regional summaries (e.g., total sales per region), which is effective for broad trends but lacks granularity. `GROUP BY REGION, STATE` adds more detailed breakdowns (e.g., state-specific performance within regions), enabling localized analysis. The choice depends on the goal: use the former for macro insights and the latter for micro-level decisions."  
+  },  
+  {  
+    "id": "integrated_evaluate_003",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Evaluate the efficiency of using `HAVING SUM(SALES) > 600000` versus filtering results in a client application after retrieving all grouped data. Which method is more scalable for large datasets?",  
+    "back_answer": "`HAVING SUM(SALES) > 600000` filters aggregated groups directly at the database level, reducing data transfer and computational load on the client. Filtering in the client requires retrieving all grouped results first, which is inefficient for large datasets due to higher memory usage and network overhead. Database-side filtering with `HAVING` is more scalable."  
+  },  
+  {  
+    "id": "integrated_evaluate_004",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Identify a potential flaw in using `ROLLUP(Region, State)` without an `ORDER BY` clause. How might this affect the interpretation of results?",  
+    "back_answer": "Without `ORDER BY`, the output of `ROLLUP(Region, State)` may display subtotals and grand totals in an unintuitive order (e.g., NULLs for Region/State appearing first). This can confuse users interpreting hierarchical aggregations. Using `ORDER BY Region, State` ensures logical presentation: detailed rows first, followed by region-level subtotals and a grand total."  
+  },  
+  {  
+    "id": "integrated_evaluate_005",  
+    "topic": "Data Aggregation with SQL",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Compare the effectiveness of `MAX([ORDER DATE])` versus `MIN([ORDER DATE])` for identifying recent activity in a sales database. Which is more useful and why?",  
+    "back_answer": "`MAX([ORDER DATE])` identifies the latest order date, directly indicating recent activity, while `MIN([ORDER DATE])` shows the earliest date, which is less relevant for tracking current trends. For monitoring recency, `MAX()` is more effective as it highlights the most up-to-date data."  
+  }  
+]

@@ -1,0 +1,100 @@
+[  
+  {  
+    "id": "simple_flash_001",  
+    "topic": "Data Aggregation with SQL",  
+    "front_prompt": "What does COUNT(*) calculate?",  
+    "back_answer": "COUNT(*) returns the total number of rows in a table, including rows with NULL values.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_002",  
+    "topic": "Data Aggregation with SQL",  
+    "front_prompt": "What does COUNT(column) calculate?",  
+    "back_answer": "COUNT(column) returns the number of non-NULL values in a specified column.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_003",  
+    "topic": "Data Aggregation with SQL",  
+    "front_prompt": "What is the purpose of SUM()?",  
+    "back_answer": "SUM() calculates the total sum of numeric values in a specified column.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_004",  
+    "topic": "Data Aggregation with SQL",  
+    "front_prompt": "What does AVG() compute?",  
+    "back_answer": "AVG() computes the average of numeric values in a specified column, ignoring NULLs.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_005",  
+    "topic": "Data Aggregation with SQL",  
+    "front_prompt": "What does MAX() return?",  
+    "back_answer": "MAX() returns the highest value in a specified column (numeric, string, or date/time).",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_006",  
+    "topic": "Data Aggregation with SQL",  
+    "front_prompt": "What does MIN() return?",  
+    "back_answer": "MIN() returns the lowest value in a specified column (numeric, string, or date/time).",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_007",  
+    "topic": "Data Aggregation with SQL",  
+    "front_prompt": "What is the correct syntax for GROUP BY?",  
+    "back_answer": "`SELECT column, aggregate_function(column) FROM table WHERE condition GROUP BY column ORDER BY column;`",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_008",  
+    "topic": "Data Aggregation with SQL",  
+    "front_prompt": "Where is the GROUP BY clause placed in a query?",  
+    "back_answer": "GROUP BY is placed after WHERE (if used) and before ORDER BY.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_009",  
+    "topic": "Data Aggregation with SQL",  
+    "front_prompt": "What is the purpose of the HAVING clause?",  
+    "back_answer": "HAVING filters grouped results based on conditions applied to aggregated values.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_010",  
+    "topic": "Data Aggregation with SQL",  
+    "front_prompt": "How does HAVING differ from WHERE?",  
+    "back_answer": "WHERE filters rows before grouping, while HAVING filters groups after aggregation.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_011",  
+    "topic": "Data Aggregation with SQL",  
+    "front_prompt": "What does ROLLUP generate in GROUP BY?",  
+    "back_answer": "ROLLUP generates subtotals and grand totals for grouped columns, using NULL placeholders.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_012",  
+    "topic": "Data Aggregation with SQL",  
+    "front_prompt": "What is the syntax for ROLLUP?",  
+    "back_answer": "`GROUP BY ROLLUP(column1, column2)` generates multi-level aggregations.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_013",  
+    "topic": "Data Aggregation with SQL",  
+    "front_prompt": "What does ROLLUP(Region, State) produce?",  
+    "back_answer": "It produces subtotals for each Region (State = NULL) and a grand total (both = NULL).",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_014",  
+    "topic": "Data Aggregation with SQL",  
+    "front_prompt": "Can alias names in SELECT be used in HAVING?",  
+    "back_answer": "No, aliases in SELECT cannot be directly used in HAVING; use the aggregate expression instead.",  
+    "type": "simple"  
+  }  
+]
