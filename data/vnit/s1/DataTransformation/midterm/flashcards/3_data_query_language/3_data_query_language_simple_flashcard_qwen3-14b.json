@@ -1,0 +1,72 @@
+[
+  {
+    "id": "simple_flash_001",
+    "topic": "SQL Querying Fundamentals",
+    "front_prompt": "What is the basic syntax for a SQL SELECT statement?",
+    "back_answer": "`SELECT column1, column2 FROM table_name;` - Specifies columns to retrieve and source table.",
+    "type": "simple"
+  },
+  {
+    "id": "simple_flash_002",
+    "topic": "SQL Querying Fundamentals",
+    "front_prompt": "How do you select all columns from a table in SQL?",
+    "back_answer": "Use the asterisk wildcard: `SELECT * FROM table_name;`",
+    "type": "simple"
+  },
+  {
+    "id": "simple_flash_003",
+    "topic": "SQL Querying Fundamentals",
+    "front_prompt": "How are special column names handled in SQL Server?",
+    "back_answer": "Enclose them in square brackets: `[Column Name]` for names with spaces/hyphens.",
+    "type": "simple"
+  },
+  {
+    "id": "simple_flash_004",
+    "topic": "SQL Querying Fundamentals",
+    "front_prompt": "What is the purpose of the WHERE clause in SQL?",
+    "back_answer": "Filters rows based on specified conditions to return a subset of data.",
+    "type": "simple"
+  },
+  {
+    "id": "simple_flash_005",
+    "topic": "SQL Querying Fundamentals",
+    "front_prompt": "What comparison operator checks for equality in SQL?",
+    "back_answer": "`=` - Example: `WHERE REGION = 'SOUTH'`",
+    "type": "simple"
+  },
+  {
+    "id": "simple_flash_006",
+    "topic": "SQL Querying Fundamentals",
+    "front_prompt": "How do you check if a value is in a list of options?",
+    "back_answer": "Use `IN`: `WHERE Category IN ('OFFICE SUPPLIES', 'FURNITURE')`",
+    "type": "simple"
+  },
+  {
+    "id": "simple_flash_007",
+    "topic": "SQL Querying Fundamentals",
+    "front_prompt": "What operator is used for range filtering in SQL?",
+    "back_answer": "`BETWEEN` - Example: `WHERE SALES BETWEEN 0 AND 5000` (inclusive)",
+    "type": "simple"
+  },
+  {
+    "id": "simple_flash_008",
+    "topic": "SQL Querying Fundamentals",
+    "front_prompt": "How does the LIKE operator work with wildcards?",
+    "back_answer": "`%` matches any sequence of characters, `_` matches a single character: `WHERE [CUSTOMER NAME] LIKE 'A%'`",
+    "type": "simple"
+  },
+  {
+    "id": "simple_flash_009",
+    "topic": "SQL Querying Fundamentals",
+    "front_prompt": "How do you check for NULL values in a column?",
+    "back_answer": "Use `IS NULL`: `WHERE Category IS NULL` or `IS NOT NULL`",
+    "type": "simple"
+  },
+  {
+    "id": "simple_flash_010",
+    "topic": "SQL Querying Fundamentals",
+    "front_prompt": "What logical operator requires both conditions to be true?",
+    "back_answer": "`AND` - Example: `WHERE REGION = 'SOUTH' AND SALES > 5000`",
+    "type": "simple"
+  }
+]

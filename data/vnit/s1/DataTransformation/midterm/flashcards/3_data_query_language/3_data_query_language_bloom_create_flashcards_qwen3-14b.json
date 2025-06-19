@@ -1,0 +1,37 @@
+[  
+  {  
+    "id": "integrated_create_001",  
+    "topic": "SQL Querying Fundamentals",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Design a simple database query system for a retail inventory that uses the `SELECT` statement with `WHERE`, `BETWEEN`, and `LIKE` clauses to filter products. Explain how each clause contributes to retrieving specific data subsets.",  
+    "back_answer": "Retail Inventory Query System Design:\n- **`SELECT`**: Retrieves product details (e.g., name, price, category).\n- **`WHERE`**: Filters for products in a specific category (e.g., `CATEGORY = 'ELECTRONICS'`).\n- **`BETWEEN`**: Narrows results to items with prices between $50 and $200.\n- **`LIKE`**: Matches product names containing 'Wireless' (e.g., `NAME LIKE '%Wireless%'`). This combines clauses to dynamically fetch targeted inventory data."  
+  },  
+  {  
+    "id": "integrated_create_002",  
+    "topic": "SQL Querying Fundamentals",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Invent an analogy to explain how the `LIKE` operator with `%` and `_` wildcards works, using a non-technical scenario.",  
+    "back_answer": "'Imagine searching for books in a library. The `%` wildcard is like saying 'any book starting with 'Cook'' (e.g., 'Cooking Basics', 'Cookbook Recipes'). The `_` wildcard is like looking for 'a 3-letter word where the first letter is 'C' and third is 'K'' (e.g., 'C_k'), helping you find specific patterns in titles or authors.'"  
+  },  
+  {  
+    "id": "integrated_create_003",  
+    "topic": "SQL Querying Fundamentals",  
+    "bloom_level": "Creating",  
+    "front_prompt": "From first principles, reconstruct the logic of a `SELECT` statement that combines `IN`, `AND`, and `IS NOT NULL` to retrieve orders from specific regions with non-null customer names.",  
+    "back_answer": "1. **Identify tables**: Assume an 'Orders' table with columns REGION and CUSTOMER_NAME.\n2. **Filter regions**: Use `REGION IN ('NORTH', 'SOUTH')` to select orders from specified regions.\n3. **Exclude nulls**: Add `AND CUSTOMER_NAME IS NOT NULL` to ensure only records with valid customer names are included.\n4. **Retrieve data**: Combine into: `SELECT * FROM Orders WHERE REGION IN ('NORTH', 'SOUTH') AND CUSTOMER_NAME IS NOT NULL;`"  
+  },  
+  {  
+    "id": "integrated_create_004",  
+    "topic": "SQL Querying Fundamentals",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Synthesize an explanation of how SQL handles special column names (e.g., with spaces or hyphens) by combining `square brackets`, `identifier quoting`, and `syntax rules`.",  
+    "back_answer": "SQL uses square brackets `[ ]` in SQL Server to quote identifiers with special characters (e.g., `[ORDER ID]`). This prevents syntax errors when columns have spaces/hyphens. It’s akin to using quotes around a variable name in programming—telling the system to treat the enclosed text as a single entity, not as separate keywords or operators."  
+  },  
+  {  
+    "id": "integrated_create_005",  
+    "topic": "SQL Querying Fundamentals",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Design a query that uses `BETWEEN` and `NOT IN` to exclude orders from certain dates while including others, then explain the logic behind your construction.",  
+    "back_answer": "Query: `SELECT * FROM Orders WHERE ORDER_DATE BETWEEN '2023-01-01' AND '2023-12-31' AND ORDER_ID NOT IN (100, 200, 300);`\nLogic:\n- **`BETWEEN`**: Includes orders from January to December 2023.\n- **`NOT IN`**: Excludes specific order IDs (100, 200, 300). This combines date-range filtering with discrete value exclusion for precise data retrieval."  
+  }  
+]

@@ -1,0 +1,65 @@
+[  
+  {  
+    "id": "integrated_understand_001",  
+    "topic": "SQL Querying Fundamentals",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain the basic SELECT statement syntax in your own words.",  
+    "back_answer": "The SELECT statement is like a recipe for fetching data. You list what ingredients (columns) you want using 'SELECT', then specify where to get them from ('FROM' + table name). An asterisk (*) means 'bring everything'."  
+  },  
+  {  
+    "id": "integrated_understand_002",  
+    "topic": "SQL Querying Fundamentals",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Give an analogy for handling column names with spaces or hyphens in SQL Server.",  
+    "back_answer": "Imagine your backpack has labeled boxes. If a box is named 'My Toy Car' (with space) or 'Toy-Car-2023' (with hyphens), you need square brackets [ ] to tell the system exactly which box to open."  
+  },  
+  {  
+    "id": "integrated_understand_003",  
+    "topic": "SQL Querying Fundamentals",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain how the WHERE clause filters data, like a 5-year-old would.",  
+    "back_answer": "The WHERE clause is like a sieve. It lets only the tiny pebbles (rows) that match your rule pass through. For example, 'give me red marbles' becomes 'WHERE color = \"red\"'."  
+  },  
+  {  
+    "id": "integrated_understand_004",  
+    "topic": "SQL Querying Fundamentals",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "How would you describe the '>' and '<=' operators to someone new to SQL?",  
+    "back_answer": "'>' means 'bigger than' (like 5 > 3), while '<=' means 'smaller or equal to' (like 4 <= 5). They help pick numbers that fit a size rule."  
+  },  
+  {  
+    "id": "integrated_understand_005",  
+    "topic": "SQL Querying Fundamentals",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "What’s the difference between AND and OR in SQL, using an analogy?",  
+    "back_answer": "'AND' is like needing both a red ball *and* a blue block to play. 'OR' is like being allowed to choose either a red ball *or* a green car."  
+  },  
+  {  
+    "id": "integrated_understand_006",  
+    "topic": "SQL Querying Fundamentals",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain the IN operator as if explaining to a child.",  
+    "back_answer": "'IN' is like choosing from a list of favorite toys. If you say 'WHERE toy IN (\"car\", \"doll\")', it picks only cars or dolls."  
+  },  
+  {  
+    "id": "integrated_understand_007",  
+    "topic": "SQL Querying Fundamentals",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "How does BETWEEN work for numbers? Give a simple example.",  
+    "back_answer": "'BETWEEN' is like picking ages for a party. 'WHERE age BETWEEN 10 AND 15' means only kids aged 10 to 15 are invited."  
+  },  
+  {  
+    "id": "integrated_understand_008",  
+    "topic": "SQL Querying Fundamentals",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "What does the LIKE operator do with wildcards? Simplify it.",  
+    "back_answer": "'LIKE' searches for patterns. '%' is a magic wildcard that means 'any letters here'. For example, 'WHERE name LIKE \"A%\"' finds all names starting with A."  
+  },  
+  {  
+    "id": "integrated_understand_009",  
+    "topic": "SQL Querying Fundamentals",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain NULL in SQL as if to someone who doesn’t know databases.",  
+    "back_answer": "'NULL' is like an empty box. If a question has no answer, it’s marked as 'empty'. We check this with 'IS NULL', like looking for boxes that are completely empty."  
+  }  
+]

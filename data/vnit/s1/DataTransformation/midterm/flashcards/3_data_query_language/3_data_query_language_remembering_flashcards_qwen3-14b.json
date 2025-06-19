@@ -1,0 +1,72 @@
+[
+  {
+    "id": "integrated_remember_001",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Remembering",
+    "front_prompt": "What is the purpose of the SELECT statement in SQL?",
+    "back_answer": "The SELECT statement is used to retrieve data from one or more tables in a database."
+  },
+  {
+    "id": "integrated_remember_002",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Remembering",
+    "front_prompt": "What does the asterisk (*) represent in a SELECT statement?",
+    "back_answer": "The asterisk (*) is a wildcard that selects all columns in a table."
+  },
+  {
+    "id": "integrated_remember_003",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Remembering",
+    "front_prompt": "How are column names with spaces or hyphens enclosed in SQL Server?",
+    "back_answer": "Column names with special characters like spaces or hyphens are enclosed in square brackets [ ]."
+  },
+  {
+    "id": "integrated_remember_004",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Remembering",
+    "front_prompt": "What is the function of the WHERE clause in a SELECT statement?",
+    "back_answer": "The WHERE clause filters rows returned by the SELECT statement based on specified conditions."
+  },
+  {
+    "id": "integrated_remember_005",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Remembering",
+    "front_prompt": "List six comparison operators used in SQL filtering.",
+    "back_answer": "= equal to, > greater than, < less than, >= greater or equal, <= less or equal, <> not equal"
+  },
+  {
+    "id": "integrated_remember_006",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Remembering",
+    "front_prompt": "What logical operator ensures both conditions must be true for a row to be included?",
+    "back_answer": "The AND operator combines conditions where both must be true."
+  },
+  {
+    "id": "integrated_remember_007",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Remembering",
+    "front_prompt": "What does the IN clause allow you to do in SQL?",
+    "back_answer": "The IN clause checks if a value matches any value within a specified list of values."
+  },
+  {
+    "id": "integrated_remember_008",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Remembering",
+    "front_prompt": "What is the purpose of the BETWEEN operator in SQL?",
+    "back_answer": "The BETWEEN operator filters values within a specified inclusive range."
+  },
+  {
+    "id": "integrated_remember_009",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Remembering",
+    "front_prompt": "What wildcard character matches any sequence of zero or more characters in the LIKE clause?",
+    "back_answer": "The % wildcard matches any sequence of zero or more characters."
+  },
+  {
+    "id": "integrated_remember_010",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Remembering",
+    "front_prompt": "How do you check for NULL values in a column?",
+    "back_answer": "Use the IS NULL or IS NOT NULL operators to check for missing data."
+  }
+]

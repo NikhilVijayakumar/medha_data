@@ -1,0 +1,58 @@
+[  
+  {  
+    "id": "integrated_analyze_001",  
+    "topic": "SQL Querying Fundamentals",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Break down the `SELECT` statement into its core components and explain how they interact to retrieve data.",  
+    "back_answer": "The `SELECT` statement consists of two main parts: 1) `SELECT [column1, column2,...]`, which specifies the columns to retrieve (using `*` for all columns), and 2) `FROM [TableName]`, which identifies the source table. These components work together by filtering rows from the specified table(s) and projecting only the requested columns into the result set."  
+  },  
+  {  
+    "id": "integrated_analyze_002",  
+    "topic": "SQL Querying Fundamentals",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Compare and contrast using `SELECT *` versus explicitly listing column names in a query.",  
+    "back_answer": "`SELECT *` retrieves all columns from the table, which is convenient but can lead to unnecessary data transfer and reduced performance. Explicitly listing columns ensures only required data is fetched, improves readability, and avoids issues if table schemas change (e.g.,新增/removed columns)."  
+  },  
+  {  
+    "id": "integrated_analyze_003",  
+    "topic": "SQL Querying Fundamentals",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Identify a potential flaw in using `WHERE [Column Name] = NULL` to check for missing values.",  
+    "back_answer": "The flaw is that `NULL` represents an unknown value, and comparing it with `=` will never return true. Instead, `IS NULL` must be used (e.g., `WHERE [Column Name] IS NULL`) to correctly detect missing data."  
+  },  
+  {  
+    "id": "integrated_analyze_004",  
+    "topic": "SQL Querying Fundamentals",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Compare the `IN` operator and the `BETWEEN` operator in terms of use cases and limitations.",  
+    "back_answer": "`IN` checks if a value matches any item in a discrete list (e.g., `WHERE Category IN ('A', 'B')`). `BETWEEN` filters values within a numeric or date range (inclusive). A key limitation is that `BETWEEN` may behave unexpectedly with non-numeric data due to sorting rules, while `IN` requires explicit enumeration."  
+  },  
+  {  
+    "id": "integrated_analyze_005",  
+    "topic": "SQL Querying Fundamentals",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Explain how logical operators (`AND`, `OR`) affect the result set when combining conditions in a `WHERE` clause.",  
+    "back_answer": "`AND` requires all specified conditions to be true for a row to be included, narrowing the result set. `OR` includes rows where at least one condition is true, broadening results. Misusing precedence (e.g., omitting parentheses) can lead to unintended outcomes due to operator priority rules."  
+  },  
+  {  
+    "id": "integrated_analyze_006",  
+    "topic": "SQL Querying Fundamentals",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Contrast the use of square brackets `[ ]` in SQL Server with alternative identifier quoting methods in other databases.",  
+    "back_answer": "SQL Server uses `[ ]` to quote identifiers with special characters (e.g., `SELECT [ORDER ID]`). Other systems like PostgreSQL use double quotes (`\"`) and MySQL uses backticks (`` ` ``). This affects portability: queries relying on SQL Server-specific quoting may fail in other databases unless adjusted."  
+  },  
+  {  
+    "id": "integrated_analyze_007",  
+    "topic": "SQL Querying Fundamentals",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Identify a weakness in using `LIKE '%pattern%'` for pattern matching without considering performance implications.",  
+    "back_answer": "The weakness is that leading wildcards (`%pattern%`) prevent the use of indexes, resulting in full table scans. This degrades query performance on large tables. Alternatives like full-text search or indexed views may be more efficient for frequent pattern searches."  
+  },  
+  {  
+    "id": "integrated_analyze_008",  
+    "topic": "SQL Querying Fundamentals",  
+    "bloom_level": "Analyzing",  
+    "front_prompt": "Compare the `LIKE` operator's `%` and `_` wildcards, highlighting their distinct behaviors.",  
+    "back_answer": "`%` matches zero or more characters (e.g., `'A%'` matches 'Apple', 'Ant'), while `_` matches exactly one character (e.g., `'J_n'` matches 'Jon', 'Jan'). Misusing these can lead to unintended results, such as `'_ '` matching a single space instead of a specific pattern."  
+  }  
+]

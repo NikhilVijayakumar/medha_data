@@ -1,0 +1,58 @@
+[
+  {
+    "id": "integrated_evaluate_001",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Critique the effectiveness of using `SELECT *` versus explicitly listing columns in a query for data retrieval efficiency.",
+    "back_answer": "`SELECT *` is convenient but less efficient as it retrieves all columns, including unused ones, increasing I/O and memory overhead. Explicit column lists improve performance by reducing data transfer and clarify intent. Use `SELECT *` only when retrieving all columns is necessary (e.g., ad-hoc analysis)."
+  },
+  {
+    "id": "integrated_evaluate_002",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Evaluate whether enclosing special column names in square brackets `[ ]` is a best practice or if alternative solutions (e.g., renaming columns) are preferable.",
+    "back_answer": "Using `[ ]` avoids syntax errors for special characters but can reduce readability. Alternatives like renaming columns to remove spaces/hyphens improve maintainability and portability across SQL dialects. Prioritize column naming conventions over quoting unless unavoidable."
+  },
+  {
+    "id": "integrated_evaluate_003",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Is it accurate to use string comparisons (e.g., `WHERE SALES = '1000'`) on a numeric column like `SALES`? Justify your answer.",
+    "back_answer": "No, this is inaccurate. Storing numbers as strings introduces risks of invalid data (non-numeric entries) and prevents efficient indexing. Use numeric types for numeric columns to ensure accurate comparisons and optimize query performance."
+  },
+  {
+    "id": "integrated_evaluate_004",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Which is more effective for complex filtering: using `AND`/`OR` with parentheses or relying on SQL’s default operator precedence? Explain.",
+    "back_answer": "Using parentheses improves clarity and ensures logical accuracy by explicitly defining evaluation order. Default precedence can lead to unintended results (e.g., `WHERE A > 10 OR B < 5 AND C = 2` is ambiguous). Parentheses are critical for unambiguous, maintainable queries."
+  },
+  {
+    "id": "integrated_evaluate_005",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Compare the efficiency of `IN ('A','B')` versus multiple `OR` conditions (e.g., `WHERE X = 'A' OR X = 'B'`). When would one outperform the other?",
+    "back_answer": "`IN` is more readable and optimized by query planners for list matching. Both are functionally equivalent, but `IN` is preferred for clarity. Performance differences are negligible in modern databases; choose based on readability unless specific indexing scenarios suggest otherwise."
+  },
+  {
+    "id": "integrated_evaluate_006",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Evaluate the effectiveness of `BETWEEN` for inclusive range queries versus using `>= AND <=`. Are there edge cases where one is superior?",
+    "back_answer": "`BETWEEN` is functionally equivalent to `>= AND <=` and improves readability. Edge cases (e.g., non-numeric types, NULLs) require caution: `BETWEEN` treats `NULL` as outside the range. Both approaches are valid; use `BETWEEN` for clarity unless handling special data types."
+  },
+  {
+    "id": "integrated_evaluate_007",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Critique the efficiency of using `LIKE '%value%'` on large tables. How could this impact performance, and what alternatives exist?",
+    "back_answer": "`LIKE '%value%'` with a leading `%` prevents index usage, causing full table scans. For large datasets, use full-text search or preprocess data into indexed columns (e.g., separate fields for partial matches). Avoid `LIKE '%...%'` on frequently queried numeric/date fields."
+  },
+  {
+    "id": "integrated_evaluate_008",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Evaluating",
+    "front_prompt": "Is checking for `IS NULL` sufficient to handle missing data, or should applications use `COALESCE()`/`DEFAULT` values instead? Justify.",
+    "back_answer": "`IS NULL` accurately identifies missing data but does not resolve it. Using `COALESCE()` or default values ensures consistent data handling and avoids logic errors downstream. The choice depends on requirements: validate with `IS NULL`, but normalize data to minimize nulls where possible."
+  }
+]

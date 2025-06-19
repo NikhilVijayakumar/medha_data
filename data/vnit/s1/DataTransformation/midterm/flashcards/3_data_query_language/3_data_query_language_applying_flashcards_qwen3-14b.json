@@ -1,0 +1,72 @@
+[
+  {
+    "id": "integrated_apply_001",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Applying",
+    "front_prompt": "Write a SQL query to retrieve all orders from the 'SalesOrder' table where the 'REGION' is either 'SOUTH' or 'WEST', and 'SALES' are greater than 5000.",
+    "back_answer": "```sql\nSELECT *\nFROM SalesOrder\nWHERE REGION IN ('SOUTH', 'WEST') AND SALES > 5000;\n```"
+  },
+  {
+    "id": "integrated_apply_002",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Applying",
+    "front_prompt": "Construct a query to select all customers whose 'CUSTOMER NAME' starts with the letter 'J', using the LIKE operator.",
+    "back_answer": "```sql\nSELECT *\nFROM Customers\nWHERE [CUSTOMER NAME] LIKE 'J%';\n```"
+  },
+  {
+    "id": "integrated_apply_003",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Applying",
+    "front_prompt": "Write a query to find all rows in the 'SalesOrder' table where the 'Category' column contains exactly five characters, using the LIKE operator with an underscore wildcard.",
+    "back_answer": "```sql\nSELECT *\nFROM SalesOrder\nWHERE Category LIKE '_____';\n```"
+  },
+  {
+    "id": "integrated_apply_004",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Applying",
+    "front_prompt": "How would you retrieve all records from the 'SalesOrder' table where the 'SALES' value is between 2000 and 5000 (inclusive)? Use the BETWEEN operator.",
+    "back_answer": "```sql\nSELECT *\nFROM SalesOrder\nWHERE SALES BETWEEN 2000 AND 5000;\n```"
+  },
+  {
+    "id": "integrated_apply_005",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Applying",
+    "front_prompt": "Write a query to find all orders in the 'SalesOrder' table where the 'Category' column is NULL.",
+    "back_answer": "```sql\nSELECT *\nFROM SalesOrder\nWHERE Category IS NULL;\n```"
+  },
+  {
+    "id": "integrated_apply_006",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Applying",
+    "front_prompt": "Construct a query to select the 'ORDER ID' and 'CUSTOMER NAME' columns from the 'SalesOrder' table, ensuring proper handling of column names with spaces.",
+    "back_answer": "```sql\nSELECT [ORDER ID], [CUSTOMER NAME]\nFROM SalesOrder;\n```"
+  },
+  {
+    "id": "integrated_apply_007",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Applying",
+    "front_prompt": "Write a SQL query to select all employees from the 'Employees' table where their salary is not equal to 50000, using the appropriate comparison operator.",
+    "back_answer": "```sql\nSELECT *\nFROM Employees\nWHERE Salary <> 50000;\n```"
+  },
+  {
+    "id": "integrated_apply_008",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Applying",
+    "front_prompt": "How would you modify the following query to include only records where 'REGION' is 'SOUTH' and 'SALES' are greater than 5000 or less than 1000? Use logical operators.",
+    "back_answer": "```sql\nSELECT *\nFROM SalesOrder\nWHERE REGION = 'SOUTH' AND (SALES > 5000 OR SALES < 1000);\n```"
+  },
+  {
+    "id": "integrated_apply_009",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Applying",
+    "front_prompt": "Write a query to select all products from the 'Products' table where the 'Sub-Category' contains the word 'PAPER', using the LIKE operator.",
+    "back_answer": "```sql\nSELECT *\nFROM Products\nWHERE [Sub-Category] LIKE '%PAPER%';\n```"
+  },
+  {
+    "id": "integrated_apply_010",
+    "topic": "SQL Querying Fundamentals",
+    "bloom_level": "Applying",
+    "front_prompt": "Construct a query to find all orders where the 'CITY' is not in the list ('LOS ANGELES', 'CHICAGO'), using NOT IN.",
+    "back_answer": "```sql\nSELECT *\nFROM SalesOrder\nWHERE CITY NOT IN ('LOS ANGELES', 'CHICAGO');\n```"
+  }
+]
