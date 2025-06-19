@@ -1,0 +1,72 @@
+{
+  "title": "SQL Querying Fundamentals Evaluation Quiz",
+  "description": "Evaluate SQL querying techniques, including statement syntax, filtering logic, special column handling, and pattern matching strategies.",
+  "type": "Evaluating",
+  "questions": [
+    {
+      "id": "q_evaluate_001",
+      "question": "A developer writes a query: `SELECT [Order-Date], [Customer Name] FROM Orders WHERE [Order-Date] BETWEEN '2023-01-01' AND '2023-12-31'`. Evaluate which aspect of this query is most likely to cause incorrect results in SQL Server.",
+      "options": [
+        { "id": "optA", "text": "The use of square brackets for hyphenated columns is unnecessary." },
+        { "id": "optB", "text": "The BETWEEN operator excludes the upper boundary date '2023-12-31'." },
+        { "id": "optC", "text": "The query correctly handles special characters and date ranges." },
+        { "id": "optD", "text": "Hyphenated column names should be quoted with double quotes instead of square brackets." },
+        { "id": "optE", "text": "BETWEEN is inappropriate for date range queries; WHERE [Order-Date] >= ... AND ... <= ... should be used." }
+      ],
+      "correctOptionIds": ["optE"],
+      "explanation": "While SQL Server accepts BETWEEN for inclusive ranges, it is generally recommended to use explicit comparison operators (>= and <=) for date ranges. This avoids potential edge-case issues with temporal data types and ensures clarity in boundary inclusion."
+    },
+    {
+      "id": "q_evaluate_002",
+      "question": "Consider two queries retrieving customer orders: Query A uses `SELECT * FROM Orders WHERE CustomerID IN (1, 3, 5)`; Query B uses `SELECT * FROM Orders WHERE CustomerID = 1 OR CustomerID = 3 OR CustomerID = 5`. Evaluate which statement is accurate regarding their performance and functionality.",
+      "options": [
+        { "id": "optA", "text": "Both queries are functionally equivalent but may have different execution plans." },
+        { "id": "optB", "text": "Query A will always outperform Query B due to optimized IN clause handling." },
+        { "id": "optC", "text": "Query B is more readable but less efficient for large lists of values." },
+        { "id": "optD", "text": "The IN operator cannot handle more than 10 values in SQL Server." },
+        { "id": "optE", "text": "Query A may return duplicate rows if CustomerID values overlap." }
+      ],
+      "correctOptionIds": ["optA"],
+      "explanation": "Both queries produce identical results. The optimizer often treats IN and OR conditions similarly, though execution plans might vary slightly. There is no inherent performance advantage to either approach for small value lists."
+    },
+    {
+      "id": "q_evaluate_003",
+      "question": "A query uses `SELECT * FROM Products WHERE ProductName LIKE '%Widget%'`. Evaluate which of these statements correctly identifies a limitation or inefficiency in this pattern.",
+      "options": [
+        { "id": "optX", "text": "The % wildcard is incorrectly used; it should be replaced with _." },
+        { "id": "optY", "text": "This query will not return products named 'Widget' exactly." },
+        { "id": "optZ", "text": "The LIKE operator cannot handle case-insensitive searches in SQL Server." },
+        { "id": "optAA", "text": "Using % on both sides of the pattern can lead to full table scans and poor performance." },
+        { "id": "optBB", "text": "This is an optimal use of wildcards for partial matches." }
+      ],
+      "correctOptionIds": ["optAA"],
+      "explanation": "Leading wildcards (%Widget%) prevent index usage in most SQL implementations, resulting in full table scans. This makes the query inefficient for large datasets unless a full-text index is employed."
+    },
+    {
+      "id": "q_evaluate_004",
+      "question": "A developer writes: `SELECT [Order ID], SUM([Order Amount]) AS Total FROM Orders GROUP BY [Order ID] HAVING SUM([Order Amount]) > 1000`. Evaluate which modification would improve this query's clarity and maintainability while preserving functionality.",
+      "options": [
+        { "id": "optP", "text": "Replace [Order ID] with OrderID in both the SELECT and GROUP BY clauses." },
+        { "id": "optQ", "text": "Remove the HAVING clause since SUM([Order Amount]) > 1000 is a filtering condition." },
+        { "id": "optR", "text": "Add an alias for [Order Amount] in the SELECT clause: AS OrderAmt." },
+        { "id": "optS", "text": "Use COUNT(*) instead of SUM([Order Amount]) in the HAVING clause." },
+        { "id": "optT", "text": "This query is already optimal and requires no changes." }
+      ],
+      "correctOptionIds": ["optR"],
+      "explanation": "Adding aliases improves readability without altering functionality. While option P might be valid if column names are unquoted, the question focuses on improving clarity through better naming conventions rather than syntax corrections."
+    },
+    {
+      "id": "q_evaluate_005",
+      "question": "A database contains a `Sales` table with NULL values in the `Discount` column. Two queries are proposed: Query 1 uses `WHERE Discount IS NOT NULL AND Discount > 5`, while Query 2 uses `WHERE Discount > 5`. Evaluate which statement is accurate regarding these approaches.",
+      "options": [
+        { "id": "optU", "text": "Both queries will return identical results." },
+        { "id": "optV", "text": "Query 1 correctly filters out NULLs, while Query 2 will include them and throw an error." },
+        { "id": "optW", "text": "Query 2 is more efficient because it avoids the IS NOT NULL check." },
+        { "id": "optX", "text": "Query 1 ensures accurate filtering but may return fewer rows than Query 2." },
+        { "id": "optY", "text": "Both queries will fail due to invalid handling of NULL values in comparisons." }
+      ],
+      "correctOptionIds": ["optX"],
+      "explanation": "Query 1 explicitly excludes NULLs and applies the >5 filter, while Query 2 implicitly excludes NULLs (since comparisons with NULL return unknown). However, Query 1 is more explicit about its intent but may return fewer rows if there are NULL values in Discount."
+    }
+  ]
+}

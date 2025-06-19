@@ -1,0 +1,46 @@
+{
+  "title": "SQL Querying Fundamentals - Creating Level Quiz",
+  "description": "Design advanced SQL queries requiring synthesis of concepts like filtering, pattern matching, null handling, and special column syntax.",
+  "type": "Creating",
+  "questions": [
+    {
+      "id": "q_create_001",
+      "question": "You are tasked with designing a query to retrieve all orders from the 'SalesOrder' table where the [ORDER ID] contains 'SO-2023-' as a prefix, and the SALES amount is between $500 and $2000 (inclusive). Additionally, exclude any records where the Category is NULL. Which SQL statement would achieve this?",
+      "options": [
+        {"id": "opt1", "text": "SELECT [ORDER ID], SALES FROM SalesOrder WHERE [ORDER ID] LIKE 'SO-2023-%' AND SALES BETWEEN 500 AND 2000 OR Category IS NOT NULL"},
+        {"id": "opt2", "text": "SELECT * FROM SalesOrder WHERE [ORDER ID] LIKE 'SO-2023%' AND SALES >= 500 AND SALES <= 2000 AND Category IS NOT NULL"},
+        {"id": "opt3", "text": "SELECT [ORDER ID], SALES FROM SalesOrder WHERE [ORDER ID] = 'SO-2023-%' AND SALES BETWEEN (500, 2000) AND Category != ''"},
+        {"id": "opt4", "text": "SELECT * FROM SalesOrder WHERE [ORDER ID] LIKE '%SO-2023%' AND SALES IN (500, 2000) AND ISNULL(Category, '') <> ''"},
+        {"id": "opt5", "text": "SELECT [ORDER ID], SALES FROM SalesOrder WHERE [ORDER ID] REGEXP '^SO-2023-' AND SALES BETWEEN 500 TO 2000 AND Category NOT IN (NULL)"}
+      ],
+      "correctOptionIds": ["opt2"],
+      "explanation": "The correct answer uses proper pattern matching with LIKE 'SO-2023%' to capture the prefix, inclusive range checking with SALES >= 500 AND <= 2000, and excludes NULLs via Category IS NOT NULL. Option1 incorrectly uses OR logic for filtering conditions. Option3 misuses = operator with wildcards and invalid BETWEEN syntax. Option4 uses REGEXP (non-SQL Server compatible) and IN instead of range checks. Option5 has TO syntax error and incorrect NULL handling."
+    },
+    {
+      "id": "q_create_002",
+      "question": "You need to design a query that retrieves all customer names from the 'Customers' table where the [CUSTOMER NAME] contains exactly 6 characters, starts with a vowel, and ends with a numeric digit. Which combination of SQL operators would correctly implement this logic?",
+      "options": [
+        {"id": "optA", "text": "[CUSTOMER NAME] LIKE '_[AEIOU]%[0-9]'"},
+        {"id": "optB", "text": "[CUSTOMER NAME] LIKE '[AEIOU]______[0-9]%'"},
+        {"id": "optC", "text": "[CUSTOMER NAME] LIKE '[^AEIOU]%%%%%%[^0-9]' ESCAPE '\\'"},
+        {"id": "optD", "text": "[CUSTOMER NAME] LIKE '[AEIOU][A-Z][A-Z][A-Z][A-Z][A-Z][0-9]'"},
+        {"id": "optE", "text": "[CUSTOMER NAME] = '^[AEIOU]{1}[a-zA-Z]{4}[0-9]$' COLLATE Latin1_General_BIN"}
+      ],
+      "correctOptionIds": ["optB"],
+      "explanation": "The correct answer uses [AEIOU] for first character, five underscores (total 6 characters) and ends with [0-9]. OptionA has incorrect wildcard placement. OptionC uses negation incorrectly. OptionD restricts to uppercase letters only but the question allows any case. OptionE uses regex syntax which is not valid in standard SQL pattern matching."
+    },
+    {
+      "id": "q_create_003",
+      "question": "You are designing a query that must return all products from the 'Products' table where either: (1) The [UNIT PRICE] is greater than $50 AND the [DISCOUNT] is less than 20%, OR (2) The [PRODUCT ID] starts with 'P-' and has exactly 4 characters after the hyphen. Which logical structure correctly implements this compound condition?",
+      "options": [
+        {"id": "optX", "text": "WHERE ([UNIT PRICE] > 50 AND [DISCOUNT] < 20) OR ([PRODUCT ID] LIKE 'P-____')"},
+        {"id": "optY", "text": "WHERE ([UNIT PRICE] > 50 OR [DISCOUNT] < 20) AND ([PRODUCT ID] LIKE 'P-[0-9][0-9][0-9][0-9]' ESCAPE '\\')"},
+        {"id": "optZ", "text": "WHERE (CASE WHEN [UNIT PRICE] > 50 THEN [DISCOUNT] ELSE NULL END < 20) OR ([PRODUCT ID] LIKE 'P-%' AND LEN([PRODUCT ID]) = 6)"},
+        {"id": "optW", "text": "WHERE ([UNIT PRICE] > 50 AND [DISCOUNT] < 20) XOR ([PRODUCT ID] LIKE 'P-____')"},
+        {"id": "optV", "text": "WHERE ([UNIT PRICE] > 50 OR [DISCOUNT] < 20) AND (LEFT([PRODUCT ID],2) = 'P-' AND LEN([PRODUCT ID]) = 6)"}
+      ],
+      "correctOptionIds": ["optX", "optZ"],
+      "explanation": "Both options correctly implement the two conditions using proper logical operators. OptionX uses standard OR/AND with LIKE for pattern matching. OptionZ uses CASE logic and LEN function for length check, which is also valid. Other options have incorrect operator precedence (OptionY), XOR instead of OR (OptionW), or incomplete pattern checks (OptionV)."
+    }
+  ]
+}

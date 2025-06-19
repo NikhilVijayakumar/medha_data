@@ -1,0 +1,59 @@
+{
+  "title": "SQL Querying Fundamentals Analysis Quiz",
+  "description": "Analyze SQL query syntax, operators, and logic to solve complex data retrieval scenarios.",
+  "type": "Analyzing",
+  "questions": [
+    {
+      "id": "q_analyze_001",
+      "question": "Consider a table with columns named 'Order ID' (containing spaces) and 'Customer-Name' (hyphenated). Which of the following queries will execute without syntax errors in SQL Server? (Select all that apply)",
+      "options": [
+        { "id": "opt1", "text": "SELECT Order ID, Customer-Name FROM Orders;" },
+        { "id": "opt2", "text": "SELECT [Order ID], [Customer-Name] FROM Orders;" },
+        { "id": "opt3", "text": "SELECT \"Order ID\", \"Customer-Name\" FROM Orders;" },
+        { "id": "opt4", "text": "SELECT Order_ID, Customer_Name FROM Orders;" },
+        { "id": "opt5", "text": "SELECT * FROM Orders WHERE [Order ID] = 1001 AND Customer-Name LIKE 'A%';" }
+      ],
+      "correctOptionIds": ["opt2", "opt5"],
+      "explanation": "In SQL Server, square brackets [ ] are required to quote identifiers with special characters (spaces or hyphens). Option 2 uses proper bracketing for both columns. Option 5 correctly applies brackets to 'Order ID' and retains the hyphenated column name without additional quotes. Options 1, 3, and 4 either omit necessary quoting or use invalid syntax (e.g., double quotes instead of square brackets)."
+    },
+    {
+      "id": "q_analyze_002",
+      "question": "Given a table 'Sales' with columns 'Region' and 'SalesAmount', which query will return all rows where Region is not 'East' or 'West', AND SalesAmount is between 1000 and 5000 (inclusive)?",
+      "options": [
+        { "id": "optA", "text": "SELECT * FROM Sales WHERE Region NOT IN ('East', 'West') AND SalesAmount BETWEEN 1000 AND 5000;" },
+        { "id": "optB", "text": "SELECT * FROM Sales WHERE Region != 'East' OR Region != 'West' AND SalesAmount >= 1000 AND <= 5000;" },
+        { "id": "optC", "text": "SELECT * FROM Sales WHERE NOT (Region = 'East' OR Region = 'West') AND SalesAmount BETWEEN 5000 AND 1000;" },
+        { "id": "optD", "text": "SELECT * FROM Sales WHERE Region IN ('North', 'South') AND SalesAmount >= 1000 AND <= 5000;" },
+        { "id": "optE", "text": "SELECT * FROM Sales WHERE Region NOT LIKE 'East%' OR Region NOT LIKE 'West%' AND SalesAmount BETWEEN 1000 AND 5000;" }
+      ],
+      "correctOptionIds": ["optA", "optD"],
+      "explanation": "Options A and D correctly apply logical operators and range checks. Option A uses NOT IN for regions and BETWEEN for the numeric range. Option D explicitly lists valid regions ('North', 'South') and applies proper AND conditions. Options B, C, and E contain logical errors: B uses OR incorrectly, C reverses BETWEEN bounds (which is allowed but inefficient), and E misapplies LIKE with OR."
+    },
+    {
+      "id": "q_analyze_003",
+      "question": "Which of the following statements about NULL values in SQL are true? (Select all that apply)",
+      "options": [
+        { "id": "optX", "text": "NULL = NULL evaluates to TRUE." },
+        { "id": "optY", "text": "Using IS NULL checks for missing data, while = NULL will never return rows." },
+        { "id": "optZ", "text": "Aggregation functions like SUM() automatically ignore NULL values." },
+        { "id": "optAA", "text": "The LIKE operator can match patterns containing NULLs using % wildcard." },
+        { "id": "optBB", "text": "A WHERE clause with [Column] IS NOT NULL ensures the column has a defined value." }
+      ],
+      "correctOptionIds": ["optY", "optZ", "optBB"],
+      "explanation": "NULL is an unknown value, so comparisons like NULL = NULL return UNKNOWN (not TRUE). Option Y correctly explains IS NULL vs. = NULL. SUM() ignores NULLs by design (option Z). LIKE cannot match NULLs (option AA is false). IS NOT NULL ensures a column has a non-missing value (option BB)."
+    },
+    {
+      "id": "q_analyze_004",
+      "question": "Consider this query: SELECT * FROM Employees WHERE Department IN ('HR', 'IT') AND Salary > 5000 OR Location = 'New York'. Which rows will be included in the result set?",
+      "options": [
+        { "id": "optP", "text": "All employees in HR or IT with salary over $5000, plus all employees in New York regardless of department/salary." },
+        { "id": "optQ", "text": "Only employees in HR or IT earning more than $5000 and located in New York." },
+        { "id": "optR", "text": "Employees with salary > 5000, plus those in New York who are not in HR/IT." },
+        { "id": "optS", "text": "Only employees in HR or IT earning more than $5000 and not located in New York." },
+        { "id": "optT", "text": "All employees with salary > 5000, regardless of department or location." }
+      ],
+      "correctOptionIds": ["optP"],
+      "explanation": "The query's logic is (Department IN ('HR', 'IT') AND Salary > 5000) OR Location = 'New York'. This means rows satisfying either condition are included. Option P correctly captures both groups: HR/IT with salary > $5000, and all New York employees irrespective of other criteria."
+    }
+  ]
+}

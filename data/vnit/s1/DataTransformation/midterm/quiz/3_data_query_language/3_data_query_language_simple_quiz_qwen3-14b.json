@@ -1,0 +1,124 @@
+{
+  "title": "SQL Querying Fundamentals Quiz",
+  "description": "Test your knowledge on fundamental SQL querying concepts.",
+  "type": "Simple",
+  "questions": [
+    {
+      "id": "q_simple_001",
+      "question_text": "Which symbol is used to select all columns in a table using the SELECT statement?",
+      "options": [
+        {"id": "opt1", "text": "'ALL' keyword"},
+        {"id": "opt2", "text": "'*' asterisk"},
+        {"id": "opt3", "text": "'%" wildcard"},
+        {"id": "opt4", "text": "'EVERY' keyword"},
+        {"id": "opt5", "text": "'?' placeholder"}
+      ],
+      "correctOptionIds": ["opt2"],
+      "explanation": "The asterisk (*) is the standard SQL syntax to select all columns from a table. Other symbols like % are used for pattern matching in LIKE clauses, not for column selection."
+    },
+    {
+      "id": "q_simple_002",
+      "question_text": "How should you enclose a column name with spaces or hyphens in SQL Server?",
+      "options": [
+        {"id": "optA", "text": "'single quotes'"},
+        {"id": "optB", "text": "'double quotes'"},
+        {"id": "optC", "text": "[square brackets]"},
+        {"id": "optD", "text": "(parentheses)"},
+        {"id": "optE", "text": "{braces}"}
+      ],
+      "correctOptionIds": ["optC"],
+      "explanation": "In SQL Server, column names with special characters like spaces or hyphens must be enclosed in square brackets [ ] to avoid syntax errors. Other options are not valid for this purpose."
+    },
+    {
+      "id": "q_simple_003",
+      "question_text": "Which clause is used to filter rows based on specific conditions?",
+      "options": [
+        {"id": "optX", "text": "'ORDER BY'"},
+        {"id": "optY", "text": "'JOIN'"},
+        {"id": "optZ", "text": "'WHERE'"},
+        {"id": "optAA", "text": "'GROUP BY'"},
+        {"id": "optBB", "text": "'HAVING'"}
+      ],
+      "correctOptionIds": ["optZ"],
+      "explanation": "The WHERE clause is explicitly used to filter rows based on conditions. Other clauses like ORDER BY or GROUP BY serve different purposes in query execution."
+    },
+    {
+      "id": "q_simple_004",
+      "question_text": "Which operator checks if a value is not equal to another?",
+      "options": [
+        {"id": "opt1", "text": "'='"},
+        {"id": "opt2", "text": "'>'"},
+        {"id": "opt3", "text": "'<>' or '!='"},
+        {"id": "opt4", "text": "'BETWEEN'"},
+        {"id": "opt5", "text": "'LIKE'"}
+      ],
+      "correctOptionIds": ["opt3"],
+      "explanation": "The operators '<>' or '!=' are used to check for inequality in SQL. Other symbols represent comparison operations like equality, greater than, or range checks."
+    },
+    {
+      "id": "q_simple_005",
+      "question_text": "Which logical operator ensures both conditions must be true?",
+      "options": [
+        {"id": "optA", "text": "'OR'"},
+        {"id": "optB", "text": "'NOT'"},
+        {"id": "optC", "text": "'AND'"},
+        {"id": "optD", "text": "'IN'"},
+        {"id": "optE", "text": "'IS NULL'"}
+      ],
+      "correctOptionIds": ["optC"],
+      "explanation": "The 'AND' operator requires both conditions to be true for a row to be included. 'OR' only needs one condition, while the others serve different purposes."
+    },
+    {
+      "id": "q_simple_006",
+      "question_text": "Which operator checks if a value is in a discrete list of values?",
+      "options": [
+        {"id": "opt1", "text": "'BETWEEN'"},
+        {"id": "opt2", "text": "'LIKE'"},
+        {"id": "opt3", "text": "'IN'"},
+        {"id": "opt4", "text": "'NOT IN'"},
+        {"id": "opt5", "text": "'IS NULL'"}
+      ],
+      "correctOptionIds": ["opt3"],
+      "explanation": "The 'IN' operator checks if a value matches any in a list. 'NOT IN' is its inverse, and other operators handle ranges or pattern matching."
+    },
+    {
+      "id": "q_simple_007",
+      "question_text": "What does the BETWEEN operator include in range filtering?",
+      "options": [
+        {"id": "optA", "text": "'Only upper bound'"},
+        {"id": "optB", "text": "'Only lower bound'"},
+        {"id": "optC", "text": "'Both bounds (inclusive)'"},
+        {"id": "optD", "text": "'Neither bound'"},
+        {"id": "optE", "text": "'Random range'"}
+      ],
+      "correctOptionIds": ["optC"],
+      "explanation": "BETWEEN includes both the lower and upper bounds of a range. This is critical for numerical or date/time filtering."
+    },
+    {
+      "id": "q_simple_008",
+      "question_text": "Which wildcard matches any single character in a LIKE clause?",
+      "options": [
+        {"id": "opt1", "text": "'%'"},
+        {"id": "opt2", "text": "'_'"},
+        {"id": "opt3", "text": "'*'"},
+        {"id": "opt4", "text": "'?'"},
+        {"id": "opt5", "text": "'{}'"}
+      ],
+      "correctOptionIds": ["opt2"],
+      "explanation": "The '_' wildcard matches exactly one character in a LIKE pattern. The '%' wildcard matches any sequence of characters."
+    },
+    {
+      "id": "q_simple_009",
+      "question_text": "How to check if a column contains NULL values?",
+      "options": [
+        {"id": "optX", "text": "'='"},
+        {"id": "optY", "text": "'IS NOT NULL'"},
+        {"id": "optZ", "text": "'IS NULL'"},
+        {"id": "optAA", "text": "'<> NULL'"},
+        {"id": "optBB", "text": "'LIKE 'NULL''"}
+      ],
+      "correctOptionIds": ["optZ"],
+      "explanation": "The 'IS NULL' condition is used to detect missing values. Other operators like '=' or '<>' do not work with NULLs due to SQL's three-state logic."
+    }
+  ]
+}
