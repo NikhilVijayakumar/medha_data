@@ -1,0 +1,72 @@
+[  
+  {  
+    "id": "integrated_understand_001",  
+    "topic": "Data Definition & Schema Management (DDL)",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain 'Schema Blueprint' in your own words.",  
+    "back_answer": "A schema blueprint is like an architect's plan for a house. It defines how tables, columns, and relationships are structured before building the database."  
+  },  
+  {  
+    "id": "integrated_understand_002",  
+    "topic": "Data Definition & Schema Management (DDL)",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Give an analogy for 'ALTER TABLE' commands.",  
+    "back_answer": "'ALTER TABLE' is like resizing a room in your house. You need permits (constraints) and update the blueprint (schema) to reflect changes, like adding a window or changing wall dimensions."  
+  },  
+  {  
+    "id": "integrated_understand_003",  
+    "topic": "Data Definition & Schema Management (DDL)",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain why 'DROP TABLE' is dangerous to a 5-year-old.",  
+    "back_answer": "'DROP TABLE' is like throwing away all your toys without checking if they’re needed. Once gone, you can’t get them back unless you have a backup!"  
+  },  
+  {  
+    "id": "integrated_understand_004",  
+    "topic": "Data Manipulation Operations (DML)",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Simplify 'INSERT INTO' as if explaining to a child.",  
+    "back_answer": "'INSERT INTO' is like adding a new toy to your toy box. You have to say exactly where it goes and what it is so the box knows how to organize it."  
+  },  
+  {  
+    "id": "integrated_understand_005",  
+    "topic": "Data Manipulation Operations (DML)",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "How would you explain 'WHERE Clause' precision?",  
+    "back_answer": "'WHERE Clause' is like telling a robot, ‘Only pick up red balls.’ It ensures changes affect only the right data, not everything in the room."  
+  },  
+  {  
+    "id": "integrated_understand_006",  
+    "topic": "Data Retrieval Techniques (DQL)",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Give an analogy for 'SELECT *' vs. specifying columns.",  
+    "back_answer": "'SELECT *' is like grabbing every toy from your room, while specifying columns is picking only the teddy bears—faster and less messy!"  
+  },  
+  {  
+    "id": "integrated_understand_007",  
+    "topic": "Data Retrieval Techniques (DQL)",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain 'ORDER BY' in simple terms.",  
+    "back_answer": "'ORDER BY' is like sorting your books by title or author. It arranges data so you can find what you need faster."  
+  },  
+  {  
+    "id": "integrated_understand_008",  
+    "topic": "Transaction Control & Integrity (TCL)",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "What is 'ACID' in your own words?",  
+    "back_answer": "'ACID' ensures database transactions are reliable: they’re all-or-nothing (Atomicity), keep rules intact (Consistency), don’t interfere with each other (Isolation), and stick around forever (Durability)."  
+  },  
+  {  
+    "id": "integrated_understand_009",  
+    "topic": "Transaction Control & Integrity (TCL)",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "Explain 'ROLLBACK' to a novice.",  
+    "back_answer": "'ROLLBACK' is like undoing your last move in a game if you make a mistake. It takes the database back to its previous state before errors happened."  
+  },  
+  {  
+    "id": "integrated_understand_010",  
+    "topic": "Transaction Control & Integrity (TCL)",  
+    "bloom_level": "Understanding",  
+    "front_prompt": "What’s a 'SAVEPOINT' analogy?",  
+    "back_answer": "'SAVEPOINT' is like bookmarking a page in your book. If you mess up later, you can return to that exact spot instead of starting over."  
+  }  
+]

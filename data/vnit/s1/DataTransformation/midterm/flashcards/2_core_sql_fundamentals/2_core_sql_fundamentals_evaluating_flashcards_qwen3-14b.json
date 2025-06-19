@@ -1,0 +1,58 @@
+[  
+  {  
+    "id": "integrated_evaluate_001",  
+    "topic": "Data Definition & Schema Management (DDL)",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Critique the effectiveness of using `DROP TABLE` versus `TRUNCATE TABLE` for permanent data removal in a production database.",  
+    "back_answer": "`DROP TABLE` permanently deletes the table structure and data, which is irreversible and risks losing metadata. `TRUNCATE TABLE` removes all rows but retains the table structure, allowing faster execution and easier recovery if backups exist. However, both risk data loss; use `TRUNCATE` for performance-critical scenarios where schema retention is needed, but only after verifying backup strategies."  
+  },  
+  {  
+    "id": "integrated_evaluate_002",  
+    "topic": "Data Manipulation Operations (DML)",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Is using a non-specific `WHERE` condition in an `UPDATE` statement efficient? Justify your answer.",  
+    "back_answer": "No, it is inefficient. A broad `WHERE` clause forces the database to scan entire tables, increasing I/O and reducing performance. Specific conditions leverage indexes for faster row identification, ensuring targeted updates and maintaining data consistency with minimal overhead."  
+  },  
+  {  
+    "id": "integrated_evaluate_003",  
+    "topic": "Data Retrieval Techniques (DQL)",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Which is more effective for performance: `SELECT *` or specifying required columns in a query? Explain.",  
+    "back_answer": "Specifying required columns is more effective. It reduces data transfer volume, minimizes memory usage, and allows the database to optimize index utilization. `SELECT *` may retrieve unnecessary data, increasing network latency and counteracting potential index benefits."  
+  },  
+  {  
+    "id": "integrated_evaluate_004",  
+    "topic": "Transaction Control & Integrity (TCL)",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Weigh the pros and cons of using `READ COMMITTED` versus `SERIALIZABLE` isolation levels for transaction consistency.",  
+    "back_answer": "`READ COMMITTED` allows higher concurrency but risks dirty reads; it is efficient for read-heavy workloads. `SERIALIZABLE` ensures strict consistency by preventing all conflicts but introduces significant locking and reduced performance. Choose `SERIALIZABLE` only when absolute data integrity is critical, despite the overhead."  
+  },  
+  {  
+    "id": "integrated_evaluate_005",  
+    "topic": "Data Definition & Schema Management (DDL)",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Identify a potential flaw in relying solely on `CASCADE` for foreign key constraints during table deletion.",  
+    "back_answer": "'CASCADE' automatically deletes dependent records, risking unintended data loss if relationships are not fully understood. It bypasses explicit validation, potentially erasing critical child records without user confirmation, leading to irreversible schema corruption."  
+  },  
+  {  
+    "id": "integrated_evaluate_006",  
+    "topic": "Data Manipulation Operations (DML)",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Which is safer for data integrity: `DELETE` with a soft delete flag or `TRUNCATE`? Justify.",  
+    "back_answer": "`DELETE` with a soft delete flag preserves records in the table, enabling recovery and audit trails. `TRUNCATE` permanently removes all rows without logging individual deletions, making it irreversible and unsuitable for scenarios requiring data traceability."  
+  },  
+  {  
+    "id": "integrated_evaluate_007",  
+    "topic": "Data Retrieval Techniques (DQL)",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Evaluate the trade-offs between using `ORDER BY` with and without an index on a large table.",  
+    "back_answer": "Using `ORDER BY` on an indexed column is efficient, as indexes are sorted. Without an index, the database performs a full table scan and sorts results in memory, increasing I/O and CPU usage. Always ensure sorting columns are indexed for large datasets."  
+  },  
+  {  
+    "id": "integrated_evaluate_008",  
+    "topic": "Transaction Control & Integrity (TCL)",  
+    "bloom_level": "Evaluating",  
+    "front_prompt": "Critique the idea of using `COMMIT` frequently in a high-write transactional system.",  
+    "back_answer": "Frequent `COMMIT`s improve recoverability but increase disk I/O and logging overhead. In contrast, fewer commits reduce contention but risk data loss if interrupted. Balance is key: use frequent commits for critical operations and batch writes where consistency can tolerate some latency."  
+  }  
+]

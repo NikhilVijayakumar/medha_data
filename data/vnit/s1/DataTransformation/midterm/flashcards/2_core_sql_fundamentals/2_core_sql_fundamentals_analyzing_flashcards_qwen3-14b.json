@@ -1,0 +1,37 @@
+[
+  {
+    "id": "integrated_analyze_001",
+    "topic": "Data Definition & Schema Management (DDL)",
+    "bloom_level": "Analyzing",
+    "front_prompt": "Compare and contrast 'CREATE TABLE' and 'ALTER TABLE' commands in terms of purpose, syntax, and impact on database structure.",
+    "back_answer": "'CREATE TABLE' defines a new table's schema by specifying columns, data types, primary keys, and constraints. It establishes the initial blueprint. 'ALTER TABLE' modifies an existing table (e.g., adding/dropping columns or changing constraints). While 'CREATE TABLE' is static once executed, 'ALTER TABLE' enables schema evolution but risks breaking dependent applications if not managed carefully."
+  },
+  {
+    "id": "integrated_analyze_002",
+    "topic": "Data Manipulation Operations (DML)",
+    "bloom_level": "Analyzing",
+    "front_prompt": "Identify a potential flaw in using 'DELETE FROM' without a WHERE clause. Explain the implications and possible safeguards.",
+    "back_answer": "Using 'DELETE FROM' without a WHERE clause risks irreversible, permanent deletion of all records in a table. This violates data integrity principles and could lead to catastrophic data loss. Safeguards include: (1) Using transactions with COMMIT/ROLLBACK, (2) Implementing soft deletes via status flags instead of physical deletion, or (3) Enforcing strict WHERE clause validation through application logic or database triggers."
+  },
+  {
+    "id": "integrated_analyze_003",
+    "topic": "Data Retrieval Techniques (DQL)",
+    "bloom_level": "Analyzing",
+    "front_prompt": "Break down the components of a 'SELECT' statement and explain how they interact to retrieve specific data.",
+    "back_answer": "A 'SELECT' statement comprises: (1) SELECT [columns/wildcard] - specifies data projection, (2) FROM [table/views] - defines data sources, (3) WHERE [conditions] - filters rows, (4) ORDER BY [columns] - sorts results. These components interact hierarchically: filtering occurs before sorting, and projections determine which columns are returned. Optimization depends on index usage for WHERE clauses and efficient column selection to minimize data transfer."
+  },
+  {
+    "id": "integrated_analyze_004",
+    "topic": "Transaction Control & Integrity (TCL)",
+    "bloom_level": "Analyzing",
+    "front_prompt": "Compare 'COMMIT' and 'ROLLBACK' operations in terms of their impact on ACID properties and data consistency.",
+    "back_answer": "'COMMIT' finalizes a transaction, ensuring Durability by persisting changes to the database and maintaining Consistency through atomic updates. 'ROLLBACK' reverts uncommitted transactions, preserving Consistency by undoing partial changes but sacrificingDurability for those modifications. Both operations enforce Atomicity by either fully applying or discarding all transactional work."
+  },
+  {
+    "id": "integrated_analyze_005",
+    "topic": "Data Definition & Schema Management (DDL)",
+    "bloom_level": "Analyzing",
+    "front_prompt": "Analyze the risks and benefits of using the 'CASCADE' option with 'DROP TABLE'. When might it be appropriate?",
+    "back_answer": "'CASCADE' automatically deletes dependent objects (e.g., foreign key references), reducing manual cleanup but increasing risk of unintended data loss. Benefits include streamlined schema management, while risks involve irreversible deletion of related tables/views. It is appropriate during controlled database migrations or when dependencies are explicitly designed for cascading removal."
+  }
+]

@@ -1,0 +1,37 @@
+[  
+  {  
+    "id": "integrated_create_001",  
+    "topic": "Data Definition & Schema Management (DDL)",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Synthesize an analogy that combines 'CREATE TABLE', 'Primary Key constraints', and 'Schema Blueprint' to explain database design to a non-technical audience.",  
+    "back_answer": "Imagine designing a house. A **schema blueprint** is the architectural plan (like blueprints for walls and rooms). The **CREATE TABLE** command is like laying the foundation for each room, specifying what objects belong there (e.g., 'bedroom' has a 'bed', '衣柜'). A **Primary Key constraint** acts as a unique identifier—like assigning a specific room number to ensure no two rooms have the same identity. Without this, chaos ensues: you’d never know which room is which!"  
+  },  
+  {  
+    "id": "integrated_create_002",  
+    "topic": "Data Manipulation Operations (DML)",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Design a system that uses 'INSERT INTO' and 'Bulk Data Loading' to automate inventory updates for an e-commerce platform. Explain how data consistency is maintained.",  
+    "back_answer": "System Design: An **inventory automation pipeline** connects supplier APIs to the database. When new products arrive, **Bulk Data Loading** imports CSV files into a staging table via `INSERT INTO`. A validation layer checks for duplicates or invalid SKUs (using UNIQUE constraints). Once verified, data is committed to the main inventory table. Consistency is ensured through transactions: if any step fails (e.g., duplicate SKU), the entire batch rolls back, preventing partial updates."  
+  },  
+  {  
+    "id": "integrated_create_003",  
+    "topic": "Data Retrieval Techniques (DQL)",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Reconstruct the logic of a 'SELECT' query with 'WHERE' and 'ORDER BY' clauses from first principles, as if explaining to someone who knows only basic math.",  
+    "back_answer": "Imagine sorting books in a library. A **SELECT** is like asking, 'Show me all books.' The **WHERE clause** adds filters: 'Show me books where the author is J.K. Rowling' (equivalent to solving an equation: `author = 'J.K. Rowling'`). Then, **ORDER BY** arranges them—like sorting by publication year ascending (`ASC`) or descending (`DESC`), similar to arranging numbers from smallest to largest."  
+  },  
+  {  
+    "id": "integrated_create_004",  
+    "topic": "Transaction Control & Integrity (TCL)",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Invent a metaphor for 'ACID properties' that ties together 'Atomicity', 'Consistency', and 'Durability' in a banking context.",  
+    "back_answer": "Imagine transferring money via an ATM. **Atomicity** is like the machine ensuring the transaction completes fully: your account loses $100, and the recipient’s gains it—no partial steps. **Consistency** ensures the bank’s total funds remain unchanged (no magic creation of money). **Durability** means even if the power cuts mid-transaction, the change persists once confirmed—a receipt is saved like a log entry, guaranteeing the transfer wasn’t lost."  
+  },  
+  {  
+    "id": "integrated_create_005",  
+    "topic": "Data Definition & Schema Management (DDL)",  
+    "bloom_level": "Creating",  
+    "front_prompt": "Create a novel analogy to explain 'CASCADE Option' in 'DROP TABLE' using real-world dependencies.",  
+    "back_answer": "'CASCADE Option' is like tearing down a house with interconnected rooms. If you remove the main wall (drop the table), and the option is set to CASCADE, all dependent elements—like connected shelves (foreign keys) or room decorations (related data)—are automatically removed too. Without it, you’d have orphaned shelves floating in space, violating schema integrity."  
+  }  
+]

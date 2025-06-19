@@ -1,0 +1,58 @@
+[
+  {
+    "id": "integrated_apply_001",
+    "topic": "Data Definition & Schema Management (DDL)",
+    "bloom_level": "Applying",
+    "front_prompt": "Write an SQL statement to create a table named 'Users' with columns 'user_id', 'username', and 'email'. Ensure 'user_id' is the primary key and 'email' has a UNIQUE constraint.",
+    "back_answer": "```sql\nCREATE TABLE Users (\n  user_id INT PRIMARY KEY,\n  username VARCHAR(50) NOT NULL,\n  email VARCHAR(100) UNIQUE\n);\n```\nThe table includes a primary key on 'user_id' and a unique constraint on 'email', ensuring data integrity."
+  },
+  {
+    "id": "integrated_apply_002",
+    "topic": "Data Definition & Schema Management (DDL)",
+    "bloom_level": "Applying",
+    "front_prompt": "You need to add a new column 'registration_date' to the existing 'Users' table. How would you modify the schema using DDL?",
+    "back_answer": "```sql\nALTER TABLE Users ADD COLUMN registration_date DATE;\n```\nThe ALTER TABLE command adds the new column to the table structure without affecting existing data."
+  },
+  {
+    "id": "integrated_apply_003",
+    "topic": "Data Manipulation Operations (DML)",
+    "bloom_level": "Applying",
+    "front_prompt": "Write an SQL query to insert a new user into the 'Users' table with username 'john_doe' and email 'john@example.com'. Explain how to prevent SQL injection.",
+    "back_answer": "```sql\nINSERT INTO Users (username, email) VALUES ('john_doe', 'john@example.com');\n```\nUse parameterized queries or prepared statements instead of string concatenation to prevent SQL injection."
+  },
+  {
+    "id": "integrated_apply_004",
+    "topic": "Data Retrieval Techniques (DQL)",
+    "bloom_level": "Applying",
+    "front_prompt": "Construct a query to retrieve all users with email domains other than 'example.com', sorted by registration date in descending order.",
+    "back_answer": "```sql\nSELECT * FROM Users WHERE email NOT LIKE '%@example.com' ORDER BY registration_date DESC;\n```\nThe query filters emails using a wildcard and sorts results by date."
+  },
+  {
+    "id": "integrated_apply_005",
+    "topic": "Transaction Control & Integrity (TCL)",
+    "bloom_level": "Applying",
+    "front_prompt": "Explain how to ensure atomicity when inserting a new user and updating their registration status in the same transaction.",
+    "back_answer": "Wrap both operations in a transaction with BEGIN; ... COMMIT;. If an error occurs, use ROLLBACK to undo changes. Example:\n```sql\nBEGIN;\nINSERT INTO Users (...);\nUPDATE Status SET ...;\nCOMMIT;\n```\nThis ensures either all changes succeed or none are applied."
+  },
+  {
+    "id": "integrated_apply_006",
+    "topic": "Data Manipulation Operations (DML)",
+    "bloom_level": "Applying",
+    "front_prompt": "Write an SQL query to update the email of user 'john_doe' to 'john_new@example.com', ensuring only the most recent record is updated.",
+    "back_answer": "```sql\nUPDATE Users SET email = 'john_new@example.com' WHERE username = 'john_doe' AND registration_date = (SELECT MAX(registration_date) FROM Users WHERE username = 'john_doe');\n```\nThe subquery ensures only the latest entry for 'john_doe' is updated."
+  },
+  {
+    "id": "integrated_apply_007",
+    "topic": "Data Retrieval Techniques (DQL)",
+    "bloom_level": "Applying",
+    "front_prompt": "Optimize this query: SELECT * FROM Orders WHERE order_date BETWEEN '2023-01-01' AND '2023-12-31'; Explain your optimization strategy.",
+    "back_answer": "Add an index on the 'order_date' column. Example:\n```sql\nCREATE INDEX idx_order_date ON Orders(order_date);\n```\nThis reduces full table scans by enabling faster range queries."
+  },
+  {
+    "id": "integrated_apply_008",
+    "topic": "Transaction Control & Integrity (TCL)",
+    "bloom_level": "Applying",
+    "front_prompt": "Describe a real-world scenario where using SAVEPOINT would be beneficial. Provide an example.",
+    "back_answer": "Scenario: Processing an order with multiple steps (inventory check, payment, shipment). Example:\n```sql\nSAVEPOINT before_payment;\n-- If payment fails:\nROLLBACK TO SAVEPOINT before_payment;\n```\nThis allows partial rollback without losing prior valid changes."
+  }
+]

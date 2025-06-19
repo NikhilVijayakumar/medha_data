@@ -1,0 +1,107 @@
+[  
+  {  
+    "id": "simple_flash_001",  
+    "topic": "Data Definition & Schema Management (DDL)",  
+    "front_prompt": "What is the SQL syntax for creating a new database?",  
+    "back_answer": "`CREATE DATABASE database_name;` — defines a new database with the specified name.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_002",  
+    "topic": "Data Definition & Schema Management (DDL)",  
+    "front_prompt": "What is the purpose of `CREATE TABLE` in SQL?",  
+    "back_answer": "`CREATE TABLE table_name (column_definitions);` — defines a new table with specified columns and constraints.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_003",  
+    "topic": "Data Definition & Schema Management (DDL)",  
+    "front_prompt": "What does the `PRIMARY KEY` constraint enforce?",  
+    "back_answer": "Ensures uniqueness and non-null values for a column or set of columns in a table.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_004",  
+    "topic": "Data Definition & Schema Management (DDL)",  
+    "front_prompt": "What is the syntax to add a new column to an existing table?",  
+    "back_answer": "`ALTER TABLE table_name ADD COLUMN column_definition;` — modifies the table structure by adding a column.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_005",  
+    "topic": "Data Definition & Schema Management (DDL)",  
+    "front_prompt": "What does `DROP TABLE table_name CASCADE` do?",  
+    "back_answer": "Permanently deletes the table and all dependent objects (e.g., foreign key references).",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_006",  
+    "topic": "Data Manipulation Operations (DML)",  
+    "front_prompt": "What is the syntax for inserting a single row into a table?",  
+    "back_answer": "`INSERT INTO table_name (column1, column2) VALUES (value1, value2);` — adds one record to the table.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_007",  
+    "topic": "Data Manipulation Operations (DML)",  
+    "front_prompt": "How do you update specific rows in a table using SQL?",  
+    "back_answer": "`UPDATE table_name SET column = value WHERE condition;` — modifies rows that meet the filter criteria.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_008",  
+    "topic": "Data Manipulation Operations (DML)",  
+    "front_prompt": "What is the purpose of `DELETE FROM table_name WHERE condition;`?",  
+    "back_answer": "Removes rows from a table that satisfy the specified condition.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_009",  
+    "topic": "Data Retrieval Techniques (DQL)",  
+    "front_prompt": "What is the basic syntax for retrieving data from a table?",  
+    "back_answer": "`SELECT column1, column2 FROM table_name;` — retrieves specified columns from the table.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_010",  
+    "topic": "Data Retrieval Techniques (DQL)",  
+    "front_prompt": "How do you sort query results in descending order?",  
+    "back_answer": "`ORDER BY column_name DESC;` — sorts the result set from highest to lowest value.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_011",  
+    "topic": "Transaction Control & Integrity (TCL)",  
+    "front_prompt": "What does `COMMIT;` do in a transaction?",  
+    "back_answer": "Saves all changes made during the transaction to the database permanently.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_012",  
+    "topic": "Transaction Control & Integrity (TCL)",  
+    "front_prompt": "What is the purpose of `SAVEPOINT savepoint_name;`?",  
+    "back_answer": "Creates a named point within a transaction to which you can later roll back.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_013",  
+    "topic": "Transaction Control & Integrity (TCL)",  
+    "front_prompt": "What are the four ACID properties of a transaction?",  
+    "back_answer": "Atomicity, Consistency, Isolation, Durability — ensure reliable processing of database transactions.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_014",  
+    "topic": "Data Definition & Schema Management (DDL)",  
+    "front_prompt": "What is `Schema Evolution` in the context of DDL?",  
+    "back_answer": "The process of modifying a database schema over time to adapt to changing requirements.",  
+    "type": "simple"  
+  },  
+  {  
+    "id": "simple_flash_015",  
+    "topic": "Data Manipulation Operations (DML)",  
+    "front_prompt": "What is a 'soft delete' pattern in data deletion?",  
+    "back_answer": "A technique where records are marked as deleted (e.g., with an `is_deleted` flag) instead of being permanently removed.",  
+    "type": "simple"  
+  }  
+]
