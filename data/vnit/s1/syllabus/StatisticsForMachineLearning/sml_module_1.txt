@@ -1,0 +1,6 @@
+Module 1 : Fundamentals of Probability and Statistics
+Probability spaces, Conditional probability, Independence, Random Variables, Discrete and Continuous
+random variables, Expectation Operator, Functions of random variables, Generating random variables,
+Multivariate Random Variables, Joint distributions of discrete and continuous variables, Functions of several
+random variables, Joint Moments, Generating multivariate random variables
+

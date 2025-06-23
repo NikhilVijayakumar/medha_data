@@ -1,0 +1,3 @@
+Module 2
+Image Segmentation: Region Growing, Edge Based approaches to segmentation, Graph-Cut, Mean-Shift,
+MRFs, Texture Segmentation; Object detection.

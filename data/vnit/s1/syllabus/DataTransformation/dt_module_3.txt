@@ -1,0 +1,4 @@
+Module 3 : Operators for Querying Databases
+Introduction to relational databases, Fundamental concepts of relational rows, tables, and columns, Several
+operators (such as logical and relational), constraints, domains, indexes, stored procedures, primary, foreign and
+unique keys, Understanding group functions

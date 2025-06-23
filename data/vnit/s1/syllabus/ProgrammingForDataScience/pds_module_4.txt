@@ -1,0 +1,4 @@
+Module 4 : Scipy for Mathematical Computing
+Introduction to SciPy, Functions building on top of NumPy, cluster, linalg, signal, optimize, integrate,
+subpackages, SciPy with Bayes Theorem.
+

@@ -1,0 +1,25 @@
+Module 1 : Fundamentals of Probability and Statistics
+Probability spaces, Conditional probability, Independence, Random Variables, Discrete and Continuous
+random variables, Expectation Operator, Functions of random variables, Generating random variables,
+Multivariate Random Variables, Joint distributions of discrete and continuous variables, Functions of several
+random variables, Joint Moments, Generating multivariate random variables
+
+Module 2 : Random Processes - Convergence, Markov Chains and Applications
+Definition, Stationary of random processes, Mean and autocovariance, functions, Independent identicallydistributed sequences, Power spectral density, Gaussian process, Poisson process, Random walk, Convergence
+of Random Processes, Types of convergence, Law of large numbers, Central limit theorem, Monte Carlo
+simulation, Time-homogeneous discrete-time Markov chains, Recurrence, Periodicity, Convergence, Markovchain Monte Carlo, Descriptive statistics, Histogram, Sample mean and variance, Order statistics, Sample
+covariance, Sample covariance matrix
+
+Module 3 : Frequentist Statistics, Regression, Bayesian Statistics and Hypothesis Testing
+Independent identically-distributed sampling, Mean square error, Consistency, Confidence intervals,
+Nonparametric model estimation, Parametric model estimation, Linear Regression models, Least-squares
+estimation, Overfitting, Global warming. Bayesian parametric models, Conjugate prior, Bayesian estimators,
+The hypothesis-testing framework, Parametric testing, Nonparametric testing: The permutation test, Multiple
+testing
+
+Module 4 : Linear Algebra
+Vector space, norm, linear mapping, range, null space, matrix multiplication
+
+Module 5 : Optimization Techniques
+Normal equation, Steepest Descent, Conjugate gradient, Optimality condition, Methods based on a local
+quadratic model, Line search methods

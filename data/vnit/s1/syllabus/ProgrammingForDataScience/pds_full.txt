@@ -1,0 +1,27 @@
+Module 1 : Introduction to Data Science using Python
+What is Data Science, what does a data scientist do? Various examples of Data Science in the industries, How
+Python is deployed for Data Science applications, Various steps in the Data Science process like data
+wrangling, data exploration and selecting the model. Introduction to Python programming language,
+Important Python features, how is Python different from other programming languages, Python installation,
+Anaconda Python distribution for Windows, Linux and Mac, How to run a sample Python script, Python IDE
+working mechanism, Running some Python basic commands, Python variables, data types and keywords.
+
+Module 2 : Python basic constructs
+Introduction to a basic construct in Python, Understanding indentation like tabs and spaces, Python built-in
+data types, Basic operators in Python, Loop and control statements like break, if, for, continue, else, range()
+and more., File Handling (I/O) and Exception Handling, Pandas, Understanding the OOP paradigm like
+encapsulation, inheritance, polymorphism and abstraction ,What are access modifiers, instances, class
+members, Classes and objects, Function parameter and return type functions, Lambda expressions.
+
+Module 3 : NumPy for Data Transformation
+Introduction to mathematical computing in Python, What are arrays and matrices, array indexing, array math,
+Inspecting a NumPy array, NumPy array manipulation
+
+Module 4 : Scipy for Mathematical Computing
+Introduction to SciPy, Functions building on top of NumPy, cluster, linalg, signal, optimize, integrate,
+subpackages, SciPy with Bayes Theorem.
+
+Module 5 : Data manipulation & Data Visualization
+Loading data from various files (.dat, .json, .h5, .txt, .csv, .xlsx etc.), Example applications, Introduction to
+Matplotlib, Using Matplotlib for plotting graphs and charts like Scatter, Bar, Pie, Line etc., Histogram and
+more, Matplotlib APIs

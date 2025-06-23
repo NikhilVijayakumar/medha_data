@@ -1,0 +1,4 @@
+Module 3 : NumPy for Data Transformation
+Introduction to mathematical computing in Python, What are arrays and matrices, array indexing, array math,
+Inspecting a NumPy array, NumPy array manipulation
+

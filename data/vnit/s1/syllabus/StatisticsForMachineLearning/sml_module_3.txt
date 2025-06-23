@@ -1,0 +1,7 @@
+Module 3 : Frequentist Statistics, Regression, Bayesian Statistics and Hypothesis Testing
+Independent identically-distributed sampling, Mean square error, Consistency, Confidence intervals,
+Nonparametric model estimation, Parametric model estimation, Linear Regression models, Least-squares
+estimation, Overfitting, Global warming. Bayesian parametric models, Conjugate prior, Bayesian estimators,
+The hypothesis-testing framework, Parametric testing, Nonparametric testing: The permutation test, Multiple
+testing
+

@@ -1,0 +1,8 @@
+Module 1 : Introduction to Data Science using Python
+What is Data Science, what does a data scientist do? Various examples of Data Science in the industries, How
+Python is deployed for Data Science applications, Various steps in the Data Science process like data
+wrangling, data exploration and selecting the model. Introduction to Python programming language,
+Important Python features, how is Python different from other programming languages, Python installation,
+Anaconda Python distribution for Windows, Linux and Mac, How to run a sample Python script, Python IDE
+working mechanism, Running some Python basic commands, Python variables, data types and keywords.
+

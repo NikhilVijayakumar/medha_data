@@ -1,0 +1,22 @@
+Module 1
+Introduction about computer vision: What is computer vision, advantages and disadvantages of computer
+vision, general applications of computer vision.
+Feature Extraction: Edges - Canny, LOG, DOG; Line detectors (Hough Transform), Corners - Harris and
+Hessian Affine, Orientation Histogram, SIFT, SURF, HOG.
+
+Module 2
+Image Segmentation: Region Growing, Edge Based approaches to segmentation, Graph-Cut, Mean-Shift,
+MRFs, Texture Segmentation; Object detection.
+
+Module 3
+Pattern Analysis: Clustering: K-Means, Mixture of Gaussians, Classification: Discriminant Function,
+Supervised, Un-supervised, Semi-supervised; Classifiers: Bayes, KNN, Dimensionality Reduction: PCA, LDA,
+ICA; Non-parametric methods.
+
+Module 4
+Computational imaging: Image sensor, noise, HDR, super resolution, blur removal, compressive sensing, Depth
+estimation and Multi-camera views: projective geometry, binocular stereo, stereo matching, Perspective,
+Binocular Stereopsis: Camera and Epipolar Geometry; Homography, Rectification, DLT, RANSAC, 3-D
+reconstruction framework; Auto-calibration.
+
+Case studies: ADAS, 3D modeling from LiDar point clouds etc.

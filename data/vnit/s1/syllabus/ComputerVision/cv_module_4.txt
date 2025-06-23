@@ -1,0 +1,6 @@
+Module 4
+Computational imaging: Image sensor, noise, HDR, super resolution, blur removal, compressive sensing, Depth
+estimation and Multi-camera views: projective geometry, binocular stereo, stereo matching, Perspective,
+Binocular Stereopsis: Camera and Epipolar Geometry; Homography, Rectification, DLT, RANSAC, 3-D
+reconstruction framework; Auto-calibration.
+

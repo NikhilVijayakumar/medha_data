@@ -1,0 +1,34 @@
+Module 1 : Introduction to Querying Language and RDBMS
+Introduction to Structured Query Language, Various types of databases, Distinction between client server and
+file server databases, Understanding SQL Server Management Studio, SQL Table basics, Data types and
+functions, Transaction-SQL, Authentication for Windows, Data control language, Identification of the keywords
+in SQL
+
+Module 2 : Database normalization and entity-relationship model
+Entity-Relationship Model, Entity and Entity Set, Attributes and types of Attributes, Relationship Sets, Degree
+of Relationship, Mapping Cardinalities, One-to-One, One-to-Many, Many-to-one, Many-to- many, Symbols
+used in E-R Notation, Normalization and functional Dependencies: 1NF, 2NF, 3NF, Boyce Codd NF, 4NF and
+5NF
+
+Module 3 : Operators for Querying Databases
+Introduction to relational databases, Fundamental concepts of relational rows, tables, and columns, Several
+operators (such as logical and relational), constraints, domains, indexes, stored procedures, primary, foreign and
+unique keys, Understanding group functions
+
+Module 4 : Querying Databases using Join, tables, and variables
+Advanced concepts of SQL tables, SQL functions, Operators & queries, Table creation, Data retrieval from
+tables, Combining rows from tables using inner, outer, cross, and self joins, Deploying operators such as
+intersect, except, union, Temporary table creation, Set operator rules, Table Variables, Understanding SQL
+functions, Scalar functions, Aggregate functions, Functions that can be used on different datasets, such as
+numbers, characters, strings, and dates, Inline SQL functions, General functions, Duplicate Functions,
+Understanding SQL subqueries and their rules, Statements and operators with which subqueries can be used,
+Using the set clause to modify subqueries, Understanding different types of subqueries, such as where, select,
+insert, update, delete, etc., Methods to create and view subqueries
+
+Module 5 : Advanced Queries for Large Databases
+Learning SQL views, Methods of creating, using, altering, renaming, dropping, and modifying views,
+Understanding stored procedures and their key benefits, Working with stored procedures, Studying user-defined
+functions, Error handling, User-defined functions and rank, Types of UDFs such as scalar, Inline table value,
+Multi-statement table, Stored procedures, Triggers, Records grouping, searching, sorting, modifying data,
+Clustered indexes creation, Use of indexes to cover queries, Common table expressions, Index guidelines,
+Python as front end, Large datasets, Querying using No-SQL

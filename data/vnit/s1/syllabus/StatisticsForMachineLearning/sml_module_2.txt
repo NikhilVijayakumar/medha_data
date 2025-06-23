@@ -1,0 +1,6 @@
+Module 2 : Random Processes - Convergence, Markov Chains and Applications
+Definition, Stationary of random processes, Mean and autocovariance, functions, Independent identicallydistributed sequences, Power spectral density, Gaussian process, Poisson process, Random walk, Convergence
+of Random Processes, Types of convergence, Law of large numbers, Central limit theorem, Monte Carlo
+simulation, Time-homogeneous discrete-time Markov chains, Recurrence, Periodicity, Convergence, Markovchain Monte Carlo, Descriptive statistics, Histogram, Sample mean and variance, Order statistics, Sample
+covariance, Sample covariance matrix
+

@@ -1,0 +1,10 @@
+Module 4 : Querying Databases using Join, tables, and variables
+Advanced concepts of SQL tables, SQL functions, Operators & queries, Table creation, Data retrieval from
+tables, Combining rows from tables using inner, outer, cross, and self joins, Deploying operators such as
+intersect, except, union, Temporary table creation, Set operator rules, Table Variables, Understanding SQL
+functions, Scalar functions, Aggregate functions, Functions that can be used on different datasets, such as
+numbers, characters, strings, and dates, Inline SQL functions, General functions, Duplicate Functions,
+Understanding SQL subqueries and their rules, Statements and operators with which subqueries can be used,
+Using the set clause to modify subqueries, Understanding different types of subqueries, such as where, select,
+insert, update, delete, etc., Methods to create and view subqueries
+

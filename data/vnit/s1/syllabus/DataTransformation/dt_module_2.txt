@@ -1,0 +1,6 @@
+Module 2 : Database normalization and entity-relationship model
+Entity-Relationship Model, Entity and Entity Set, Attributes and types of Attributes, Relationship Sets, Degree
+of Relationship, Mapping Cardinalities, One-to-One, One-to-Many, Many-to-one, Many-to- many, Symbols
+used in E-R Notation, Normalization and functional Dependencies: 1NF, 2NF, 3NF, Boyce Codd NF, 4NF and
+5NF
+

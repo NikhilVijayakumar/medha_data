@@ -1,0 +1,6 @@
+Module 1 : Introduction to Querying Language and RDBMS
+Introduction to Structured Query Language, Various types of databases, Distinction between client server and
+file server databases, Understanding SQL Server Management Studio, SQL Table basics, Data types and
+functions, Transaction-SQL, Authentication for Windows, Data control language, Identification of the keywords
+in SQL
+

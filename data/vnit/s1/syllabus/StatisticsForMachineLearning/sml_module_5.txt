@@ -1,0 +1,3 @@
+Module 5 : Optimization Techniques
+Normal equation, Steepest Descent, Conjugate gradient, Optimality condition, Methods based on a local
+quadratic model, Line search methods

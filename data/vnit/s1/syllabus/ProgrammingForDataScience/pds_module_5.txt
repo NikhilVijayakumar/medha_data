@@ -1,0 +1,4 @@
+Module 5 : Data manipulation & Data Visualization
+Loading data from various files (.dat, .json, .h5, .txt, .csv, .xlsx etc.), Example applications, Introduction to
+Matplotlib, Using Matplotlib for plotting graphs and charts like Scatter, Bar, Pie, Line etc., Histogram and
+more, Matplotlib APIs

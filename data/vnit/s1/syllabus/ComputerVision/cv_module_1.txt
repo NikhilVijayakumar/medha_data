@@ -1,0 +1,6 @@
+Module 1
+Introduction about computer vision: What is computer vision, advantages and disadvantages of computer
+vision, general applications of computer vision.
+Feature Extraction: Edges - Canny, LOG, DOG; Line detectors (Hough Transform), Corners - Harris and
+Hessian Affine, Orientation Histogram, SIFT, SURF, HOG.
+

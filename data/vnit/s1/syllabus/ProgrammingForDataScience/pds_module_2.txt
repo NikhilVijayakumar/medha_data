@@ -1,0 +1,6 @@
+Module 2 : Python basic constructs
+Introduction to a basic construct in Python, Understanding indentation like tabs and spaces, Python built-in
+data types, Basic operators in Python, Loop and control statements like break, if, for, continue, else, range()
+and more., File Handling (I/O) and Exception Handling, Pandas, Understanding the OOP paradigm like
+encapsulation, inheritance, polymorphism and abstraction ,What are access modifiers, instances, class
+members, Classes and objects, Function parameter and return type functions, Lambda expressions.

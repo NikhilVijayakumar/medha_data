@@ -1,0 +1,7 @@
+Module 5 : Advanced Queries for Large Databases
+Learning SQL views, Methods of creating, using, altering, renaming, dropping, and modifying views,
+Understanding stored procedures and their key benefits, Working with stored procedures, Studying user-defined
+functions, Error handling, User-defined functions and rank, Types of UDFs such as scalar, Inline table value,
+Multi-statement table, Stored procedures, Triggers, Records grouping, searching, sorting, modifying data,
+Clustered indexes creation, Use of indexes to cover queries, Common table expressions, Index guidelines,
+Python as front end, Large datasets, Querying using No-SQL
