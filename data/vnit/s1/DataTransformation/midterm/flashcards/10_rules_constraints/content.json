@@ -1,9 +1,4 @@
 [
-    "10_rules_constraints_analyzing_flashcards_qwen3-14b.json",
-    "10_rules_constraints_applying_flashcards_qwen3-14b.json",
-    "10_rules_constraints_bloom_create_flashcards_qwen3-14b.json",
-    "10_rules_constraints_evaluating_flashcards_qwen3-14b.json",
     "10_rules_constraints_remembering_flashcards_qwen3-14b.json",
-    "10_rules_constraints_simple_flashcard_qwen3-14b.json",
-    "10_rules_constraints_understanding_flashcards_qwen3-14b.json"
+    "10_rules_constraints_simple_flashcard_qwen3-14b.json"
 ]

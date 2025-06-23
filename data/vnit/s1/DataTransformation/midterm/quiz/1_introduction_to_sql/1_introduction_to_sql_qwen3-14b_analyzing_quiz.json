@@ -7,9 +7,9 @@
       "id": "q_analyze_001",
       "question": "Consider a Students table with (StudentID [PK], Name, Major) and an Enrollment table with (EnrollmentID, StudentID [FK], CourseID [FK], Grade). If the foreign key constraint on Enrollment.StudentID is removed, which of the following outcomes would **definitely** occur? (Select all that apply)",
       "options": [
-        {"id": "opt1", "text": "Referential integrity between Students and Enrollment tables will be enforced automatically."],
+        {"id": "opt1", "text": "Referential integrity between Students and Enrollment tables will be enforced automatically."},
         {"id": "opt2", "text": "Enrollment records may reference non-existent StudentIDs, leading to orphaned data."},
-        {"id": "opt3", "text": "The primary key on the Students.StudentID column will become invalid."],
+        {"id": "opt3", "text": "The primary key on the Students.StudentID column will become invalid."},
         {"id": "opt4", "text": "SQL queries joining Students and Enrollment tables will fail syntax checks."},
         {"id": "opt5", "text": "Data duplication between StudentID in Students and Enrollment tables will be prevented automatically."}
       ],
@@ -24,7 +24,7 @@
         {"id": "optB", "text": "ALTER TABLE Customers ADD CONSTRAINT fk_order FOREIGN KEY (OrderID) REFERENCES Orders(OrderID);"},
         {"id": "optC", "text": "CREATE TABLE Orders (OrderID INT, CustomerID INT, FOREIGN KEY (CustomerID) REFERENCES Customers);"},
         {"id": "optD", "text": "ALTER TABLE Orders ADD CONSTRAINT fk_customer UNIQUE (CustomerID) REFERENCES Customers(CustomerID);"},
-        {"id": "optE", "text": "CREATE TABLE Orders (... ) WITH (FOREIGN KEY = CustomerID -> Customers.CustomerID);}
+        {"id": "optE", "text": "CREATE TABLE Orders (... ) WITH (FOREIGN KEY = CustomerID -> Customers.CustomerID);"}
       ],
       "correctOptionIds": ["optA"],
       "explanation": "Option A uses proper syntax for adding a foreign key constraint. Option B references OrderID in Customers, which doesn't exist. Option C's CREATE TABLE syntax is invalid; FOREIGN KEY must specify the referenced column explicitly. Option D incorrectly combines UNIQUE and FOREIGN KEY constraints. Option E uses non-standard SQL syntax."
@@ -34,7 +34,7 @@
       "question": "Evaluate this SQL query for logical errors: SELECT StudentID, Name FROM Students WHERE Major = (SELECT Major FROM Courses WHERE CourseName = 'Database Systems'). Which of the following is a critical flaw in this query?",
       "options": [
         {"id": "optX", "text": "It will return students with any major matching a course's major attribute."},
-        {"id": "optY", "text": "The subquery may return multiple values, causing an error in the WHERE clause."],
+        {"id": "optY", "text": "The subquery may return multiple values, causing an error in the WHERE clause."},
         {"id": "optZ", "text": "It uses invalid SQL syntax for correlated subqueries."},
         {"id": "optAA", "text": "The query assumes that Courses.Major is a valid column name."},
         {"id": "optBB", "text": "It will always return an empty result set if no course has 'Database Systems' as its CourseName."}
@@ -47,7 +47,7 @@
       "question": "Which of these scenarios demonstrate **normalization** principles? Analyze for both functional dependencies and redundancy elimination.",
       "options": [
         {"id": "optP", "text": "Storing customer address details (street, city, zip) in a separate Addresses table linked via CustomerID."},
-        {"id": "optQ", "text": "Repeating product prices in every order line item record instead of referencing a Products table."],
+        {"id": "optQ", "text": "Repeating product prices in every order line item record instead of referencing a Products table."},
         {"id": "optR", "text": "Using a single 'Notes' column to store all customer information in the Customers table."},
         {"id": "optS", "text": "Creating multiple tables with identical columns for different departments (e.g., Sales_2023, Sales_2024)."},
         {"id": "optT", "text": "Storing employee supervisor relationships as a separate Supervisors table instead of embedding manager names in the Employees table."}

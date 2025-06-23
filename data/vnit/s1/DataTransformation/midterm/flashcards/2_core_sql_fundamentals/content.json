@@ -1,9 +1,5 @@
 [
-    "2_core_sql_fundamentals_analyzing_flashcards_qwen3-14b.json",
-    "2_core_sql_fundamentals_applying_flashcards_qwen3-14b.json",
-    "2_core_sql_fundamentals_bloom_create_flashcards_qwen3-14b.json",
-    "2_core_sql_fundamentals_evaluating_flashcards_qwen3-14b.json",
     "2_core_sql_fundamentals_remembering_flashcards_qwen3-14b.json",
-    "2_core_sql_fundamentals_simple_flashcard_qwen3-14b.json",
-    "2_core_sql_fundamentals_understanding_flashcards_qwen3-14b.json"
+    "2_core_sql_fundamentals_simple_flashcard_qwen3-14b.json"
+
 ]

@@ -1,9 +1,4 @@
 [
-    "12_entity_relationship_model_analyzing_flashcards_qwen3-14b.json",
-    "12_entity_relationship_model_applying_flashcards_qwen3-14b.json",
-    "12_entity_relationship_model_bloom_create_flashcards_qwen3-14b.json",
-    "12_entity_relationship_model_evaluating_flashcards_qwen3-14b.json",
     "12_entity_relationship_model_remembering_flashcards_qwen3-14b.json",
-    "12_entity_relationship_model_simple_flashcard_qwen3-14b.json",
-    "12_entity_relationship_model_understanding_flashcards_qwen3-14b.json"
+    "12_entity_relationship_model_simple_flashcard_qwen3-14b.json"
 ]

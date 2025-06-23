@@ -1,9 +1,4 @@
 [
-    "11_database_normalisation_analyzing_flashcards_qwen3-14b.json",
-    "11_database_normalisation_applying_flashcards_qwen3-14b.json",
-    "11_database_normalisation_bloom_create_flashcards_qwen3-14b.json",
-    "11_database_normalisation_evaluating_flashcards_qwen3-14b.json",
     "11_database_normalisation_remembering_flashcards_qwen3-14b.json",
-    "11_database_normalisation_simple_flashcard_qwen3-14b.json",
-    "11_database_normalisation_understanding_flashcards_qwen3-14b.json"
+    "11_database_normalisation_simple_flashcard_qwen3-14b.json"
 ]
