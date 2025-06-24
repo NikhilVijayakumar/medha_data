@@ -1,0 +1,9 @@
+[  
+    {"source": "Module 5: Advanced Queries for Large Databases (Continued)", "type": "prerequisite"},  
+    {"source": "4. SQL Server Programming Constructs", "type": "sequential"},  
+    {"source": "4.1 Conditional Logic (`IF`/`ELSE` Statements)", "type": "prerequisite"},  
+    {"source": "4.2 Loops (`WHILE` Condition)", "type": "prerequisite"},  
+    {"source": "4.3 Dynamic SQL", "type": "advanced_application_of"},  
+    {"source": "4.4 Triggers", "type": "advanced_application_of"},  
+    {"source": "4.5 User-Defined Functions (UDFs) - Brief Introduction", "type": "conceptual_support"}  
+]

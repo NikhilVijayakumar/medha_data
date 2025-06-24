@@ -1,0 +1,5 @@
+[  
+    {"source": "Module 4: Querying Databases Using Joins, Tables, and Variables", "type": "prerequisite"},  
+    {"source": "Advanced SQL Functions: Text and String Manipulation", "type": "sequential"},  
+    {"source": "Operators for Combining Query Results", "type": "advanced_application_of"}  
+]

@@ -1,0 +1,28 @@
+```json
+{
+  "keywords": [
+    "Text and String Manipulation",
+    "LEN Function",
+    "LEFT Function",
+    "RIGHT Function",
+    "SUBSTRING Function",
+    "UPPER Function",
+    "LOWER Function",
+    "CHARINDEX Function",
+    "TRIM Function",
+    "LTRIM Function",
+    "RTRIM Function",
+    "CONCAT Function",
+    "STRING_SPLIT Table-Valued Function",
+    "REPLACE Function",
+    "STUFF Function",
+    "FORMAT Function",
+    "Collation Sensitivity",
+    "Data Cleaning",
+    "String Standardization",
+    "Substring Extraction",
+    "Case Conversion",
+    "Delimiter-Based String Splitting"
+  ]
+}
+```

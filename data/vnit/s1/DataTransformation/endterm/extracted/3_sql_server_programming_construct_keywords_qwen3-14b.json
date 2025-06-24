@@ -1,0 +1,25 @@
+```json
+{
+  "keywords": [
+    "Conditional Logic",
+    "IF EXISTS Statement",
+    "IF...ELSE Construct",
+    "WHILE Loop",
+    "Row-by-Row Processing",
+    "Set-Based Operations",
+    "Dynamic SQL Constructs",
+    "SP_EXECUTESQL Procedure",
+    "Parameterization (Dynamic SQL)",
+    "Security (SQL Injection Prevention)",
+    "Triggers (DML Events)",
+    "Trigger Execution Mechanism",
+    "Pseudo Tables (inserted, deleted)",
+    "Audit Logging with Triggers",
+    "Data Integrity Enforcement",
+    "User-Defined Functions (UDFs)",
+    "Inline Table-Valued Functions (iTVFs)",
+    "Multi-Statement Table-Valued Functions (mTVFs)",
+    "Scalar Functions"
+  ]
+}
+```

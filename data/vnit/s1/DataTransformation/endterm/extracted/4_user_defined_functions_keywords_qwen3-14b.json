@@ -1,0 +1,29 @@
+```json
+{
+  "keywords": [
+    "User-Defined Functions (UDFs)",
+    "Scalar Functions",
+    "Table-Valued Functions (TVFs)",
+    "Inline Table-Valued Function (iTVF)",
+    "Multi-Statement Table-Valued Function (mTVF)",
+    "Function Definition Syntax",
+    "RETURNS Clause",
+    "RETURN Statement",
+    "Parameter Passing",
+    "Local Variable Declaration",
+    "Conditional Logic in Functions",
+    "String Manipulation Functions",
+    "Date/Time Manipulation Functions",
+    "DBO Schema Prefixing",
+    "ALTER FUNCTION Command",
+    "SP_RENAME Procedure",
+    "Indexing Strategies",
+    "Clustered Index",
+    "Non-Clustered Index",
+    "SET STATISTICS IO ON",
+    "Covering Queries",
+    "SYS.indexes System View",
+    "SYS.tables System View"
+  ]
+}
+```

@@ -1,0 +1,49 @@
+[  
+  {  
+    "topic_name": "User-Defined Functions (UDFs) in SQL",  
+    "sub_topics": [  
+      {  
+        "name": "Scalar Function Implementation",  
+        "keywords": ["SCALAR FUNCTION", "RETURN VALUE", "PARAMETERS", "DECLARE VARIABLE", "FUNCTION SYNTAX", "ROW-BY-ROW PROCESSING", "PERFORMANCE CONSIDERATIONS"]  
+      },  
+      {  
+        "name": "Table-Valued Functions (TVFs)",  
+        "keywords": ["TABLE-VALUED FUNCTION", "RETURNS TABLE", "INLINE TVF", "MULTI-STATEMENT TVF", "TABLE VARIABLE", "INSERT INTO @TABLE", "COMPLEX LOGIC"]  
+      },  
+      {  
+        "name": "General UDF Concepts & Management",  
+        "keywords": ["GO BATCH TERMINATOR", "DBO SCHEMA PREFIX", "ALTER FUNCTION", "SP_RENAME", "FUNCTION RENAMING", "OBJECT DEPENDENCIES", "SCHEMA RESOLUTION"]  
+      }  
+    ]  
+  },  
+  {  
+    "topic_name": "Database Indexing Strategies",  
+    "sub_topics": [  
+      {  
+        "name": "Clustered Indexes",  
+        "keywords": ["CLUSTERED INDEX", "PHYSICAL STORAGE ORDER", "PRIMARY KEY", "UNIQUE VALUES", "RANGE SCANS", "ORDER BY OPTIMIZATION"]  
+      },  
+      {  
+        "name": "Non-Clustered Indexes",  
+        "keywords": ["NON-CLUSTERED INDEX", "ROW LOCATORS", "SEPARATE B-TREE STRUCTURE", "FREQUENT WHERE CLAUSES", "COVERING QUERIES", "SELECTIVITY"]  
+      },  
+      {  
+        "name": "Index Analysis & Management",  
+        "keywords": ["SYS.INDEXES", "SYS.TABLES", "OBJECT_ID()", "INDEX TYPE DESC", "I/O STATISTICS", "PERFORMANCE TUNING", "FILL FACTOR"]  
+      }  
+    ]  
+  },  
+  {  
+    "topic_name": "Advanced SQL Function Applications",  
+    "sub_topics": [  
+      {  
+        "name": "Scalar UDF Use Cases",  
+        "keywords": ["ARITHMETIC OPERATIONS", "CONDITIONAL LOGIC (IF-ELSE)", "STRING MANIPULATION", "DATE DIFFERENCE CALCULATIONS", "COLUMN-WISE TRANSFORMATIONS"]  
+      },  
+      {  
+        "name": "TVF Implementation Examples",  
+        "keywords": ["INLINE TVF SYNTAX", "MULTI-STATEMENT TABLE VARIABLE", "PARAMETERIZED VIEWS", "EMPLOYEE DATA FILTERING", "TOP N RESULTS"]  
+      }  
+    ]  
+  }  
+]

@@ -1,0 +1,22 @@
+{  
+  "keywords": [  
+    "Aggregate Functions (MIN(), MAX())",  
+    "GROUP BY Clause",  
+    "Correlated Subqueries",  
+    "Nested Subqueries",  
+    "Derived Tables/Inline Views",  
+    "Data Retrieval Techniques",  
+    "Aggregation Methods",  
+    "Stored Procedures",  
+    "Parameterized Stored Procedures",  
+    "ALTER PROCEDURE Statement",  
+    "DROP PROCEDURE Statement",  
+    "Error Handling (TRY...CATCH Blocks)",  
+    "Triggers",  
+    "User-Defined Functions (UDFs)",  
+    "Scalar Functions",  
+    "Inline Table-Valued Functions (iTVFs)",  
+    "Multi-Statement Table-Valued Functions (mTVFs)",  
+    "Indexing Strategies"  
+  ]  
+}

@@ -1,0 +1,27 @@
+[  
+    {  
+        "topic_name": "Advanced SQL Server Programming Constructs",  
+        "sub_topics": [  
+            {  
+                "name": "Conditional Control Structures in T-SQL",  
+                "keywords": ["IF/ELSE", "IF EXISTS", "BOOLEAN EXPRESSIONS", "EXISTENCE CHECKS", "COUNT(*)", "CONDITIONAL EXECUTION", "EFFICIENCY TRADEOFFS"]  
+            },  
+            {  
+                "name": "Iterative Processing with WHILE Loops",  
+                "keywords": ["WHILE LOOP", "ITERATIVE LOGIC", "ROW-BY-ROW PROCESSING", "SET-BASED OPERATIONS", "PERFORMANCE CONSIDERATIONS", "CONTROL FLOW STATEMENTS"]  
+            },  
+            {  
+                "name": "Dynamic SQL Execution Strategies",  
+                "keywords": ["SP_EXECUTESQL", "PARAMETERIZED QUERIES", "SQL INJECTION PREVENTION", "RUNTIME QUERY CONSTRUCTION", "DYNAMIC OBJECT REFERENCE", "EXECUTION PLAN REUSE"]  
+            },  
+            {  
+                "name": "Event-Driven Trigger Implementation",  
+                "keywords": ["DML TRIGGERS", "INSERTED/DELETED TABLES", "AUDIT LOGGING", "AUTOMATIC EXECUTION", "TRIGGER NESTING", "DATA INTEGRITY ENFORCEMENT"]  
+            },  
+            {  
+                "name": "User-Defined Functions (UDFs) Overview",  
+                "keywords": ["SCALAR FUNCTIONS", "TABLE-VALUED FUNCTIONS", "INLINE TVF", "MULTI-STATEMENT TVF", "REUSABLE LOGIC", "QUERY INTEGRATION"]  
+            }  
+        ]  
+    }  
+]

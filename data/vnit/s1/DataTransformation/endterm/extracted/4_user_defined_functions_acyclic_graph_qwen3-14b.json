@@ -1,0 +1,11 @@
+[  
+  {"source": "User-Defined Functions (UDFs)", "type": "prerequisite"},  
+  {"source": "Scalar Functions", "type": "sequential"},  
+  {"source": "Table-Valued Functions (TVFs)", "type": "advanced_application_of"},  
+  {"source": "Inline Table-Valued Functions (iTVFs)", "type": "conceptual_support"},  
+  {"source": "Multi-Statement Table-Valued Functions (mTVFs)", "type": "sequential"},  
+  {"source": "Indexing", "type": "prerequisite"},  
+  {"source": "Purpose of Indexes", "type": "conceptual_support"},  
+  {"source": "Types of Indexes", "type": "advanced_application_of"},  
+  {"source": "Viewing Indexes with System Catalog Views", "type": "sequential"}  
+]

@@ -1,0 +1,7 @@
+[  
+    {"source": "Module 4: Querying Databases Using Joins, Tables, and Variables", "type": "prerequisite"},  
+    {"source": "2. Operators & Queries: Data Retrieval and Aggregation", "type": "sequential"},  
+    {"source": "3. Subqueries (Continued)", "type": "advanced_application_of"},  
+    {"source": "Module 5: Advanced Queries for Large Databases", "type": "prerequisite"},  
+    {"source": "2. Stored Procedures", "type": "advanced_application_of"}  
+]

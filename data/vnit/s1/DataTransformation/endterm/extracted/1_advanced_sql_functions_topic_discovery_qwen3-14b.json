@@ -1,0 +1,39 @@
+[  
+  {  
+    "topic_name": "Text and String Data Manipulation in SQL",  
+    "sub_topics": [  
+      {  
+        "name": "Character Length Extraction Functions",  
+        "keywords": ["LEN", "LEFT", "RIGHT", "SUBSTRING", "character count", "string slicing"]  
+      },  
+      {  
+        "name": "Case Conversion Operations",  
+        "keywords": ["UPPER", "LOWER", "case normalization", "text standardization", "collation sensitivity"]  
+      },  
+      {  
+        "name": "Substring Positioning and Search Functions",  
+        "keywords": ["CHARINDEX", "substring search", "position detection", "space extraction", "first name parsing"]  
+      },  
+      {  
+        "name": "Whitespace Trimming Utilities",  
+        "keywords": ["TRIM", "LTRIM", "RTRIM", "whitespace removal", "data cleaning", "string sanitation"]  
+      },  
+      {  
+        "name": "String Concatenation and Composition",  
+        "keywords": ["CONCAT", "string joining", "composite keys", "NULL handling", "display formatting"]  
+      },  
+      {  
+        "name": "Delimited String Splitting Functions",  
+        "keywords": ["STRING_SPLIT", "table-valued function", "tag normalization", "data decomposition", "row expansion"]  
+      },  
+      {  
+        "name": "Advanced Replacement Operations",  
+        "keywords": ["REPLACE", "STUFF", "pattern substitution", "string transformation", "abbreviation standardization"]  
+      },  
+      {  
+        "name": "Performance and Implementation Considerations",  
+        "keywords": ["query performance", "ETL processes", "collation sensitivity", "regex alternatives", "function overhead"]  
+      }  
+    ]  
+  }  
+]

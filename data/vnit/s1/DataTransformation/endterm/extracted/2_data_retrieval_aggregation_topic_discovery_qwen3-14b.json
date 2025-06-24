@@ -1,0 +1,61 @@
+[  
+    {  
+        "topic_name": "SQL Data Retrieval & Aggregation Techniques",  
+        "sub_topics": [  
+            {  
+                "name": "Aggregate Functions for Date Analysis",  
+                "keywords": ["MIN()", "MAX()", "GROUP BY", "Customer Order Dates", "Aggregation"]  
+            },  
+            {  
+                "name": "Correlated Subqueries in Aggregation",  
+                "keywords": ["Correlated Subquery", "Performance Impact", "Execution Plan", "Outer Query Dependency", "Efficiency Trade-offs"]  
+            },  
+            {  
+                "name": "Nested Subquery Implementation",  
+                "keywords": ["IN Operator", "Multi-Row Filtering", "Subquery Execution Order", "Department Filtering Example"]  
+            },  
+            {  
+                "name": "Derived Tables and Inline Views",  
+                "keywords": ["FROM Clause Subqueries", "Pre-Aggregation", "JOIN with Derived Tables", "Employee Count per Department"]  
+            }  
+        ]  
+    },  
+    {  
+        "topic_name": "Advanced SQL Features – Stored Procedures",  
+        "sub_topics": [  
+            {  
+                "name": "Stored Procedure Overview and Benefits",  
+                "keywords": ["Reusability", "Performance Optimization", "Security Advantages", "Centralized Logic"]  
+            },  
+            {  
+                "name": "Creating and Modifying Stored Procedures",  
+                "keywords": ["CREATE PROCEDURE Syntax", "ALTER PROCEDURE", "Parameterization", "Control Flow in SPs"]  
+            },  
+            {  
+                "name": "Parameterized Queries with Stored Procedures",  
+                "keywords": ["Input Parameters", "@DEPTNO INT", "@ENAME VARCHAR(20)", "Dynamic Filtering", "EXEC Command"]  
+            },  
+            {  
+                "name": "Error Handling and Execution Control",  
+                "keywords": ["TRY...CATCH Blocks", "Transaction Management", "Error Response Mechanisms", "Stored Procedure Debugging"]  
+            },  
+            {  
+                "name": "Indexing and Optimization Concepts (Brief Introduction)",  
+                "keywords": ["Clustered Indexes", "Non-Clustered Indexes", "Query Performance Tuning", "Data Retrieval Speed"]  
+            }  
+        ]  
+    },  
+    {  
+        "topic_name": "Advanced SQL Constructs and Extensions",  
+        "sub_topics": [  
+            {  
+                "name": "User-Defined Functions (UDFs)",  
+                "keywords": ["Scalar UDFs", "Inline Table-Valued Functions", "Multi-Statement TVFs", "SQL Query Integration"]  
+            },  
+            {  
+                "name": "Database Triggers and Automation",  
+                "keywords": ["Trigger Events (INSERT/UPDATE/DELETE)", "Automated Data Validation", "Referential Integrity Checks"]  
+            }  
+        ]  
+    }  
+]
