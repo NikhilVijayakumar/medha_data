@@ -99,14 +99,14 @@ if __name__ == "__main__":
     processor = DirectoryProcessor(settings.INPUT_CONFIG_PATH)
 
     # Step 1: Scan directory and generate content.json
-    filenames = processor.scan_directory()
+    #filenames = processor.scan_directory()
 
     # Step 2: Process content.json and generate topic.json
     #processor.process_filenames(filenames)
 
-    # content_json_path = r""
-    # with open(content_json_path, 'r') as f:
-    #     data = json.load(f)
+    content_json_path = r"E:\Python\medha_data\data\vnit\s1\DataTransformation\midterm\notes\content.json"
+    with open(content_json_path, 'r') as f:
+        data = json.load(f)
 
     # Step 3: Create folders for each topic with an empty content.json inside
-    #processor.create_topic_directories_with_json(data)
+    processor.create_topic_directories_with_json(data)
