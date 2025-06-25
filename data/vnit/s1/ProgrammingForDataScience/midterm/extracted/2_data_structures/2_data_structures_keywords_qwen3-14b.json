@@ -1,0 +1,29 @@
+{
+  "keywords": [
+    "Data Structures",
+    "Python Lists",
+    "Python Dictionaries",
+    "Python Tuples",
+    "Python Sets",
+    "Ordered Sequences",
+    "Mutable Data Structures",
+    "Heterogeneous Elements",
+    "Indexing and Slicing",
+    "List Concatenation and Repetition",
+    "Nested Lists",
+    "List Methods (Append, Insert, Sort, Reverse, Pop, Remove, Count, Index, Extend, Clear)",
+    "List Comprehensions",
+    "Unordered Collections (Python 3.7+)",
+    "Key-Value Pairs",
+    "Immutable Data Structures",
+    "Dictionary Keys and Values",
+    "Dictionary Methods (Keys, Values, Items, Get, Update, Pop, Popitem, Clear)",
+    "Dictionary Comprehensions",
+    "Tuple Packing and Unpacking",
+    "Set Operations (Union, Intersection, Difference, Symmetric Difference)",
+    "Unique Elements",
+    "Mutable Sets",
+    "Set Methods (Add, Update, Remove, Discard, Pop, Clear)",
+    "Set Comprehensions"
+  ]
+}

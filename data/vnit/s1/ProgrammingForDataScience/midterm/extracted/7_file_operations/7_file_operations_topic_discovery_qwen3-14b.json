@@ -1,0 +1,75 @@
+[  
+  {  
+    "topic_name": "Text File Operations in Python",  
+    "sub_topics": [  
+      {  
+        "name": "File Modes and Management",  
+        "keywords": ["open()", "close()", "with statement", "'r'", "'w'", "'a'", "'x'"]  
+      },  
+      {  
+        "name": "Reading Text Files",  
+        "keywords": ["read()", "readline()", "for loop iteration", ".seek()", "file pointer"]  
+      },  
+      {  
+        "name": "Writing and Appending to Text Files",  
+        "keywords": ["write()", "writelines()", "append mode", "overwriting files", "file encoding"]  
+      }  
+    ]  
+  },  
+  {  
+    "topic_name": "Image Processing with Pillow (PIL)",  
+    "sub_topics": [  
+      {  
+        "name": "Image Object Creation and Attributes",  
+        "keywords": ["Image.open()", "filename", "size", "mode", "format_description"]  
+      },  
+      {  
+        "name": "Image Manipulation Techniques",  
+        "keywords": ["crop()", "resize()", "paste()", "RGBA transparency", "convert() to grayscale"]  
+      },  
+      {  
+        "name": "Creating New Images Programmatically",  
+        "keywords": ["Image.new()", "RGB mode", "color parameters", "image saving formats"]  
+      }  
+    ]  
+  },  
+  {  
+    "topic_name": "PDF Text Extraction with PyPDF2",  
+    "sub_topics": [  
+      {  
+        "name": "Loading and Analyzing PDFs",  
+        "keywords": ["PdfReader()", "'rb' mode", "page count", "extract_text()"]  
+      },  
+      {  
+        "name": "Error Handling in PDF Processing",  
+        "keywords": ["FileNotFoundError", "exception handling", "page indexing", "text truncation"]  
+      }  
+    ]  
+  },  
+  {  
+    "topic_name": "CSV File Handling and Data Manipulation",  
+    "sub_topics": [  
+      {  
+        "name": "Basic CSV Operations with Built-in Module",  
+        "keywords": ["csv.reader()", "csv.writer()", "writerows()", "newline parameter"]  
+      },  
+      {  
+        "name": "Advanced CSV Processing with Pandas",  
+        "keywords": ["pd.read_csv()", "DataFrame", "df.to_csv()", "index=False", "data structures"]  
+      }  
+    ]  
+  },  
+  {  
+    "topic_name": "Fundamental File Management Principles",  
+    "sub_topics": [  
+      {  
+        "name": "Resource Management Best Practices",  
+        "keywords": ["file closure", "context managers", "system resources", "'with' statement"]  
+      },  
+      {  
+        "name": "Binary vs Text Mode Operations",  
+        "keywords": ["'t' mode", "'b' mode", "encoding/decoding", "non-text files"]  
+      }  
+    ]  
+  }  
+]

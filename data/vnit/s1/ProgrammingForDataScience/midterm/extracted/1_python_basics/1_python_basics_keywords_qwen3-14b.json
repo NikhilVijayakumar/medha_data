@@ -1,0 +1,29 @@
+{
+  "keywords": [
+    "Python Syntax",
+    "Basic Data Types",
+    "Integer (int)",
+    "Floating-Point Numbers (float)",
+    "Strings (str)",
+    "Boolean (bool)",
+    "Variable Assignment",
+    "Dynamic Typing",
+    "PEP 8 Naming Conventions",
+    "String Indexing",
+    "String Slicing",
+    "String Immutability",
+    "String Methods (Upper Case Conversion)",
+    "String Methods (Lower Case Conversion)",
+    "String Methods (Trim Whitespace)",
+    "String Methods (Splitting Text)",
+    "String Methods (Joining Text)",
+    "String Methods (Finding Substrings)",
+    "String Methods (Replacing Text)",
+    "f-strings (Formatted String Literals)",
+    ".format() Method",
+    "% Formatting (Legacy Style)",
+    "Boolean Comparison Operators",
+    "Logical Operators (and, or, not)",
+    "Truthiness and Falsiness"
+  ]
+}

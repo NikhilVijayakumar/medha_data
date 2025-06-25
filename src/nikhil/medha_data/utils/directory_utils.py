@@ -104,7 +104,7 @@ if __name__ == "__main__":
     # Step 2: Process content.json and generate topic.json
     #processor.process_filenames(filenames)
 
-    content_json_path = r"E:\Python\medha_data\data\vnit\s1\DataTransformation\endterm\topic.json"
+    content_json_path = r"E:\Python\medha_data\data\vnit\s1\ProgrammingForDataScience\midterm\topic.json"
     with open(content_json_path, 'r') as f:
         data = json.load(f)
 

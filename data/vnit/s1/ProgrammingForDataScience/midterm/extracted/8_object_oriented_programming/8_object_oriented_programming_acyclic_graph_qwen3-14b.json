@@ -1,0 +1,7 @@
+[  
+  {"source": "Classes and Objects", "type": "prerequisite"},  
+  {"source": "Inheritance", "type": "sequential"},  
+  {"source": "Method Overriding", "type": "advanced_application_of"},  
+  {"source": "Special Methods (Dunder)", "type": "advanced_application_of"},  
+  {"source": "Polymorphism", "type": "sequential"}  
+]

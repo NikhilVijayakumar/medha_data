@@ -1,0 +1,27 @@
+[  
+  {  
+    "topic_name": "Python Syntax and Basic Data Types",  
+    "sub_topics": [  
+      {  
+        "name": "Core Data Types",  
+        "keywords": ["integers", "floats", "strings", "booleans", "dynamic typing", "data types", "variable assignment"]  
+      },  
+      {  
+        "name": "Variable Assignment and Naming Conventions",  
+        "keywords": ["variables", "dynamic typing", "PEP8", "snake_case", "reassignment", "memory references", "naming conventions"]  
+      },  
+      {  
+        "name": "String Operations and Manipulation",  
+        "keywords": ["indexing", "slicing", "immutability", "string methods", "upper()", "lower()", "strip()"]  
+      },  
+      {  
+        "name": "String Formatting Techniques",  
+        "keywords": ["f-strings", ".format()", "% formatting", "placeholders", "debugging", "concatenation", "interpolation"]  
+      },  
+      {  
+        "name": "Boolean Logic and Truth Values",  
+        "keywords": ["logical operators", "comparison operators", "truthy/falsy", "boolean context", "and/or/not", "conditional checks", "data redundancy"]  
+      }  
+    ]  
+  }  
+]

@@ -1,0 +1,7 @@
+[  
+  {"source": "Text Files", "type": "prerequisite"},  
+  {"source": "Image Objects (using Pillow)", "type": "sequential"},  
+  {"source": "PDFs (using PyPDF2)", "type": "sequential"},  
+  {"source": "CSV using `csv` module", "type": "conceptual_support"},  
+  {"source": "CSV Files with Pandas", "type": "advanced_application_of"}  
+]

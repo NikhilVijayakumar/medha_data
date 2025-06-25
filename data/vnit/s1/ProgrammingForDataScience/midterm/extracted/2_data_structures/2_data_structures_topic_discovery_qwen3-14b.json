@@ -1,0 +1,35 @@
+[  
+  {  
+    "topic_name": "Python Data Structures Fundamentals",  
+    "sub_topics": [  
+      {  
+        "name": "Lists - Ordered Mutable Sequences",  
+        "keywords": ["ordered", "mutable", "indexing", "slicing", "concatenation", "nested lists", "list comprehensions"]  
+      },  
+      {  
+        "name": "List Operations and Methods",  
+        "keywords": ["append()", "insert()", "sort()", "pop()", "remove()", "extend()", "clear()"]  
+      },  
+      {  
+        "name": "Dictionaries - Key-Value Pair Collections",  
+        "keywords": ["unordered (Python 3.7+)", "key-value pairs", "hashable keys", "dynamic updates", "dictionary comprehensions"]  
+      },  
+      {  
+        "name": "Dictionary Methods and Operations",  
+        "keywords": ["get()", "update()", "popitem()", "keys()", "values()", "items()", "default values"]  
+      },  
+      {  
+        "name": "Tuples - Immutable Ordered Sequences",  
+        "keywords": ["immutable", "packing/unpacking", "hashable", "indexing", "slicing", "tuple comprehensions"]  
+      },  
+      {  
+        "name": "Sets - Unordered Unique Collections",  
+        "keywords": ["uniqueness", "mutability", "set operations", "union()", "intersection()", "symmetric difference", "set comprehensions"]  
+      },  
+      {  
+        "name": "Data Structure Use Cases and Best Practices",  
+        "keywords": ["data storage", "immutability benefits", "duplicate removal", "efficient lookups", "nested structures"]  
+      }  
+    ]  
+  }  
+]

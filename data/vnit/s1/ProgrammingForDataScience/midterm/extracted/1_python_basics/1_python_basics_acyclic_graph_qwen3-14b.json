@@ -1,0 +1,9 @@
+[  
+  {"source": "Basic Data Types", "type": "prerequisite"},  
+  {"source": "Variable Assignment", "type": "sequential"},  
+  {"source": "Dynamic Typing", "type": "advanced_application_of"},  
+  {"source": "Strings (Core Concepts)", "type": "prerequisite"},  
+  {"source": "String Indexing and Slicing", "type": "sequential"},  
+  {"source": "String Immutability", "type": "conceptual_support"},  
+  {"source": "Boolean Operators and Truthiness", "type": "advanced_application_of"}  
+]

@@ -1,0 +1,53 @@
+[  
+  {  
+    "topic_name": "Conditional Logic in Python",  
+    "sub_topics": [  
+      {  
+        "name": "If Statement Implementation",  
+        "keywords": ["if statement", "condition evaluation", "boolean logic", "code block execution", "True/False"]  
+      },  
+      {  
+        "name": "Elif-Else Conditional Chains",  
+        "keywords": ["elif clause", "else block", "conditional hierarchy", "multiple conditions", "fall-through logic"]  
+      },  
+      {  
+        "name": "Indentation Rules for Control Flow",  
+        "keywords": ["Python indentation", "code block alignment", "syntax requirements", "whitespace rules", "block structure"]  
+      }  
+    ]  
+  },  
+  {  
+    "topic_name": "Iterative Structures and Loops",  
+    "sub_topics": [  
+      {  
+        "name": "For Loop Mechanics",  
+        "keywords": ["for loop syntax", "sequence iteration", "list/dictionary traversal", ".keys()", ".values()"]  
+      },  
+      {  
+        "name": "While Loop Behavior",  
+        "keywords": ["while condition check", "loop termination", "infinite loops", "else clause execution", "counter variables"]  
+      },  
+      {  
+        "name": "Loop Control Statements",  
+        "keywords": ["break statement", "continue directive", "pass placeholder", "iteration interruption", "flow modification"]  
+      }  
+    ]  
+  },  
+  {  
+    "topic_name": "Iterative Functionality and Tools",  
+    "sub_topics": [  
+      {  
+        "name": "Range Object Generation",  
+        "keywords": ["range() function", "start/stop parameters", "step size", "numeric sequence generation", "loop iteration support"]  
+      },  
+      {  
+        "name": "Enumerate and Zip Utilities",  
+        "keywords": ["enumerate()", "index tracking", "zip() function", "parallel iteration", "tuple unpacking"]  
+      },  
+      {  
+        "name": "Membership Operators & Aggregates",  
+        "keywords": ["in/not in operators", "element existence checks", "min()/max() functions", "iterable extremes detection", "sequence analysis"]  
+      }  
+    ]  
+  }  
+]

@@ -1,0 +1,27 @@
+[  
+  {  
+    "topic_name": "Error Handling in Python",  
+    "sub_topics": [  
+      {  
+        "name": "Try-Except Exception Handling",  
+        "keywords": ["try block", "except block", "ZeroDivisionError", "ValueError", "IndexError", "exception propagation", "specific exceptions"]  
+      },  
+      {  
+        "name": "Else Block Usage",  
+        "keywords": ["else clause", "successful execution", "dependent code", "no exceptions raised", "conditional execution"]  
+      },  
+      {  
+        "name": "Finally Block for Cleanup",  
+        "keywords": ["finally clause", "resource cleanup", "file closing", "guaranteed execution", "error handling"]  
+      },  
+      {  
+        "name": "Raising Custom Exceptions",  
+        "keywords": ["raise keyword", "user-defined exceptions", "custom error messages", "exception signaling", "validation checks"]  
+      },  
+      {  
+        "name": "Security Risks of Eval()",  
+        "keywords": ["eval() function", "arbitrary code execution", "untrusted input", "security vulnerabilities", "dangerous practices"]  
+      }  
+    ]  
+  }  
+]

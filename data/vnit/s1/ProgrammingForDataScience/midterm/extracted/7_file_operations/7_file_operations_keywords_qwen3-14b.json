@@ -1,0 +1,20 @@
+{
+  "keywords": [
+    "File Operations",
+    "Text File Handling",
+    "Pillow Library for Image Processing",
+    "PyPDF2 Library for PDF Manipulation",
+    "CSV File Handling with Built-in Module",
+    "Pandas Dataframe Operations",
+    "Openpyxl Library for Excel Files",
+    "Python File Modes (r, w, a, r+, w+, x)",
+    "Text File Reading Techniques (read(), readline())",
+    "Writing to Text Files (write(), writelines())",
+    "Cursor Movement via seek() Method",
+    "Image Cropping Techniques",
+    "Image Resizing Methods",
+    "Transparency Handling in RGBA Mode",
+    "Grayscale Image Conversion",
+    "PDF Text Extraction Process"
+  ]
+}

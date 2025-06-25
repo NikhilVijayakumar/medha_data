@@ -1,0 +1,35 @@
+[  
+  {  
+    "topic_name": "Functions in Python",  
+    "sub_topics": [  
+      {  
+        "name": "Function Definition Syntax",  
+        "keywords": ["def keyword", "function parameters", "indentation", "docstring", "code block"]  
+      },  
+      {  
+        "name": "Argument Types and Passing Mechanisms",  
+        "keywords": ["positional arguments", "keyword arguments", "default parameters", "argument order", "parameter naming"]  
+      },  
+      {  
+        "name": "Return Values and Output Handling",  
+        "keywords": ["return statement", "None value", "function output", "print vs return", "output assignment"]  
+      },  
+      {  
+        "name": "Variable Scope and Lifetime",  
+        "keywords": ["local scope", "global scope", "global keyword", "nonlocal keyword", "variable accessibility"]  
+      },  
+      {  
+        "name": "Arbitrary Arguments Handling (*args/**kwargs)",  
+        "keywords": ["*args tuple", "**kwargs dictionary", "variable arguments", "parameter collection", "flexible parameters"]  
+      },  
+      {  
+        "name": "Lambda Expressions and Anonymous Functions",  
+        "keywords": ["lambda keyword", "single-expression functions", "anonymous function", "inline definition", "functional programming"]  
+      },  
+      {  
+        "name": "Higher-Order Functions (map/filter)",  
+        "keywords": ["map function", "filter function", "iterable processing", "lambda integration", "function as argument"]  
+      }  
+    ]  
+  }  
+]

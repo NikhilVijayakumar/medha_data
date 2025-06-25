@@ -1,0 +1,58 @@
+[  
+  {  
+    "topic_name": "Object-Oriented Programming Fundamentals",  
+    "sub_topics": [  
+      {  
+        "name": "Core Concepts of OOP",  
+        "keywords": ["Classes", "Objects", "Blueprints", "Instantiation", "Encapsulation"]  
+      },  
+      {  
+        "name": "Attributes and Initialization",  
+        "keywords": ["Instance Attributes", "__init__ Method", "Class Attributes", "Initialization Process", "Self Parameter"]  
+      },  
+      {  
+        "name": "Method Implementation and Behavior",  
+        "keywords": ["Methods in Classes", "Functionality Encapsulation", "Behavior Definition", "Self Reference", "Object Operations"]  
+      }  
+    ]  
+  },  
+  {  
+    "topic_name": "Inheritance and Class Hierarchies",  
+    "sub_topics": [  
+      {  
+        "name": "Inheritance Mechanisms",  
+        "keywords": ["Subclass Relationships", "Superclass Inheritance", "Code Reusability", "super() Function", "Hierarchical Structures"]  
+      },  
+      {  
+        "name": "Method Overriding and Polymorphism",  
+        "keywords": ["Override Mechanism", "Customized Behavior", "Dynamic Method Resolution", "Polymorphic Calls", "Generic Programming"]  
+      }  
+    ]  
+  },  
+  {  
+    "topic_name": "Special Methods and Advanced Features",  
+    "sub_topics": [  
+      {  
+        "name": "Dunder Methods (Magic Methods)",  
+        "keywords": ["__init__", "__str__", "__len__", "__del__", "Operator Overloading", "Implicit Invocation"]  
+      },  
+      {  
+        "name": "Polymorphism in Practice",  
+        "keywords": ["Method Overriding", "Same Method Names", "Different Implementations", "Dynamic Binding", "Object Flexibility"]  
+      }  
+    ]  
+  },  
+  {  
+    "topic_name": "OOP Principles and Practical Applications",  
+    "sub_topics": [  
+      {  
+        "name": "Design Philosophy of OOP",  
+        "keywords": ["Modular Design", "Reusability", "Organized Code Structure", "Method Syntax Consistency", "Scalable Development"]  
+      },  
+      {  
+        "name": "Real-World Implementation Examples",  
+        "keywords": ["Class Construction", "Object Interaction", "__str__ Customization", "Length Calculation", "Garbage Collection Behavior"]  
+      }  
+    ]  
+  }  
+]

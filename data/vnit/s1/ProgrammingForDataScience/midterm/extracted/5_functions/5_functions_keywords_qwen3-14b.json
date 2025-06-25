@@ -1,0 +1,17 @@
+{
+  "keywords": [
+    "Function Definition",
+    "Docstring",
+    "Positional Argument",
+    "Keyword Argument with Default Value",
+    "Return Statement",
+    "Local Scope",
+    "Global Scope",
+    "Nonlocal Variable Declaration",
+    "Arbitrary Positional Arguments (*args)",
+    "Arbitrary Keyword Arguments (**kwargs)",
+    "Lambda Expression (Anonymous Function)",
+    "Map Function",
+    "Filter Function"
+  ]
+}

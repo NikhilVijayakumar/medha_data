@@ -1,0 +1,61 @@
+[  
+  {  
+    "topic_name": "Iterating Over Python Data Structures",  
+    "sub_topics": [  
+      {  
+        "name": "List Iteration Techniques",  
+        "keywords": ["for loop", "enumerate", "list comprehension", "map()", "filter()"]  
+      },  
+      {  
+        "name": "Dictionary Iteration Methods",  
+        "keywords": ["keys()", "values()", "items()", "dictionary comprehension", "key-value pairs"]  
+      },  
+      {  
+        "name": "Tuple Iteration and Operations",  
+        "keywords": ["for loop", "enumerate", "generator expression", "map()", "filter()"]  
+      },  
+      {  
+        "name": "Set Iteration and Transformations",  
+        "keywords": ["unordered iteration", "set comprehension", "map()", "filter()", "mathematical operations"]  
+      },  
+      {  
+        "name": "Parallel Iteration with zip()",  
+        "keywords": ["multiple iterables", "parallel looping", "tuple unpacking", "synchronized iteration"]  
+      }  
+    ]  
+  },  
+  {  
+    "topic_name": "Data Structure-Specific Operations",  
+    "sub_topics": [  
+      {  
+        "name": "List Comprehension for Transformation and Filtering",  
+        "keywords": ["element-wise operations", "conditional filtering", "nested expressions", "square brackets syntax"]  
+      },  
+      {  
+        "name": "Dictionary Comprehension for Key-Value Manipulation",  
+        "keywords": ["key-value pairs transformation", "conditional inclusion", "dynamic dictionary creation"]  
+      },  
+      {  
+        "name": "Tuple and Set Comprehensions (Generators)",  
+        "keywords": ["generator expressions", "implicit iteration", "memory efficiency", "conversion to tuple/set"]  
+      },  
+      {  
+        "name": "Validation Logic During Iteration",  
+        "keywords": ["conditional checks", "element verification", "index-based validation", "type checking"]  
+      }  
+    ]  
+  },  
+  {  
+    "topic_name": "Functional Programming with map() and filter()",  
+    "sub_topics": [  
+      {  
+        "name": "map() for Element-Wise Function Application",  
+        "keywords": ["lambda functions", "element transformation", "iterable mapping", "result conversion"]  
+      },  
+      {  
+        "name": "filter() for Conditional Selection",  
+        "keywords": ["predicate functions", "data filtering", "boolean evaluation", "subset extraction"]  
+      }  
+    ]  
+  }  
+]
