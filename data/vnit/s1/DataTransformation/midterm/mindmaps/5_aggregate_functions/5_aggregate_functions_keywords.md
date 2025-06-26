@@ -2,7 +2,7 @@
 mindmap
   course_root[Comprehensive SQL Course]
     mod_sql_advanced[Advanced SQL Concepts]
-      section_aggregate_funcs[Average Functions]
+      section_aggregate_funcs[Aggregate Functions]
         func_count[COUNT]
         func_sum[SUM]
         func_avg[AVG]
