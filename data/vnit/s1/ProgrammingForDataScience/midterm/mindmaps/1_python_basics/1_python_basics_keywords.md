@@ -1,21 +1,20 @@
 ```mermaid
 mindmap
-    python_root[Python Fundamentals]
-        mod_syntax[Python Syntax]
+    python_root[Python Fundamentals]        
         mod_data_types[BASIC DATA TYPES]
-            subgraph "Data Types"
+            subgraph (Data Types)
                 concept_int[Integer int]
                 concept_float[Floating-Point Numbers float]
                 concept_str[Strings str]
                 concept_bool[Boolean bool]
             end
         mod_variables[Variable Assignment]
-            subgraph "Variables Concepts"
+            subgraph (Variables Concepts)
                 concept_dynamic_typing[Dynamic Typing]
                 concept_pep8[PEP 8 Naming Conventions]
             end
         mod_strings[String Operations]
-            subgraph "String Methods"
+            subgraph (String Methods)
                 subtopic_indexing[String Indexing]
                 subtopic_slicing[String Slicing]
                 subtopic_immutable[String Immutability]
@@ -31,7 +30,7 @@ mindmap
                 subtopic_percent[% Formatting Legacy Style]
             end
         mod_booleans[Boolean Logic]
-            subgraph "Boolean Concepts"
+            subgraph (Boolean Concepts)
                 concept_bool_ops[Boolean Comparison Operators]
                 concept_logical_ops[Logical Operators and, or, not]
                 concept_truthiness[Truthiness and Falsiness]

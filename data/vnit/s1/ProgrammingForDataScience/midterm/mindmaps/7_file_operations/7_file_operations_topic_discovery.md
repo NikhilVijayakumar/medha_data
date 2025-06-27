@@ -5,7 +5,7 @@ mindmap
       sub_text_file_modes[File Modes and Management]
       sub_text_read[Reading Text Files]
       sub_text_write_append[Writing and Appending to Text Files]
-    mod_image_processing[Image Processing with Pillow (PIL)]
+    mod_image_processing[Image Processing with Pillow PIL]
       sub_image_creation[Image Object Creation and Attributes]
       sub_image_manipulation[Image Manipulation Techniques]
       sub_image_new[Creating New Images Programmatically]

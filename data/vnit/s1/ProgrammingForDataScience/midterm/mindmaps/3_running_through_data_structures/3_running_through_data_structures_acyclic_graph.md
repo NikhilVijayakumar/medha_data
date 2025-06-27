@@ -12,12 +12,12 @@ mindmap
       Iterating through Values
       Iterating through Items (key-value pairs)
         Dictionary Comprehension
-      `map()` and `filter()` with Dictionaries
+      `map` and `filter` with Dictionaries
     Tuples
-      `map()` and `filter()` with Tuples
+      `map` and `filter` with Tuples
         Tuple Comprehension
     Sets
-      `map()` and `filter()` with Sets
+      `map` and `filter` with Sets
         Set Comprehension
-    `zip()`
+    `zip`
 ```

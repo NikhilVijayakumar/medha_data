@@ -6,8 +6,8 @@ mindmap
       loop_for[for Loops]
       loop_while[while Loops]
     advanced_applications[Advanced Loop Applications]
-      app_break_continue[Loop Control Statements (break, continue)]
-      app_range[range() Function]
-      app_enumerate[enumerate() Function]
-      app_zip[zip() Function]
+      app_break_continue[Loop Control Statements break, continue]
+      app_range[range Function]
+      app_enumerate[enumerate Function]
+      app_zip[zip Function]
 ```

@@ -6,7 +6,7 @@ root((Python Function Concepts))
     mod_parameters[Function Parameters]
         subpositional_arg[Positional Argument]
         subkeyword_default[Keyword Argument with Default Value]
-        args_kwargs[Arbitrary Arguments (*args and **kwargs)]
+        args_kwargs[Arbitrary Arguments *args and **kwargs]
     mod_scoping[Variable Scope Management]
         sublocal_scope[Local Scope]
         subglobal_scope[Global Scope]
@@ -15,6 +15,6 @@ root((Python Function Concepts))
         subreturn_stmt[Return Statement]
         subdocstring[Docstring]
     mod_advanced_funcs[Advanced Functional Concepts]
-        lambda_expr[Lambda Expression (Anonymous Function)]
+        lambda_expr[Lambda Expression Anonymous Function]
         map_filter_func[Map & Filter Functions]
 ```

@@ -4,10 +4,10 @@ mindmap
     subgraph "File Operations Fundamentals"
       mod_file_ops[File Operations Fundamentals]
         sub_text_files[Text File Handling]
-          sub_file_modes[Python File Modes (r, w, a, r+, w+, x)]
-          sub_read_tech[Text File Reading Techniques (read(), readline())]
-          sub_write_tech[Writing to Text Files (write(), writelines())]
-          sub_cursor_move[Cursor Movement via seek() Method]
+          sub_file_modes[Python File Modes r, w, a, r+, w+, x]
+          sub_read_tech[Text File Reading Techniques read, readline]
+          sub_write_tech[Writing to Text Files write, writelines]
+          sub_cursor_move[Cursor Movement via seek Method]
     end
     subgraph "Image Processing with Pillow"
       mod_image_proc[Image Processing with Pillow]

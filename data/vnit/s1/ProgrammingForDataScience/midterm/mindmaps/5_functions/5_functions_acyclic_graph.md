@@ -6,7 +6,7 @@ mindmap
       Return Values
     Scope
       Lambda Expressions
-    map() Function
-      filter() Function
+    map Function
+      filter Function
     *args and **kwargs
 ```
