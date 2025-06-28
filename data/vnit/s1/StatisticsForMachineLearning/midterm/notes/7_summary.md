@@ -23,10 +23,10 @@
   P(A) = \frac{n(A)}{n(S)}
   $$
 
-- **Axioms of Probability:**  
-  1. \( 0 \leq P(A) \leq 1 \)  
-  2. \( P(S) = 1 \)  
-  3. If \( A_1, A_2, ..., A_n \) are mutually exclusive:  
+- **Axioms of Probability:** 
+1. $0 \leq P(A) \leq 1$  
+2. $P(S) = 1$  
+3. If $A_1, A_2, ..., A_n$ are mutually exclusive:  
      $$
      P\left( \bigcup_{i=1}^{n} A_i \right) = \sum_{i=1}^{n} P(A_i)
      $$
@@ -156,6 +156,8 @@
   $$
   P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}, \quad k = 0, 1, ..., n
   $$
+$$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$
+
 - Mean:  
   $$
   \mu = np

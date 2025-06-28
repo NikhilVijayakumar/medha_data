@@ -112,11 +112,8 @@ A hyperplane is a fundamental geometric object in N-dimensional space that serve
 
 ---
 
-#Extra Linear algebra
+# Extra Linear algebra
 
-Here's the well-formatted Markdown documentation for the provided Linear Algebra formulas, with mathematical expressions rendered using LaTeX:
-
----
 
 # Essential Linear Algebra Formulas
 
