@@ -1,11 +1,14 @@
 [
-    "1_pandas_library",
-    "2_advanced_pandas_operations",
-    "3_mastering_pandas_dataframes",
-    "4_data_visualization",
-    "5_data_analysis",
-    "6_machine_learning_fundamentals",
-    "7_web_scraping_data_handling",
-    "8_endterm_question",
-    "8_1_answers"
+  "1_pandas_library",
+  "2_advanced_pandas_operations",
+  "3_mastering_pandas_dataframes",
+  "4_data_visualization",
+  "5_data_analysis",
+  "6_machine_learning_fundamentals",
+  "7_web_scraping_data_handling",
+  "8_endterm_question",
+  "8_1_answers",
+  "NumPy",
+  "pandas",
+  "visualization"
 ]
